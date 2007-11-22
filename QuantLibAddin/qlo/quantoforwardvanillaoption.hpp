@@ -20,18 +20,12 @@
 #define qla_quantoforwardvanillaoption_hpp
 
 #include <qlo/baseinstruments.hpp>
+#include <ql/types.hpp>
 
 namespace QuantLib {
-    class YieldTermStructure;
-    class BlackVolTermStructure;
-    class GeneralizedBlackScholesProcess;
     class StrikedTypePayoff;
     class Exercise;
     class Date;
-    class PricingEngine;
-
-    template <class T>
-    class Handle;
 }
 
 namespace QuantLibAddin {
@@ -40,19 +34,13 @@ namespace QuantLibAddin {
     public:
         QuantoForwardVanillaOption(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-            const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
-            const boost::shared_ptr < QuantLib::BlackVolTermStructure > &blackVolTermStructure,
-            const double &correlation,
-            const double &moneyness,
-            QuantLib::Date resetDate,
-            const boost::shared_ptr < QuantLib::GeneralizedBlackScholesProcess > &blackScholesProcess,
-            const boost::shared_ptr<QuantLib::StrikedTypePayoff> &payoff,
-            const boost::shared_ptr < QuantLib::Exercise > &exercise,
-            const boost::shared_ptr<QuantLib::PricingEngine> &pricingEngine,
+            QuantLib::Real moneyness,
+            const QuantLib::Date& resetDate,
+            const boost::shared_ptr<QuantLib::StrikedTypePayoff>& payoff,
+            const boost::shared_ptr<QuantLib::Exercise>& exercise,
             bool permanent);
     };
 
 }
 
 #endif
-
