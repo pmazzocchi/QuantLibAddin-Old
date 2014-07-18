@@ -1,0 +1,275 @@
+
+/*  
+ Copyright (C) 2008 Eric Ehlers
+ 
+ This file is part of QuantLib, a free-software/open-source library
+ for financial quantitative analysts and developers - http://quantlib.org/
+
+ QuantLib is free software: you can redistribute it and/or modify it
+ under the terms of the QuantLib license.  You should have received a
+ copy of the license along with this program; if not, please email
+ <quantlib-dev@lists.sf.net>. The license is also available online at
+ <http://quantlib.org/license.shtml>.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the license for more details.
+*/
+
+// This file was generated automatically by gensrc.py.  If you edit this file
+// manually then your changes will be lost the next time gensrc runs.
+
+// This source code file was generated from the following stub:
+//      gensrc/gensrc/stubs/stub.doxygen.file
+
+/*! \page func_objects Objects
+\section overview Overview
+objects.
+\section functionlist Function List
+\ref ohObjectCallerAddress ()\n
+\ref ohObjectCallerKey ()\n
+\ref ohObjectClassName ()\n
+\ref ohObjectCreationTime ()\n
+\ref ohObjectExists ()\n
+\ref ohObjectIsOrphan ()\n
+\ref ohObjectIsPermanent ()\n
+\ref ohObjectPrecedentIDs ()\n
+\ref ohObjectUpdateCounter ()\n
+\ref ohObjectUpdateTime ()\n
+
+\section documentation Function Documentation
+\anchor ohObjectCallerAddress \b ohObjectCallerAddress
+\code
+
+vector<string> returnValue
+
+ohObjectCallerAddress(
+        vector<string> ObjectId
+        any Trigger)
+
+\endcode
+\par Description:
+
+retrieve address of cell in which object resides.
+
+\par Supported Platforms:
+
+Excel
+
+\param ObjectId ID of object to be queried.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohObjectCallerKey \b ohObjectCallerKey
+\code
+
+vector<string> returnValue
+
+ohObjectCallerKey(
+        vector<string> ObjectId
+        any Trigger)
+
+\endcode
+\par Description:
+
+retrieve unique ID of the CallingRange object associated with the cell in which object resides.
+
+\par Supported Platforms:
+
+Excel
+
+\param ObjectId ID of object to be queried.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohObjectClassName \b ohObjectClassName
+\code
+
+vector<string> returnValue
+
+ohObjectClassName(
+        vector<string> ObjectID
+        any Trigger)
+
+\endcode
+\par Description:
+
+get the object class name
+
+\par Supported Platforms:
+
+Excel
+
+\param ObjectID Object ID name.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohObjectCreationTime \b ohObjectCreationTime
+\code
+
+vector<double> returnValue
+
+ohObjectCreationTime(
+        vector<string> ObjectID
+        any Trigger)
+
+\endcode
+\par Description:
+
+The time at which the Object was initially created, return the time of initing object.
+
+\par Supported Platforms:
+
+Excel
+
+\param ObjectID object ID.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohObjectExists \b ohObjectExists
+\code
+
+vector<bool> returnValue
+
+ohObjectExists(
+        vector<string> ObjectID
+        any Trigger)
+
+\endcode
+\par Description:
+
+list the IDs of objects in repository matching regex.
+
+\par Supported Platforms:
+
+Excel
+
+\param ObjectID Object ID name.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohObjectIsOrphan \b ohObjectIsOrphan
+\code
+
+vector<bool> returnValue
+
+ohObjectIsOrphan(
+        vector<string> ObjectId
+        any Trigger)
+
+\endcode
+\par Description:
+
+get the object property orphan 
+
+\par Supported Platforms:
+
+Excel
+
+\param ObjectId Object ID name.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohObjectIsPermanent \b ohObjectIsPermanent
+\code
+
+vector<bool> returnValue
+
+ohObjectIsPermanent(
+        vector<string> ObjectID
+        any Trigger)
+
+\endcode
+\par Description:
+
+get the object property permanent
+
+\par Supported Platforms:
+
+Excel
+
+\param ObjectID Object ID name.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohObjectPrecedentIDs \b ohObjectPrecedentIDs
+\code
+
+vector<string> returnValue
+
+ohObjectPrecedentIDs(
+        string ObjectID
+        any Trigger)
+
+\endcode
+\par Description:
+
+A list of the Object's precedent Objects, return the object's list.
+
+\par Supported Platforms:
+
+Excel
+
+\param ObjectID object ID.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohObjectUpdateCounter \b ohObjectUpdateCounter
+\code
+
+vector<string> returnValue
+
+ohObjectUpdateCounter(
+        vector<string> ObjectID
+        any Trigger)
+
+\endcode
+\par Description:
+
+get the object property update counter
+
+\par Supported Platforms:
+
+Excel
+
+\param ObjectID Object ID name.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohObjectUpdateTime \b ohObjectUpdateTime
+\code
+
+vector<double> returnValue
+
+ohObjectUpdateTime(
+        vector<string> ObjectID
+        any Trigger)
+
+\endcode
+\par Description:
+
+The time at which the Object was last recreated, return the last udate time.
+
+\par Supported Platforms:
+
+Excel
+
+\param ObjectID object ID.
+\param Trigger dependency tracking trigger
+
+
+
+
+
+*/
+
+

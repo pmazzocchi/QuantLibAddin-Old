@@ -1,0 +1,202 @@
+
+/*  
+ Copyright (C) 2004, 2005 Ferdinando Ametrano
+ Copyright (C) 2004, 2005, 2006 Eric Ehlers
+ Copyright (C) 2005, 2006 Plamen Neykov
+ Copyright (C) 2004 StatPro Italia srl
+ 
+ This file is part of QuantLib, a free-software/open-source library
+ for financial quantitative analysts and developers - http://quantlib.org/
+
+ QuantLib is free software: you can redistribute it and/or modify it
+ under the terms of the QuantLib license.  You should have received a
+ copy of the license along with this program; if not, please email
+ <quantlib-dev@lists.sf.net>. The license is also available online at
+ <http://quantlib.org/license.shtml>.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the license for more details.
+*/
+
+// This file was generated automatically by gensrc.py.  If you edit this file
+// manually then your changes will be lost the next time gensrc runs.
+
+// This source code file was generated from the following stub:
+//      gensrc/gensrc/stubs/stub.doxygen.file
+
+/*! \page func_garbagecollection Garbage Collection
+\section overview Overview
+garbage collection.
+\section functionlist Function List
+\ref ohRepositoryCollectGarbage ()\n
+\ref ohRepositoryDeleteAllObjects ()\n
+\ref ohRepositoryDeleteObject ()\n
+\ref ohRepositoryListObjectIDs ()\n
+\ref ohRepositoryLogAllObjects ()\n
+\ref ohRepositoryLogObject ()\n
+\ref ohRepositoryObjectCount ()\n
+
+\section documentation Function Documentation
+\anchor ohRepositoryCollectGarbage \b ohRepositoryCollectGarbage
+\code
+
+void returnValue
+
+ohRepositoryCollectGarbage(
+        bool DeletePermanent
+        any Trigger)
+
+\endcode
+\par Description:
+
+delete orphaned objects from repository.
+
+\par Supported Platforms:
+
+Excel
+
+\param DeletePermanent also delete permanent objects. Default value = false.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohRepositoryDeleteAllObjects \b ohRepositoryDeleteAllObjects
+\code
+
+void returnValue
+
+ohRepositoryDeleteAllObjects(
+        bool DeletePermanent
+        any Trigger)
+
+\endcode
+\par Description:
+
+delete all objects from repository.
+
+\par Supported Platforms:
+
+C++, Excel
+
+\param DeletePermanent also delete permanent objects. Default value = false.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohRepositoryDeleteObject \b ohRepositoryDeleteObject
+\code
+
+void returnValue
+
+ohRepositoryDeleteObject(
+        vector<string> ObjectId
+        any Trigger)
+
+\endcode
+\par Description:
+
+delete object from repository.
+
+\par Supported Platforms:
+
+Excel
+
+\param ObjectId ID of object to be deleted.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohRepositoryListObjectIDs \b ohRepositoryListObjectIDs
+\code
+
+vector<string> returnValue
+
+ohRepositoryListObjectIDs(
+        string Regex
+        any Trigger)
+
+\endcode
+\par Description:
+
+list the IDs of objects in repository matching regex.
+
+\par Supported Platforms:
+
+Excel
+
+\param Regex optional matching pattern in UNIX format (wildcard is .*).
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohRepositoryLogAllObjects \b ohRepositoryLogAllObjects
+\code
+
+void returnValue
+
+ohRepositoryLogAllObjects(
+        any Trigger)
+
+\endcode
+\par Description:
+
+write all object descriptions to log file.
+
+\par Supported Platforms:
+
+Excel
+
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohRepositoryLogObject \b ohRepositoryLogObject
+\code
+
+void returnValue
+
+ohRepositoryLogObject(
+        string ObjectId
+        any Trigger)
+
+\endcode
+\par Description:
+
+write object description to log file.
+
+\par Supported Platforms:
+
+C++, Excel
+
+\param ObjectId ID of object to be logged.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohRepositoryObjectCount \b ohRepositoryObjectCount
+\code
+
+long returnValue
+
+ohRepositoryObjectCount(
+        any Trigger)
+
+\endcode
+\par Description:
+
+#/objects in repository.
+
+\par Supported Platforms:
+
+Excel
+
+\param Trigger dependency tracking trigger
+
+
+
+
+
+*/
+
+

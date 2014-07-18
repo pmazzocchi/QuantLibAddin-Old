@@ -1,0 +1,173 @@
+
+/*  
+ Copyright (C) 2007, 2008 Eric Ehlers
+ 
+ This file is part of QuantLib, a free-software/open-source library
+ for financial quantitative analysts and developers - http://quantlib.org/
+
+ QuantLib is free software: you can redistribute it and/or modify it
+ under the terms of the QuantLib license.  You should have received a
+ copy of the license along with this program; if not, please email
+ <quantlib-dev@lists.sf.net>. The license is also available online at
+ <http://quantlib.org/license.shtml>.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the license for more details.
+*/
+
+// This file was generated automatically by gensrc.py.  If you edit this file
+// manually then your changes will be lost the next time gensrc runs.
+
+// This source code file was generated from the following stub:
+//      gensrc/gensrc/stubs/stub.doxygen.file
+
+/*! \page func_enumerations Enumerations
+\section overview Overview
+enumerations.
+\section functionlist Function List
+\ref ohEnumeratedClass ()\n
+\ref ohEnumeratedPair ()\n
+\ref ohEnumeratedType ()\n
+\ref ohListEnumeratedClasses ()\n
+\ref ohListEnumeratedPairs ()\n
+\ref ohListEnumeratedTypes ()\n
+
+\section documentation Function Documentation
+\anchor ohEnumeratedClass \b ohEnumeratedClass
+\code
+
+vector<string> returnValue
+
+ohEnumeratedClass(
+        string EnumId
+        any Trigger)
+
+\endcode
+\par Description:
+
+return the members of a given enumerated class.
+
+\par Supported Platforms:
+
+Excel
+
+\param EnumId name of enumerated type.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohEnumeratedPair \b ohEnumeratedPair
+\code
+
+vector<string> returnValue
+
+ohEnumeratedPair(
+        string EnumId
+        any Trigger)
+
+\endcode
+\par Description:
+
+return the members of a given enumerated pair.
+
+\par Supported Platforms:
+
+Excel
+
+\param EnumId name of enumerated type.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohEnumeratedType \b ohEnumeratedType
+\code
+
+vector<string> returnValue
+
+ohEnumeratedType(
+        string EnumId
+        any Trigger)
+
+\endcode
+\par Description:
+
+return the members of a given enumerated type.
+
+\par Supported Platforms:
+
+Excel
+
+\param EnumId name of enumerated type.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohListEnumeratedClasses \b ohListEnumeratedClasses
+\code
+
+vector<string> returnValue
+
+ohListEnumeratedClasses(
+        any Trigger)
+
+\endcode
+\par Description:
+
+list supported enumerated classes.
+
+\par Supported Platforms:
+
+Excel
+
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohListEnumeratedPairs \b ohListEnumeratedPairs
+\code
+
+vector<string> returnValue
+
+ohListEnumeratedPairs(
+        any Trigger)
+
+\endcode
+\par Description:
+
+list supported enumerated pairs.
+
+\par Supported Platforms:
+
+Excel
+
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohListEnumeratedTypes \b ohListEnumeratedTypes
+\code
+
+vector<string> returnValue
+
+ohListEnumeratedTypes(
+        any Trigger)
+
+\endcode
+\par Description:
+
+list supported enumerated types.
+
+\par Supported Platforms:
+
+Excel
+
+\param Trigger dependency tracking trigger
+
+
+
+
+
+*/
+
+

@@ -1,0 +1,364 @@
+
+/*  
+ Copyright (C) 2004, 2005, 2006, 2007, 2008 Ferdinando Ametrano
+ Copyright (C) 2004, 2005, 2006, 2007, 2011 Eric Ehlers
+ Copyright (C) 2005, 2006 Plamen Neykov
+ Copyright (C) 2004 StatPro Italia srl
+ 
+ This file is part of QuantLib, a free-software/open-source library
+ for financial quantitative analysts and developers - http://quantlib.org/
+
+ QuantLib is free software: you can redistribute it and/or modify it
+ under the terms of the QuantLib license.  You should have received a
+ copy of the license along with this program; if not, please email
+ <quantlib-dev@lists.sf.net>. The license is also available online at
+ <http://quantlib.org/license.shtml>.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the license for more details.
+*/
+
+// This file was generated automatically by gensrc.py.  If you edit this file
+// manually then your changes will be lost the next time gensrc runs.
+
+// This source code file was generated from the following stub:
+//      gensrc/gensrc/stubs/stub.doxygen.file
+
+/*! \page func_ohutils ObjectHandler Utilities
+\section overview Overview
+objecthandler utilities.
+\section functionlist Function List
+\ref ohBoostVersion ()\n
+\ref ohFilter ()\n
+\ref ohFunctionCount ()\n
+\ref ohPack ()\n
+\ref ohRangeRetrieveError ()\n
+\ref ohRemoveInvalidColumns ()\n
+\ref ohRemoveInvalidRows ()\n
+\ref ohStack ()\n
+\ref ohStringConcatenate ()\n
+\ref ohStringSplit ()\n
+\ref ohTrigger ()\n
+\ref ohVbaError ()\n
+\ref ohVersion ()\n
+
+\section documentation Function Documentation
+\anchor ohBoostVersion \b ohBoostVersion
+\code
+
+string returnValue
+
+ohBoostVersion(
+        any Trigger)
+
+\endcode
+\par Description:
+
+returns the version number of Boost.
+
+\par Supported Platforms:
+
+Excel
+
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohFilter \b ohFilter
+\code
+
+vector<any> returnValue
+
+ohFilter(
+        vector<any> Input
+        vector<bool> Flags)
+
+\endcode
+\par Description:
+
+Filters the first vector using the second one as boolean inclusion flags.
+
+\par Supported Platforms:
+
+Excel
+
+\param Input vector to be filtered.
+\param Flags vector to inclusion flags.
+
+
+
+\anchor ohFunctionCount \b ohFunctionCount
+\code
+
+long returnValue
+
+ohFunctionCount(
+        any Trigger)
+
+\endcode
+\par Description:
+
+returns the number of functions in this addin.
+
+\par Supported Platforms:
+
+Excel
+
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohPack \b ohPack
+\code
+
+vector<vector<any> > returnValue
+
+ohPack(
+        vector<vector<any> > InputRange
+        any Trigger)
+
+\endcode
+\par Description:
+
+trim error/null/empty values from bottom/right of matrix/vector.
+
+\par Supported Platforms:
+
+Excel
+
+\param InputRange scalar/vector/matrix of values to be packed.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohRangeRetrieveError \b ohRangeRetrieveError
+\code
+
+reference returnValue
+
+ohRangeRetrieveError(
+        reference Range)
+
+\endcode
+\par Description:
+
+Retrieve the error message if any that is associated with the given range.
+
+\par Supported Platforms:
+
+Excel
+
+\param Range range to query.
+
+
+
+\anchor ohRemoveInvalidColumns \b ohRemoveInvalidColumns
+\code
+
+vector<vector<any> > returnValue
+
+ohRemoveInvalidColumns(
+        vector<vector<any> > InputRange
+        any Trigger)
+
+\endcode
+\par Description:
+
+trim error/null/empty columns from matrix/vector.
+
+\par Supported Platforms:
+
+Excel
+
+\param InputRange scalar/vector/matrix of values to be packed.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohRemoveInvalidRows \b ohRemoveInvalidRows
+\code
+
+vector<vector<any> > returnValue
+
+ohRemoveInvalidRows(
+        vector<vector<any> > InputRange
+        any Trigger)
+
+\endcode
+\par Description:
+
+trim error/null/empty rows from matrix/vector.
+
+\par Supported Platforms:
+
+Excel
+
+\param InputRange scalar/vector/matrix of values to be packed.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohStack \b ohStack
+\code
+
+long returnValue
+
+ohStack(
+        any Trigger)
+
+\endcode
+\par Description:
+
+Returns the amount of stack space left available to the XLL.  This function returns the number 65535 when the stack size exceeds 64K.
+
+\par Supported Platforms:
+
+Excel
+
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohStringConcatenate \b ohStringConcatenate
+\code
+
+string returnValue
+
+ohStringConcatenate(
+        vector<string> Substrings
+        string Delimiter)
+
+\endcode
+\par Description:
+
+Concatenate substrings into a single string using the given delimiter.
+
+\par Supported Platforms:
+
+Excel
+
+\param Substrings string to be parsed.
+\param Delimiter delimiter string.
+
+
+
+\anchor ohStringSplit \b ohStringSplit
+\code
+
+vector<string> returnValue
+
+ohStringSplit(
+        string String
+        string Delimiters
+        bool ConcatenateDelim)
+
+\endcode
+\par Description:
+
+Split a string into substrings using the given delimiter.
+
+\par Supported Platforms:
+
+Excel
+
+\param String string to be parsed.
+\param Delimiters delimiter characters.
+\param ConcatenateDelim specifies if multiple adjacent delimiters are to be considered as one (TRUE) or not (FALSE). Default value = false.
+
+
+
+\anchor ohTrigger \b ohTrigger
+\code
+
+long returnValue
+
+ohTrigger(
+        any Dummy0
+        any Dummy1
+        any Dummy2
+        any Dummy3
+        any Dummy4
+        any Dummy5
+        any Dummy6
+        any Dummy7
+        any Dummy8
+        any Dummy9
+        any Dummy10
+        any Dummy11
+        any Dummy12
+        any Dummy13)
+
+\endcode
+\par Description:
+
+forces a dependency between multiple ranges and returns the update counter.
+
+\par Supported Platforms:
+
+Excel
+
+\param Dummy0 dummy range reference (ignored).
+\param Dummy1 dummy range reference (ignored).
+\param Dummy2 dummy range reference (ignored).
+\param Dummy3 dummy range reference (ignored).
+\param Dummy4 dummy range reference (ignored).
+\param Dummy5 dummy range reference (ignored).
+\param Dummy6 dummy range reference (ignored).
+\param Dummy7 dummy range reference (ignored).
+\param Dummy8 dummy range reference (ignored).
+\param Dummy9 dummy range reference (ignored).
+\param Dummy10 dummy range reference (ignored).
+\param Dummy11 dummy range reference (ignored).
+\param Dummy12 dummy range reference (ignored).
+\param Dummy13 dummy range reference (ignored).
+
+
+
+\anchor ohVbaError \b ohVbaError
+\code
+
+string returnValue
+
+ohVbaError(
+        any Trigger)
+
+\endcode
+\par Description:
+
+Retrieve error message associated with VBA code.
+
+\par Supported Platforms:
+
+Excel
+
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohVersion \b ohVersion
+\code
+
+string returnValue
+
+ohVersion(
+        any Trigger)
+
+\endcode
+\par Description:
+
+returns the version number of ObjectHandler.
+
+\par Supported Platforms:
+
+C++, Excel
+
+\param Trigger dependency tracking trigger
+
+
+
+
+
+*/
+
+

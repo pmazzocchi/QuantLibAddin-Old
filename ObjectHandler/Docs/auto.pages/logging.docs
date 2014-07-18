@@ -1,0 +1,184 @@
+
+/*  
+ Copyright (C) 2004, 2005 Ferdinando Ametrano
+ Copyright (C) 2004, 2005, 2006 Eric Ehlers
+ Copyright (C) 2005, 2006 Plamen Neykov
+ Copyright (C) 2004 StatPro Italia srl
+ 
+ This file is part of QuantLib, a free-software/open-source library
+ for financial quantitative analysts and developers - http://quantlib.org/
+
+ QuantLib is free software: you can redistribute it and/or modify it
+ under the terms of the QuantLib license.  You should have received a
+ copy of the license along with this program; if not, please email
+ <quantlib-dev@lists.sf.net>. The license is also available online at
+ <http://quantlib.org/license.shtml>.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the license for more details.
+*/
+
+// This file was generated automatically by gensrc.py.  If you edit this file
+// manually then your changes will be lost the next time gensrc runs.
+
+// This source code file was generated from the following stub:
+//      gensrc/gensrc/stubs/stub.doxygen.file
+
+/*! \page func_logging Logging Functions
+\section overview Overview
+logging functions.
+\section functionlist Function List
+\ref ohLogFile ()\n
+\ref ohLogLevel ()\n
+\ref ohLogSetConsole ()\n
+\ref ohLogSetFile ()\n
+\ref ohLogSetLevel ()\n
+\ref ohLogWriteMessage ()\n
+
+\section documentation Function Documentation
+\anchor ohLogFile \b ohLogFile
+\code
+
+string returnValue
+
+ohLogFile(
+        any Trigger)
+
+\endcode
+\par Description:
+
+get log file.
+
+\par Supported Platforms:
+
+Excel
+
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohLogLevel \b ohLogLevel
+\code
+
+long returnValue
+
+ohLogLevel(
+        any Trigger)
+
+\endcode
+\par Description:
+
+get log level.
+
+\par Supported Platforms:
+
+Excel
+
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohLogSetConsole \b ohLogSetConsole
+\code
+
+void returnValue
+
+ohLogSetConsole(
+        long Console
+        long LogLevel
+        any Trigger)
+
+\endcode
+\par Description:
+
+fork output to stdout.
+
+\par Supported Platforms:
+
+C++
+
+\param Console 1 (enable) / 0 (disable).
+\param LogLevel threshold for log messages. Default value = 4.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohLogSetFile \b ohLogSetFile
+\code
+
+string returnValue
+
+ohLogSetFile(
+        string LogFileName
+        long LogLevel
+        any Trigger)
+
+\endcode
+\par Description:
+
+begin logging to named file.
+
+\par Supported Platforms:
+
+C++, Calc, Excel
+
+\param LogFileName path and name of log file.
+\param LogLevel threshold for log messages. Default value = 4.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohLogSetLevel \b ohLogSetLevel
+\code
+
+void returnValue
+
+ohLogSetLevel(
+        long LogLevel
+        any Trigger)
+
+\endcode
+\par Description:
+
+set threshold for log messages.
+
+\par Supported Platforms:
+
+Excel
+
+\param LogLevel threshold for log messages.
+\param Trigger dependency tracking trigger
+
+
+
+\anchor ohLogWriteMessage \b ohLogWriteMessage
+\code
+
+void returnValue
+
+ohLogWriteMessage(
+        string LogMessage
+        long LogLevel
+        any Trigger)
+
+\endcode
+\par Description:
+
+log a message.
+
+\par Supported Platforms:
+
+C++, Excel
+
+\param LogMessage message to be logged.
+\param LogLevel threshold for log messages. Default value = 4.
+\param Trigger dependency tracking trigger
+
+
+
+
+
+*/
+
+

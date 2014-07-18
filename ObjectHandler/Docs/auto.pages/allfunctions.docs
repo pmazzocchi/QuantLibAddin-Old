@@ -1,0 +1,87 @@
+
+/*  
+ Copyright (C) 2004, 2005, 2006 Eric Ehlers
+ 
+ This file is part of QuantLib, a free-software/open-source library
+ for financial quantitative analysts and developers - http://quantlib.org/
+
+ QuantLib is free software: you can redistribute it and/or modify it
+ under the terms of the QuantLib license.  You should have received a
+ copy of the license along with this program; if not, please email
+ <quantlib-dev@lists.sf.net>. The license is also available online at
+ <http://quantlib.org/license.shtml>.
+
+ This program is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ FOR A PARTICULAR PURPOSE.  See the license for more details.
+*/
+
+// This file was generated automatically by gensrc.py.  If you edit this file
+// manually then your changes will be lost the next time gensrc runs.
+
+// This source code file was generated from the following stub:
+//      gensrc/gensrc/stubs/stub.doxygen.header
+
+/*! \page allfunctions Functions
+
+Below is an alphabetical list of links to documentation for all functions (53) in %ObjectHandler.
+
+\section functions Function List
+
+\ref ohBoostVersion ()\n
+\ref ohEnumeratedClass ()\n
+\ref ohEnumeratedPair ()\n
+\ref ohEnumeratedType ()\n
+\ref ohFilter ()\n
+\ref ohFunctionCount ()\n
+\ref ohGroup ()\n
+\ref ohGroupList ()\n
+\ref ohGroupSize ()\n
+\ref ohListEnumeratedClasses ()\n
+\ref ohListEnumeratedPairs ()\n
+\ref ohListEnumeratedTypes ()\n
+\ref ohLogFile ()\n
+\ref ohLogLevel ()\n
+\ref ohLogSetConsole ()\n
+\ref ohLogSetFile ()\n
+\ref ohLogSetLevel ()\n
+\ref ohLogWriteMessage ()\n
+\ref ohObjectCallerAddress ()\n
+\ref ohObjectCallerKey ()\n
+\ref ohObjectClassName ()\n
+\ref ohObjectCreationTime ()\n
+\ref ohObjectExists ()\n
+\ref ohObjectIsOrphan ()\n
+\ref ohObjectIsPermanent ()\n
+\ref ohObjectLoad ()\n
+\ref ohObjectLoadString ()\n
+\ref ohObjectPrecedentIDs ()\n
+\ref ohObjectPropertyNames ()\n
+\ref ohObjectPropertyValues ()\n
+\ref ohObjectPropertyValues2 ()\n
+\ref ohObjectSave ()\n
+\ref ohObjectSaveString ()\n
+\ref ohObjectUpdateCounter ()\n
+\ref ohObjectUpdateTime ()\n
+\ref ohPack ()\n
+\ref ohRange ()\n
+\ref ohRangeRetrieveError ()\n
+\ref ohRemoveInvalidColumns ()\n
+\ref ohRemoveInvalidRows ()\n
+\ref ohRepositoryCollectGarbage ()\n
+\ref ohRepositoryDeleteAllObjects ()\n
+\ref ohRepositoryDeleteObject ()\n
+\ref ohRepositoryListObjectIDs ()\n
+\ref ohRepositoryLogAllObjects ()\n
+\ref ohRepositoryLogObject ()\n
+\ref ohRepositoryObjectCount ()\n
+\ref ohStack ()\n
+\ref ohStringConcatenate ()\n
+\ref ohStringSplit ()\n
+\ref ohTrigger ()\n
+\ref ohVbaError ()\n
+\ref ohVersion ()\n
+
+
+*/
+
