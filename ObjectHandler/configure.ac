@@ -54,17 +54,17 @@ AC_LANG([C++])
 AC_PATH_PROG([DOXYGEN], [doxygen])
 AC_PATH_PROG([SED], [sed])
 
-# Configure and validate the path to gensrc
-
-AC_ARG_WITH([gensrc],
-            AC_HELP_STRING([--with-gensrc=/path/to/gensrc],
-                           [Specify the path to gensrc]),
-            [gensrc_path=${withval}],
-            [AC_MSG_ERROR([You must specify the location of gensrc: "./configure --with-gensrc=path/to/gensrc"])])
-AC_CHECK_FILE([${gensrc_path}/gensrc.py], [],
-            [AC_MSG_ERROR([Unable to locate script gensrc.py in specified gensrc directory])])
-AC_ARG_VAR(gensrc_dir, path to gensrc)
-AC_SUBST(gensrc_dir, [${gensrc_path}])
+## Configure and validate the path to gensrc
+#
+#AC_ARG_WITH([gensrc],
+#            AC_HELP_STRING([--with-gensrc=/path/to/gensrc],
+#                           [Specify the path to gensrc]),
+#            [gensrc_path=${withval}],
+#            [AC_MSG_ERROR([You must specify the location of gensrc: "./configure --with-gensrc=path/to/gensrc"])])
+#AC_CHECK_FILE([${gensrc_path}/gensrc.py], [],
+#            [AC_MSG_ERROR([Unable to locate script gensrc.py in specified gensrc directory])])
+#AC_ARG_VAR(gensrc_dir, path to gensrc)
+#AC_SUBST(gensrc_dir, [${gensrc_path}])
 
 # Done, output the configured files
 
@@ -78,7 +78,6 @@ AC_CONFIG_FILES([
     Examples/ExampleObjects/Makefile
     Examples/C++/Makefile
     Examples/xl/Makefile
-    gensrc/Makefile
     Makefile
     oh/conversions/Makefile
     oh/enumerations/Makefile
