@@ -318,6 +318,16 @@ namespace ObjectHandler {
     }
 
     std::string SerializationFactory::saveObjectString(
+        const boost::shared_ptr<ObjectHandler::Object> &object) {
+        std::ostringstream os;
+        boost::archive::xml_oarchive oa(os);
+        std::vector<boost::shared_ptr<ObjectHandler::ValueObject> > v;
+        v.push_back(object->properties());
+        register_out(oa, v);
+		return os.str();
+    }
+
+    std::string SerializationFactory::saveObjectString(
         const std::vector<boost::shared_ptr<ObjectHandler::Object> > &objectList,
         bool forceOverwrite /* TODO : we need to remove this arg */) {
 

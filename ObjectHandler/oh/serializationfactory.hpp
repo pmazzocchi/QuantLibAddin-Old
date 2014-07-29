@@ -73,6 +73,10 @@ namespace ObjectHandler {
             bool forceOverwrite,
 			bool includeGroups = true);
 
+        //! Write the object to the given string.
+        virtual std::string saveObjectString(
+            const boost::shared_ptr<Object>&);
+
         //! Write the object(s) to the given string.
         virtual std::string saveObjectString(
             const std::vector<boost::shared_ptr<Object> >&,
