@@ -100,8 +100,10 @@ namespace ObjectHandler {
     boost::shared_ptr<Object> SerializationFactory::recreateObject( 
         boost::shared_ptr<ObjectHandler::ValueObject> valueObject) const {
 
-        CreatorMap::const_iterator i = creatorMap_().find(valueObject->className());
-        OH_REQUIRE(i != creatorMap_().end(), "No creator for class " << valueObject->className());
+        std::string className = valueObject->className();
+        OH_REQUIRE(!className.empty(), "valueobject classname is null.");
+        CreatorMap::const_iterator i = creatorMap_().find(className);
+        OH_REQUIRE(i != creatorMap_().end(), "No creator for class '" << className << "'");
         Creator creator = i->second;
         boost::shared_ptr<ObjectHandler::Object> object = creator(valueObject);
         return object;
