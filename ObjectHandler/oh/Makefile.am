@@ -2,6 +2,7 @@ AM_CPPFLAGS = -I${top_srcdir}
 includedir = $(prefix)/include/oh
 
 include_HEADERS = \
+    addin.hpp \
     config.hpp \
     exception.hpp \
     group.hpp \
@@ -32,6 +33,7 @@ LDFLAGS += -llog4cxx
 endif
 
 libObjectHandler_la_SOURCES = \
+    addin.cpp \
     logger.cpp \
     processor.cpp \
     repository.cpp \
