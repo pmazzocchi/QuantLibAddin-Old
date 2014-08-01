@@ -432,6 +432,14 @@
 			Name="utilities"
 			>
 			<File
+				RelativePath=".\oh\addin.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\oh\addin.hpp"
+				>
+			</File>
+			<File
 				RelativePath="oh\auto_link.hpp"
 				>
 			</File>
