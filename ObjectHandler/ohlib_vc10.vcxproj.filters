@@ -84,6 +84,9 @@
     <ClInclude Include="oh\utilities.hpp">
       <Filter>utilities</Filter>
     </ClInclude>
+    <ClInclude Include="oh\addin.hpp">
+      <Filter>utilities</Filter>
+    </ClInclude>
     <ClInclude Include="oh\enumerations\enumregistry.hpp">
       <Filter>enumerations</Filter>
     </ClInclude>
@@ -117,6 +120,9 @@
       <Filter>utilities</Filter>
     </ClCompile>
     <ClCompile Include="oh\utilities.cpp">
+      <Filter>utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="oh\addin.cpp">
       <Filter>utilities</Filter>
     </ClCompile>
     <ClCompile Include="oh\enumerations\enumregistry.cpp">
