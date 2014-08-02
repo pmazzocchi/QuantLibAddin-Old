@@ -444,6 +444,14 @@
 				RelativePath="oh\utilities.hpp"
 				>
 			</File>
+			<File
+				RelativePath="oh\addin.cpp"
+				>
+			</File>
+			<File
+				RelativePath="oh\addin.hpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="enumerations"

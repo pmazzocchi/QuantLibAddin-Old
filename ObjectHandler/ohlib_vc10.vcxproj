@@ -235,6 +235,7 @@
     <ClInclude Include="oh\auto_link.hpp" />
     <ClInclude Include="oh\logger.hpp" />
     <ClInclude Include="oh\utilities.hpp" />
+    <ClInclude Include="oh\addin.hpp" />
     <ClInclude Include="oh\enumerations\enumregistry.hpp" />
     <ClInclude Include="oh\enumerations\registry.hpp" />
     <ClInclude Include="oh\enumerations\typefactory.hpp" />
@@ -248,6 +249,7 @@
     <ClCompile Include="oh\serializationfactory.cpp" />
     <ClCompile Include="oh\logger.cpp" />
     <ClCompile Include="oh\utilities.cpp" />
+    <ClCompile Include="oh\addin.cpp" />
     <ClCompile Include="oh\enumerations\enumregistry.cpp" />
   </ItemGroup>
   <ItemGroup>
