@@ -25,10 +25,10 @@
 #ifndef oh_defines_hpp
 #define oh_defines_hpp
 
-//#if BOOST_GCC >= 40700
+#ifdef __GNUC__
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wunused-local-typedefs"
-//#endif
+#endif
 
 #include <boost/config.hpp>
 #include <boost/version.hpp>
