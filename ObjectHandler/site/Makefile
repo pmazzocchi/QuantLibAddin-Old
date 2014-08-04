@@ -1,8 +1,8 @@
 
 DOXYGEN=/home/erik/doxygen-1.8.7/bin/doxygen
 
-all : gensrc.doxy
-	$(DOXYGEN) gensrc.doxy
+all : reposit.doxy
+	$(DOXYGEN) reposit.doxy
 	cp tabs.css html
 	cp ql.css html
 	mkdir -p html/images

@@ -23,6 +23,8 @@
 
 /*! \page history Version History
 
+\section idx_hist_1 Overview
+
 <strong>Release 1.4.0 - June 2014</strong>
 
 - When generating documentation files, suppress whitespace before ref directive

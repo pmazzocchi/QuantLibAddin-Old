@@ -1,12 +1,4 @@
 
-/*
-CSS file for ObjectHandler, gensrc, QuantLibAddin, and QuantLibXL.
-
-There is a glitch in Microsoft Compiled HTML Help (*.chm) files
-which causes images from this CSS file to be excluded.  A workaround
-is implemented in file license.docs.
-*/
-
 body {
     position: relative;
     font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
@@ -86,7 +78,7 @@ body {
 }
 #sidebar li {
     margin: 0px;
-    border-bottom: 2px solid #FDA1A4;
+    border-bottom: 2px solid #A1CFFF;
 }
 #sidebar li.menuheader {
     border-bottom: 0px;
@@ -102,7 +94,7 @@ body {
     outline: none;
 }
 #sidebar a:hover {
-    color: #CB232A;
+    color: #074BB4;
 }
 #sidebar li.menuheader a {
     padding: 5px 0px 5px 30px;
@@ -127,14 +119,14 @@ body {
     font-family: sans-serif;
     font-size: 10px;
     text-align: center;
-    color: #CB232A;
+    color: #074BB4;
     padding-top: 22px;
     line-height: 125%;
 }
 
 #footer a, #footer a.focus, #footer a.hover, #footer a.active, #footer a.visited {
     text-decoration: underline;
-    color: #CB232A;
+    color: #074BB4;
     background-color: transparent; /* override doxygen setting*/
 }
 
