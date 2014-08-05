@@ -21,14 +21,29 @@
  The members of the QuantLib Group are listed in the QuantLib License
 */
 
-/*! \page installation Installation
+/*! \page build_git_swig_windows Building the reposit SWIG Module On Windows From A git Clone
 
-\section inst_sec_1 Overview
+<div align="center"><small><a href="installation.html">back to installation index</a></small></div>
 
-\ref build_release_swig_windows \n
-\ref build_release_swig_linux \n
-\ref build_git_swig_windows \n
-\ref build_git_swig_linux \n
+\section build_git_swig_windows_sec_1 Overview
+
+C:\reposit
+C:\reposit\quantlib
+C:\reposit\swig
+
+- Download pcre-8.35.zip to C:\reposit and uncompress:
+
+C:\reposit\pcre-8.35
+
+- Use cmake to create the pcre build files as explained in file
+  NON-AUTOTOOLS-BUILD.  This creates the solution file below, open it and build
+  it:
+
+C:\reposit\pcre-8.35\PCRE.sln
+
+- Open the swig solution file below and build that:
+
+C:\reposit\swig\swig_vc9.sln
 
 */
 

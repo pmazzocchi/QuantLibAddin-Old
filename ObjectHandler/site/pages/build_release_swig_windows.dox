@@ -21,14 +21,18 @@
  The members of the QuantLib Group are listed in the QuantLib License
 */
 
-/*! \page installation Installation
+/*! \page build_release_swig_windows Building the reposit SWIG Module On Windows From A Release
 
-\section inst_sec_1 Overview
+<div align="center"><small><a href="installation.html">back to installation index</a></small></div>
 
-\ref build_release_swig_windows \n
-\ref build_release_swig_linux \n
-\ref build_git_swig_windows \n
-\ref build_git_swig_linux \n
+\section build_release_swig_windows_sec_1 Overview
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+culpa qui officia deserunt mollit anim id est laborum.
 
 */
 
