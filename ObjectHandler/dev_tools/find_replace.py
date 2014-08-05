@@ -43,9 +43,11 @@ import shutil
 # ROOT_DIRS - The list of root folders from which
 # you want the find/replace to begin.
 ROOT_DIRS = (
-    #'/media/windows/linux/repos/reposit/swig',
-    #"/media/windows/linux/repos/reposit/swig/Examples/reposit/complex/ComplexLibAddin/swig",
-    "/media/windows/linux/repos/reposit/quantlib/QuantLibAddin2/swig/typemaps",
+    #'C:/erik/ql/R01020x-branch/log4cxx',
+    '/media/windows/linux/repos/quantlib/gensrc',
+    '/media/windows/linux/repos/quantlib/ObjectHandler',
+    '/media/windows/linux/repos/quantlib/QuantLibAddin',
+    '/media/windows/linux/repos/quantlib/QuantLibXL'
 )
 
 # CALLBACK FUNCTIONS - Called from regexes which require multiple passes
@@ -71,29 +73,10 @@ SUBSTITUTIONS = (
 
 ##  1) Simple
 ##  Straight find/replace.
-   (re.compile(r'\brp_xll\b'), 'rp_tm_xll_cod'),
-   (re.compile(r'\brp_add_in\b'), 'rp_tm_add_prm'),
-   (re.compile(r'\brp_add_call\b'), 'rp_tm_add_cll'),
-   (re.compile(r'\brp_add_cnv\b'), 'rp_tm_add_cnv'),
-   (re.compile(r'\brp_add_typ\b'), 'rp_tm_add_ret'),
-   (re.compile(r'\brp_default\b'), 'rp_tm_default'),
-   (re.compile(r'\brp_obj_class\b'), 'rp_tm_obj_cls'),
-   (re.compile(r'\brp_obj_ret\b'), 'rp_tm_obj_rdc'),
-   (re.compile(r'\brp_obj_typ\b'), 'rp_tm_obj_prm'),
-   (re.compile(r'\brp_ser_cnv\b'), 'rp_tm_cre_cnv'),
-   (re.compile(r'\brp_val_call\b'), 'rp_tm_val_ser'),
-   (re.compile(r'\brp_val_cnv\b'), 'rp_tm_val_cnv'),
-   (re.compile(r'\brp_val_ctor_init\b'), 'rp_tm_val_ini'),
-   (re.compile(r'\brp_val_declare\b'), 'rp_tm_val_dcl'),
-   (re.compile(r'\brp_val_in\b'), 'rp_tm_val_prm'),
-   (re.compile(r'\brp_val_prop\b'), 'rp_tm_val_nam'),
-   (re.compile(r'\brp_xll_call_obj\b'), 'rp_tm_xll_cll_obj'),
-   (re.compile(r'\brp_xll_call_val\b'), 'rp_tm_xll_cll_val'),
-   (re.compile(r'\brp_xll_cnv\b'), 'rp_tm_xll_cnv'),
-   (re.compile(r'\brp_xll_in\b'), 'rp_tm_xll_prm'),
-   (re.compile(r'\brp_xll_out\b'), 'rp_tm_xll_ret'),
-   (re.compile(r'\brp_xll_ret\b'), 'rp_tm_xll_rdc'),
+#   (re.compile('aaa'), 'bbb'),
 
+##  1B) Match on word boundaries.
+#   (re.compile(r'\baaa\b'), 'bbb'),
 
 ##  2) Group
 ##  Use parentheses to indicate group(s) in the find text.
@@ -115,11 +98,11 @@ SUBSTITUTIONS = (
 #   (re.compile('abcDEFghi'), toLower),
 
 ##  Frequently used
-#    (re.compile('1_4_0'), '1_5_0'),
-#    (re.compile('1\.4\.0'), '1.5.0'),
-#    (re.compile('0x010400'), '0x010500'),
-#    (re.compile('R010401f0'), 'R010500f0'),
-#    (re.compile('0\.10\.0d'), '0.10.0e'),
+    (re.compile('1_4_0'), '1_5_0'),
+    (re.compile('1\.4\.0'), '1.5.0'),
+    (re.compile('0x010400'), '0x010500'),
+    (re.compile('R010401f0'), 'R010500f0'),
+    (re.compile('0\.10\.0d'), '0.10.0e'),
 )
 
 # INCLUDE_FILES
@@ -129,8 +112,7 @@ SUBSTITUTIONS = (
 
 INCLUDE_FILES = (
 
-    #re.compile(r'^reposit\.cxx$'),
-    re.compile(r'^.+\.i$'),
+#    re.compile(r'^.+\.[ch]pp$'),
 
 )
 
@@ -139,60 +121,60 @@ INCLUDE_FILES = (
 
 IGNORE_FILES = (
 
-#    re.compile('^.+\.bmp$'),
-#    re.compile('^.+\.exe$'),
-#    re.compile('^.+\.exp$'),
-#    re.compile('^.+\.ico$'),
-#    re.compile('^.+\.jpg$'),
-#    re.compile('^.+\.la$'),
-#    re.compile('^.+\.lib$'),
-#    re.compile('^.+\.log$'),
-#    re.compile('^.+\.ncb$'),
-#    re.compile('^.+\.o$'),
-#    re.compile('^.+\.pdf$'),
-#    re.compile('^.+\.plg$'),
-#    re.compile('^.+\.png$'),
-#    re.compile('^.+\.pyc$'),
-#    re.compile('^.+\.xls$'),
-#    re.compile('^.+~$'),
-#    re.compile('^\.'),
-#
-#    re.compile('^Announce\.txt$'),
-#    re.compile('^ChangeLog\.txt$'),
-#    re.compile('^changes\..+$'),
-#    re.compile('^config\.status$'),
-#    re.compile('^configure$'),
-#    re.compile('^design\.docs$'),
-#    re.compile('^history\.docs$'),
-#    re.compile('^libtool$'),
-#    re.compile('^Makefile$'),
-#    re.compile('^Makefile\.in$'),
-#    re.compile('^NEWS\.txt$'),
-#    re.compile('^News\.txt$'),
-#    re.compile('^objecthandler\.cpp$'),
-#    re.compile('^ohfunctions\.cpp$'),
-#    re.compile('^todonando\.txt$'),
+    re.compile('^.+\.bmp$'),
+    re.compile('^.+\.exe$'),
+    re.compile('^.+\.exp$'),
+    re.compile('^.+\.ico$'),
+    re.compile('^.+\.jpg$'),
+    re.compile('^.+\.la$'),
+    re.compile('^.+\.lib$'),
+    re.compile('^.+\.log$'),
+    re.compile('^.+\.ncb$'),
+    re.compile('^.+\.o$'),
+    re.compile('^.+\.pdf$'),
+    re.compile('^.+\.plg$'),
+    re.compile('^.+\.png$'),
+    re.compile('^.+\.pyc$'),
+    re.compile('^.+\.xls$'),
+    re.compile('^.+~$'),
+    re.compile('^\.'),
+
+    re.compile('^Announce\.txt$'),
+    re.compile('^ChangeLog\.txt$'),
+    re.compile('^changes\..+$'),
+    re.compile('^config\.status$'),
+    re.compile('^configure$'),
+    re.compile('^design\.docs$'),
+    re.compile('^history\.docs$'),
+    re.compile('^libtool$'),
+    re.compile('^Makefile$'),
+    re.compile('^Makefile\.in$'),
+    re.compile('^NEWS\.txt$'),
+    re.compile('^News\.txt$'),
+    re.compile('^objecthandler\.cpp$'),
+    re.compile('^ohfunctions\.cpp$'),
+    re.compile('^todonando\.txt$'),
 )
 
 # IGNORE_DIRS
 # Regexes to indicate directories to be ignored by the find/replace.
 
 IGNORE_DIRS = (
-#    re.compile('^\.'),
-#    re.compile('^\.svn$'),
-#    re.compile('^autom4te\.cache$'),
-#    re.compile('^build$'),
-#    re.compile('^configure$'),
-#    re.compile('^dev_tools$'),
-#    re.compile('^framework$'),
-#    re.compile('^html$'),
-#    re.compile('^Launcher$'),
-#    re.compile('^lib$'),
-#    re.compile('^log4cxx$'),
-#    re.compile('^QuantLib$'),
-#    re.compile('^QuantLib-site$'),
-#    re.compile('^QuantLib-SWIG$'),
-#    re.compile('^Workbooks$'),
+    re.compile('^\.'),
+    re.compile('^\.svn$'),
+    re.compile('^autom4te\.cache$'),
+    re.compile('^build$'),
+    re.compile('^configure$'),
+    re.compile('^dev_tools$'),
+    re.compile('^framework$'),
+    re.compile('^html$'),
+    re.compile('^Launcher$'),
+    re.compile('^lib$'),
+    re.compile('^log4cxx$'),
+    re.compile('^QuantLib$'),
+    re.compile('^QuantLib-site$'),
+    re.compile('^QuantLib-SWIG$'),
+    re.compile('^Workbooks$'),
 )
 
 def prompt_exit(msg='', status=0):
@@ -268,8 +250,6 @@ def processDir(ignore, dirPath, nameList):
             prompt_exit('unknown file type: ' + fullPath)
         i -= 1
 
-print "begin"
-
 try:
     opts, args = getopt.getopt(sys.argv[1:], 'dsvh', 'help' )
 except getopt.GetoptError:
@@ -290,8 +270,6 @@ if execSub == -1:
     usage()
 
 for rootDir in ROOT_DIRS:
-
-    print rootDir
 
     if not os.path.isdir(rootDir):
         prompt_exit('invalid directory: ' + rootDir)
