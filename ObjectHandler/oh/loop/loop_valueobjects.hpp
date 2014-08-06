@@ -16,13 +16,6 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-// This file was generated automatically by gensrc.py.  If you edit this file
-// manually then your changes will be lost the next time gensrc runs.
-
-// This source code file was generated from the following stub:
-//      gensrc/gensrc/stubs/stub.loop.file
-
-
 #include <boost/bind.hpp>
 
 namespace ObjectHandler {

@@ -16,13 +16,7 @@
  FOR A PARTICULAR PURPOSE.  See the license for more details.
 */
 
-// This file was generated automatically by gensrc.py.  If you edit this file
-// manually then your changes will be lost the next time gensrc runs.
-
-// This source code file was generated from the following stub:
-//      gensrc/gensrc/stubs/stub.excel.numfunc
-
-// Indicate the number of functions in this Addin.  The value is calculated by
-// gensrc and may be used by the Addin to return this information to the user.
+// Indicate the number of functions in this Addin.  The value may be used by
+// the Addin to return this information to the user.
 
 #define FUNCTION_COUNT 52
