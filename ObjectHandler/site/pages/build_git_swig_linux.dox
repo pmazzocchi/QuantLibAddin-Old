@@ -115,7 +115,7 @@ cd $REPOSIT_DIR/swig/Examples/simple/Main
 
 cd $REPOSIT_DIR/swig/Examples/reposit/complex
 export LD_LIBRARY_PATH=$REPOSIT_DIR/install/lib:$REPOSIT_DIR/swig/Examples/reposit/complex/lib
-make SWIG
+make SWIGCPP
 make
 cd $REPOSIT_DIR/swig/Examples/reposit/complex/ComplexLibAddin/Main
 ./mainComplexLibAddin
