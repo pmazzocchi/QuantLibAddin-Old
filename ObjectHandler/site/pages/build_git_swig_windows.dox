@@ -27,9 +27,11 @@
 
 \section build_git_swig_windows_sec_1 Overview
 
+This document explains how to build the reposit C++ and Excel binaries on Windows.
+
 \section build_git_swig_windows_sec_1b Compiler
 
-The only compiler is Visual Studio 2008, also known as VC9.  The only supported configuration is Release, 32 bit.
+The only supported compiler is Visual Studio 2008, also known as VC9.  The only supported configuration is Release, 32 bit.
 
 \section build_git_swig_windows_sec_2 Build Directory
 
@@ -83,7 +85,7 @@ Build the solution:
 $REPOSIT_DIR\swig\swig_vc9.sln
 \endverbatim
 
-\section build_git_swig_windows_sec_5 Simple
+\subsection build_git_swig_windows_sec_5 Example - Simple
 
 Build the solution:
 
@@ -104,7 +106,7 @@ $REPOSIT_DIR\swig\Examples\reposit\simple\Release\AddinXl.xll
 $REPOSIT_DIR\swig\Examples\reposit\simple\AddinXl\AddinXl.xlsx
 \endverbatim
 
-\section build_git_swig_windows_sec_6 Complex
+\subsection build_git_swig_windows_sec_6 Example - Complex
 
 Build the solution:
 
