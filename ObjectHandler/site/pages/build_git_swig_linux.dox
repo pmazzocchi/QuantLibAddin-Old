@@ -21,7 +21,7 @@
  The members of the QuantLib Group are listed in the QuantLib License
 */
 
-/*! \page build_git_swig_linux Building the reposit SWIG Module On Linux From A git Clone
+/*! \page build_git_swig_linux Building reposit On Linux From A git Clone
 
 <div align="center"><small><a href="installation.html">back to installation index</a></small></div>
 
@@ -29,11 +29,11 @@
 
 This document explains how to build the reposit C++ binaries on Linux.
 
-\section build_git_swig_windows_sec_2 Build Directory
+\section build_git_swig_linux_sec_2 Build Directory
 
 Create a directory on your hard drive where you will do the build.  Set the REPOSIT_DIR environment variable equal to the new directory.
 
-\section build_git_swig_windows_sec_3 Boost
+\section build_git_swig_linux_sec_3 Boost
 
 Download boost_1_52_0.tar.gz to $REPOSIT_DIR.
 
@@ -45,13 +45,13 @@ cd $REPOSIT_DIR/boost_1_52_0
 ./b2 install
 \endverbatim
 
-\section build_git_swig_windows_sec_4 ObjectHandler
+\section build_git_swig_linux_sec_4 ObjectHandler
 
 Clone the repo.
 
 \verbatim
 cd $REPOSIT_DIR
-git clone -b reposit --depth 1 https://github.com/eehlers/quantlib.git
+git clone -b R000100f0 --depth 1 https://github.com/eehlers/quantlib.git
 \endverbatim
 
 Configure and build ObjectHandler.
@@ -73,7 +73,7 @@ cd $REPOSIT_DIR/quantlib/ObjectHandler/Examples/C++
 ./ExampleCpp
 \endverbatim
 
-\section build_git_swig_windows_sec_5 PCRE
+\section build_git_swig_linux_sec_5 PCRE
 
 Download pcre-8.35.tar.gz to $REPOSIT_DIR.
 
@@ -87,13 +87,13 @@ cd $REPOSIT_DIR/pcre-8.35
 make install
 \endverbatim
 
-\section build_git_swig_windows_sec_6 SWIG
+\section build_git_swig_linux_sec_6 SWIG
 
 Clone the repo.
 
 \verbatim
 cd $REPOSIT_DIR
-git clone --depth 1 https://github.com/eehlers/swig.git
+git clone -b R000100f0 --depth 1 https://github.com/eehlers/swig.git
 \endverbatim
 
 Configure and build SWIG.
@@ -109,7 +109,7 @@ make
 #make install
 \endverbatim
 
-\subsection build_git_swig_windows_sec_7 Example - Simple
+\subsection build_git_swig_linux_sec_7 Example - Simple
 
 \verbatim
 cd $REPOSIT_DIR/swig/Examples/reposit/simple
@@ -120,7 +120,7 @@ cd $REPOSIT_DIR/swig/Examples/simple/Main
 ./mainSimpleLibAddin
 \endverbatim
 
-\subsection build_git_swig_windows_sec_8 Example - Complex
+\subsection build_git_swig_linux_sec_8 Example - Complex
 
 \verbatim
 cd $REPOSIT_DIR/swig/Examples/reposit/complex
@@ -131,7 +131,7 @@ cd $REPOSIT_DIR/swig/Examples/reposit/complex/ComplexLibAddin/Main
 ./mainComplexLibAddin
 \endverbatim
 
-\section build_git_swig_windows_sec_9 QuantLib
+\section build_git_swig_linux_sec_9 QuantLib
 
 Configure and build QuantLib.
 
@@ -144,7 +144,7 @@ cd $REPOSIT_DIR/quantlib/QuantLib
 make install
 \endverbatim
 
-\section build_git_swig_windows_sec_10 QuantLibAddin
+\section build_git_swig_linux_sec_10 QuantLibAddin
 
 Configure and build QuantLibAddin.
 
