@@ -27,41 +27,36 @@
 
 \section build_git_swig_linux_sec_1 Overview
 
+This document explains how to build the reposit C++ binaries on Linux.
 
-Linux
-=======
+\section build_git_swig_windows_sec_2 Build Directory
 
-# Create a directory for your work:
+Create a directory on your hard drive where you will do the build.  Set the REPOSIT_DIR environment variable equal to the new directory.
 
-mkdir /home/erik/reposit
+\section build_git_swig_windows_sec_3 Boost
 
-# Set the REPOSIT_DIR environment variable equal to the new directory:
+Download boost_1_52_0.tar.gz to $REPOSIT_DIR.
 
-export REPOSIT_DIR=/home/erik/reposit
-#export PATH=$PATH:$REPOSIT_DIR/install/bin
-
-boost
-=====
-
-# Download boost_1_52_0.tar.gz to $REPOSIT_DIR.
-
+\verbatim
 cd $REPOSIT_DIR
 tar xzvf boost_1_52_0.tar.gz
 cd $REPOSIT_DIR/boost_1_52_0
 ./bootstrap.sh --prefix=$REPOSIT_DIR/install
 ./b2 install
+\endverbatim
 
-ObjectHandler
-=============
+\section build_git_swig_windows_sec_4 ObjectHandler
 
+Clone the repo.
+
+\verbatim
 cd $REPOSIT_DIR
+git clone -b reposit --depth 1 https://github.com/eehlers/quantlib.git
+\endverbatim
 
-# This repo contains a version of ObjectHandler that has no dependency on gensrc.
+Configure and build ObjectHandler.
 
-git clone -b reposit https://github.com/eehlers/quantlib.git
-
-# Configure and build ObjectHandler.
-
+\verbatim
 cd $REPOSIT_DIR/quantlib/ObjectHandler
 ./autogen.sh
 ./configure --without-log4cxx \
@@ -69,70 +64,91 @@ cd $REPOSIT_DIR/quantlib/ObjectHandler
     CPPFLAGS=-I$REPOSIT_DIR/install/include \
     LDFLAGS=-L$REPOSIT_DIR/install/lib
 make install
+\endverbatim
 
-# Test.
+Test.
 
+\verbatim
 cd $REPOSIT_DIR/quantlib/ObjectHandler/Examples/C++
 ./ExampleCpp
+\endverbatim
 
-pcre
-====
+\section build_git_swig_windows_sec_5 PCRE
 
-# Download pcre-8.35.tar.gz to $REPOSIT_DIR.
+Download pcre-8.35.tar.gz to $REPOSIT_DIR.
 
+Configure and build pcre.
+
+\verbatim
 cd $REPOSIT_DIR
 tar xzvf pcre-8.35.tar.gz
 cd $REPOSIT_DIR/pcre-8.35
 ./configure --prefix=$REPOSIT_DIR/install
 make install
+\endverbatim
 
-SWIG
-====
+\section build_git_swig_windows_sec_6 SWIG
 
+Clone the repo.
+
+\verbatim
 cd $REPOSIT_DIR
-
 git clone --depth 1 https://github.com/eehlers/swig.git
+\endverbatim
 
+Configure and build SWIG.
+
+\verbatim
 cd $REPOSIT_DIR/swig
-
 ./autogen.sh
-
 ./configure --prefix=$REPOSIT_DIR/install \
     PCRE_CONFIG=$REPOSIT_DIR/install/bin/pcre-config \
     CPPFLAGS=-I$REPOSIT_DIR/install/include \
     LDFLAGS=-L$REPOSIT_DIR/install/lib
 make
 #make install
+\endverbatim
 
-# Build & run the examples.
+\subsection build_git_swig_windows_sec_7 Example - Simple
 
+\verbatim
 cd $REPOSIT_DIR/swig/Examples/reposit/simple
 export LD_LIBRARY_PATH=$REPOSIT_DIR/install/lib:$REPOSIT_DIR/swig/Examples/reposit/simple/lib
 make SWIG
 make
 cd $REPOSIT_DIR/swig/Examples/simple/Main
 ./mainSimpleLibAddin
+\endverbatim
 
+\subsection build_git_swig_windows_sec_8 Example - Complex
+
+\verbatim
 cd $REPOSIT_DIR/swig/Examples/reposit/complex
 export LD_LIBRARY_PATH=$REPOSIT_DIR/install/lib:$REPOSIT_DIR/swig/Examples/reposit/complex/lib
 make SWIG
 make
 cd $REPOSIT_DIR/swig/Examples/reposit/complex/ComplexLibAddin/Main
 ./mainComplexLibAddin
+\endverbatim
 
-QuantLib
-========
+\section build_git_swig_windows_sec_9 QuantLib
 
+Configure and build QuantLib.
+
+\verbatim
 cd $REPOSIT_DIR/quantlib/QuantLib
 ./autogen.sh
 ./configure --prefix=$REPOSIT_DIR/install \
     --with-boost-include=$REPOSIT_DIR/install/include \
     --with-boost-lib=$REPOSIT_DIR/install/lib
 make install
+\endverbatim
 
-QuantLibAddin
-=============
+\section build_git_swig_windows_sec_10 QuantLibAddin
 
+Configure and build QuantLibAddin.
+
+\verbatim
 cd $REPOSIT_DIR/quantlib/QuantLibAddin2
 ./autogen.sh
 ./configure --prefix=$REPOSIT_DIR/install \
@@ -142,10 +158,14 @@ cd $REPOSIT_DIR/quantlib/QuantLibAddin2
 export LD_LIBRARY_PATH=$REPOSIT_DIR/install/lib
 make SWIG
 make
+\endverbatim
 
-# Test.
+Run the C++ executable.
 
-cd $REPOSIT_DIR/reposit/QuantLibAddin/Main
+\verbatim
+cd $REPOSIT_DIR/reposit/quantlib/QuantLibAddin2/Clients/Cpp
+./ClientCppDemo
+\endverbatim
 
 */
 
