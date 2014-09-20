@@ -27,23 +27,132 @@
 
 \section build_git_swig_windows_sec_1 Overview
 
-C:\reposit
-C:\reposit\quantlib
-C:\reposit\swig
+\section build_git_swig_windows_sec_1b Compiler
 
-- Download pcre-8.35.zip to C:\reposit and uncompress:
+The only compiler is Visual Studio 2008, also known as VC9.  The only supported configuration is Release, 32 bit.
 
-C:\reposit\pcre-8.35
+\section build_git_swig_windows_sec_2 Build Directory
 
-- Use cmake to create the pcre build files as explained in file
-  NON-AUTOTOOLS-BUILD.  This creates the solution file below, open it and build
-  it:
+Create a directory on your hard drive where you will do the build.  This document refers to your build directory as $REPOSIT_DIR but you do not need an environment variable by that name.
 
-C:\reposit\pcre-8.35\PCRE.sln
+\section build_git_swig_windows_sec_2a Boost
 
-- Open the swig solution file below and build that:
+Build Boost and configure VC9 to find it.
 
-C:\reposit\swig\swig_vc9.sln
+\section build_git_swig_windows_sec_2b ObjectHandler
+
+Open a git bash prompt in $REPOSIT_DIR and clone the repo:
+
+\verbatim
+git clone -b reposit --depth 1 https://github.com/eehlers/quantlib.git
+\endverbatim
+
+Build the solution:
+
+\verbatim
+$REPOSIT_DIR\quantlib\ObjectHandler\ObjectHandler_vc9.sln
+\endverbatim
+
+\section build_git_swig_windows_sec_3 PCRE
+
+Download pcre-8.35.zip to $REPOSIT_DIR and uncompress:
+
+\verbatim
+$REPOSIT_DIR\pcre-8.35
+\endverbatim
+
+As explained in file NON-AUTOTOOLS-BUILD, use cmake to create the pcre build files.
+
+Build the solution:
+
+\verbatim
+$REPOSIT_DIR\pcre-8.35\build\PCRE.sln
+\endverbatim
+
+\section build_git_swig_windows_sec_4 SWIG
+
+Open a git bash prompt in $REPOSIT_DIR and clone the repo:
+
+\verbatim
+git clone --depth 1 https://github.com/eehlers/swig.git
+\endverbatim
+
+Build the solution:
+
+\verbatim
+$REPOSIT_DIR\swig\swig_vc9.sln
+\endverbatim
+
+\section build_git_swig_windows_sec_5 Simple
+
+Build the solution:
+
+\verbatim
+$REPOSIT_DIR\swig\Examples\reposit\simple\simple.sln
+\endverbatim
+
+Run the executable:
+
+\verbatim
+$REPOSIT_DIR\swig\Examples\reposit\simple\Release\MainSimpleLibAddin.exe
+\endverbatim
+
+Start Excel and load the addin and workbook:
+
+\verbatim
+$REPOSIT_DIR\swig\Examples\reposit\simple\Release\AddinXl.xll
+$REPOSIT_DIR\swig\Examples\reposit\simple\AddinXl\AddinXl.xlsx
+\endverbatim
+
+\section build_git_swig_windows_sec_6 Complex
+
+Build the solution:
+
+\verbatim
+$REPOSIT_DIR\swig\Examples\reposit\complex\complex.sln
+\endverbatim
+
+Run the executable:
+
+\verbatim
+$REPOSIT_DIR\swig\Examples\reposit\complex\Release\MainComplexLibAddin.exe
+\endverbatim
+
+Start Excel and load the addin and workbook:
+
+\verbatim
+$REPOSIT_DIR\swig\Examples\reposit\complex\Release\AddinXl.xll
+$REPOSIT_DIR\swig\Examples\reposit\complex\ComplexLibXL\Workbooks\AddinXl.xlsx
+\endverbatim
+
+\section build_git_swig_windows_sec_7 QuantLib
+
+Build the solution:
+
+\verbatim
+$REPOSIT_DIR\quantlib\QuantLib\QuantLib_vc9.sln
+\endverbatim
+
+\section build_git_swig_windows_sec_8 QuantLibAddin/QuantLibXL
+
+Build the solution:
+
+\verbatim
+$REPOSIT_DIR\quantlib\QuantLibAdin\QuantLibAddin_vc9.sln
+\endverbatim
+
+Run the executable:
+
+\verbatim
+$REPOSIT_DIR\quantlib\QuantLibAddin2\Release\MainQuantLibAddin.exe
+\endverbatim
+
+Start Excel and load the addin and workbook:
+
+\verbatim
+$REPOSIT_DIR\quantlib\QuantLibXL2\xll\QuantLibXL-vc90-mt-1_5_0.xll
+$REPOSIT_DIR\quantlib\QuantLibXL2\Workbooks\EquityOption.xlsx
+\endverbatim
 
 */
 
