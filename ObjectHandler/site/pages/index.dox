@@ -25,12 +25,22 @@
 
 \section idx_overview Overview
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.
+Reposit implements a repository in which objects may be instantiated,
+queried, updated, and destroyed, facilitating deployment of object oriented
+functionality to procedural platforms such as spreadsheets.
+
+The project also provides a utility to parse the header files of a C++ library
+and autogenerate the source code for a corresponding Excel addin.  This makes
+it easy to export the functionality of a C++ library to Excel.
+
+\section idx_quantlib QuantLib
+
+Reposit is a subproject of the <a href="http://quantlib.org">QuantLib</a>
+C++ analytics library and shares the QuantLib project structure with regard to
+distribution and licensing.  The mailing list for reposit is
+<a href="https://lists.sourceforge.net/lists/listinfo/quantlib-users">quantlib-users@lists.sf.net</a>.
+The list archives may be searched
+<a href="https://sourceforge.net/p/quantlib/mailman/quantlib-users/">here</a>.
 
 */
 
