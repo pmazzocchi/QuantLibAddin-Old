@@ -25,8 +25,8 @@
 
 \section inst_sec_1 Overview
 
-\ref build_release_swig_windows \n
-\ref build_release_swig_linux \n
+Reposit is still in the development stage and has not yet been released.  The links below explain how to build a prerelease version of the code by cloning the git repository.  The HOWTOs include instructions for building the object repository, the SWIG module to autogenerate addin source code, and examples of all supported features.
+
 \ref build_git_swig_windows \n
 \ref build_git_swig_linux \n
 

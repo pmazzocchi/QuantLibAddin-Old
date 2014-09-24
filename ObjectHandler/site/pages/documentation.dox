@@ -25,12 +25,17 @@
 
 \section idx_doc_1 Overview
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.
+The code for the object repository is documented at this link:
+
+<a href="docs/ObjectHandler-docs-1.5.0-html/index.html">docs/ObjectHandler-docs-1.5.0-html/index.html</a>
+
+The code for our copy of SWIG is documented at this link:
+
+<a href="docs/swig/index.html">docs/swig/index.html</a>
+
+The page for the reposit SWIG module is:
+
+<a href="docs/swig/Reposit.html">docs/swig/Reposit.html</a>
 
 */
 
