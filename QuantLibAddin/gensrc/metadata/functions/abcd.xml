@@ -932,7 +932,7 @@
       </ReturnValue>
     </Member>
 
-    
+
     <!-- TenorBasis abstract class interfaces -->
     <Member name='qlTenorBasisValue' type='QuantLib::TenorBasis' loopParameter='Dates'>
       <description>Returns the value of simple basis.</description>
@@ -1030,8 +1030,43 @@
       </ReturnValue>
     </Member>
 
+    <!-- AbcdTenorBasis class costructor -->
+    <Constructor name='qlAbcdTenorBasis'>
+      <libraryFunction>AbcdTenorBasis</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='SettlementDate' const='False' default='QuantLib::Date()'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Settlement date.</description>
+          </Parameter>
+          <Parameter name='IborIndex'>
+            <type>QuantLib::IborIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>.</description>
+          </Parameter>
+          <Parameter name='BaseCurve'>
+            <type>QuantLib::YieldTermStructure</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>base rate term structure object ID.</description>
+          </Parameter>
+          <Parameter name='PureAbcdFunction'>
+            <type>QuantLib::PureAbcdFunction</type>
+            <tensorRank>scalar</tensorRank>
+            <description>.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
     <!-- IntegralTenorBasis abstract class interfaces -->
-    <Member name='qlIntegralTenorBasisIntegrate1' type='QuantLib::IntegralTenorBasis' loopParameter='Dates'>
+    <Member name='qlIntegralTenorBasisIntegrate' type='QuantLib::IntegralTenorBasis' loopParameter='Dates'>
       <description>Returns the value of the integrated instantaneous continuous basis over [d, d+tau] with tau being the iborIndex tenor.</description>
       <libraryFunction>integrate</libraryFunction>
       <SupportedPlatforms>
@@ -1183,7 +1218,7 @@
     </Member>
 
     <Member name='qlAbcdIntegralTenorBasisA' type='QuantLib::AbcdIntegralTenorBasis'>
-      <description>Returns the a coefficient in the AbcdIntegralTenorBasis function.</description>
+      <description>Returns the a coefficient in the implicit abcd parametrization of the _simple_ TenorBasis.</description>
       <libraryFunction>a</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
@@ -1199,7 +1234,7 @@
     </Member>
 
     <Member name='qlAbcdIntegralTenorBasisB' type='QuantLib::AbcdIntegralTenorBasis'>
-      <description>Returns the b coefficient in the AbcdIntegralTenorBasis function.</description>
+      <description>Returns the b coefficient in the implicit abcd parametrization of the _simple_ TenorBasis.</description>
       <libraryFunction>b</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
@@ -1215,7 +1250,7 @@
     </Member>
 
     <Member name='qlAbcdIntegralTenorBasisC' type='QuantLib::AbcdIntegralTenorBasis'>
-      <description>Returns the c coefficient in the AbcdIntegralTenorBasis function.</description>
+      <description>Returns the c coefficient in the implicit abcd parametrization of the _simple_ TenorBasis.</description>
       <libraryFunction>c</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
@@ -1231,7 +1266,7 @@
     </Member>
 
     <Member name='qlAbcdIntegralTenorBasisD' type='QuantLib::AbcdIntegralTenorBasis'>
-      <description>Returns the d coefficient in the AbcdIntegralTenorBasis function.</description>
+      <description>Returns the d coefficient in the implicit abcd parametrization of the _simple_ TenorBasis.</description>
       <libraryFunction>d</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>

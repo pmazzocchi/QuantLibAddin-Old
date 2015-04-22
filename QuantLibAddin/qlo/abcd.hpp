@@ -65,6 +65,19 @@ namespace QuantLibAddin {
         //: ObjectHandler::LibraryObject<QuantLib::TenorBasis>(p, permanent) {}
     };
 
+    class AbcdTenorBasis : public TenorBasis {
+    public:
+        AbcdTenorBasis(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& p,
+            QuantLib::Date settlementDate,
+            boost::shared_ptr<QuantLib::IborIndex> iborIndex,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>&,
+            boost::shared_ptr<QuantLib::PureAbcdFunction> abcd,
+            bool permanent);
+    protected:
+        OH_OBJ_CTOR(AbcdTenorBasis, TenorBasis);
+    };
+
     class IntegralTenorBasis : public TenorBasis {
       public:
         OH_OBJ_CTOR(IntegralTenorBasis, TenorBasis);

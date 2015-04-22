@@ -105,6 +105,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::TenorBasis</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::IntegralTenorBasis</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::AbcdIntegralTenorBasis</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::AbcdTenorBasis</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Interpolation2D</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Interpolation</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::LMMCurveState</DataType>

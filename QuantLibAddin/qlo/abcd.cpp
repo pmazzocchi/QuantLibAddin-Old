@@ -48,6 +48,19 @@ namespace QuantLibAddin {
             QuantLib::PureAbcdFunction(a, b, c, d));
     }   
 
+    AbcdTenorBasis::AbcdTenorBasis(
+        const shared_ptr<ObjectHandler::ValueObject>& p,
+        QuantLib::Date settlementDate,
+        shared_ptr<QuantLib::IborIndex> iborIndex,
+        const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
+        shared_ptr<QuantLib::PureAbcdFunction> abcd,
+        bool permanent)
+    : TenorBasis(p, permanent)
+    {
+        libraryObject_ = shared_ptr<QuantLib::AbcdTenorBasis>(new
+            QuantLib::AbcdTenorBasis(settlementDate, iborIndex, baseCurve, abcd));
+    }
+
     AbcdIntegralTenorBasis::AbcdIntegralTenorBasis(
             const shared_ptr<ObjectHandler::ValueObject>& p,
             QuantLib::Date settlementDate,
