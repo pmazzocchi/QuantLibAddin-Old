@@ -5,16 +5,27 @@
   <serializationIncludes>
     <include>qlo/abcd.hpp</include>
     <include>qlo/optimization.hpp</include>
+    <include>qlo/indexes/iborindex.hpp</include>
+    <include>qlo/termstructures.hpp</include>
+
+    <include>ql/indexes/iborindex.hpp</include>
+    <include>ql/termstructures/yieldtermstructure.hpp</include>
   </serializationIncludes>
   <addinIncludes>
     <include>qlo/abcd.hpp</include>
     <include>qlo/optimization.hpp</include>
+    <include>qlo/indexes/iborindex.hpp</include>
+    <include>qlo/termstructures.hpp</include>
+
     <include>ql/termstructures/volatility/abcd.hpp</include>
     <include>ql/termstructures/volatility/abcdcalibration.hpp</include>
+    <include>ql/termstructures/yield/integratedcontinuousbasis.hpp</include>
+    <include>ql/termstructures/yieldtermstructure.hpp</include>
+    <include>ql/indexes/iborindex.hpp</include>
   </addinIncludes>
 
   <copyright>
-    Copyright (C) 2006, 2007 Ferdinando Ametrano
+    Copyright (C) 2006, 2007, 2015 Ferdinando Ametrano
     Copyright (C) 2007 Chiara Fornarola
     Copyright (C) 2006, 2007 Marco Bianchetti
     Copyright (C) 2006, 2007 Cristina Duminuco
@@ -660,6 +671,581 @@
         <tensorRank>scalar</tensorRank>
       </ReturnValue>
     </Member>
+
+    <!-- PureAbcdFunction class costructor -->
+    <Constructor name='qlPureAbcdFunction'>
+      <libraryFunction>PureAbcdFunction</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='A' default='-0.06'>
+            <type>double</type>
+            <tensorRank>scalar</tensorRank>
+            <description>the a coefficient in the abcd parametrization. Used as guess if the object is later calibrated.</description>
+          </Parameter>
+          <Parameter name='B' default='0.17'>
+            <type>double</type>
+            <tensorRank>scalar</tensorRank>
+            <description>the b coefficient in the abcd parametrization. Used as guess if the object is later calibrated.</description>
+          </Parameter>
+          <Parameter name='C' default='0.54'>
+            <type>double</type>
+            <tensorRank>scalar</tensorRank>
+            <description>the c coefficient in the abcd parametrization. Used as guess if the object is later calibrated.</description>
+          </Parameter>
+          <Parameter name='D' default='0.17'>
+            <type>double</type>
+            <tensorRank>scalar</tensorRank>
+            <description>the d coefficient in the abcd parametrization. Used as guess if the object is later calibrated.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <!-- PureAbcdFunction class interfaces -->
+    <Member name='qlPureAbcdFunctionValue' type='QuantLib::PureAbcdFunction' loopParameter='T'>
+      <description>Returns the value of the function [a + b*t] * e^{-c*t} + d.</description>
+      <libraryFunction>operator()</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='T' const='False' exampleValue ='5.0,4.0,3.0,2.0,1.0'>
+            <type>double</type>
+            <tensorRank>vector</tensorRank>
+            <description>time(s).</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPureAbcdFunctionDerivative' type='QuantLib::PureAbcdFunction' loopParameter='T'>
+      <description>Returns the derivative of the function [a + b*t] * e^{-c*t} + d.</description>
+      <libraryFunction>derivative</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='T' const='False' exampleValue ='5.0,4.0,3.0,2.0,1.0'>
+            <type>double</type>
+            <tensorRank>vector</tensorRank>
+            <description>time(s).</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPureAbcdFunctionPrimitive' type='QuantLib::PureAbcdFunction' loopParameter='T'>
+      <description>Returns the primitive of the function [a + b*t] * e^{-c*t} + d.</description>
+      <libraryFunction>primitive</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='T' const='False' exampleValue ='5.0,4.0,3.0,2.0,1.0'>
+            <type>double</type>
+            <tensorRank>vector</tensorRank>
+            <description>time(s).</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPureAbcdFunctionDefiniteIntegral' type='QuantLib::PureAbcdFunction'>
+      <description>Returns the definite integral of the function [a + b*t] * e^{-c*t} + d  between T1 and T2.</description>
+      <libraryFunction>definiteIntegral</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='T1' const='False' exampleValue ='1.0'>
+            <type>double</type>
+            <tensorRank>scalar</tensorRank>
+            <description>integration lower bound time.</description>
+          </Parameter>
+          <Parameter name='T2' const='False' exampleValue ='2.0'>
+            <type>double</type>
+            <tensorRank>scalar</tensorRank>
+            <description>integration upper bound time.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPureAbcdFunctionMaximumLocation' type='QuantLib::PureAbcdFunction'>
+      <description>Returns the location of the Abcd maximum.</description>
+      <libraryFunction>maximumLocation</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Time</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPureAbcdFunctionMaximumValue' type='QuantLib::PureAbcdFunction'>
+      <description>Returns the maximum of the Abcd function.</description>
+      <libraryFunction>maximumValue</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPureAbcdFunctionShortTermValue' type='QuantLib::PureAbcdFunction'>
+      <description>Returns the short term value of the Abcd function.</description>
+      <libraryFunction>shortTermValue</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPureAbcdFunctionLongTermValue' type='QuantLib::PureAbcdFunction'>
+      <description>Returns the long term value of the Abcd function.</description>
+      <libraryFunction>longTermValue</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPureAbcdFunctionA' type='QuantLib::PureAbcdFunction'>
+      <description>Returns the a coefficient in the abcd function.</description>
+      <libraryFunction>a</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPureAbcdFunctionB' type='QuantLib::PureAbcdFunction'>
+      <description>Returns the b coefficient in the abcd function.</description>
+      <libraryFunction>b</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPureAbcdFunctionC' type='QuantLib::PureAbcdFunction'>
+      <description>Returns the c coefficient in the abcd function.</description>
+      <libraryFunction>c</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPureAbcdFunctionD' type='QuantLib::PureAbcdFunction'>
+      <description>Returns the d coefficient in the abcd function.</description>
+      <libraryFunction>d</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    
+    <!-- TenorBasis abstract class interfaces -->
+    <Member name='qlTenorBasisValue' type='QuantLib::TenorBasis' loopParameter='Dates'>
+      <description>Returns the value of simple basis.</description>
+      <libraryFunction>operator()</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Dates' const='False'>
+            <type>QuantLib::Date</type>
+            <tensorRank>vector</tensorRank>
+            <description>date(s).</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlTenorBasisDayCounter' type='QuantLib::TenorBasis'>
+      <description>Returns the DayCounter used by the given TenorBasis object.</description>
+      <libraryFunction>dayCounter</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::DayCounter</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlTenorBasisTimeFromSettlementDate' type='QuantLib::TenorBasis' loopParameter='Date'>
+      <description>Returns the time from the settlement date for the given TenorBasis object.</description>
+      <libraryFunction>timeFromSettlementDate</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!-- This function does not compile on 64-bit Linux so temporarily excluding from C++ addin -->
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Date' exampleValue ="1Y">
+            <type>QuantLib::Date</type>
+            <tensorRank>vector</tensorRank>
+            <description>vector of dates.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Time</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlTenorBasisSettlementDate' type='QuantLib::TenorBasis'>
+      <description>Returns the reference date for the given TenorBasis object.</description>
+      <libraryFunction>settlementDate</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Cpp'/>
+        <SupportedPlatform name='Calc'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Date</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlTenorBasisCalendar' type='QuantLib::TenorBasis'>
+      <description>Returns the calendar used by the given TenorBasis object.</description>
+      <libraryFunction>calendar</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Calendar</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <!-- IntegralTenorBasis abstract class interfaces -->
+    <Member name='qlIntegralTenorBasisIntegrate1' type='QuantLib::IntegralTenorBasis' loopParameter='Dates'>
+      <description>Returns the value of the integrated instantaneous continuous basis over [d, d+tau] with tau being the iborIndex tenor.</description>
+      <libraryFunction>integrate</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Dates' const='False'>
+            <type>QuantLib::Date</type>
+            <tensorRank>vector</tensorRank>
+            <description>date(s).</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlIntegralTenorBasisIntegrate2' type='QuantLib::IntegralTenorBasis'>
+      <description>Returns the value of the integrated instantaneous continuous basis over [d1, d2].</description>
+      <libraryFunction>integrate</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Date1' const='False'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>first date.</description>
+          </Parameter>
+          <Parameter name='Date2' const='False'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>second date.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <!-- AbcdIntegralTenorBasis class costructor -->
+    <Constructor name='qlAbcdIntegralTenorBasis'>
+      <libraryFunction>AbcdIntegralTenorBasis</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='SettlementDate' const='False' default='QuantLib::Date()'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Settlement date.</description>
+          </Parameter>
+          <Parameter name='IborIndex'>
+            <type>QuantLib::IborIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>.</description>
+          </Parameter>
+          <Parameter name='BaseCurve'>
+            <type>QuantLib::YieldTermStructure</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>base rate term structure object ID.</description>
+          </Parameter>
+          <Parameter name='PureAbcdFunction'>
+            <type>QuantLib::PureAbcdFunction</type>
+            <tensorRank>scalar</tensorRank>
+            <description>.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <!-- AbcdIntegralTenorBasis class interfaces -->
+    <Member name='qlAbcdIntegralTenorBasisMaximumLocation' type='QuantLib::AbcdIntegralTenorBasis'>
+      <description>Returns the location of the AbcdIntegralTenorBasis maximum.</description>
+      <libraryFunction>maximumLocation</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Date</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlAbcdIntegralTenorBasisMaximumValue' type='QuantLib::AbcdIntegralTenorBasis'>
+      <description>Returns the maximum of the AbcdIntegralTenorBasis function.</description>
+      <libraryFunction>maximumValue</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlAbcdIntegralTenorBasisShortTermValue' type='QuantLib::AbcdIntegralTenorBasis'>
+      <description>Returns the short term value of the AbcdIntegralTenorBasis function.</description>
+      <libraryFunction>shortTermValue</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlAbcdIntegralTenorBasisLongTermValue' type='QuantLib::AbcdIntegralTenorBasis'>
+      <description>Returns the long term value of the AbcdIntegralTenorBasis function.</description>
+      <libraryFunction>longTermValue</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlAbcdIntegralTenorBasisA' type='QuantLib::AbcdIntegralTenorBasis'>
+      <description>Returns the a coefficient in the AbcdIntegralTenorBasis function.</description>
+      <libraryFunction>a</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlAbcdIntegralTenorBasisB' type='QuantLib::AbcdIntegralTenorBasis'>
+      <description>Returns the b coefficient in the AbcdIntegralTenorBasis function.</description>
+      <libraryFunction>b</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlAbcdIntegralTenorBasisC' type='QuantLib::AbcdIntegralTenorBasis'>
+      <description>Returns the c coefficient in the AbcdIntegralTenorBasis function.</description>
+      <libraryFunction>c</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlAbcdIntegralTenorBasisD' type='QuantLib::AbcdIntegralTenorBasis'>
+      <description>Returns the d coefficient in the AbcdIntegralTenorBasis function.</description>
+      <libraryFunction>d</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
 
   </Functions>
 </Category>

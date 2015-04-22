@@ -1,7 +1,7 @@
 /* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 
 /*
- Copyright (C) 2006, 2007 Ferdinando Ametrano
+ Copyright (C) 2006, 2007, 2015 Ferdinando Ametrano
  Copyright (C) 2007 Chiara Fornarola
  Copyright (C) 2006, 2007 Marco Bianchetti
  Copyright (C) 2006, 2007 Cristina Duminuco
@@ -28,14 +28,64 @@
 #include <ql/types.hpp>
 
 namespace QuantLib {
+    class TenorBasis;
+    class Date;
+    class PureAbcdFunction;
+    class IborIndex;
     class AbcdFunction;
     class AbcdCalibration;
     class Quote;
     class EndCriteria;
     class OptimizationMethod;
+    class YieldTermStructure;
+
+    template <class T>
+    class Handle;
 }
 
 namespace QuantLibAddin {
+    class PureAbcdFunction : public
+        ObjectHandler::LibraryObject<QuantLib::PureAbcdFunction> {
+      public:
+        PureAbcdFunction(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            QuantLib::Real a,
+            QuantLib::Real b,
+            QuantLib::Real c,
+            QuantLib::Real d,
+            bool permanent);
+    };
+
+    class TenorBasis :
+                    public ObjectHandler::LibraryObject<QuantLib::TenorBasis> {
+      public:
+        OH_LIB_CTOR(TenorBasis, QuantLib::TenorBasis);
+        // TenorBasis(const boost::shared_ptr<ObjectHandler::ValueObject>& p,
+        //            bool permanent)
+        //: ObjectHandler::LibraryObject<QuantLib::TenorBasis>(p, permanent) {}
+    };
+
+    class IntegralTenorBasis : public TenorBasis {
+      public:
+        OH_OBJ_CTOR(IntegralTenorBasis, TenorBasis);
+        // IntegralTenorBasis(const boost::shared_ptr<ObjectHandler::ValueObject>& p,
+        //                    bool permanent)
+        //: TenorBasis(p, permanent) {}
+    };
+
+    class AbcdIntegralTenorBasis : public IntegralTenorBasis {
+      public:
+        AbcdIntegralTenorBasis(
+                        const boost::shared_ptr<ObjectHandler::ValueObject>& p,
+                        QuantLib::Date settlementDate,
+                        boost::shared_ptr<QuantLib::IborIndex> iborIndex,
+                        const QuantLib::Handle<QuantLib::YieldTermStructure>&,
+                        boost::shared_ptr<QuantLib::PureAbcdFunction> abcd,
+                        bool permanent);
+      protected:
+        OH_OBJ_CTOR(AbcdIntegralTenorBasis, IntegralTenorBasis);
+    };
+
     class AbcdFunction :
             public ObjectHandler::LibraryObject<QuantLib::AbcdFunction> {
       public:

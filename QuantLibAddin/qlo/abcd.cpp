@@ -1,7 +1,7 @@
 /* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 
 /*
- Copyright (C) 2006, 2007 Ferdinando Ametrano
+ Copyright (C) 2006, 2007, 2015 Ferdinando Ametrano
  Copyright (C) 2007 Chiara Fornarola
  Copyright (C) 2006, 2007 Marco Bianchetti
  Copyright (C) 2006, 2007 Cristina Duminuco
@@ -25,26 +25,56 @@
     #include <qlo/config.hpp>
 #endif
 #include <qlo/abcd.hpp>
+#include <ql/math/pureabcd.hpp>
 #include <ql/termstructures/volatility/abcd.hpp>
 #include <ql/quotes/simplequote.hpp>
 #include <ql/termstructures/volatility/abcdcalibration.hpp>
+#include <ql/termstructures/yield/integratedcontinuousbasis.hpp>
+
+using boost::shared_ptr;
+using ObjectHandler::LibraryObject;
 
 namespace QuantLibAddin {
    
-    AbcdFunction::AbcdFunction(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    PureAbcdFunction::PureAbcdFunction(
+            const shared_ptr<ObjectHandler::ValueObject>& properties,
             QuantLib::Real a, 
             QuantLib::Real b,
             QuantLib::Real c, 
             QuantLib::Real d,
             bool permanent)
-    : ObjectHandler::LibraryObject<QuantLib::AbcdFunction>(properties, permanent) {
-        libraryObject_ = boost::shared_ptr<QuantLib::AbcdFunction>(new
+    : LibraryObject<QuantLib::PureAbcdFunction>(properties, permanent) {
+        libraryObject_ = shared_ptr<QuantLib::PureAbcdFunction>(new
+            QuantLib::PureAbcdFunction(a, b, c, d));
+    }   
+
+    AbcdIntegralTenorBasis::AbcdIntegralTenorBasis(
+            const shared_ptr<ObjectHandler::ValueObject>& p,
+            QuantLib::Date settlementDate,
+            shared_ptr<QuantLib::IborIndex> iborIndex,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
+            shared_ptr<QuantLib::PureAbcdFunction> abcd,
+            bool permanent)
+    : IntegralTenorBasis(p, permanent)
+    {
+        libraryObject_= shared_ptr<QuantLib::AbcdIntegralTenorBasis>(new
+            QuantLib::AbcdIntegralTenorBasis(settlementDate, iborIndex, baseCurve, abcd));
+    }
+
+    AbcdFunction::AbcdFunction(
+            const shared_ptr<ObjectHandler::ValueObject>& properties,
+            QuantLib::Real a, 
+            QuantLib::Real b,
+            QuantLib::Real c, 
+            QuantLib::Real d,
+            bool permanent)
+    : LibraryObject<QuantLib::AbcdFunction>(properties, permanent) {
+        libraryObject_ = shared_ptr<QuantLib::AbcdFunction>(new
             QuantLib::AbcdFunction(a, b, c, d));
     }   
 
     AbcdCalibration::AbcdCalibration(
-               const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+               const shared_ptr<ObjectHandler::ValueObject>& properties,
                const std::vector<QuantLib::Time>& times,
                const std::vector<QuantLib::Volatility>& blackVols,
                QuantLib::Real a, QuantLib::Real b,
@@ -52,12 +82,12 @@ namespace QuantLibAddin {
                bool aIsFixed, bool bIsFixed,
                bool cIsFixed, bool dIsFixed,
                bool vegaWeighted,
-               const boost::shared_ptr<QuantLib::EndCriteria> endCriteria,
-               const boost::shared_ptr<QuantLib::OptimizationMethod> method,
+               const shared_ptr<QuantLib::EndCriteria> endCriteria,
+               const shared_ptr<QuantLib::OptimizationMethod> method,
                bool permanent)
-    : ObjectHandler::LibraryObject<QuantLib::AbcdCalibration>(properties, permanent) {
+    : LibraryObject<QuantLib::AbcdCalibration>(properties, permanent) {
 
-        libraryObject_ = boost::shared_ptr<QuantLib::AbcdCalibration>(new
+        libraryObject_ = shared_ptr<QuantLib::AbcdCalibration>(new
             QuantLib::AbcdCalibration(times, blackVols, a, b, c, d,
                                       aIsFixed, bIsFixed, cIsFixed, dIsFixed,
                                       vegaWeighted, endCriteria, method));
