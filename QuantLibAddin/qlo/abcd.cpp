@@ -29,7 +29,7 @@
 #include <ql/termstructures/volatility/abcd.hpp>
 #include <ql/quotes/simplequote.hpp>
 #include <ql/termstructures/volatility/abcdcalibration.hpp>
-#include <ql/termstructures/yield/integratedcontinuousbasis.hpp>
+#include <ql/termstructures/yield/tenorbasis.hpp>
 
 using boost::shared_ptr;
 using ObjectHandler::LibraryObject;
