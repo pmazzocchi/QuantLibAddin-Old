@@ -837,22 +837,6 @@
       </ReturnValue>
     </Member>
 
-    <Member name='qlPureAbcdFunctionShortTermValue' type='QuantLib::PureAbcdFunction'>
-      <description>Returns the short term value of the Abcd function.</description>
-      <libraryFunction>shortTermValue</libraryFunction>
-      <SupportedPlatforms>
-        <SupportedPlatform name='Excel'/>
-        <!--SupportedPlatform name='Cpp'/-->
-      </SupportedPlatforms>
-      <ParameterList>
-        <Parameters/>
-      </ParameterList>
-      <ReturnValue>
-        <type>double</type>
-        <tensorRank>scalar</tensorRank>
-      </ReturnValue>
-    </Member>
-
     <Member name='qlPureAbcdFunctionLongTermValue' type='QuantLib::PureAbcdFunction'>
       <description>Returns the long term value of the Abcd function.</description>
       <libraryFunction>longTermValue</libraryFunction>
@@ -933,9 +917,9 @@
       </ReturnValue>
     </Member>
 
-    <!-- CubicFunction class costructor -->
-    <Constructor name='qlCubicFunction'>
-      <libraryFunction>CubicFunction</libraryFunction>
+    <!-- PolynomialFunction class costructor -->
+    <Constructor name='qlPolynomialFunction'>
+      <libraryFunction>PolynomialFunction</libraryFunction>
       <SupportedPlatforms>
         <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
         <SupportedPlatform name='Excel'/>
@@ -943,33 +927,18 @@
       </SupportedPlatforms>
       <ParameterList>
         <Parameters>
-          <Parameter name='A' default='0.002'>
-            <type>double</type>
-            <tensorRank>scalar</tensorRank>
-            <description>the coefficient of the zero order term in the cubic parametrization. Used as guess if the object is later calibrated.</description>
-          </Parameter>
-          <Parameter name='B' default='0.001'>
-            <type>double</type>
-            <tensorRank>scalar</tensorRank>
-            <description>the coefficient of the first order term in the cubic parametrization. Used as guess if the object is later calibrated.</description>
-          </Parameter>
-          <Parameter name='C' default='0.16'>
-            <type>double</type>
-            <tensorRank>scalar</tensorRank>
-            <description>the coefficient of the second order term in the cubic parametrization. Used as guess if the object is later calibrated.</description>
-          </Parameter>
-          <Parameter name='D' default='0.1'>
-            <type>double</type>
-            <tensorRank>scalar</tensorRank>
-            <description>the coefficient of the third order term in the cubic parametrization. Used as guess if the object is later calibrated.</description>
+          <Parameter name='Coefficients' default='1,1,1,1'>
+            <type>QuantLib::Real</type>
+            <tensorRank>vector</tensorRank>
+            <description>Polynomials coefficients, the first one being the order zero one.</description>
           </Parameter>
         </Parameters>
       </ParameterList>
     </Constructor>
 
     <!-- PureAbcdFunction class interfaces -->
-    <Member name='qlCubicFunctionValue' type='QuantLib::CubicFunction' loopParameter='T'>
-      <description>Returns the value of the function a + b*t + c*t^2 + d*t^3.</description>
+    <Member name='qlPolynomialFunctionValue' type='QuantLib::PolynomialFunction' loopParameter='T'>
+      <description>Returns the value of the polynomial function sum_0^n{c[i]*t^i}.</description>
       <libraryFunction>operator()</libraryFunction>
       <SupportedPlatforms>
         <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
@@ -991,8 +960,8 @@
       </ReturnValue>
     </Member>
 
-    <Member name='qlCubicFunctionDerivative' type='QuantLib::CubicFunction' loopParameter='T'>
-      <description>Returns the derivative of the function a + b*t + c*t^2 + d*t^3.</description>
+    <Member name='qlPolynomialFunctionDerivative' type='QuantLib::PolynomialFunction' loopParameter='T'>
+      <description>Returns the derivative of the polynomial function sum_0^n{c[i]*t^i}, i.e. sum_0^n-1{(i+1)c[i+1]*t^i}.</description>
       <libraryFunction>derivative</libraryFunction>
       <SupportedPlatforms>
         <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
@@ -1014,8 +983,8 @@
       </ReturnValue>
     </Member>
 
-    <Member name='qlCubicFunctionPrimitive' type='QuantLib::CubicFunction' loopParameter='T'>
-      <description>Returns the primitive of the function a + b*t + c*t^2 + d*t^3.</description>
+    <Member name='qlPolynomialFunctionPrimitive' type='QuantLib::PolynomialFunction' loopParameter='T'>
+      <description>Returns the primitive of the polynomial function sum_0^n{c[i]*t^i}, i.e. sum_1^n+1{c[i-1]/i*t^i}.</description>
       <libraryFunction>primitive</libraryFunction>
       <SupportedPlatforms>
         <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
@@ -1037,8 +1006,8 @@
       </ReturnValue>
     </Member>
 
-    <Member name='qlCubicFunctionDefiniteIntegral' type='QuantLib::CubicFunction'>
-      <description>Returns the definite integral of the function a + b*t + c*t^2 + d*t^3  between T1 and T2.</description>
+    <Member name='qlPolynomialFunctionDefiniteIntegral' type='QuantLib::PolynomialFunction'>
+      <description>Returns the definite integral of the polynomial function sum_0^n{c[i]*t^i}.</description>
       <libraryFunction>definiteIntegral</libraryFunction>
       <SupportedPlatforms>
         <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
@@ -1060,15 +1029,14 @@
         </Parameters>
       </ParameterList>
       <ReturnValue>
-        <type>double</type>
+        <type>QuantLib::Real</type>
         <tensorRank>scalar</tensorRank>
       </ReturnValue>
     </Member>
 
-
-    <Member name='qlCubicFunctionShortTermValue' type='QuantLib::CubicFunction'>
-      <description>Returns the short term value of the Cubic function.</description>
-      <libraryFunction>shortTermValue</libraryFunction>
+    <Member name='qlPolynomialFunctionCoefficients' type='QuantLib::PolynomialFunction'>
+      <description>Returns the coefficients of the polynomial function sum_0^n{c[i]*t^i}.</description>
+      <libraryFunction>coefficients</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
         <!--SupportedPlatform name='Cpp'/-->
@@ -1077,14 +1045,14 @@
         <Parameters/>
       </ParameterList>
       <ReturnValue>
-        <type>double</type>
-        <tensorRank>scalar</tensorRank>
+        <type>QuantLib::Real</type>
+        <tensorRank>vector</tensorRank>
       </ReturnValue>
     </Member>
 
-    <Member name='qlCubicFunctionA' type='QuantLib::CubicFunction'>
-      <description>Returns the coefficient of the zero order term in the cubic parametrization.</description>
-      <libraryFunction>a</libraryFunction>
+    <Member name='qlPolynomialFunctionDerivativeCoefficients' type='QuantLib::PolynomialFunction'>
+      <description>Returns the coefficients of the derivative of the polynomial function sum_0^n{c[i]*t^i}.</description>
+      <libraryFunction>derivativeCoefficients</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
         <!--SupportedPlatform name='Cpp'/-->
@@ -1093,14 +1061,14 @@
         <Parameters/>
       </ParameterList>
       <ReturnValue>
-        <type>double</type>
-        <tensorRank>scalar</tensorRank>
+        <type>QuantLib::Real</type>
+        <tensorRank>vector</tensorRank>
       </ReturnValue>
     </Member>
 
-    <Member name='qlCubicFunctionB' type='QuantLib::CubicFunction'>
-      <description>Returns the coefficient of the first order term in the cubic parametrization.</description>
-      <libraryFunction>b</libraryFunction>
+    <Member name='qlPolynomialFunctionIntegralCoefficients' type='QuantLib::PolynomialFunction'>
+      <description>Returns the coefficients of the primitive of the polynomial function sum_0^n{c[i]*t^i}.</description>
+      <libraryFunction>primitiveCoefficients</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
         <!--SupportedPlatform name='Cpp'/-->
@@ -1109,40 +1077,8 @@
         <Parameters/>
       </ParameterList>
       <ReturnValue>
-        <type>double</type>
-        <tensorRank>scalar</tensorRank>
-      </ReturnValue>
-    </Member>
-
-    <Member name='qlCubicFunctionC' type='QuantLib::CubicFunction'>
-      <description>Returns the coefficient of the second order term in the cubic parametrization.</description>
-      <libraryFunction>c</libraryFunction>
-      <SupportedPlatforms>
-        <SupportedPlatform name='Excel'/>
-        <!--SupportedPlatform name='Cpp'/-->
-      </SupportedPlatforms>
-      <ParameterList>
-        <Parameters/>
-      </ParameterList>
-      <ReturnValue>
-        <type>double</type>
-        <tensorRank>scalar</tensorRank>
-      </ReturnValue>
-    </Member>
-
-    <Member name='qlCubicFunctionD' type='QuantLib::CubicFunction'>
-      <description>Returns the coefficient of the third order term in the cubic parametrization.</description>
-      <libraryFunction>d</libraryFunction>
-      <SupportedPlatforms>
-        <SupportedPlatform name='Excel'/>
-        <!--SupportedPlatform name='Cpp'/-->
-      </SupportedPlatforms>
-      <ParameterList>
-        <Parameters/>
-      </ParameterList>
-      <ReturnValue>
-        <type>double</type>
-        <tensorRank>scalar</tensorRank>
+        <type>QuantLib::Real</type>
+        <tensorRank>vector</tensorRank>
       </ReturnValue>
     </Member>
 
@@ -1278,9 +1214,9 @@
       </ParameterList>
     </Constructor>
 
-    <!-- CubicTenorBasis class costructor -->
-    <Constructor name='qlCubicTenorBasis'>
-      <libraryFunction>CubicTenorBasis</libraryFunction>
+    <!-- PolynomialTenorBasis class costructor -->
+    <Constructor name='qlPolynomialTenorBasis'>
+      <libraryFunction>PolynomialTenorBasis</libraryFunction>
       <SupportedPlatforms>
         <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
         <SupportedPlatform name='Excel'/>
@@ -1304,8 +1240,8 @@
             <tensorRank>scalar</tensorRank>
             <description>base rate term structure object ID.</description>
           </Parameter>
-          <Parameter name='CubicFunction'>
-            <type>QuantLib::CubicFunction</type>
+          <Parameter name='PolynomialFunction'>
+            <type>QuantLib::PolynomialFunction</type>
             <tensorRank>scalar</tensorRank>
             <description>.</description>
           </Parameter>
@@ -1434,22 +1370,6 @@
       </ReturnValue>
     </Member>
 
-    <Member name='qlAbcdIntegralTenorBasisShortTermValue' type='QuantLib::AbcdIntegralTenorBasis'>
-      <description>Returns the short term value of the AbcdIntegralTenorBasis function.</description>
-      <libraryFunction>shortTermValue</libraryFunction>
-      <SupportedPlatforms>
-        <SupportedPlatform name='Excel'/>
-        <!--SupportedPlatform name='Cpp'/-->
-      </SupportedPlatforms>
-      <ParameterList>
-        <Parameters/>
-      </ParameterList>
-      <ReturnValue>
-        <type>double</type>
-        <tensorRank>scalar</tensorRank>
-      </ReturnValue>
-    </Member>
-
     <Member name='qlAbcdIntegralTenorBasisLongTermValue' type='QuantLib::AbcdIntegralTenorBasis'>
       <description>Returns the long term value of the AbcdIntegralTenorBasis function.</description>
       <libraryFunction>longTermValue</libraryFunction>
@@ -1530,9 +1450,9 @@
       </ReturnValue>
     </Member>
 
-    <!-- CubicIntegralTenorBasis class costructor -->
-    <Constructor name='qlCubicIntegralTenorBasis'>
-      <libraryFunction>CubicIntegralTenorBasis</libraryFunction>
+    <!-- PolynomialIntegralTenorBasis class costructor -->
+    <Constructor name='qlPolynomialIntegralTenorBasis'>
+      <libraryFunction>PolynomialIntegralTenorBasis</libraryFunction>
       <SupportedPlatforms>
         <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
         <SupportedPlatform name='Excel'/>
@@ -1556,8 +1476,8 @@
             <tensorRank>scalar</tensorRank>
             <description>base rate term structure object ID.</description>
           </Parameter>
-          <Parameter name='CubicFunction'>
-            <type>QuantLib::CubicFunction</type>
+          <Parameter name='PolynomialFunction'>
+            <type>QuantLib::PolynomialFunction</type>
             <tensorRank>scalar</tensorRank>
             <description>.</description>
           </Parameter>
