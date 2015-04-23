@@ -30,6 +30,7 @@
     Copyright (C) 2006, 2007 Marco Bianchetti
     Copyright (C) 2006, 2007 Cristina Duminuco
     Copyright (C) 2006, 2007 Giorgio Facchinetti
+    Copyright (C) 2015 Paolo Mazzocchi
   </copyright>
   <Functions>
 
@@ -932,6 +933,218 @@
       </ReturnValue>
     </Member>
 
+    <!-- CubicFunction class costructor -->
+    <Constructor name='qlCubicFunction'>
+      <libraryFunction>CubicFunction</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='A' default='0.002'>
+            <type>double</type>
+            <tensorRank>scalar</tensorRank>
+            <description>the coefficient of the zero order term in the cubic parametrization. Used as guess if the object is later calibrated.</description>
+          </Parameter>
+          <Parameter name='B' default='0.001'>
+            <type>double</type>
+            <tensorRank>scalar</tensorRank>
+            <description>the coefficient of the first order term in the cubic parametrization. Used as guess if the object is later calibrated.</description>
+          </Parameter>
+          <Parameter name='C' default='0.16'>
+            <type>double</type>
+            <tensorRank>scalar</tensorRank>
+            <description>the coefficient of the second order term in the cubic parametrization. Used as guess if the object is later calibrated.</description>
+          </Parameter>
+          <Parameter name='D' default='0.1'>
+            <type>double</type>
+            <tensorRank>scalar</tensorRank>
+            <description>the coefficient of the third order term in the cubic parametrization. Used as guess if the object is later calibrated.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <!-- PureAbcdFunction class interfaces -->
+    <Member name='qlCubicFunctionValue' type='QuantLib::CubicFunction' loopParameter='T'>
+      <description>Returns the value of the function a + b*t + c*t^2 + d*t^3.</description>
+      <libraryFunction>operator()</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='T' const='False' exampleValue ='5.0,4.0,3.0,2.0,1.0'>
+            <type>double</type>
+            <tensorRank>vector</tensorRank>
+            <description>time(s).</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlCubicFunctionDerivative' type='QuantLib::CubicFunction' loopParameter='T'>
+      <description>Returns the derivative of the function a + b*t + c*t^2 + d*t^3.</description>
+      <libraryFunction>derivative</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='T' const='False' exampleValue ='5.0,4.0,3.0,2.0,1.0'>
+            <type>double</type>
+            <tensorRank>vector</tensorRank>
+            <description>time(s).</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlCubicFunctionPrimitive' type='QuantLib::CubicFunction' loopParameter='T'>
+      <description>Returns the primitive of the function a + b*t + c*t^2 + d*t^3.</description>
+      <libraryFunction>primitive</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='T' const='False' exampleValue ='5.0,4.0,3.0,2.0,1.0'>
+            <type>double</type>
+            <tensorRank>vector</tensorRank>
+            <description>time(s).</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlCubicFunctionDefiniteIntegral' type='QuantLib::CubicFunction'>
+      <description>Returns the definite integral of the function a + b*t + c*t^2 + d*t^3  between T1 and T2.</description>
+      <libraryFunction>definiteIntegral</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='T1' const='False' exampleValue ='1.0'>
+            <type>double</type>
+            <tensorRank>scalar</tensorRank>
+            <description>integration lower bound time.</description>
+          </Parameter>
+          <Parameter name='T2' const='False' exampleValue ='2.0'>
+            <type>double</type>
+            <tensorRank>scalar</tensorRank>
+            <description>integration upper bound time.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+
+    <Member name='qlCubicFunctionShortTermValue' type='QuantLib::CubicFunction'>
+      <description>Returns the short term value of the Cubic function.</description>
+      <libraryFunction>shortTermValue</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlCubicFunctionA' type='QuantLib::CubicFunction'>
+      <description>Returns the coefficient of the zero order term in the cubic parametrization.</description>
+      <libraryFunction>a</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlCubicFunctionB' type='QuantLib::CubicFunction'>
+      <description>Returns the coefficient of the first order term in the cubic parametrization.</description>
+      <libraryFunction>b</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlCubicFunctionC' type='QuantLib::CubicFunction'>
+      <description>Returns the coefficient of the second order term in the cubic parametrization.</description>
+      <libraryFunction>c</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlCubicFunctionD' type='QuantLib::CubicFunction'>
+      <description>Returns the coefficient of the third order term in the cubic parametrization.</description>
+      <libraryFunction>d</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
 
     <!-- TenorBasis abstract class interfaces -->
     <Member name='qlTenorBasisValue' type='QuantLib::TenorBasis' loopParameter='Dates'>
@@ -1064,6 +1277,42 @@
         </Parameters>
       </ParameterList>
     </Constructor>
+
+    <!-- CubicTenorBasis class costructor -->
+    <Constructor name='qlCubicTenorBasis'>
+      <libraryFunction>CubicTenorBasis</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='SettlementDate' const='False' default='QuantLib::Date()'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Settlement date.</description>
+          </Parameter>
+          <Parameter name='IborIndex'>
+            <type>QuantLib::IborIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>.</description>
+          </Parameter>
+          <Parameter name='BaseCurve'>
+            <type>QuantLib::YieldTermStructure</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>base rate term structure object ID.</description>
+          </Parameter>
+          <Parameter name='CubicFunction'>
+            <type>QuantLib::CubicFunction</type>
+            <tensorRank>scalar</tensorRank>
+            <description>.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
 
     <!-- IntegralTenorBasis abstract class interfaces -->
     <Member name='qlIntegralTenorBasisIntegrate' type='QuantLib::IntegralTenorBasis' loopParameter='Dates'>
@@ -1281,6 +1530,40 @@
       </ReturnValue>
     </Member>
 
+    <!-- CubicIntegralTenorBasis class costructor -->
+    <Constructor name='qlCubicIntegralTenorBasis'>
+      <libraryFunction>CubicIntegralTenorBasis</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='SettlementDate' const='False' default='QuantLib::Date()'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Settlement date.</description>
+          </Parameter>
+          <Parameter name='IborIndex'>
+            <type>QuantLib::IborIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>.</description>
+          </Parameter>
+          <Parameter name='BaseCurve'>
+            <type>QuantLib::YieldTermStructure</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>base rate term structure object ID.</description>
+          </Parameter>
+          <Parameter name='CubicFunction'>
+            <type>QuantLib::CubicFunction</type>
+            <tensorRank>scalar</tensorRank>
+            <description>.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
 
   </Functions>
 </Category>

@@ -6,6 +6,7 @@
  Copyright (C) 2006, 2007 Marco Bianchetti
  Copyright (C) 2006, 2007 Cristina Duminuco
  Copyright (C) 2006, 2007 Giorgio Facchinetti
+ Copyright (C) 2015 Paolo Mazzocchi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -31,6 +32,7 @@ namespace QuantLib {
     class TenorBasis;
     class Date;
     class PureAbcdFunction;
+    class CubicFunction;
     class IborIndex;
     class AbcdFunction;
     class AbcdCalibration;
@@ -48,6 +50,18 @@ namespace QuantLibAddin {
         ObjectHandler::LibraryObject<QuantLib::PureAbcdFunction> {
       public:
         PureAbcdFunction(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            QuantLib::Real a,
+            QuantLib::Real b,
+            QuantLib::Real c,
+            QuantLib::Real d,
+            bool permanent);
+    };
+
+    class CubicFunction : public
+        ObjectHandler::LibraryObject<QuantLib::CubicFunction> {
+    public:
+        CubicFunction(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
             QuantLib::Real a,
             QuantLib::Real b,
@@ -78,6 +92,19 @@ namespace QuantLibAddin {
         OH_OBJ_CTOR(AbcdTenorBasis, TenorBasis);
     };
 
+    class CubicTenorBasis : public TenorBasis {
+    public:
+        CubicTenorBasis(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& p,
+            QuantLib::Date settlementDate,
+            boost::shared_ptr<QuantLib::IborIndex> iborIndex,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>&,
+            boost::shared_ptr<QuantLib::CubicFunction> cubic,
+            bool permanent);
+    protected:
+        OH_OBJ_CTOR(CubicTenorBasis, TenorBasis);
+    };
+
     class IntegralTenorBasis : public TenorBasis {
       public:
         OH_OBJ_CTOR(IntegralTenorBasis, TenorBasis);
@@ -97,6 +124,19 @@ namespace QuantLibAddin {
                         bool permanent);
       protected:
         OH_OBJ_CTOR(AbcdIntegralTenorBasis, IntegralTenorBasis);
+    };
+
+    class CubicIntegralTenorBasis : public IntegralTenorBasis {
+    public:
+        CubicIntegralTenorBasis(
+                        const boost::shared_ptr<ObjectHandler::ValueObject>& p,
+                        QuantLib::Date settlementDate,
+                        boost::shared_ptr<QuantLib::IborIndex> iborIndex,
+                        const QuantLib::Handle<QuantLib::YieldTermStructure>&,
+                        boost::shared_ptr<QuantLib::CubicFunction> cubic,
+                        bool permanent);
+    protected:
+        OH_OBJ_CTOR(CubicIntegralTenorBasis, IntegralTenorBasis);
     };
 
     class AbcdFunction :

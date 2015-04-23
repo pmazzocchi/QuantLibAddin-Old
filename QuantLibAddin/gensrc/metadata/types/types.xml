@@ -79,6 +79,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::CoterminalSwapCurveState</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CovarianceDecomposition</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CubicInterpolation</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::CubicFunction</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CurveState</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::DefaultLossModel</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::DigitalReplication</DataType>
@@ -104,8 +105,10 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::InterestRateIndex</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::TenorBasis</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::IntegralTenorBasis</DataType>
-    <DataType defaultSuperType='libraryClass'>QuantLib::AbcdIntegralTenorBasis</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::AbcdTenorBasis</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::AbcdIntegralTenorBasis</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::CubicTenorBasis</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::CubicIntegralTenorBasis</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Interpolation2D</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Interpolation</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::LMMCurveState</DataType>

@@ -6,6 +6,7 @@
  Copyright (C) 2006, 2007 Marco Bianchetti
  Copyright (C) 2006, 2007 Cristina Duminuco
  Copyright (C) 2006, 2007 Giorgio Facchinetti
+ Copyright (C) 2015 Paolo Mazzocchi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -48,6 +49,18 @@ namespace QuantLibAddin {
             QuantLib::PureAbcdFunction(a, b, c, d));
     }   
 
+    CubicFunction::CubicFunction(
+            const shared_ptr<ObjectHandler::ValueObject>& properties,
+            QuantLib::Real a,
+            QuantLib::Real b,
+            QuantLib::Real c,
+            QuantLib::Real d,
+            bool permanent)
+        : LibraryObject<QuantLib::CubicFunction>(properties, permanent) {
+        libraryObject_ = shared_ptr<QuantLib::CubicFunction>(new
+            QuantLib::CubicFunction(a, b, c, d));
+    }
+
     AbcdTenorBasis::AbcdTenorBasis(
         const shared_ptr<ObjectHandler::ValueObject>& p,
         QuantLib::Date settlementDate,
@@ -61,6 +74,19 @@ namespace QuantLibAddin {
             QuantLib::AbcdTenorBasis(settlementDate, iborIndex, baseCurve, abcd));
     }
 
+    CubicTenorBasis::CubicTenorBasis(
+        const shared_ptr<ObjectHandler::ValueObject>& p,
+        QuantLib::Date settlementDate,
+        shared_ptr<QuantLib::IborIndex> iborIndex,
+        const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
+        shared_ptr<QuantLib::CubicFunction> cubic,
+        bool permanent)
+    : TenorBasis(p, permanent)
+    {
+        libraryObject_ = shared_ptr<QuantLib::CubicTenorBasis>(new
+            QuantLib::CubicTenorBasis(settlementDate, iborIndex, baseCurve, cubic));
+    }
+
     AbcdIntegralTenorBasis::AbcdIntegralTenorBasis(
             const shared_ptr<ObjectHandler::ValueObject>& p,
             QuantLib::Date settlementDate,
@@ -72,6 +98,19 @@ namespace QuantLibAddin {
     {
         libraryObject_= shared_ptr<QuantLib::AbcdIntegralTenorBasis>(new
             QuantLib::AbcdIntegralTenorBasis(settlementDate, iborIndex, baseCurve, abcd));
+    }
+
+    CubicIntegralTenorBasis::CubicIntegralTenorBasis(
+            const shared_ptr<ObjectHandler::ValueObject>& p,
+            QuantLib::Date settlementDate,
+            shared_ptr<QuantLib::IborIndex> iborIndex,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
+            shared_ptr<QuantLib::CubicFunction> cubic,
+            bool permanent)
+    : IntegralTenorBasis(p, permanent)
+    {
+        libraryObject_ = shared_ptr<QuantLib::CubicIntegralTenorBasis>(new
+            QuantLib::CubicIntegralTenorBasis(settlementDate, iborIndex, baseCurve, cubic));
     }
 
     AbcdFunction::AbcdFunction(
