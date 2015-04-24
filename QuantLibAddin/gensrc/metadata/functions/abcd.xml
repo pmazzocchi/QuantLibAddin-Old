@@ -936,9 +936,9 @@
       </ParameterList>
     </Constructor>
 
-    <!-- PureAbcdFunction class interfaces -->
+    <!-- PolynomialFunction class interfaces -->
     <Member name='qlPolynomialFunctionValue' type='QuantLib::PolynomialFunction' loopParameter='T'>
-      <description>Returns the value of the polynomial function sum_0^n{c[i]*t^i}.</description>
+      <description>Returns the value of the polynomial function sum_0^n{c_i]*t^i}.</description>
       <libraryFunction>operator()</libraryFunction>
       <SupportedPlatforms>
         <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
@@ -961,7 +961,7 @@
     </Member>
 
     <Member name='qlPolynomialFunctionDerivative' type='QuantLib::PolynomialFunction' loopParameter='T'>
-      <description>Returns the derivative of the polynomial function sum_0^n{c[i]*t^i}, i.e. sum_0^n-1{(i+1)c[i+1]*t^i}.</description>
+      <description>Returns the derivative of the polynomial function sum_0^n{c_i*t^i}, i.e. sum_0^n-1{(i+1)c[i+1]*t^i}.</description>
       <libraryFunction>derivative</libraryFunction>
       <SupportedPlatforms>
         <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
@@ -984,7 +984,7 @@
     </Member>
 
     <Member name='qlPolynomialFunctionPrimitive' type='QuantLib::PolynomialFunction' loopParameter='T'>
-      <description>Returns the primitive of the polynomial function sum_0^n{c[i]*t^i}, i.e. sum_1^n+1{c[i-1]/i*t^i}.</description>
+      <description>Returns the primitive of the polynomial function sum_0^n{c_i*t^i}, i.e. sum_1^n+1{c[i-1]/i*t^i}.</description>
       <libraryFunction>primitive</libraryFunction>
       <SupportedPlatforms>
         <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
@@ -1007,7 +1007,7 @@
     </Member>
 
     <Member name='qlPolynomialFunctionDefiniteIntegral' type='QuantLib::PolynomialFunction'>
-      <description>Returns the definite integral of the polynomial function sum_0^n{c[i]*t^i}.</description>
+      <description>Returns the definite integral of the polynomial function sum_0^n{v*t^i}.</description>
       <libraryFunction>definiteIntegral</libraryFunction>
       <SupportedPlatforms>
         <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
@@ -1035,7 +1035,7 @@
     </Member>
 
     <Member name='qlPolynomialFunctionCoefficients' type='QuantLib::PolynomialFunction'>
-      <description>Returns the coefficients of the polynomial function sum_0^n{c[i]*t^i}.</description>
+      <description>Returns the coefficients {c} of the polynomial function sum_0^n{c_i*t^i}.</description>
       <libraryFunction>coefficients</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
@@ -1051,7 +1051,7 @@
     </Member>
 
     <Member name='qlPolynomialFunctionDerivativeCoefficients' type='QuantLib::PolynomialFunction'>
-      <description>Returns the coefficients of the derivative of the polynomial function sum_0^n{c[i]*t^i}.</description>
+      <description>Returns the coefficients of the derivative of the polynomial function sum_0^n{c_i*t^i}.</description>
       <libraryFunction>derivativeCoefficients</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
@@ -1067,7 +1067,7 @@
     </Member>
 
     <Member name='qlPolynomialFunctionIntegralCoefficients' type='QuantLib::PolynomialFunction'>
-      <description>Returns the coefficients of the primitive of the polynomial function sum_0^n{c[i]*t^i}.</description>
+      <description>Returns the coefficients of the primitive of the polynomial function sum_0^n{c_i*t^i}.</description>
       <libraryFunction>primitiveCoefficients</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
@@ -1357,22 +1357,6 @@
     <Member name='qlAbcdIntegralTenorBasisMaximumValue' type='QuantLib::AbcdIntegralTenorBasis'>
       <description>Returns the maximum of the AbcdIntegralTenorBasis function.</description>
       <libraryFunction>maximumValue</libraryFunction>
-      <SupportedPlatforms>
-        <SupportedPlatform name='Excel'/>
-        <!--SupportedPlatform name='Cpp'/-->
-      </SupportedPlatforms>
-      <ParameterList>
-        <Parameters/>
-      </ParameterList>
-      <ReturnValue>
-        <type>double</type>
-        <tensorRank>scalar</tensorRank>
-      </ReturnValue>
-    </Member>
-
-    <Member name='qlAbcdIntegralTenorBasisLongTermValue' type='QuantLib::AbcdIntegralTenorBasis'>
-      <description>Returns the long term value of the AbcdIntegralTenorBasis function.</description>
-      <libraryFunction>longTermValue</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
         <!--SupportedPlatform name='Cpp'/-->
