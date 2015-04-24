@@ -26,7 +26,7 @@
     #include <qlo/config.hpp>
 #endif
 #include <qlo/abcd.hpp>
-#include <ql/math/pureabcd.hpp>
+#include <ql/math/abcdmathfunction.hpp>
 #include <ql/termstructures/volatility/abcd.hpp>
 #include <ql/quotes/simplequote.hpp>
 #include <ql/termstructures/volatility/abcdcalibration.hpp>
@@ -37,16 +37,16 @@ using ObjectHandler::LibraryObject;
 
 namespace QuantLibAddin {
    
-    PureAbcdFunction::PureAbcdFunction(
+    AbcdMathFunction::AbcdMathFunction(
             const shared_ptr<ObjectHandler::ValueObject>& properties,
             QuantLib::Real a, 
             QuantLib::Real b,
             QuantLib::Real c, 
             QuantLib::Real d,
             bool permanent)
-    : LibraryObject<QuantLib::PureAbcdFunction>(properties, permanent) {
-        libraryObject_ = shared_ptr<QuantLib::PureAbcdFunction>(new
-            QuantLib::PureAbcdFunction(a, b, c, d));
+    : LibraryObject<QuantLib::AbcdMathFunction>(properties, permanent) {
+        libraryObject_ = shared_ptr<QuantLib::AbcdMathFunction>(new
+            QuantLib::AbcdMathFunction(a, b, c, d));
     }   
 
     PolynomialFunction::PolynomialFunction(
@@ -63,7 +63,7 @@ namespace QuantLibAddin {
         QuantLib::Date settlementDate,
         shared_ptr<QuantLib::IborIndex> iborIndex,
         const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
-        shared_ptr<QuantLib::PureAbcdFunction> abcd,
+        shared_ptr<QuantLib::AbcdMathFunction> abcd,
         bool permanent)
     : TenorBasis(p, permanent)
     {
@@ -89,7 +89,7 @@ namespace QuantLibAddin {
             QuantLib::Date settlementDate,
             shared_ptr<QuantLib::IborIndex> iborIndex,
             const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
-            shared_ptr<QuantLib::PureAbcdFunction> abcd,
+            shared_ptr<QuantLib::AbcdMathFunction> abcd,
             bool permanent)
     : IntegralTenorBasis(p, permanent)
     {

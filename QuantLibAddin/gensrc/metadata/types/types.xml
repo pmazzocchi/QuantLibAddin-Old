@@ -135,7 +135,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::PlainVanillaPayoff</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::PolynomialFunction</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::PricingEngine</DataType>
-    <DataType defaultSuperType='libraryClass'>QuantLib::PureAbcdFunction</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::AbcdMathFunction</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::RangeAccrualFloatersCoupon</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::RangeAccrualPricer</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::RateHelper</DataType>

@@ -31,7 +31,7 @@
 namespace QuantLib {
     class TenorBasis;
     class Date;
-    class PureAbcdFunction;
+    class AbcdMathFunction;
     class PolynomialFunction;
     class IborIndex;
     class AbcdFunction;
@@ -46,10 +46,10 @@ namespace QuantLib {
 }
 
 namespace QuantLibAddin {
-    class PureAbcdFunction : public
-        ObjectHandler::LibraryObject<QuantLib::PureAbcdFunction> {
+    class AbcdMathFunction : public
+        ObjectHandler::LibraryObject<QuantLib::AbcdMathFunction> {
       public:
-        PureAbcdFunction(
+        AbcdMathFunction(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
             QuantLib::Real a,
             QuantLib::Real b,
@@ -83,7 +83,7 @@ namespace QuantLibAddin {
             QuantLib::Date settlementDate,
             boost::shared_ptr<QuantLib::IborIndex> iborIndex,
             const QuantLib::Handle<QuantLib::YieldTermStructure>&,
-            boost::shared_ptr<QuantLib::PureAbcdFunction> abcd,
+            boost::shared_ptr<QuantLib::AbcdMathFunction> abcd,
             bool permanent);
     protected:
         OH_OBJ_CTOR(AbcdTenorBasis, TenorBasis);
@@ -117,7 +117,7 @@ namespace QuantLibAddin {
                         QuantLib::Date settlementDate,
                         boost::shared_ptr<QuantLib::IborIndex> iborIndex,
                         const QuantLib::Handle<QuantLib::YieldTermStructure>&,
-                        boost::shared_ptr<QuantLib::PureAbcdFunction> abcd,
+                        boost::shared_ptr<QuantLib::AbcdMathFunction> abcd,
                         bool permanent);
       protected:
         OH_OBJ_CTOR(AbcdIntegralTenorBasis, IntegralTenorBasis);
