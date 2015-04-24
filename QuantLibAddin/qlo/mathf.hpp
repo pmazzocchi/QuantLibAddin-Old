@@ -1,6 +1,6 @@
 /* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 /*
- Copyright (C) 2006 Ferdinando Ametrano
+ Copyright (C) 2006, 2015 Ferdinando Ametrano
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -22,13 +22,22 @@
 
 #include <oh/libraryobject.hpp>
 #include <ql/math/distributions/normaldistribution.hpp>
+#include <ql/math/tartaglia.hpp>
 
 namespace QuantLibAddin {
 
+    inline std::vector<long> Tartaglia(QuantLib::Size i)
+    {
+        const std::vector<QuantLib::BigNatural>& r =
+                                                QuantLib::Tartaglia::get(i);
+        std::vector<long> result(r.begin(), r.end());
+        return result;
+    }
+
     inline double normDist(double x,
-                         double mean,
-                         double stdDev,
-                         bool cumulative) {
+                           double mean,
+                           double stdDev,
+                           bool cumulative) {
         if (cumulative) {
             return QuantLib::CumulativeNormalDistribution(mean, stdDev)(x);
         } else {
