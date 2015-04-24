@@ -49,16 +49,13 @@ namespace QuantLibAddin {
             QuantLib::PureAbcdFunction(a, b, c, d));
     }   
 
-    CubicFunction::CubicFunction(
+    PolynomialFunction::PolynomialFunction(
             const shared_ptr<ObjectHandler::ValueObject>& properties,
-            QuantLib::Real a,
-            QuantLib::Real b,
-            QuantLib::Real c,
-            QuantLib::Real d,
+            const std::vector<QuantLib::Real>& c,
             bool permanent)
-        : LibraryObject<QuantLib::CubicFunction>(properties, permanent) {
-        libraryObject_ = shared_ptr<QuantLib::CubicFunction>(new
-            QuantLib::CubicFunction(a, b, c, d));
+    : LibraryObject<QuantLib::PolynomialFunction>(properties, permanent) {
+        libraryObject_ = shared_ptr<QuantLib::PolynomialFunction>(new
+            QuantLib::PolynomialFunction(c));
     }
 
     AbcdTenorBasis::AbcdTenorBasis(
@@ -74,17 +71,17 @@ namespace QuantLibAddin {
             QuantLib::AbcdTenorBasis(settlementDate, iborIndex, baseCurve, abcd));
     }
 
-    CubicTenorBasis::CubicTenorBasis(
+    PolynomialTenorBasis::PolynomialTenorBasis(
         const shared_ptr<ObjectHandler::ValueObject>& p,
         QuantLib::Date settlementDate,
         shared_ptr<QuantLib::IborIndex> iborIndex,
         const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
-        shared_ptr<QuantLib::CubicFunction> cubic,
+        shared_ptr<QuantLib::PolynomialFunction> Polynomial,
         bool permanent)
     : TenorBasis(p, permanent)
     {
-        libraryObject_ = shared_ptr<QuantLib::CubicTenorBasis>(new
-            QuantLib::CubicTenorBasis(settlementDate, iborIndex, baseCurve, cubic));
+        libraryObject_ = shared_ptr<QuantLib::PolynomialTenorBasis>(new
+            QuantLib::PolynomialTenorBasis(settlementDate, iborIndex, baseCurve, Polynomial));
     }
 
     AbcdIntegralTenorBasis::AbcdIntegralTenorBasis(
@@ -100,17 +97,17 @@ namespace QuantLibAddin {
             QuantLib::AbcdIntegralTenorBasis(settlementDate, iborIndex, baseCurve, abcd));
     }
 
-    CubicIntegralTenorBasis::CubicIntegralTenorBasis(
+    PolynomialIntegralTenorBasis::PolynomialIntegralTenorBasis(
             const shared_ptr<ObjectHandler::ValueObject>& p,
             QuantLib::Date settlementDate,
             shared_ptr<QuantLib::IborIndex> iborIndex,
             const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
-            shared_ptr<QuantLib::CubicFunction> cubic,
+            shared_ptr<QuantLib::PolynomialFunction> Polynomial,
             bool permanent)
     : IntegralTenorBasis(p, permanent)
     {
-        libraryObject_ = shared_ptr<QuantLib::CubicIntegralTenorBasis>(new
-            QuantLib::CubicIntegralTenorBasis(settlementDate, iborIndex, baseCurve, cubic));
+        libraryObject_ = shared_ptr<QuantLib::PolynomialIntegralTenorBasis>(new
+            QuantLib::PolynomialIntegralTenorBasis(settlementDate, iborIndex, baseCurve, Polynomial));
     }
 
     AbcdFunction::AbcdFunction(
