@@ -1326,7 +1326,7 @@
     </Member>
 
     <Member name='qlIntegralTenorBasisForwardRate2' type='QuantLib::IntegralTenorBasis'>
-      <description>Returns the value of the forward rate basis over [d1, d2].</description>
+      <description>Returns the value of the forward rate over [d1, d2].</description>
       <libraryFunction>fwdRate</libraryFunction>
       <SupportedPlatforms>
         <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
@@ -1351,7 +1351,35 @@
         <type>QuantLib::Real</type>
         <tensorRank>scalar</tensorRank>
       </ReturnValue>
-    </Member>   
+    </Member>
+
+    <Member name='qlIntegralTenorBasisSimpleBasis2' type='QuantLib::IntegralTenorBasis'>
+      <description>Returns the value of the simple basis over [d1, d2].</description>
+      <libraryFunction>fwdRate</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Date1' const='False'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>first date.</description>
+          </Parameter>
+          <Parameter name='Date2' const='False'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>second date.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
 
     <!-- AbcdIntegralTenorBasis class costructor -->
     <Constructor name='qlAbcdIntegralTenorBasis'>
