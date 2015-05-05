@@ -1082,6 +1082,33 @@
       </ReturnValue>
     </Member>
 
+    <Member name='qlPolynomialFunctionDefiniteIntegralCoefficients' type='QuantLib::PolynomialFunction'>
+      <description>Returns the coefficients of the definite integral of the polynomial on a rolling window equal to t2-t1.</description>
+      <libraryFunction>definiteIntegralCoefficients</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='T1' const='False' exampleValue ='1.0'>
+            <type>double</type>
+            <tensorRank>scalar</tensorRank>
+            <description>rolling window start time.</description>
+          </Parameter>
+          <Parameter name='T2' const='False' exampleValue ='2.0'>
+            <type>double</type>
+            <tensorRank>scalar</tensorRank>
+            <description>rolling window end time.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
+
     <!-- TenorBasis abstract class interfaces -->
     <Member name='qlTenorBasisValue' type='QuantLib::TenorBasis' loopParameter='Dates'>
       <description>Returns the value of simple basis.</description>
@@ -1547,6 +1574,22 @@
         </Parameters>
       </ParameterList>
     </Constructor>
+
+    <Member name='qlPolynomialIntegralTenorBasisCoef' type='QuantLib::PolynomialIntegralTenorBasis'>
+      <description>Returns the coefficients in the implicit abcd parametrization of the _simple_ TenorBasis.</description>
+      <libraryFunction>TenorBasisCoefficients</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
 
   </Functions>
 </Category>
