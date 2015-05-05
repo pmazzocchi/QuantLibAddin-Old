@@ -1,4 +1,3 @@
-
 <root>
 
   <RuleGroups>
@@ -62,6 +61,7 @@
         <!--Rule tensorRank='scalar' superType='libraryType' type='QuantLib::Real'/-->
         <Rule tensorRank='scalar' type='QuantLib::Real' default='false'/>
         <Rule tensorRank='scalar' type='QuantLib::Natural' default='true' codeID='code201a'/>
+        <Rule tensorRank='scalar' type='QuantLib::BigNatural' default='true' codeID='code201a'/>
         <Rule tensorRank='scalar' superType='libraryType' type='QuantLib::Date' default='false' codeID='code200'/>
         <Rule tensorRank='scalar' superType='libraryType' nativeType='string' default='true' codeID='code213'/>
         <Rule tensorRank='scalar' superType='libraryType' nativeType='string' default='false' codeID='code22'/>
@@ -150,6 +150,7 @@
         <Rule tensorRank='scalar' default='true'>%(indent)s%(name)sCpp</Rule>
         <Rule tensorRank='scalar'>%(indent)s%(name)s</Rule>
         <Rule tensorRank='vector' type='QuantLib::Natural'>%(indent)s%(nameConverted)s</Rule>
+        <Rule tensorRank='vector' type='QuantLib::BigNatural'>%(indent)s%(nameConverted)s</Rule>
         <Rule tensorRank='vector' type='QuantLib::Size'>%(indent)s%(nameConverted)s</Rule>
         <!--<Rule tensorRank='vector' type='QuantLib::Real'>%(indent)s%(nameConverted)s</Rule>-->
         <Rule superType='libraryType' vectorIterator='begin'>%(indent)s%(nameConverted)s.begin()</Rule>
@@ -221,4 +222,3 @@
   </RuleGroups>
 
 </root>
-

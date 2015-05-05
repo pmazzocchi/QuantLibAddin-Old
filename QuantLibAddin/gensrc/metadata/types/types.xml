@@ -202,6 +202,7 @@
     <DataType defaultSuperType='libraryType' nativeType='long'>QuantLib::Date</DataType>
     <DataType defaultSuperType='libraryType' nativeType='long'>QuantLib::Integer</DataType>
     <DataType defaultSuperType='libraryType' nativeType='long'>QuantLib::Natural</DataType>
+    <DataType defaultSuperType='libraryType' nativeType='long'>QuantLib::BigNatural</DataType>
     <DataType defaultSuperType='libraryType' nativeType='long'>QuantLib::Size</DataType>
     <DataType defaultSuperType='libraryType' nativeType='string'>QuantLib::Period</DataType>
 
