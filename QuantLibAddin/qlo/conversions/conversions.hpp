@@ -40,6 +40,7 @@ namespace QuantLibAddin {
     std::string libraryToScalar(const QuantLib::Period&);
 
     std::vector<long> libraryToVector(const std::vector<QuantLib::Date>&);
+    std::vector<long> libraryToVector(const std::vector<QuantLib::BigNatural>&);
     std::vector<std::string> libraryToVector(const std::vector<QuantLib::Period>&);
     std::vector<double> libraryToVector(const std::vector<QuantLib::Real>&);
 
@@ -57,6 +58,7 @@ namespace QuantLibAddin {
 #endif
 #if defined(WAZOO_64_BIT)
     void cppToLibrary(const long &in, QuantLib::Natural &ret);
+    void cppToLibrary(const long &in, QuantLib::BigNatural &ret);
 #endif
 
     template <class Tin, class Tout>
