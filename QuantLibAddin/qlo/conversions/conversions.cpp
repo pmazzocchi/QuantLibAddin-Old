@@ -67,6 +67,11 @@ namespace QuantLibAddin {
         return ret;
     }
 
+    std::vector<long> libraryToVector(const std::vector<QuantLib::BigNatural> &v) {
+        std::vector<long> ret(v.begin(), v.end());
+        return ret;
+    }
+
     std::vector<std::string> libraryToVector(const std::vector<QuantLib::Period> &v) {
         std::vector<std::string> ret;
         ret.reserve(v.size());
@@ -92,9 +97,16 @@ namespace QuantLibAddin {
         ret = QuantLib::Size(in);
     }
 
+    void cppToLibrary(const long &in, QuantLib::BigNatural &ret) {
+        ret = QuantLib::BigNatural(in);
+    }
+
 #if defined(WAZOO_64_BIT)
     void cppToLibrary(const long &in, QuantLib::Natural &ret) {
         ret = QuantLib::Natural(in);
+    }
+    void cppToLibrary(const long &in, QuantLib::BigNatural &ret) {
+        ret = QuantLib::BigNatural(in);
     }
 #endif
 
@@ -126,18 +138,23 @@ namespace QuantLibAddin {
 
 namespace ObjectHandler {
 
-    template<> 
+    template<>
     QuantLib::Date convert2<QuantLib::Date, property_t>(const property_t& c) {
         return convertDate(c);
     }
 
-    template<> 
+    template<>
     QuantLib::Period convert2<QuantLib::Period, property_t>(const property_t& c) {
         return convertPeriod(c);
     }
 
-    template<> 
+    template<>
     QuantLib::Size convert2<QuantLib::Size, property_t>(const property_t& p) { 
+        return convertSize(p); 
+    }
+
+    template<>
+    QuantLib::BigNatural convert2<QuantLib::BigNatural, property_t>(const property_t& p) { 
         return convertSize(p); 
     }
 
@@ -151,23 +168,23 @@ namespace ObjectHandler {
         return convertQuoteHandle(c);
     }
 
-    template<> 
+    template<>
     QuantLib::TimeSeriesDef convert2<QuantLib::TimeSeriesDef, property_t>(const property_t& c) {
         return convertTimeSeriesDef(c);
     }
 
     /*
-    template<> 
+    template<>
     QuantLib::Date convert2<QuantLib::Date, ConvertOper>(const ConvertOper& c) {
         return convertDate(c);
     }
 
-    template<> 
+    template<>
     QuantLib::Period convert2<QuantLib::Period, ConvertOper>(const ConvertOper& c) {
         return convertPeriod(c);
     }
     
-    template<> 
+    template<>
     QuantLib::Size convert2<QuantLib::Size, ConvertOper>(const ConvertOper& p) {
         return convertSize(p); 
     }

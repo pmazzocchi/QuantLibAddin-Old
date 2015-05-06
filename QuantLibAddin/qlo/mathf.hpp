@@ -22,17 +22,8 @@
 
 #include <oh/libraryobject.hpp>
 #include <ql/math/distributions/normaldistribution.hpp>
-#include <ql/math/tartaglia.hpp>
 
 namespace QuantLibAddin {
-
-    inline std::vector<long> Tartaglia(QuantLib::Size i)
-    {
-        const std::vector<QuantLib::BigNatural>& r =
-                                                QuantLib::Tartaglia::get(i);
-        std::vector<long> result(r.begin(), r.end());
-        return result;
-    }
 
     inline double normDist(double x,
                            double mean,
