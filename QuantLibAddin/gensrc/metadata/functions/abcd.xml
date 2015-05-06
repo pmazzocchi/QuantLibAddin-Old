@@ -1241,6 +1241,69 @@
       </ParameterList>
     </Constructor>
 
+    <Member name='qlAbcdImpliedContinuousBasisA' type='QuantLib::AbcdTenorBasis'>
+      <description>Returns the a coefficient in the implicit abcd parametrization of the _continuous_ TenorBasis.</description>
+      <libraryFunction>a</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlAbcdImpliedContinuousBasisB' type='QuantLib::AbcdTenorBasis'>
+      <description>Returns the b coefficient in the implicit abcd parametrization of the _continuous_ TenorBasis.</description>
+      <libraryFunction>b</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+    <Member name='qlAbcdImpliedContinuousBasisC' type='QuantLib::AbcdTenorBasis'>
+      <description>Returns the c coefficient in the implicit abcd parametrization of the _continuous_ TenorBasis.</description>
+      <libraryFunction>c</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+    <Member name='qlAbcdImpliedContinuousBasisD' type='QuantLib::AbcdTenorBasis'>
+      <description>Returns the d coefficient in the implicit abcd parametrization of the _continuous_ TenorBasis.</description>
+      <libraryFunction>d</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+
     <!-- PolynomialTenorBasis class costructor -->
     <Constructor name='qlPolynomialTenorBasis'>
       <libraryFunction>PolynomialTenorBasis</libraryFunction>
