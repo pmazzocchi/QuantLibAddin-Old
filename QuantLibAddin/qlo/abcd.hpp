@@ -46,15 +46,13 @@ namespace QuantLib {
 }
 
 namespace QuantLibAddin {
+
     class AbcdMathFunction : public
         ObjectHandler::LibraryObject<QuantLib::AbcdMathFunction> {
       public:
         AbcdMathFunction(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-            QuantLib::Real a,
-            QuantLib::Real b,
-            QuantLib::Real c,
-            QuantLib::Real d,
+            const std::vector<QuantLib::Real>& abcd,
             bool permanent);
     };
 
@@ -83,7 +81,8 @@ namespace QuantLibAddin {
             QuantLib::Date settlementDate,
             boost::shared_ptr<QuantLib::IborIndex> iborIndex,
             const QuantLib::Handle<QuantLib::YieldTermStructure>&,
-            boost::shared_ptr<QuantLib::AbcdMathFunction> abcd,
+            bool isSimple,
+            boost::shared_ptr<QuantLib::AbcdMathFunction> f,
             bool permanent);
     protected:
         OH_OBJ_CTOR(AbcdTenorBasis, TenorBasis);
@@ -96,44 +95,11 @@ namespace QuantLibAddin {
             QuantLib::Date settlementDate,
             boost::shared_ptr<QuantLib::IborIndex> iborIndex,
             const QuantLib::Handle<QuantLib::YieldTermStructure>&,
-            boost::shared_ptr<QuantLib::PolynomialFunction> Polynomial,
+            bool isSimple,
+            boost::shared_ptr<QuantLib::PolynomialFunction> f,
             bool permanent);
     protected:
         OH_OBJ_CTOR(PolynomialTenorBasis, TenorBasis);
-    };
-
-    class IntegralTenorBasis : public TenorBasis {
-      public:
-        OH_OBJ_CTOR(IntegralTenorBasis, TenorBasis);
-        // IntegralTenorBasis(const boost::shared_ptr<ObjectHandler::ValueObject>& p,
-        //                    bool permanent)
-        //: TenorBasis(p, permanent) {}
-    };
-
-    class AbcdIntegralTenorBasis : public IntegralTenorBasis {
-      public:
-        AbcdIntegralTenorBasis(
-                        const boost::shared_ptr<ObjectHandler::ValueObject>& p,
-                        QuantLib::Date settlementDate,
-                        boost::shared_ptr<QuantLib::IborIndex> iborIndex,
-                        const QuantLib::Handle<QuantLib::YieldTermStructure>&,
-                        boost::shared_ptr<QuantLib::AbcdMathFunction> abcd,
-                        bool permanent);
-      protected:
-        OH_OBJ_CTOR(AbcdIntegralTenorBasis, IntegralTenorBasis);
-    };
-
-    class PolynomialIntegralTenorBasis : public IntegralTenorBasis {
-    public:
-        PolynomialIntegralTenorBasis(
-                        const boost::shared_ptr<ObjectHandler::ValueObject>& p,
-                        QuantLib::Date settlementDate,
-                        boost::shared_ptr<QuantLib::IborIndex> iborIndex,
-                        const QuantLib::Handle<QuantLib::YieldTermStructure>&,
-                        boost::shared_ptr<QuantLib::PolynomialFunction> Polynomial,
-                        bool permanent);
-    protected:
-        OH_OBJ_CTOR(PolynomialIntegralTenorBasis, IntegralTenorBasis);
     };
 
     class AbcdFunction :
