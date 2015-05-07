@@ -27,6 +27,7 @@
 #endif
 #include <qlo/abcd.hpp>
 #include <ql/math/abcdmathfunction.hpp>
+#include <ql/math/polynomialmathfunction.hpp>
 #include <ql/termstructures/volatility/abcd.hpp>
 #include <ql/quotes/simplequote.hpp>
 #include <ql/termstructures/volatility/abcdcalibration.hpp>
