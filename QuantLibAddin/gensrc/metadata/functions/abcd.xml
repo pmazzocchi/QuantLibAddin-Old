@@ -1213,7 +1213,7 @@
       </ReturnValue>
     </Member>
 
-    <Member name='qlTenorBasisForwardRate' type='QuantLib::TenorBasis'>
+    <Member name='qlTenorBasisForwardRate2' type='QuantLib::TenorBasis'>
       <description>Returns the value of the forward rate over [d1, d2], obtained as integral of instantaneous continuous basis.</description>
       <libraryFunction>forwardRate</libraryFunction>
       <SupportedPlatforms>
@@ -1225,19 +1225,19 @@
         <Parameters>
           <Parameter name='Date1' const='False'>
             <type>QuantLib::Date</type>
-            <tensorRank>vector</tensorRank>
+            <tensorRank>scalar</tensorRank>
             <description>First date for the integration of the instantaneous continuous basis.</description>
           </Parameter>
         <Parameter name='Date2' const='False'>
           <type>QuantLib::Date</type>
-          <tensorRank>vector</tensorRank>
+          <tensorRank>scalar</tensorRank>
           <description>Second date for the integration of the instantaneous continuous basis.</description>
         </Parameter>
         </Parameters>
       </ParameterList>
       <ReturnValue>
         <type>QuantLib::Rate</type>
-        <tensorRank>vector</tensorRank>
+        <tensorRank>scalar</tensorRank>
       </ReturnValue>
     </Member>
 
