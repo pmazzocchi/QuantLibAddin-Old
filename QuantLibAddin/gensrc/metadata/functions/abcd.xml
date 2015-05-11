@@ -1162,14 +1162,14 @@
         </Parameters>
       </ParameterList>
       <ReturnValue>
-        <type>QuantLib::Real</type>
+        <type>QuantLib::Spread</type>
         <tensorRank>vector</tensorRank>
       </ReturnValue>
     </Member>
 
-    <Member name='qlTenorBasisExactValue' type='QuantLib::TenorBasis' loopParameter='Dates'>
-      <description>Returns the exact value (avoiding approximations) of simple basis.</description>
-      <libraryFunction>exactValue</libraryFunction>
+    <Member name='qlTenorBasisTenorForwardRate' type='QuantLib::TenorBasis' loopParameter='Dates'>
+      <description>Returns the value of the forward rate over [d, d+tau] with tau being the iborIndex tenor, as obtained from simple basis.</description>
+      <libraryFunction>tenorForwardRate</libraryFunction>
       <SupportedPlatforms>
         SupportedPlatform name='Excel' calcInWizard='false'/
         <SupportedPlatform name='Excel'/>
@@ -1185,13 +1185,13 @@
         </Parameters>
       </ParameterList>
       <ReturnValue>
-        <type>QuantLib::Real</type>
+        <type>QuantLib::Rate</type>
         <tensorRank>vector</tensorRank>
       </ReturnValue>
     </Member>
 
     <Member name='qlTenorBasisForwardRate' type='QuantLib::TenorBasis' loopParameter='Dates'>
-      <description>Returns the value of the forward rate over [d, d+tau] with tau being the iborIndex tenor.</description>
+      <description>Returns the value of the forward rate over [d, d+tau] with tau being the iborIndex tenor, obtained as integral of instantaneous continuous basis.</description>
       <libraryFunction>forwardRate</libraryFunction>
       <SupportedPlatforms>
         SupportedPlatform name='Excel' calcInWizard='false'/
@@ -1208,7 +1208,35 @@
         </Parameters>
       </ParameterList>
       <ReturnValue>
-        <type>QuantLib::Real</type>
+        <type>QuantLib::Rate</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlTenorBasisForwardRate' type='QuantLib::TenorBasis'>
+      <description>Returns the value of the forward rate over [d1, d2], obtained as integral of instantaneous continuous basis.</description>
+      <libraryFunction>forwardRate</libraryFunction>
+      <SupportedPlatforms>
+        SupportedPlatform name='Excel' calcInWizard='false'/
+        <SupportedPlatform name='Excel'/>
+        SupportedPlatform name='Cpp'/
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Date1' const='False'>
+            <type>QuantLib::Date</type>
+            <tensorRank>vector</tensorRank>
+            <description>First date for the integration of the instantaneous continuous basis.</description>
+          </Parameter>
+        <Parameter name='Date2' const='False'>
+          <type>QuantLib::Date</type>
+          <tensorRank>vector</tensorRank>
+          <description>Second date for the integration of the instantaneous continuous basis.</description>
+        </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Rate</type>
         <tensorRank>vector</tensorRank>
       </ReturnValue>
     </Member>
@@ -1242,34 +1270,6 @@
       <ReturnValue>
         <type>QuantLib::Real</type>
         <tensorRank>vector</tensorRank>
-      </ReturnValue>
-    </Member>
-
-    <Member name='qlTenorBasisSyntheticRate' type='QuantLib::TenorBasis'>
-      <description>Returns the value of a syntethic forward rate over [d1, d2].</description>
-      <libraryFunction>syntheticRate</libraryFunction>
-      <SupportedPlatforms>
-        SupportedPlatform name='Excel' calcInWizard='false'/
-        <SupportedPlatform name='Excel'/>
-        SupportedPlatform name='Cpp'/
-      </SupportedPlatforms>
-      <ParameterList>
-        <Parameters>
-          <Parameter name='Date1' const='False'>
-            <type>QuantLib::Date</type>
-            <tensorRank>scalar</tensorRank>
-            <description>first date.</description>
-          </Parameter>
-          <Parameter name='Date2' const='False'>
-            <type>QuantLib::Date</type>
-            <tensorRank>scalar</tensorRank>
-            <description>second date.</description>
-          </Parameter>
-        </Parameters>
-      </ParameterList>
-      <ReturnValue>
-        <type>QuantLib::Real</type>
-        <tensorRank>scalar</tensorRank>
       </ReturnValue>
     </Member>
 
