@@ -108,7 +108,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::AbcdIntegralTenorBasis</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::PolynomialTenorBasis</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::PolynomialIntegralTenorBasis</DataType>
-    <DataType defaultSuperType='libraryClass'>QuantLib::CubicIntegralTenorBasis</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::CalibratedModel</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Interpolation2D</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Interpolation</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::LMMCurveState</DataType>
@@ -139,6 +139,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::AbcdMathFunction</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::RangeAccrualFloatersCoupon</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::RangeAccrualPricer</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::BasisHelper</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::RateHelper</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::SABRInterpolation</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::SabrInterpolatedSmileSection</DataType>
@@ -250,6 +251,7 @@
     <DataType defaultSuperType='objectClass'>QuantLibAddin::PiecewiseHazardRateCurve</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::RandomSequenceGenerator</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::RateHelper</DataType>
+    <DataType defaultSuperType='objectClass'>QuantLibAddin::BasisHelper</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::RelinkableHandle</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::SMMDriftCalculator</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::SabrVolSurface</DataType>

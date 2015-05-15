@@ -33,6 +33,7 @@
 #include <ql/termstructures/yield/bondhelpers.hpp>
 #include <ql/termstructures/yield/oisratehelper.hpp>
 #include <ql/time/imm.hpp>
+#include <ql/termstructures/yield/tenorbasis.hpp>
 
 #include <oh/repository.hpp>
 
@@ -55,6 +56,28 @@ namespace QuantLibAddin {
         } catch(...) {
             return std::string();
         }
+    }
+
+    BasisRateHelper::BasisRateHelper(
+                const shared_ptr<ValueObject>& properties,
+                const QuantLib::Handle<QuantLib::Quote>& price,
+                const QuantLib::Date& d,
+                bool permanent)
+        : BasisHelper(properties, permanent) {
+        libraryObject_ = shared_ptr<QuantLib::BasisHelper>(new
+            QuantLib::BasisRateHelper(price, d));
+        quoteName_ = f(properties->getSystemProperty("Basis"));
+    }
+
+    BasisRateHelper::BasisRateHelper(
+        const shared_ptr<ValueObject>& properties,
+        QuantLib::Real price,
+        const QuantLib::Date& d,
+        bool permanent)
+        : BasisHelper(properties, permanent) {
+        libraryObject_ = shared_ptr<QuantLib::BasisHelper>(new
+            QuantLib::BasisRateHelper(price, d));
+        quoteName_ = f(properties->getSystemProperty("Basis"));
     }
 
     DepositRateHelper::DepositRateHelper(

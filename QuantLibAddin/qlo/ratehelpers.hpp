@@ -32,11 +32,13 @@
 
 namespace QuantLib {
     class YieldTermStructure;
+    class TenorBasis;
 
     template<class TS>
     class BootstrapHelper;
 
     typedef BootstrapHelper<YieldTermStructure> RateHelper;
+    typedef BootstrapHelper<TenorBasis> BasisHelper;
 
     class Quote;
     class Period;
@@ -53,6 +55,28 @@ namespace QuantLib {
 }
 
 namespace QuantLibAddin {
+
+    class BasisHelper : public ObjectHandler::LibraryObject<QuantLib::BasisHelper> {
+    public:
+
+    protected:
+        OH_LIB_CTOR(BasisHelper, QuantLib::BasisHelper);
+        std::string quoteName_;
+    };
+
+    class BasisRateHelper : public BasisHelper {
+    public:
+        BasisRateHelper(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::Quote>& price,
+            const QuantLib::Date& d,
+            bool permanent);
+        BasisRateHelper(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            QuantLib::Real price,
+            const QuantLib::Date& d,
+            bool permanent);
+    };
 
     class RateHelper : public ObjectHandler::LibraryObject<QuantLib::RateHelper> {
       public:
