@@ -27,66 +27,15 @@
 #endif
 #include <qlo/abcd.hpp>
 
-#include <ql/math/abcdmathfunction.hpp>
-#include <ql/math/polynomialmathfunction.hpp>
 #include <ql/termstructures/volatility/abcd.hpp>
 #include <ql/quotes/simplequote.hpp>
 #include <ql/termstructures/volatility/abcdcalibration.hpp>
-#include <ql/termstructures/yield/tenorbasis.hpp>
 
 using boost::shared_ptr;
 using ObjectHandler::LibraryObject;
 
 namespace QuantLibAddin {
-   
-    AbcdMathFunction::AbcdMathFunction(
-            const shared_ptr<ObjectHandler::ValueObject>& properties,
-            const std::vector<QuantLib::Real>& abcd,
-            bool permanent)
-    : LibraryObject<QuantLib::AbcdMathFunction>(properties, permanent) {
-        libraryObject_ = shared_ptr<QuantLib::AbcdMathFunction>(new
-            QuantLib::AbcdMathFunction(abcd));
-    }   
-
-    PolynomialFunction::PolynomialFunction(
-            const shared_ptr<ObjectHandler::ValueObject>& properties,
-            const std::vector<QuantLib::Real>& c,
-            bool permanent)
-    : LibraryObject<QuantLib::PolynomialFunction>(properties, permanent) {
-        libraryObject_ = shared_ptr<QuantLib::PolynomialFunction>(new
-            QuantLib::PolynomialFunction(c));
-    }
-
-    AbcdTenorBasis::AbcdTenorBasis(
-        const shared_ptr<ObjectHandler::ValueObject>& p,
-        QuantLib::Date settlementDate,
-        shared_ptr<QuantLib::IborIndex> iborIndex,
-        const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
-        bool isSimple,
-        shared_ptr<QuantLib::AbcdMathFunction> f,
-        bool permanent)
-    : TenorBasis(p, permanent)
-    {
-        libraryObject_ = shared_ptr<QuantLib::AbcdTenorBasis>(new
-            QuantLib::AbcdTenorBasis(settlementDate, iborIndex,
-                                     baseCurve, isSimple, f));
-    }
-
-    PolynomialTenorBasis::PolynomialTenorBasis(
-        const shared_ptr<ObjectHandler::ValueObject>& p,
-        QuantLib::Date settlementDate,
-        shared_ptr<QuantLib::IborIndex> iborIndex,
-        const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
-        bool isSimple,
-        shared_ptr<QuantLib::PolynomialFunction> f,
-        bool permanent)
-    : TenorBasis(p, permanent)
-    {
-        libraryObject_ = shared_ptr<QuantLib::PolynomialTenorBasis>(new
-            QuantLib::PolynomialTenorBasis(settlementDate, iborIndex,
-                                           baseCurve, isSimple, f));
-    }
-
+  
     AbcdFunction::AbcdFunction(
             const shared_ptr<ObjectHandler::ValueObject>& properties,
             QuantLib::Real a, 
