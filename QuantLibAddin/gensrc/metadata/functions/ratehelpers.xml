@@ -179,14 +179,19 @@
             <tensorRank>scalar</tensorRank>
             <description>Reference date of the simple basis, B(T).</description>
           </Parameter>
+          <Parameter name='IborIndex' exampleValue='Euribor6M'>
+            <type>QuantLib::IborIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>IborIndex object ID.</description>
+          </Parameter>
         </Parameters>
       </ParameterList>
     </Constructor>
 
-    <Constructor name='qlBasisRateHelper2'>
+    <!--<Constructor name='qlBasisRateHelper2'>
       <libraryFunction>BasisRateHelper</libraryFunction>
       <SupportedPlatforms>
-        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        --><!--SupportedPlatform name='Excel' calcInWizard='false'/--><!--
         <SupportedPlatform name='Excel'/>
         <SupportedPlatform name='Calc'/>
         <SupportedPlatform name='Cpp'/>
@@ -206,7 +211,7 @@
           </Parameter>
         </Parameters>
       </ParameterList>
-    </Constructor>
+    </Constructor>-->
 
     <!-- Rate Helper functions -->
     <Member name='qlRateHelperEarliestDate' type='QuantLib::RateHelper'>

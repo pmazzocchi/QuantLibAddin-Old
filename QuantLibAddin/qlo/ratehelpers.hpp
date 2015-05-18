@@ -58,7 +58,7 @@ namespace QuantLibAddin {
 
     class BasisHelper : public ObjectHandler::LibraryObject<QuantLib::BasisHelper> {
     public:
-
+        std::string quoteName() { return quoteName_; }
     protected:
         OH_LIB_CTOR(BasisHelper, QuantLib::BasisHelper);
         std::string quoteName_;
@@ -68,13 +68,9 @@ namespace QuantLibAddin {
     public:
         BasisRateHelper(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-            const QuantLib::Handle<QuantLib::Quote>& price,
+            const QuantLib::Handle<QuantLib::Quote>& basis,
             const QuantLib::Date& d,
-            bool permanent);
-        BasisRateHelper(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-            QuantLib::Real price,
-            const QuantLib::Date& d,
+            const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
             bool permanent);
     };
 

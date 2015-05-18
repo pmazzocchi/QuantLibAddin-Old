@@ -60,24 +60,16 @@ namespace QuantLibAddin {
 
     BasisRateHelper::BasisRateHelper(
                 const shared_ptr<ValueObject>& properties,
-                const QuantLib::Handle<QuantLib::Quote>& price,
+                const QuantLib::Handle<QuantLib::Quote>& basis,
                 const QuantLib::Date& d,
+                const shared_ptr<QuantLib::IborIndex>& iborIndex,
                 bool permanent)
         : BasisHelper(properties, permanent) {
         libraryObject_ = shared_ptr<QuantLib::BasisHelper>(new
-            QuantLib::BasisRateHelper(price, d));
-        quoteName_ = f(properties->getSystemProperty("Basis"));
-    }
-
-    BasisRateHelper::BasisRateHelper(
-        const shared_ptr<ValueObject>& properties,
-        QuantLib::Real price,
-        const QuantLib::Date& d,
-        bool permanent)
-        : BasisHelper(properties, permanent) {
-        libraryObject_ = shared_ptr<QuantLib::BasisHelper>(new
-            QuantLib::BasisRateHelper(price, d));
-        quoteName_ = f(properties->getSystemProperty("Basis"));
+            QuantLib::BasisRateHelper(basis, 
+                                      d, 
+                                      iborIndex));
+        quoteName_ = f(properties->getSystemProperty("Rate"));
     }
 
     DepositRateHelper::DepositRateHelper(
