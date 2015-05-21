@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug (static runtime)|Win32">
@@ -568,6 +568,7 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="functions\tenorbasis.cpp" />
     <ClCompile Include="register\addin.cpp" />
     <ClCompile Include="register\register_abcd.cpp" />
     <ClCompile Include="register\register_accountingengines.cpp" />
@@ -627,6 +628,7 @@
     <ClCompile Include="register\register_swap.cpp" />
     <ClCompile Include="register\register_swaption.cpp" />
     <ClCompile Include="register\register_swaptionvolstructure.cpp" />
+    <ClCompile Include="register\register_tenorbasis.cpp" />
     <ClCompile Include="register\register_termstructures.cpp" />
     <ClCompile Include="register\register_timeseries.cpp" />
     <ClCompile Include="register\register_utilities.cpp" />
