@@ -843,6 +843,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\valueobjects\vo_tenorbasis.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_tenorbasis.hpp"
+				>
+			</File>
+			<File
 				RelativePath="qlo\valueobjects\vo_termstructures.cpp"
 				>
 			</File>
@@ -903,6 +911,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\tenorbasis.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\tenorbasis.hpp"
+				>
+			</File>
+			<File
 				RelativePath="qlo\yieldtermstructures.cpp"
 				>
 			</File>
@@ -914,6 +930,14 @@
 		<Filter
 			Name="Math"
 			>
+			<File
+				RelativePath=".\qlo\abcdmathfunction.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\abcdmathfunction.hpp"
+				>
+			</File>
 			<File
 				RelativePath="qlo\extrapolator.cpp"
 				>
@@ -948,6 +972,14 @@
 			</File>
 			<File
 				RelativePath="qlo\mathf.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\polynomialmathfunction.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\polynomialmathfunction.hpp"
 				>
 			</File>
 			<File
@@ -1391,6 +1423,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\model.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\model.hpp"
+				>
+			</File>
+			<File
 				RelativePath="qlo\products.cpp"
 				>
 			</File>
@@ -1435,6 +1475,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\loop\loop_defaulttermstructures.hpp"
+				>
+			</File>
+			<File
 				RelativePath="qlo\loop\loop_index.hpp"
 				>
 			</File>
@@ -1447,6 +1491,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\loop\loop_tenorbasis.hpp"
+				>
+			</File>
+			<File
 				RelativePath="qlo\loop\loop_termstructures.hpp"
 				>
 			</File>
@@ -1456,6 +1504,10 @@
 			</File>
 			<File
 				RelativePath="qlo\loop\loop_valueobject.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\loop\loop_valueobjects.hpp"
 				>
 			</File>
 		</Filter>
@@ -1970,6 +2022,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_tenorbasis.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_tenorbasis.hpp"
+					>
+				</File>
+				<File
 					RelativePath="qlo\serialization\create\create_termstructures.cpp"
 					>
 				</File>
@@ -2427,6 +2487,14 @@
 				</File>
 				<File
 					RelativePath="qlo\serialization\register\serialization_swaptionvolstructure.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_tenorbasis.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_tenorbasis.hpp"
 					>
 				</File>
 				<File
