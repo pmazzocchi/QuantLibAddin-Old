@@ -33,8 +33,8 @@ namespace QuantLib {
 namespace QuantLibAddin {
 
     class CalibratedModel :
-        public ObjectHandler::LibraryObject < QuantLib::CalibratedModel > {
-    public:
+        public ObjectHandler::LibraryObject<QuantLib::CalibratedModel> {
+     public:
         CalibratedModel(
             const boost::shared_ptr<ObjectHandler::ValueObject>& p,
             QuantLib::Size nArguments,

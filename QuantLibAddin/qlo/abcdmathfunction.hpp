@@ -30,8 +30,8 @@ namespace QuantLib {
 
 namespace QuantLibAddin {
 
-    class AbcdMathFunction : public
-        ObjectHandler::LibraryObject<QuantLib::AbcdMathFunction> {
+    class AbcdMathFunction : 
+        public ObjectHandler::LibraryObject<QuantLib::AbcdMathFunction> {
       public:
         AbcdMathFunction(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,

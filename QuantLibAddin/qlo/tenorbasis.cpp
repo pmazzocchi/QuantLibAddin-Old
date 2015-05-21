@@ -48,6 +48,7 @@ namespace QuantLibAddin {
         shared_ptr<QuantLib::AbcdMathFunction> f,
         bool permanent)
     : TenorBasis(p, 4, permanent)
+    //: TenorBasis(p, permanent)
     {
         libraryObject_ = shared_ptr<QuantLib::AbcdTenorBasis>(new
             QuantLib::AbcdTenorBasis(settlementDate, iborIndex,
@@ -63,6 +64,7 @@ namespace QuantLibAddin {
         shared_ptr<QuantLib::PolynomialFunction> f,
         bool permanent)
         : TenorBasis(p, f->order(), permanent)
+        //: TenorBasis(p, permanent)
     {
         libraryObject_ = shared_ptr<QuantLib::PolynomialTenorBasis>(new
             QuantLib::PolynomialTenorBasis(settlementDate, iborIndex,
