@@ -35,9 +35,8 @@ namespace QuantLibAddin {
    
     TenorBasis::TenorBasis(
                        const shared_ptr<ObjectHandler::ValueObject>& p,
-                       QuantLib::Size nArguments,
                        bool permanent)
-    : CalibratedModel(p, nArguments, permanent){}
+    : CalibratedModel(p, permanent){}
 
     AbcdTenorBasis::AbcdTenorBasis(
         const shared_ptr<ObjectHandler::ValueObject>& p,
@@ -47,9 +46,7 @@ namespace QuantLibAddin {
         bool isSimple,
         shared_ptr<QuantLib::AbcdMathFunction> f,
         bool permanent)
-    : TenorBasis(p, 4, permanent)
-    //: TenorBasis(p, permanent)
-    {
+    : TenorBasis(p, permanent) {
         libraryObject_ = shared_ptr<QuantLib::AbcdTenorBasis>(new
             QuantLib::AbcdTenorBasis(settlementDate, iborIndex,
                                      baseCurve, isSimple, f));
@@ -63,9 +60,7 @@ namespace QuantLibAddin {
         bool isSimple,
         shared_ptr<QuantLib::PolynomialFunction> f,
         bool permanent)
-        : TenorBasis(p, f->order(), permanent)
-        //: TenorBasis(p, permanent)
-    {
+    : TenorBasis(p, permanent) {
         libraryObject_ = shared_ptr<QuantLib::PolynomialTenorBasis>(new
             QuantLib::PolynomialTenorBasis(settlementDate, iborIndex,
                                            baseCurve, isSimple, f));

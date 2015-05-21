@@ -43,19 +43,10 @@ namespace QuantLibAddin {
 
 
     class TenorBasis : public CalibratedModel {
-        public:
-            TenorBasis(const boost::shared_ptr<ObjectHandler::ValueObject>& p,
-                       QuantLib::Size nArguments,
-                       bool permanent);
+      public:
+        TenorBasis(const boost::shared_ptr<ObjectHandler::ValueObject>& p,
+                   bool permanent);
     };
-    //class TenorBasis : 
-        //public ObjectHandler::LibraryObject<QuantLib::TenorBasis> {
-        //protected:
-            //OH_LIB_CTOR(TenorBasis, QuantLib::TenorBasis);
-            // TenorBasis(const boost::shared_ptr<ObjectHandler::ValueObject>& p,
-            //            bool permanent)
-            //: ObjectHandler::LibraryObject<QuantLib::TenorBasis>(p, permanent) {}
-    //};
 
 
     class AbcdTenorBasis : public TenorBasis {
@@ -68,8 +59,6 @@ namespace QuantLibAddin {
             bool isSimple,
             boost::shared_ptr<QuantLib::AbcdMathFunction> f,
             bool permanent);
-    //protected:
-    //    OH_OBJ_CTOR(AbcdTenorBasis, TenorBasis);
     };
 
     class PolynomialTenorBasis : public TenorBasis {
@@ -82,8 +71,6 @@ namespace QuantLibAddin {
             bool isSimple,
             boost::shared_ptr<QuantLib::PolynomialFunction> f,
             bool permanent);
-    //protected:
-    //    OH_OBJ_CTOR(PolynomialTenorBasis, TenorBasis);
     };
 
 }

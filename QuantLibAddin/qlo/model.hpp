@@ -25,19 +25,15 @@
 
 namespace QuantLib {
     class CalibratedModel;
-
-    //template <class T>
-    //class Handle;
 }
 
 namespace QuantLibAddin {
 
     class CalibratedModel :
         public ObjectHandler::LibraryObject<QuantLib::CalibratedModel> {
-     public:
+      protected:
         CalibratedModel(
             const boost::shared_ptr<ObjectHandler::ValueObject>& p,
-            QuantLib::Size nArguments,
             bool permanent);
     };
 

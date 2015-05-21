@@ -31,12 +31,7 @@ namespace QuantLibAddin {
 
     CalibratedModel::CalibratedModel(
             const shared_ptr<ObjectHandler::ValueObject>& properties,
-            QuantLib::Size nArguments,
             bool permanent) 
-            : LibraryObject<QuantLib::CalibratedModel>(properties, permanent) {
-                libraryObject_ = shared_ptr<QuantLib::CalibratedModel>(new
-            QuantLib::CalibratedModel(nArguments));
-    }
+    : LibraryObject<QuantLib::CalibratedModel>(properties, permanent) {}
 
 }
-
