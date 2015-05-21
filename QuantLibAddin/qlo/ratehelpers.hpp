@@ -4,8 +4,9 @@
  Copyright (C) 2005, 2006, 2007 Eric Ehlers
  Copyright (C) 2005 Aurelien Chanudet
  Copyright (C) 2005 Plamen Neykov
- Copyright (C) 2006, 2007, 2008, 2009, 2012 Ferdinando Ametrano
+ Copyright (C) 2006-2009, 2012, 2015 Ferdinando Ametrano
  Copyright (C) 2007 Marco Bianchetti
+ Copyright (C) 2015 Maddalena Zanzi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -29,6 +30,7 @@
 #include <ql/types.hpp>
 #include <ql/time/businessdayconvention.hpp>
 #include <ql/time/frequency.hpp>
+#include <ql/instruments/futures.hpp>
 
 namespace QuantLib {
     class YieldTermStructure;
@@ -52,6 +54,7 @@ namespace QuantLib {
     class Bond;
     template <class T>
     class Handle;
+
 }
 
 namespace QuantLibAddin {
@@ -111,6 +114,7 @@ namespace QuantLibAddin {
         FuturesRateHelper(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
             const QuantLib::Handle<QuantLib::Quote>& price,
+            QuantLib::FuturesType type,
             const QuantLib::Date& immDate,
             const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
             const QuantLib::Handle<QuantLib::Quote>& convAdj,
@@ -118,6 +122,7 @@ namespace QuantLibAddin {
         FuturesRateHelper(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
             const QuantLib::Handle<QuantLib::Quote>& price,
+            QuantLib::FuturesType type,
             const QuantLib::Date& immDate,
             QuantLib::Natural lengthInMonths,
             const QuantLib::Calendar& calendar,
@@ -129,6 +134,7 @@ namespace QuantLibAddin {
         FuturesRateHelper(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
             const QuantLib::Handle<QuantLib::Quote>& price,
+            QuantLib::FuturesType type,
             const QuantLib::Date& immDate,
             const QuantLib::Date& endDate,
             const QuantLib::DayCounter& dayCounter,
@@ -149,6 +155,7 @@ namespace QuantLibAddin {
         SwapRateHelper(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
             const QuantLib::Handle<QuantLib::Quote>& quote,
+            QuantLib::Natural settlementDays,
             const QuantLib::Period& p,
             const QuantLib::Calendar& calendar,
             const QuantLib::Frequency& fixedFrequency,
