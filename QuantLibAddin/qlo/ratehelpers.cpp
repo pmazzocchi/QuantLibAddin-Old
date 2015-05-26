@@ -63,13 +63,11 @@ namespace QuantLibAddin {
                 const shared_ptr<ValueObject>& properties,
                 const QuantLib::Handle<QuantLib::Quote>& basis,
                 const QuantLib::Date& d,
-                const shared_ptr<QuantLib::IborIndex>& iborIndex,
                 bool permanent)
         : BasisHelper(properties, permanent) {
         libraryObject_ = shared_ptr<QuantLib::BasisHelper>(new
             QuantLib::BasisRateHelper(basis, 
-                                      d, 
-                                      iborIndex));
+                                      d));
         quoteName_ = f(properties->getSystemProperty("Rate"));
     }
 

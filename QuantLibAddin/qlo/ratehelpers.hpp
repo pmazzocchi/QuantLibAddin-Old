@@ -73,7 +73,6 @@ namespace QuantLibAddin {
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
             const QuantLib::Handle<QuantLib::Quote>& basis,
             const QuantLib::Date& d,
-            const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
             bool permanent);
     };
 
