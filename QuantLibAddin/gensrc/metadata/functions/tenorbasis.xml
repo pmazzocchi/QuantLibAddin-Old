@@ -872,14 +872,73 @@
             <tensorRank>scalar</tensorRank>
             <description>TRUE if the PolynomialFunction is the parametrization of the simple basis; FALSE for instantaneous continous basis.</description>
           </Parameter>
-          <Parameter name='PolynomialFunction'>
+          <Parameter name='Coefficients'>
+            <type>QuantLib::Real</type>
+            <tensorRank>vector</tensorRank>
+            <description>Polynomials coefficients, the first one being the order zero one.</description>
+          </Parameter>
+          <!--<Parameter name='PolynomialFunction'>
             <type>QuantLib::PolynomialFunction</type>
             <tensorRank>scalar</tensorRank>
-            <description>.</description>
-          </Parameter>
+            <description>Coefficients of the polinomial function.</description>
+          </Parameter>-->
         </Parameters>
       </ParameterList>
     </Constructor>
+
+    <!-- CalibratedModel Calibrate-->
+    <!--<Constructor name='qlCalibratedModelCalibrate' type='QuantLib::CalibratedModel'>
+      <description>compute calibration.</description>
+      <libraryFunction>calibrate</libraryFunction>
+      <SupportedPlatforms>
+        --><!--SupportedPlatform name='Excel' calcInWizard='false'/--><!--
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Times' exampleValue ='0.01, 0.02, 0.03, 0.04 '>
+            <type>QuantLib::Time</type>
+            <tensorRank>vector</tensorRank>
+            <description>times.</description>
+          </Parameter>
+          <Parameter name='RateHelpers'>
+            <type>QuantLibAddin::RateHelper</type>
+            <tensorRank>vector</tensorRank>
+            <description>vector of RateHelper IDs.</description>
+          </Parameter>
+          <Parameter name='Method' default='""'>
+            <type>QuantLib::OptimizationMethod</type>
+            <tensorRank>scalar</tensorRank>
+            <description>OptimizationMethod object ID.</description>
+          </Parameter>
+          <Parameter name='EndCriteria' default='""'>
+            <type>QuantLib::EndCriteria</type>
+            <tensorRank>scalar</tensorRank>
+            <description>EndCriteria object ID.</description>
+          </Parameter>
+          <Parameter name='Constraint'>
+            <type>Quantlib::Constraint</type>
+            <tensorRank>scalar</tensorRank>
+            <description>additional Constraint.</description>
+          </Parameter>
+          <Parameter name='Weights'>
+            <type>QuantLib::Real</type>
+            <tensorRank>vector</tensorRank>
+            <description>Weghts.</description>
+          </Parameter>
+          <Parameter name='FixParameters'>
+            <type>bool</type>
+            <tensorRank>vector</tensorRank>
+            <description>Weghts.</description>
+          </Parameter>          
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>void</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Constructor>-->
 
   </Functions>
 </Category>

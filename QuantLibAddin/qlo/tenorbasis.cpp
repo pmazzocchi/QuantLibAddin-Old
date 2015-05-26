@@ -58,12 +58,12 @@ namespace QuantLibAddin {
         shared_ptr<QuantLib::IborIndex> iborIndex,
         const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
         bool isSimple,
-        shared_ptr<QuantLib::PolynomialFunction> f,
+        const std::vector<QuantLib::Real>& coeff,
         bool permanent)
     : TenorBasis(p, permanent) {
         libraryObject_ = shared_ptr<QuantLib::PolynomialTenorBasis>(new
             QuantLib::PolynomialTenorBasis(settlementDate, iborIndex,
-                                           baseCurve, isSimple, f));
+                                           baseCurve, isSimple, coeff));
     }
 
 }
