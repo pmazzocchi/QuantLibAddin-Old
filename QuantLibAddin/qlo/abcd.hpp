@@ -31,6 +31,7 @@
 namespace QuantLib {
     class AbcdFunction;
     class AbcdCalibration;
+    class AbcdCalibration2;
     class EndCriteria;
     class OptimizationMethod;
 
@@ -74,6 +75,30 @@ namespace QuantLibAddin {
                  = boost::shared_ptr<QuantLib::OptimizationMethod>(),
             bool permanent = false);
     };
+
+    class AbcdCalibration2 :
+        public ObjectHandler::LibraryObject<QuantLib::AbcdCalibration2> {
+    public:
+        AbcdCalibration2(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const std::vector<QuantLib::Time>& t,
+            const std::vector<QuantLib::Rate>& r,
+            const std::vector<QuantLib::Real>& w,
+            QuantLib::Real a,
+            QuantLib::Real b,
+            QuantLib::Real c,
+            QuantLib::Real d,
+            bool aIsFixed,
+            bool bIsFixed,
+            bool cIsFixed,
+            bool dIsFixed,
+            const boost::shared_ptr<QuantLib::EndCriteria> endCriteria
+            = boost::shared_ptr<QuantLib::EndCriteria>(),
+            const boost::shared_ptr<QuantLib::OptimizationMethod> method
+            = boost::shared_ptr<QuantLib::OptimizationMethod>(),
+            bool permanent = false);
+    };
+
 }
 
 #endif
