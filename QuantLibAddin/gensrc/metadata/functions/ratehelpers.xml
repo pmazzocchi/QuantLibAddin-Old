@@ -873,7 +873,7 @@
             <description>price quote.</description>
           </Parameter>
           <Parameter name='FuturesType' default='"IMM"'>
-            <type>QuantLib::FuturesType</type>
+            <type>QuantLib::Futures::Type</type>
             <tensorRank>scalar</tensorRank>
             <description>Futures type.</description>
           </Parameter>
@@ -914,7 +914,7 @@
             <description>price quote.</description>
           </Parameter>
           <Parameter name='FuturesType' default='"IMM"'>
-            <type>QuantLib::FuturesType</type>
+            <type>QuantLib::Futures::Type</type>
             <tensorRank>scalar</tensorRank>
             <description>Futures type.</description>
           </Parameter>
@@ -975,7 +975,7 @@
             <description>price quote.</description>
           </Parameter>
           <Parameter name='FuturesType' default='"IMM"'>
-            <type>QuantLib::FuturesType</type>
+            <type>QuantLib::Futures::Type</type>
             <tensorRank>scalar</tensorRank>
             <description>Futures type.</description>
           </Parameter>
