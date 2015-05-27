@@ -69,7 +69,7 @@ namespace QuantLibAddin {
             boost::shared_ptr<QuantLib::IborIndex> iborIndex,
             const QuantLib::Handle<QuantLib::YieldTermStructure>&,
             bool isSimple,
-            boost::shared_ptr<QuantLib::PolynomialFunction> f,
+            const std::vector<QuantLib::Real>& coeff,
             bool permanent);
     };
 

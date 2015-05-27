@@ -48,6 +48,7 @@
 
     <DataType defaultSuperType='libraryClass'>QuantLib::AbcdAtmVolCurve</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::AbcdCalibration</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::AbcdCalibration2</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::AbcdFunction</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::AbcdInterpolation</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::AccountingEngine</DataType>
