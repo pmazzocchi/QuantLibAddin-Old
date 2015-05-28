@@ -896,5 +896,159 @@
       </ReturnValue>
     </Member>
 
+    <!-- PolynomialCalibration class costructor -->
+    <Constructor name='qlPolynomialCalibration'>
+      <libraryFunction>PolynomialCalibration</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Times' exampleValue ='0.01, 0.02, 0.03, 0.04 '>
+            <type>QuantLib::Time</type>
+            <tensorRank>vector</tensorRank>
+            <description>times.</description>
+          </Parameter>
+          <Parameter name='Rates' >
+            <type>QuantLib::Rate</type>
+            <tensorRank>vector</tensorRank>
+            <description>rates.</description>
+          </Parameter>
+          <Parameter name='Weights' >
+            <type>QuantLib::Real</type>
+            <tensorRank>vector</tensorRank>
+            <description>weights.</description>
+          </Parameter>
+          <Parameter name='Coeff' >
+            <type>QuantLib::Real</type>
+            <tensorRank>vector</tensorRank>
+            <description>polynomial coefficients.</description>
+          </Parameter>
+          <Parameter name='FixedCoeff' >
+            <type>bool</type>
+            <tensorRank>vector</tensorRank>
+            <description>TRUE if the i-th coefficient must be kept fixed in later calibrations, FALSE otherwise.</description>
+          </Parameter>
+          <Parameter name='EndCriteria' default='""'>
+            <type>QuantLib::EndCriteria</type>
+            <tensorRank>scalar</tensorRank>
+            <description>EndCriteria object ID.</description>
+          </Parameter>
+          <Parameter name='Method' default='""'>
+            <type>QuantLib::OptimizationMethod</type>
+            <tensorRank>scalar</tensorRank>
+            <description>OptimizationMethod object ID.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <!-- PolynomialCalibration  class interfaces -->
+    <Member name='qlPolynomialCalibrationCompute' type='QuantLib::PolynomialCalibration'>
+      <description>compute polynomial calibration</description>
+      <libraryFunction>compute</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>void</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPolynomialCalibrationK' type='QuantLib::PolynomialCalibration'>
+      <description>Returns the 'k' adjustment factors needed to match market values.</description>
+      <libraryFunction>k</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPolynomialCalibrationError' type='QuantLib::PolynomialCalibration'>
+      <description>Returns the root mean squared error between the polynomial implied value and a given market value vector.</description>
+      <libraryFunction>error</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPolynomialCalibrationMaxError' type='QuantLib::PolynomialCalibration'>
+      <description>Returs the max error between the polynomial implied value and a given market value vector.</description>
+      <libraryFunction>maxError</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPolynomialCalibrationEndCriteria' type='QuantLib::PolynomialCalibration'>
+      <description>Calibrates the parameters of the parametrization.</description>
+      <libraryFunction>endCriteria</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::EndCriteria::Type</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPolynomialCalibrationCoefficients' type='QuantLib::PolynomialCalibration'>
+      <description>Returns the coefficient in the polynomial parametrization.</description>
+      <libraryFunction>coeff</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
+
   </Functions>
 </Category>

@@ -80,11 +80,28 @@ namespace QuantLibAddin {
         const shared_ptr<QuantLib::EndCriteria> endCriteria,
         const shared_ptr<QuantLib::OptimizationMethod> method,
         bool permanent)
-        : LibraryObject<QuantLib::AbcdCalibration2>(properties, permanent) {
+    : LibraryObject<QuantLib::AbcdCalibration2>(properties, permanent) {
 
         libraryObject_ = shared_ptr<QuantLib::AbcdCalibration2>(new
             QuantLib::AbcdCalibration2(t, r, w, a, b, c, d,
             aIsFixed, bIsFixed, cIsFixed, dIsFixed, endCriteria, method));
+    }
+
+    PolynomialCalibration::PolynomialCalibration(
+        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const std::vector<QuantLib::Time>& t,
+        const std::vector<QuantLib::Rate>& r,
+        const std::vector<QuantLib::Real>& w,
+        std::vector<QuantLib::Real> coeff,
+        const std::vector<bool>& fixedCoeff,
+        const boost::shared_ptr<QuantLib::EndCriteria> endCriteria,
+        const boost::shared_ptr<QuantLib::OptimizationMethod> method,
+        bool permanent)
+    : LibraryObject<QuantLib::PolynomialCalibration>(properties, permanent) {
+
+        libraryObject_ = shared_ptr<QuantLib::PolynomialCalibration>(new
+            QuantLib::PolynomialCalibration(t, r, w, coeff, fixedCoeff, 
+                                                      endCriteria, method));
     }
 
 }
