@@ -712,9 +712,9 @@
       </ReturnValue>
     </Member>
 
-    <Member name='qlTenorBasisTimeFromSettlementDate' type='QuantLib::TenorBasis' loopParameter='Date'>
-      <description>Returns the time from the settlement date for the given TenorBasis object.</description>
-      <libraryFunction>timeFromSettlementDate</libraryFunction>
+    <Member name='qlTenorBasisTimeFromReferenceDate' type='QuantLib::TenorBasis' loopParameter='Date'>
+      <description>Returns the time from the reference date for the given TenorBasis object.</description>
+      <libraryFunction>timeFromReference</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
         This function does not compile on 64-bit Linux so temporarily excluding from C++ addin
@@ -735,9 +735,9 @@
       </ReturnValue>
     </Member>
 
-    <Member name='qlTenorBasisSettlementDate' type='QuantLib::TenorBasis'>
+    <Member name='qlTenorBasisReferenceDate' type='QuantLib::TenorBasis'>
       <description>Returns the reference date for the given TenorBasis object.</description>
-      <libraryFunction>settlementDate</libraryFunction>
+      <libraryFunction>referenceDate</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
         <SupportedPlatform name='Cpp'/>
@@ -762,11 +762,6 @@
       </SupportedPlatforms>
       <ParameterList>
         <Parameters>
-          <Parameter name='SettlementDate' const='False' default='QuantLib::Date()'>
-            <type>QuantLib::Date</type>
-            <tensorRank>scalar</tensorRank>
-            <description>Settlement date.</description>
-          </Parameter>
           <Parameter name='IborIndex'>
             <type>QuantLib::IborIndex</type>
             <tensorRank>scalar</tensorRank>
@@ -777,6 +772,11 @@
             <superType>libToHandle</superType>
             <tensorRank>scalar</tensorRank>
             <description>base rate term structure object ID.</description>
+          </Parameter>
+          <Parameter name='ReferenceDate' const='False' default='QuantLib::Date()'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Reference date.</description>
           </Parameter>
           <Parameter name='IsSimple'>
             <type>bool</type>
@@ -851,11 +851,6 @@
       </SupportedPlatforms>
       <ParameterList>
         <Parameters>
-          <Parameter name='SettlementDate' const='False' default='QuantLib::Date()'>
-            <type>QuantLib::Date</type>
-            <tensorRank>scalar</tensorRank>
-            <description>Settlement date.</description>
-          </Parameter>
           <Parameter name='IborIndex'>
             <type>QuantLib::IborIndex</type>
             <tensorRank>scalar</tensorRank>
@@ -866,6 +861,11 @@
             <superType>libToHandle</superType>
             <tensorRank>scalar</tensorRank>
             <description>base rate term structure object ID.</description>
+          </Parameter>
+          <Parameter name='ReferenceDate' const='False' default='QuantLib::Date()'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Reference date.</description>
           </Parameter>
           <Parameter name='IsSimple'>
             <type>bool</type>
