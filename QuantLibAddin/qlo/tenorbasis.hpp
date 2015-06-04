@@ -48,7 +48,6 @@ namespace QuantLibAddin {
                    bool permanent);
     };
 
-
     class AbcdTenorBasis : public TenorBasis {
     public:
         AbcdTenorBasis(
@@ -57,7 +56,7 @@ namespace QuantLibAddin {
             const QuantLib::Handle<QuantLib::YieldTermStructure>&,
             QuantLib::Date referenceDate,
             bool isSimple,
-            boost::shared_ptr<QuantLib::AbcdMathFunction> f,
+            const std::vector<QuantLib::Real>& coeff,
             bool permanent);
     };
 

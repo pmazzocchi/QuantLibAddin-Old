@@ -44,12 +44,12 @@ namespace QuantLibAddin {
         const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
         QuantLib::Date referenceDate,
         bool isSimple,
-        shared_ptr<QuantLib::AbcdMathFunction> f,
+        const std::vector<QuantLib::Real>& coeff,
         bool permanent)
     : TenorBasis(p, permanent) {
         libraryObject_ = shared_ptr<QuantLib::AbcdTenorBasis>(new
             QuantLib::AbcdTenorBasis(iborIndex, baseCurve, referenceDate, 
-                                     isSimple, f));
+                                     isSimple, coeff));
     }
 
     PolynomialTenorBasis::PolynomialTenorBasis(
