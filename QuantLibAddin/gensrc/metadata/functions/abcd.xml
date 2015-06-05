@@ -689,7 +689,17 @@
             <tensorRank>vector</tensorRank>
             <description>weights.</description>
           </Parameter>
-          <Parameter name='A' default='-0.06'>
+          <Parameter name='Coeff' >
+            <type>QuantLib::Real</type>
+            <tensorRank>vector</tensorRank>
+            <description>abcd function coefficients.</description>
+          </Parameter>
+          <Parameter name='FixedCoeff' >
+            <type>bool</type>
+            <tensorRank>vector</tensorRank>
+            <description>TRUE if the i-th coefficient must be kept fixed in later calibrations, FALSE otherwise.</description>
+          </Parameter>
+          <!--<Parameter name='A' default='-0.06'>
             <type>double</type>
             <tensorRank>scalar</tensorRank>
             <description>the a coefficient in the abcd vol parametrization. Used as guess if the object is later calibrated.</description>
@@ -728,7 +738,7 @@
             <type>bool</type>
             <tensorRank>scalar</tensorRank>
             <description>TRUE if the a coefficient must be kept fixed in later calibrations.</description>
-          </Parameter>
+          </Parameter>-->
           <Parameter name='EndCriteria' default='""'>
             <type>QuantLib::EndCriteria</type>
             <tensorRank>scalar</tensorRank>
