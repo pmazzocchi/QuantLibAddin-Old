@@ -48,16 +48,15 @@ namespace QuantLibAddin {
                    bool permanent);
     };
 
-
     class AbcdTenorBasis : public TenorBasis {
     public:
         AbcdTenorBasis(
             const boost::shared_ptr<ObjectHandler::ValueObject>& p,
-            QuantLib::Date settlementDate,
             boost::shared_ptr<QuantLib::IborIndex> iborIndex,
             const QuantLib::Handle<QuantLib::YieldTermStructure>&,
+            QuantLib::Date referenceDate,
             bool isSimple,
-            boost::shared_ptr<QuantLib::AbcdMathFunction> f,
+            const std::vector<QuantLib::Real>& coeff,
             bool permanent);
     };
 
@@ -65,9 +64,9 @@ namespace QuantLibAddin {
     public:
         PolynomialTenorBasis(
             const boost::shared_ptr<ObjectHandler::ValueObject>& p,
-            QuantLib::Date settlementDate,
             boost::shared_ptr<QuantLib::IborIndex> iborIndex,
             const QuantLib::Handle<QuantLib::YieldTermStructure>&,
+            QuantLib::Date referenceDate,
             bool isSimple,
             const std::vector<QuantLib::Real>& coeff,
             bool permanent);
