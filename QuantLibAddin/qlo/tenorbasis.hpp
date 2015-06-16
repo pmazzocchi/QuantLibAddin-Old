@@ -29,11 +29,21 @@
 namespace QuantLib {
     class TenorBasis;
     class Date;
+    class Quote;
     class AbcdMathFunction;
     class PolynomialFunction;
     class IborIndex;
     class CalibratedModel;
     class YieldTermStructure;
+    // for calibration
+    class PolynomialCalibration;
+    class AbcdCalibration2;
+    class EndCriteria;
+    class OptimizationMethod;
+
+    template<class TS>
+    class BootstrapHelper;
+    typedef BootstrapHelper<TenorBasis> BasisHelper;
 
     template <class T>
     class Handle;
@@ -72,6 +82,53 @@ namespace QuantLibAddin {
             bool permanent);
     };
 
+    class AbcdCalibration2 :
+        public ObjectHandler::LibraryObject<QuantLib::AbcdCalibration2> {
+    public:
+        AbcdCalibration2(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const std::vector<QuantLib::Time>& t,
+            const std::vector<QuantLib::Rate>& r,
+            const std::vector<QuantLib::Real>& w,
+            std::vector<QuantLib::Real> coeff,
+            const std::vector<bool>& fixedCoeff,
+            const boost::shared_ptr<QuantLib::EndCriteria> endCriteria,
+            const boost::shared_ptr<QuantLib::OptimizationMethod> method,
+            bool permanent);
+    };
+
+    class PolynomialCalibration :
+        public ObjectHandler::LibraryObject<QuantLib::PolynomialCalibration> {
+    public:
+        PolynomialCalibration(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const std::vector<QuantLib::Time>& t,
+            const std::vector<QuantLib::Rate>& rates,
+            const std::vector<QuantLib::Real>& weights,
+            std::vector<QuantLib::Real> coeff,
+            const std::vector<bool>& fixedCoeff,
+            const boost::shared_ptr<QuantLib::EndCriteria> endCriteria,
+            const boost::shared_ptr<QuantLib::OptimizationMethod> method,
+            bool permanent);
+    };
+
+    class BasisHelper :
+        public ObjectHandler::LibraryObject<QuantLib::BasisHelper> {
+    public:
+        std::string quoteName() { return quoteName_; }
+    protected:
+        OH_LIB_CTOR(BasisHelper, QuantLib::BasisHelper);
+        std::string quoteName_;
+    };
+
+    class BasisRateHelper : public BasisHelper {
+    public:
+        BasisRateHelper(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::Quote>& basis,
+            const QuantLib::Date& d,
+            bool permanent);
+    };
 }
 
 #endif

@@ -31,10 +31,9 @@
 namespace QuantLib {
     class AbcdFunction;
     class AbcdCalibration;
-    class AbcdCalibration2;
     class EndCriteria;
     class OptimizationMethod;
-    class PolynomialCalibration;
+
 
     template <class T>
     class Handle;
@@ -75,36 +74,6 @@ namespace QuantLibAddin {
              const boost::shared_ptr<QuantLib::OptimizationMethod> method
                  = boost::shared_ptr<QuantLib::OptimizationMethod>(),
              bool permanent = false);
-    };
-
-    class AbcdCalibration2 :
-        public ObjectHandler::LibraryObject<QuantLib::AbcdCalibration2> {
-    public:
-        AbcdCalibration2(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-            const std::vector<QuantLib::Time>& t,
-            const std::vector<QuantLib::Rate>& r,
-            const std::vector<QuantLib::Real>& w,
-            std::vector<QuantLib::Real> coeff,
-            const std::vector<bool>& fixedCoeff,
-            const boost::shared_ptr<QuantLib::EndCriteria> endCriteria,
-            const boost::shared_ptr<QuantLib::OptimizationMethod> method,
-            bool permanent);
-    };
-
-    class PolynomialCalibration :
-        public ObjectHandler::LibraryObject<QuantLib::PolynomialCalibration> {
-    public:
-        PolynomialCalibration(
-               const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-               const std::vector<QuantLib::Time>& t,
-               const std::vector<QuantLib::Rate>& rates,
-               const std::vector<QuantLib::Real>& weights,
-               std::vector<QuantLib::Real> coeff,
-               const std::vector<bool>& fixedCoeff,
-               const boost::shared_ptr<QuantLib::EndCriteria> endCriteria,
-               const boost::shared_ptr<QuantLib::OptimizationMethod> method,
-               bool permanent);
     };
 
 }
