@@ -11,10 +11,6 @@
     <include>qlo/optimization.hpp</include>
 
     <include>ql/indexes/iborindex.hpp</include>
-    <include>ql/experimental/tenorbasis/tenorbasis.hpp</include>
-    <include>ql/experimental/tenorbasis/tenorbasiscalibration.hpp</include>
-    <include>ql/experimental/tenorbasis/basisratehelpers.hpp</include>
-    <include>ql/termstructures/yieldtermstructure.hpp</include>
   </serializationIncludes>
   <addinIncludes>
     <include>qlo/tenorbasis.hpp</include>
@@ -29,7 +25,6 @@
     <include>ql/experimental/tenorbasis/tenorbasis.hpp</include>
     <include>ql/experimental/tenorbasis/tenorbasiscalibration.hpp</include>
     <include>ql/experimental/tenorbasis/basisratehelpers.hpp</include>
-    <include>ql/termstructures/yieldtermstructure.hpp</include>
     <include>ql/indexes/iborindex.hpp</include>
   </addinIncludes>
 
@@ -1230,6 +1225,23 @@
       <ReturnValue>
         <type>QuantLib::EndCriteria::Type</type>
         <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlPolynomialCalibrationCoefficients' type='QuantLib::PolynomialCalibration'>
+      <description>Returns the coefficient in the polynomial parametrization.</description>
+      <libraryFunction>coeff</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>vector</tensorRank>
       </ReturnValue>
     </Member>
 
