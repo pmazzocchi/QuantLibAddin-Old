@@ -78,6 +78,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::CmsCouponPricer</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CmsMarket</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CmsMarketCalibration</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::Constraint</DataType>
     <DataType defaultSuperType='objectClass'>QuantLib::CorrelationTermStructure</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CoterminalSwapCurveState</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CovarianceDecomposition</DataType>

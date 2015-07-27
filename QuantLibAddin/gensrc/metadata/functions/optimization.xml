@@ -198,6 +198,21 @@
       </ParameterList>
     </Constructor>
 
+    <!-- Constraint class and interface -->
+
+    <Constructor name='qlNoConstraint'>
+      <libraryFunction>NoConstraint</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
     <!-- OptimizationMethod derived classes' constructors -->
 
     <Constructor name='qlSimplex'>

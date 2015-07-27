@@ -696,9 +696,9 @@
       <description>calibrate tenorBasis</description>
       <libraryFunction>calibrate</libraryFunction>
       <SupportedPlatforms>
-        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
         <SupportedPlatform name='Excel'/>
-        <!--SupportedPlatform name='Cpp'/-->
+        <SupportedPlatform name='Cpp'/>
+        <SupportedPlatform name='Calc'/>
       </SupportedPlatforms>
       <ParameterList>
         <Parameters>
@@ -707,18 +707,21 @@
             <tensorRank>vector</tensorRank>
             <description>Rate Helpers.</description>
           </Parameter>
-          <Parameter name='Method' default='""'>
+          <Parameter name='Method'>
             <type>QuantLib::OptimizationMethod</type>
+            <superType>underlyingClass</superType>
             <tensorRank>scalar</tensorRank>
             <description>OptimizationMethod object ID.</description>
           </Parameter>
-          <Parameter name='EndCriteria' default='""'>
+          <Parameter name='EndCriteria'>
             <type>QuantLib::EndCriteria</type>
+            <superType>underlyingClass</superType>
             <tensorRank>scalar</tensorRank>
             <description>EndCriteria object ID.</description>
           </Parameter>
-          <Parameter name='Constraint' default='""'>
+          <Parameter name='Constraint'>
             <type>QuantLib::Constraint</type>
+            <superType>underlyingClass</superType>
             <tensorRank>scalar</tensorRank>
             <description>Constraint.</description>
           </Parameter>
@@ -732,8 +735,6 @@
             <tensorRank>vector</tensorRank>
             <description>TRUE if the i-th coefficient must be kept fixed in later calibrations, FALSE otherwise.</description>
           </Parameter>
-          
-          
         </Parameters>
       </ParameterList>
       <ReturnValue>
@@ -746,8 +747,8 @@
     <Constructor name='qlAbcdTenorBasis'>
       <libraryFunction>AbcdTenorBasis</libraryFunction>
       <SupportedPlatforms>
-        SupportedPlatform name='Excel' calcInWizard='false'/
-        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Excel' calcInWizard='false'/>
+        <!--<SupportedPlatform name='Excel'/>-->
         <SupportedPlatform name='Cpp'/>
       </SupportedPlatforms>
       <ParameterList>
@@ -835,8 +836,8 @@
     <Constructor name='qlPolynomialTenorBasis'>
       <libraryFunction>PolynomialTenorBasis</libraryFunction>
       <SupportedPlatforms>
-        SupportedPlatform name='Excel' calcInWizard='false'/
-        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Excel' calcInWizard='false'/>
+        <!--<SupportedPlatform name='Excel'/>-->
         <SupportedPlatform name='Cpp'/>
       </SupportedPlatforms>
       <ParameterList>
