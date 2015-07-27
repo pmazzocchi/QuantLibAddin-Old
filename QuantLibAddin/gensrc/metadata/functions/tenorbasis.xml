@@ -9,6 +9,7 @@
     <include>qlo/indexes/iborindex.hpp</include>
     <include>qlo/termstructures.hpp</include>
     <include>qlo/optimization.hpp</include>
+    <include>qlo/ratehelpers.hpp</include>    
 
     <include>ql/indexes/iborindex.hpp</include>
   </serializationIncludes>
@@ -19,6 +20,7 @@
     <include>qlo/indexes/iborindex.hpp</include>
     <include>qlo/termstructures.hpp</include>
     <include>qlo/optimization.hpp</include>
+    <include>qlo/ratehelpers.hpp</include>    
 
     <include>ql/math/abcdmathfunction.hpp</include>
     <include>ql/math/polynomialmathfunction.hpp</include>
@@ -650,70 +652,6 @@
       </ReturnValue>
     </Member>
 
-    <Member name='qlTenorBasisBusinessDayConvention' type='QuantLib::TenorBasis'>
-      <description>Returns the BusinessDayConvention used by the given TenorBasis object.</description>
-      <libraryFunction>businessDayConvention</libraryFunction>
-      <SupportedPlatforms>
-        <SupportedPlatform name='Excel'/>
-        SupportedPlatform name='Cpp'/
-      </SupportedPlatforms>
-      <ParameterList>
-        <Parameters/>
-      </ParameterList>
-      <ReturnValue>
-        <type>QuantLib::BusinessDayConvention</type>
-        <tensorRank>scalar</tensorRank>
-      </ReturnValue>
-    </Member>
-
-    <Member name='qlTenorBasisEndOfMonth' type='QuantLib::TenorBasis'>
-      <description>TRUE if the End of Month rule is applied, FALSE otherwise.</description>
-      <libraryFunction>endOfMonth</libraryFunction>
-      <SupportedPlatforms>
-        <SupportedPlatform name='Excel'/>
-        SupportedPlatform name='Cpp'/
-      </SupportedPlatforms>
-      <ParameterList>
-        <Parameters/>
-      </ParameterList>
-      <ReturnValue>
-        <type>bool</type>
-        <tensorRank>scalar</tensorRank>
-      </ReturnValue>
-    </Member>
-
-    <Member name='qlTenorBasisCalendar' type='QuantLib::TenorBasis'>
-      <description>Returns the Calendar used by the given TenorBasis object.</description>
-      <libraryFunction>calendar</libraryFunction>
-      <SupportedPlatforms>
-        <SupportedPlatform name='Excel'/>
-        SupportedPlatform name='Cpp'/
-      </SupportedPlatforms>
-      <ParameterList>
-        <Parameters/>
-      </ParameterList>
-      <ReturnValue>
-        <type>QuantLib::Calendar</type>
-        <tensorRank>scalar</tensorRank>
-      </ReturnValue>
-    </Member>
-
-    <Member name='qlTenorBasisTenor' type='QuantLib::TenorBasis'>
-      <description>Returns the tenor of the given TenorBasis object.</description>
-      <libraryFunction>tenor</libraryFunction>
-      <SupportedPlatforms>
-        <SupportedPlatform name='Excel'/>
-        SupportedPlatform name='Cpp'/
-      </SupportedPlatforms>
-      <ParameterList>
-        <Parameters/>
-      </ParameterList>
-      <ReturnValue>
-        <type>QuantLib::Period</type>
-        <tensorRank>scalar</tensorRank>
-      </ReturnValue>
-    </Member>
-
     <Member name='qlTenorBasisTimeFromReferenceDate' type='QuantLib::TenorBasis' loopParameter='Date'>
       <description>Returns the time from the reference date for the given TenorBasis object.</description>
       <libraryFunction>timeFromReference</libraryFunction>
@@ -750,6 +688,56 @@
       </ParameterList>
       <ReturnValue>
         <type>QuantLib::Date</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+    
+    <Member name='qlTenorBasisCalibrate' type='QuantLib::TenorBasis'>
+      <description>calibrate tenorBasis</description>
+      <libraryFunction>calibrate</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='RateHelpers'>
+            <type>QuantLib::RateHelper</type>
+            <tensorRank>vector</tensorRank>
+            <description>Rate Helpers.</description>
+          </Parameter>
+          <Parameter name='Method' default='""'>
+            <type>QuantLib::OptimizationMethod</type>
+            <tensorRank>scalar</tensorRank>
+            <description>OptimizationMethod object ID.</description>
+          </Parameter>
+          <Parameter name='EndCriteria' default='""'>
+            <type>QuantLib::EndCriteria</type>
+            <tensorRank>scalar</tensorRank>
+            <description>EndCriteria object ID.</description>
+          </Parameter>
+          <Parameter name='Constraint' default='""'>
+            <type>QuantLib::Constraint</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Constraint.</description>
+          </Parameter>
+          <Parameter name='Weights' >
+            <type>QuantLib::Real</type>
+            <tensorRank>vector</tensorRank>
+            <description>weights.</description>
+          </Parameter>
+          <Parameter name='FixedCoeff' >
+            <type>bool</type>
+            <tensorRank>vector</tensorRank>
+            <description>TRUE if the i-th coefficient must be kept fixed in later calibrations, FALSE otherwise.</description>
+          </Parameter>
+          
+          
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>void</type>
         <tensorRank>scalar</tensorRank>
       </ReturnValue>
     </Member>
