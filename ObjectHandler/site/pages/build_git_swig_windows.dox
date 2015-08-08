@@ -21,7 +21,7 @@
  The members of the QuantLib Group are listed in the QuantLib License
 */
 
-/*! \page build_git_swig_windows Building the reposit SWIG Module On Windows From A git Clone
+/*! \page build_git_swig_windows Building reposit On Windows From A git Clone
 
 <div align="center"><small><a href="installation.html">back to installation index</a></small></div>
 
@@ -46,7 +46,7 @@ Build Boost and configure VC9 to find it.
 Open a git bash prompt in $REPOSIT_DIR and clone the repo:
 
 \verbatim
-git clone -b reposit --depth 1 https://github.com/eehlers/quantlib.git
+git clone -b R000100f0 --depth 1 https://github.com/eehlers/quantlib.git
 \endverbatim
 
 Build the solution:
@@ -76,7 +76,7 @@ $REPOSIT_DIR\pcre-8.35\build\PCRE.sln
 Open a git bash prompt in $REPOSIT_DIR and clone the repo:
 
 \verbatim
-git clone --depth 1 https://github.com/eehlers/swig.git
+git clone -b R000100f0 --depth 1 https://github.com/eehlers/swig.git
 \endverbatim
 
 Build the solution:
