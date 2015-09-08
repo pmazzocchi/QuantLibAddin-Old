@@ -719,12 +719,12 @@
             <tensorRank>scalar</tensorRank>
             <description>EndCriteria object ID.</description>
           </Parameter>
-          <Parameter name='Constraint'>
+          <!--<Parameter name='Constraint'>
             <type>QuantLib::Constraint</type>
             <superType>underlyingClass</superType>
             <tensorRank>scalar</tensorRank>
             <description>Constraint.</description>
-          </Parameter>
+          </Parameter>-->
           <Parameter name='Weights' >
             <type>QuantLib::Real</type>
             <tensorRank>vector</tensorRank>
