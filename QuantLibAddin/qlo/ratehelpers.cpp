@@ -97,10 +97,14 @@ namespace QuantLibAddin {
             const QuantLib::Date& date,
             const shared_ptr<QuantLib::IborIndex>& iborIndex,
             const QuantLib::Handle<QuantLib::Quote>& convAdj,
+            bool intermediateInterp,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar,
             bool permanent)
     : RateHelper(properties, permanent) {
         libraryObject_ = shared_ptr<QuantLib::RateHelper>(new
-            QuantLib::FuturesRateHelper(price, date, iborIndex,convAdj,type));
+            QuantLib::FuturesRateHelper(price, date, iborIndex,convAdj,type,
+                              intermediateInterp, pillarChoice, customPillar));
         quoteName_ = f(properties->getSystemProperty("Price"));
     }
 
@@ -115,6 +119,9 @@ namespace QuantLibAddin {
             bool endOfMonth,
             const QuantLib::DayCounter& dayCounter,
             const QuantLib::Handle<QuantLib::Quote>& convAdj,
+            bool intermediateInterp,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar,
             bool permanent)
     : RateHelper(properties, permanent) {
         libraryObject_ = shared_ptr<QuantLib::RateHelper>(new
@@ -126,7 +133,10 @@ namespace QuantLibAddin {
                                         endOfMonth,
                                         dayCounter,
                                         convAdj,
-                                        type));
+                                        type,
+                                        intermediateInterp, 
+                                        pillarChoice, 
+                                        customPillar));));
         quoteName_ = f(properties->getSystemProperty("Price"));
     }
 

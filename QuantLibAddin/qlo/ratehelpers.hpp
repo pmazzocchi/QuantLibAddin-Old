@@ -7,6 +7,7 @@
  Copyright (C) 2006, 2007, 2008, 2009, 2012, 2015 Ferdinando Ametrano
  Copyright (C) 2007 Marco Bianchetti
  Copyright (C) 2015 Maddalena Zanzi
+ Copyright (C) 2015 Paolo Mazzocchi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -99,6 +100,9 @@ namespace QuantLibAddin {
             const QuantLib::Date& immDate,
             const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
             const QuantLib::Handle<QuantLib::Quote>& convAdj,
+            bool intermediateInterp,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar,
             bool permanent);
         FuturesRateHelper(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
@@ -111,6 +115,9 @@ namespace QuantLibAddin {
             bool endOfMonth,
             const QuantLib::DayCounter& dayCounter,
             const QuantLib::Handle<QuantLib::Quote>& convAdj,
+            bool intermediateInterp,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar,
             bool permanent);
         FuturesRateHelper(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
