@@ -136,7 +136,7 @@ namespace QuantLibAddin {
                                         type,
                                         intermediateInterp, 
                                         pillarChoice, 
-                                        customPillar));));
+                                        customPillar));
         quoteName_ = f(properties->getSystemProperty("Price"));
     }
 
