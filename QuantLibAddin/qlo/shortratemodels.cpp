@@ -29,14 +29,20 @@
 
 namespace QuantLibAddin {
 
+    OneFactorAffineModel::OneFactorAffineModel(
+               const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+               //QuantLib::Size nArguments,
+               bool permanent) 
+    : AffineModel(properties, permanent){}
+
     Vasicek::Vasicek(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
                      QuantLib::Real a,
                      QuantLib::Real b,
                      QuantLib::Real lambda,
                      QuantLib::Real sigma,
-                     bool permanent) : AffineModel(properties, permanent)
+                     bool permanent) : OneFactorAffineModel(properties, permanent)
     {
-        libraryObject_ = boost::shared_ptr<QuantLib::AffineModel>(new
+        libraryObject_ = boost::shared_ptr<QuantLib::OneFactorAffineModel>(new
             QuantLib::Vasicek(a, b, lambda, sigma));
     }
 
@@ -45,9 +51,9 @@ namespace QuantLibAddin {
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
                 QuantLib::Real a,
                 QuantLib::Real sigma,
-                bool permanent) : AffineModel(properties, permanent)
+                bool permanent) : OneFactorAffineModel(properties, permanent)
     {
-        libraryObject_ = boost::shared_ptr<QuantLib::AffineModel>(new
+        libraryObject_ = boost::shared_ptr<QuantLib::OneFactorAffineModel>(new
             QuantLib::HullWhite(hYTS, a, sigma));
     }
 

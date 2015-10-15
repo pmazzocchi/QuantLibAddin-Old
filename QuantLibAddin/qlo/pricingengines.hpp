@@ -45,6 +45,7 @@ namespace QuantLib {
     class DiscountingBondEngine;
     class DiscountingSwapEngine;
     class GeneralizedBlackScholesProcess;
+    class OneFactorAffineModel;
 
     template <class T>
     class Handle;
@@ -173,6 +174,26 @@ namespace QuantLibAddin {
             const QuantLib::Handle<QuantLib::YieldTermStructure>& discountCurve,
             bool permanent);
     };
+
+    class JamshidianSwaptionEngine : public PricingEngine {
+    public:
+        JamshidianSwaptionEngine(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<QuantLib::OneFactorAffineModel>& model,
+            //const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure,
+            bool permanent);
+    };
+
+    class TreeSwaptionEngine : public PricingEngine {
+    public:
+        TreeSwaptionEngine(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<QuantLib::OneFactorAffineModel>& model,
+            QuantLib::Size timeSteps,
+            //const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure,
+            bool permanent);
+    };
+
 }
 
 #endif
