@@ -98,6 +98,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::ForwardRateAgreement</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::FuturesRateHelper</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::GeneralizedBlackScholesProcess</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::G2</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::HistoricalForwardRatesAnalysis</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::HistoricalRatesAnalysis</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::IborIndex</DataType>
@@ -162,6 +163,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::TypePayoff</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::OvernightIndexedSwap</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::VanillaSwap</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::Vasicek</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::VolatilityTermStructure</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CreditDefaultSwap</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CdsOption</DataType>

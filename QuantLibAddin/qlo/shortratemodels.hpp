@@ -32,29 +32,44 @@ namespace QuantLib {
 
     class AffineModel;
     class OneFactorAffineModel;
+
 }
 
 namespace QuantLibAddin {
 
     OH_LIB_CLASS(AffineModel, QuantLib::AffineModel);
 
-    class OneFactorAffineModel : public AffineModel{
-      public:
-        OneFactorAffineModel(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-                             bool permanent);
- };
+    //class ShortRateModel : public CalibratedModel {
+    //public:
+    //    ShortRateModel(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //                   bool permanent);
+    //};
+
+    //class OneFactorModel : public ShortRateModel {
+    //public:
+    //    OneFactorModel(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //                   bool permanent);
+    //};
+
+    class OneFactorAffineModel : public AffineModel {
+                                 //public OneFactorModel {
+     public:
+       OneFactorAffineModel(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+                            bool permanent);
+};
 
     class Vasicek : public OneFactorAffineModel {
       public:
           Vasicek(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-                  QuantLib::Real a,
-                  QuantLib::Real b,
-                  QuantLib::Real lambda,
-                  QuantLib::Real sigma,
-                  bool permanent);
+                  QuantLib::Rate r0 = 0.05,
+                  QuantLib::Real a = 0.1,
+                  QuantLib::Real b = 0.05,
+                  QuantLib::Real sigma = 0.01,
+                  QuantLib::Real lambda = 0.0,
+                  bool permanent = true);
     };
 
-    class HullWhite : public OneFactorAffineModel {
+    class HullWhite : public Vasicek {
       public:
         HullWhite(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
                   const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
@@ -63,6 +78,17 @@ namespace QuantLibAddin {
                   bool permanent);
     };
 
+    class G2 : public AffineModel {
+    public:
+        G2(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+           const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure,
+           QuantLib::Real a,
+           QuantLib::Real sigma,
+           QuantLib::Real b,
+           QuantLib::Real eta,
+           QuantLib::Real rho,
+           bool permanent);
+    };
 }
 
 #endif
