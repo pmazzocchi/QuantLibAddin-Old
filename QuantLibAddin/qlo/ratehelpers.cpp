@@ -157,12 +157,17 @@ namespace QuantLibAddin {
             const QuantLib::Handle<QuantLib::Quote>& spread,
             const QuantLib::Period& forwardStart,
             const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar,
             bool permanent)
     : RateHelper(properties, permanent) {
         libraryObject_ = shared_ptr<QuantLib::RateHelper>(new
             QuantLib::SwapRateHelper(rate,
                                      swapIndex,
-                                     spread, forwardStart, discount));
+                                     spread, forwardStart, discount,
+                                     pillarChoice,
+                                     customPillar
+                                     ));
         quoteName_ = f(properties->getSystemProperty("Rate"));
     }
 
@@ -179,12 +184,17 @@ namespace QuantLibAddin {
             const QuantLib::Handle<QuantLib::Quote>& spread,
             const QuantLib::Period& forwardStart,
             const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar,
             bool permanent)
     : RateHelper(properties, permanent) {
         libraryObject_ = shared_ptr<QuantLib::RateHelper>(new
             QuantLib::SwapRateHelper(rate,
                                      p, cal, fixFreq, fixConv, fixDC, ibor,
-                                     spread, forwardStart, discount, settlementDays));
+                                     spread, forwardStart, discount, settlementDays,
+                                     pillarChoice,
+                                     customPillar
+                                     ));
         quoteName_ = f(properties->getSystemProperty("Rate"));
     }
 
@@ -193,10 +203,15 @@ namespace QuantLibAddin {
             const QuantLib::Handle<QuantLib::Quote>& rate,
             QuantLib::Period periodToStart,
             const shared_ptr<QuantLib::IborIndex>& iborIndex,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar,
             bool permanent)
     : RateHelper(properties, permanent) {
         libraryObject_ = shared_ptr<QuantLib::RateHelper>(new
-            QuantLib::FraRateHelper(rate, periodToStart, iborIndex));
+            QuantLib::FraRateHelper(rate, periodToStart, iborIndex,
+                                    pillarChoice,
+                                    customPillar
+                                    ));
         quoteName_ = f(properties->getSystemProperty("Rate"));
     }
 
@@ -210,6 +225,8 @@ namespace QuantLibAddin {
             QuantLib::BusinessDayConvention convention,
             bool endOfMonth,
             const QuantLib::DayCounter& dayCounter,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar,
             bool permanent)
     : RateHelper(properties, permanent) {
         libraryObject_ = shared_ptr<QuantLib::RateHelper>(new
@@ -220,7 +237,10 @@ namespace QuantLibAddin {
                                     calendar,
                                     convention,
                                     endOfMonth,
-                                    dayCounter));
+                                    dayCounter,
+                                    pillarChoice,
+                                    customPillar
+                                    ));
         quoteName_ = f(properties->getSystemProperty("Rate"));
     }
 
@@ -428,7 +448,7 @@ namespace QuantLibAddin {
                                             qlarh_id,
                                             priority[i],
                                             qlrh->earliestDate(),
-                                            qlrh->latestDate(),
+                                            qlrh->pillarDate(),
                                             minDist.size()==1 ? minDist[0] : minDist[i]));
         }
 
