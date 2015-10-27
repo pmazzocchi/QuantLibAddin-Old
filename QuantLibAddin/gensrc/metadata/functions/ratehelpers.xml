@@ -34,6 +34,7 @@
     Copyright (C) 2005 Plamen Neykov
     Copyright (C) 2005 Aurelien Chanudet
     Copyright (C) 2015 Maddalena Zanzi
+    Copyright (C) 2015 Paolo Mazzocchi
   </copyright>
   <Functions>
 
@@ -54,9 +55,43 @@
       </ReturnValue>
     </Member>
 
-    <Member name='qlRateHelperLatestDate' type='QuantLib::RateHelper'>
-      <description>returns the latest date for the given RateHelper object.</description>
-      <libraryFunction>latestDate</libraryFunction>
+    <Member name='qlRateHelperLatestRelevantDate' type='QuantLib::RateHelper'>
+      <description>returns the latest relevant date for the given RateHelper object.</description>
+      <libraryFunction>latestRelevantDate</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Date</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlRateHelperPillarDate' type='QuantLib::RateHelper'>
+      <description>returns the pillar date for the given RateHelper object.</description>
+      <libraryFunction>pillarDate</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Date</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlRateHelperMaturityDate' type='QuantLib::RateHelper'>
+      <description>returns the maturity date for the given RateHelper object.</description>
+      <libraryFunction>maturityDate</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
         <SupportedPlatform name='Calc'/>
@@ -268,6 +303,16 @@
             <tensorRank>scalar</tensorRank>
             <description>discounting YieldTermStructure object ID.</description>
           </Parameter>
+          <Parameter name='PillarDate' default='"MaturityDate"'>
+            <type>QuantLib::Pillar::Choice</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Pillar date can be: MaturityDate, LastRelevantDate or CustomDate.</description>
+          </Parameter>
+          <Parameter name='CustomPillarDate' default='QuantLib::Date()'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Custom Pillar Date.</description>
+          </Parameter>
         </Parameters>
       </ParameterList>
     </Constructor>
@@ -339,6 +384,16 @@
             <superType>libToHandle</superType>
             <tensorRank>scalar</tensorRank>
             <description>discounting YieldTermStructure object ID.</description>
+          </Parameter>
+          <Parameter name='PillarDate' default='"MaturityDate"'>
+            <type>QuantLib::Pillar::Choice</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Pillar date can be: MaturityDate, LastRelevantDate or CustomDate.</description>
+          </Parameter>
+          <Parameter name='CustomPillarDate' default='QuantLib::Date()'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Custom Pillar Date.</description>
           </Parameter>
         </Parameters>
       </ParameterList>
@@ -486,6 +541,16 @@
             <tensorRank>scalar</tensorRank>
             <description>IborIndex object ID.</description>
           </Parameter>
+          <Parameter name='PillarDate' default='"MaturityDate"'>
+            <type>QuantLib::Pillar::Choice</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Pillar date can be: MaturityDate, LastRelevantDate or CustomDate.</description>
+          </Parameter>
+          <Parameter name='CustomPillarDate' default='QuantLib::Date()'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Custom Pillar Date.</description>
+          </Parameter>
         </Parameters>
       </ParameterList>
     </Constructor>
@@ -540,6 +605,16 @@
             <type>QuantLib::DayCounter</type>
             <tensorRank>scalar</tensorRank>
             <description>DayCounter ID.</description>
+          </Parameter>
+          <Parameter name='PillarDate' default='"MaturityDate"'>
+            <type>QuantLib::Pillar::Choice</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Pillar date can be: MaturityDate, LastRelevantDate or CustomDate.</description>
+          </Parameter>
+          <Parameter name='CustomPillarDate' default='QuantLib::Date()'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Custom Pillar Date.</description>
           </Parameter>
         </Parameters>
       </ParameterList>
