@@ -78,6 +78,11 @@
             <tensorRank>scalar</tensorRank>
             <description>BackwardFlat, ForwardFlat, Linear, LogLinear, CubicSpline, or LogCubic.</description>
           </Parameter>
+          <Parameter name='NRateHelper' default='1'>
+            <type>QuantLib::Size</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Number of pillar from which change the interpolation ID.</description>
+          </Parameter>
         </Parameters>
       </ParameterList>
     </Constructor>
