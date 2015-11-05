@@ -5,6 +5,7 @@
  Copyright (C) 2006 Katiuscia Manzoni
  Copyright (C) 2005 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
+ Copyright (C) 2015 Paolo Mazzocchi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -30,6 +31,7 @@
 #include <ql/indexes/ibor/usdlibor.hpp>
 #include <ql/indexes/ibor/gbplibor.hpp>
 #include <ql/indexes/ibor/sonia.hpp>
+#include <ql/indexes/ibor/fedfunds.hpp>
 #include <ql/indexes/ibor/chflibor.hpp>
 #include <ql/indexes/ibor/jpylibor.hpp>
 
@@ -171,6 +173,15 @@ namespace QuantLibAddin {
     {
         libraryObject_ = shared_ptr<QuantLib::Sonia>(new
             QuantLib::Sonia(h));
+    }
+
+    FedFunds::FedFunds(const shared_ptr<ValueObject>& properties,
+                       const QuantLib::Handle<QuantLib::YieldTermStructure>& h,
+                       bool permanent)
+    : OvernightIndex(properties, permanent)
+    {
+        libraryObject_ = shared_ptr<QuantLib::FedFunds>(new
+            QuantLib::FedFunds(h));
     }
 
 }

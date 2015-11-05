@@ -5,6 +5,7 @@
  Copyright (C) 2006 Katiuscia Manzoni
  Copyright (C) 2005 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
+ Copyright (C) 2015 Paolo Mazzocchi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -30,25 +31,23 @@
 namespace QuantLibAddin {
 
     SwapIndex::SwapIndex(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+                         QuantLib::Currency& crr,
                          const std::string& familyName,
                          const QuantLib::Period& p,
+                         const QuantLib::DayCounter& fixedLegDayCounter,
                          QuantLib::Natural fixingDays,
-                         QuantLib::Currency& crr,
                          const QuantLib::Calendar& calendar,
                          const QuantLib::Period& fixedLegTenor,
                          QuantLib::BusinessDayConvention fixedLegBDC,
-                         const QuantLib::DayCounter& fixedLegDayCounter,
                          const boost::shared_ptr<QuantLib::IborIndex>& index,
                          const QuantLib::Handle<QuantLib::YieldTermStructure>& disc,
                          bool permanent)
     : InterestRateIndex(properties, permanent)
     {
         libraryObject_ = boost::shared_ptr<QuantLib::SwapIndex>(new
-            QuantLib::SwapIndex(familyName, p,
-                                fixingDays, crr, calendar, 
-                                fixedLegTenor, fixedLegBDC,
-                                fixedLegDayCounter, index,
-                                disc));
+            QuantLib::SwapIndex(crr,familyName, p, fixedLegDayCounter,
+                                fixingDays, calendar, fixedLegTenor, 
+                                fixedLegBDC, index, disc));
     }
 
     std::ostream& operator<<(std::ostream& out,

@@ -5,6 +5,7 @@
  Copyright (C) 2006 Katiuscia Manzoni
  Copyright (C) 2005 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
+ Copyright (C) 2015 Paolo Mazzocchi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -31,54 +32,49 @@ namespace QuantLibAddin {
 
     IborIndex::IborIndex(
                  const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+                 const QuantLib::Currency& crr,
                  const std::string& familyName,
                  const QuantLib::Period& p,
+                 const QuantLib::DayCounter& fltDayCounter,
                  const QuantLib::Natural fixingDays,
-                 const QuantLib::Currency& crr,
                  const QuantLib::Calendar& calendar,
                  QuantLib::BusinessDayConvention fltBDC,
                  bool endOfMonth,
-                 const QuantLib::DayCounter& fltDayCounter,
                  const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
                  bool permanent)
     : InterestRateIndex(properties, permanent)
     {
         libraryObject_ = boost::shared_ptr<QuantLib::IborIndex>(new
-            QuantLib::IborIndex(familyName, 
-                                p,
-                                fixingDays, crr, calendar, 
-                                fltBDC, endOfMonth, fltDayCounter,
-                                hYTS));
+            QuantLib::IborIndex(crr, familyName, p, fltDayCounter, fixingDays,
+                                calendar, fltBDC, endOfMonth, hYTS));
     }
 
     OvernightIndex::OvernightIndex(
                  const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-                 const std::string& familyName,
-                 const QuantLib::Natural fixingDays,
                  const QuantLib::Currency& crr,
-                 const QuantLib::Calendar& calendar,
+                 const std::string& familyName,
                  const QuantLib::DayCounter& fltDayCounter,
+                 const QuantLib::Natural fixingDays,
+                 const QuantLib::Calendar& calendar,
                  const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
                  bool permanent)
     : IborIndex(properties, permanent)
     {
         libraryObject_ = boost::shared_ptr<QuantLib::OvernightIndex>(new
-            QuantLib::OvernightIndex(familyName,
-                                     fixingDays, crr, calendar, 
-                                     fltDayCounter,
-                                     hYTS));
+            QuantLib::OvernightIndex(crr, familyName, fltDayCounter,
+                                     fixingDays, calendar, hYTS));
     }
 
     ProxyIbor::ProxyIbor(
                  const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+                 const QuantLib::Currency& currency,
                  const std::string& familyName,
                  const QuantLib::Period& tenor,
+                 const QuantLib::DayCounter& dayCounter,
                  QuantLib::Natural settlementDays,
-                 const QuantLib::Currency& currency,
                  const QuantLib::Calendar& fixingCalendar,
                  QuantLib::BusinessDayConvention convention,
                  bool endOfMonth,
-                 const QuantLib::DayCounter& dayCounter,
                  const QuantLib::Handle<QuantLib::Quote>& gearing,
                  const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
                  const QuantLib::Handle<QuantLib::Quote>& spread,
@@ -86,14 +82,14 @@ namespace QuantLibAddin {
     : IborIndex(properties, permanent)
     {
         libraryObject_ = boost::shared_ptr<QuantLib::ProxyIbor>(new
-            QuantLib::ProxyIbor(familyName,
+            QuantLib::ProxyIbor(currency,
+                                familyName,
                                 tenor,
+                                dayCounter,
                                 settlementDays,
-                                currency,
                                 fixingCalendar,
                                 convention,
                                 endOfMonth,
-                                dayCounter,
                                 gearing,
                                 iborIndex,
                                 spread));

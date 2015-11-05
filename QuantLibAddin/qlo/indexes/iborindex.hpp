@@ -5,6 +5,7 @@
  Copyright (C) 2006 Katiuscia Manzoni
  Copyright (C) 2005 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
+ Copyright (C) 2015 Paolo Mazzocchi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -45,14 +46,14 @@ namespace QuantLibAddin {
     class IborIndex : public InterestRateIndex {
       public:
         IborIndex(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+                  const QuantLib::Currency& crr,
                   const std::string& familyName,
                   const QuantLib::Period& p,
+                  const QuantLib::DayCounter& fltDayCounter,
                   const QuantLib::Natural fixingDays,
-                  const QuantLib::Currency& crr,
                   const QuantLib::Calendar& calendar,
                   QuantLib::BusinessDayConvention fltBDC,
                   bool endOfMonth,
-                  const QuantLib::DayCounter& fltDayCounter,
                   const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
                   bool permanent);
       protected:
@@ -63,11 +64,11 @@ namespace QuantLibAddin {
       public:
         OvernightIndex(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-            const std::string& familyName,
-            const QuantLib::Natural fixingDays,
             const QuantLib::Currency& crr,
-            const QuantLib::Calendar& calendar,
+            const std::string& familyName,
             const QuantLib::DayCounter& fltDayCounter,
+            const QuantLib::Natural fixingDays,
+            const QuantLib::Calendar& calendar,
             const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
             bool permanent);
       protected:
@@ -77,14 +78,14 @@ namespace QuantLibAddin {
     class ProxyIbor : public IborIndex {
       public:
         ProxyIbor(const boost::shared_ptr<ObjectHandler::ValueObject>& prop,
+                  const QuantLib::Currency& currency,
                   const std::string& familyName,
                   const QuantLib::Period& tenor,
+                  const QuantLib::DayCounter& dayCounter,
                   QuantLib::Natural settlementDays,
-                  const QuantLib::Currency& currency,
                   const QuantLib::Calendar& fixingCalendar,
                   QuantLib::BusinessDayConvention convention,
                   bool endOfMonth,
-                  const QuantLib::DayCounter& dayCounter,
                   const QuantLib::Handle<QuantLib::Quote>& gearing,
                   const boost::shared_ptr<QuantLib::IborIndex>& iborIndex,
                   const QuantLib::Handle<QuantLib::Quote>& spread,

@@ -36,6 +36,7 @@
     Copyright (C) 2006 Katiuscia Manzoni
     Copyright (C) 2005, 2007 Eric Ehlers
     Copyright (C) 2005 Plamen Neykov
+    Copyright (C) 2015 Paolo Mazzocchi
   </copyright>
   <Functions>
 
@@ -419,6 +420,11 @@
       <processorName>IndexProcessor</processorName>
       <ParameterList>
         <Parameters>
+          <Parameter name='Currency' exampleValue='EUR'>
+            <type>QuantLib::Currency</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Index Currency.</description>
+          </Parameter>
           <Parameter name='FamilyName' exampleValue='Euribor'>
             <type>string</type>
             <tensorRank>scalar</tensorRank>
@@ -429,15 +435,15 @@
             <tensorRank>scalar</tensorRank>
             <description>index tenor (e.g. 2D for two days , 3W for three weeks, 6M for six months, 1Y for one year).</description>
           </Parameter>
+          <Parameter name='DayCounter' exampleValue='Actual/360'>
+            <type>QuantLib::DayCounter</type>
+            <tensorRank>scalar</tensorRank>
+            <description>DayCounter ID.</description>
+          </Parameter>
           <Parameter name='FixingDays' exampleValue='2'>
             <type>QuantLib::Natural</type>
             <tensorRank>scalar</tensorRank>
             <description>fixing days (e.g. 2).</description>
-          </Parameter>
-          <Parameter name='Currency' exampleValue='EUR'>
-            <type>QuantLib::Currency</type>
-            <tensorRank>scalar</tensorRank>
-            <description>Index Currency.</description>
           </Parameter>
           <Parameter name='Calendar' exampleValue='TARGET'>
             <type>QuantLib::Calendar</type>
@@ -453,11 +459,6 @@
             <type>bool</type>
             <tensorRank>scalar</tensorRank>
             <description>TRUE if the index follow the 'end of month' convention.</description>
-          </Parameter>
-          <Parameter name='DayCounter' exampleValue='Actual/360'>
-            <type>QuantLib::DayCounter</type>
-            <tensorRank>scalar</tensorRank>
-            <description>DayCounter ID.</description>
           </Parameter>
           <Parameter name='FwdCurve' exampleValue='EURYC6M' default='""'>
             <type>QuantLib::YieldTermStructure</type>
@@ -480,30 +481,30 @@
       <processorName>IndexProcessor</processorName>
       <ParameterList>
         <Parameters>
+          <Parameter name='Currency' exampleValue='EUR'>
+            <type>QuantLib::Currency</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Index Currency.</description>
+          </Parameter>
           <Parameter name='FamilyName' exampleValue='Eonia'>
             <type>string</type>
             <tensorRank>scalar</tensorRank>
             <description>index family name.</description>
+          </Parameter>
+          <Parameter name='DayCounter' exampleValue='Actual/360'>
+            <type>QuantLib::DayCounter</type>
+            <tensorRank>scalar</tensorRank>
+            <description>DayCounter ID.</description>
           </Parameter>
           <Parameter name='FixingDays' exampleValue='0'>
             <type>QuantLib::Natural</type>
             <tensorRank>scalar</tensorRank>
             <description>fixing days (e.g. 0).</description>
           </Parameter>
-          <Parameter name='Currency' exampleValue='EUR'>
-            <type>QuantLib::Currency</type>
-            <tensorRank>scalar</tensorRank>
-            <description>Index Currency.</description>
-          </Parameter>
           <Parameter name='Calendar' exampleValue='TARGET'>
             <type>QuantLib::Calendar</type>
             <tensorRank>scalar</tensorRank>
             <description>holiday calendar (e.g. TARGET).</description>
-          </Parameter>
-          <Parameter name='DayCounter' exampleValue='Actual/360'>
-            <type>QuantLib::DayCounter</type>
-            <tensorRank>scalar</tensorRank>
-            <description>DayCounter ID.</description>
           </Parameter>
           <Parameter name='YieldCurve' exampleValue='EURYC' default='""'>
             <type>QuantLib::YieldTermStructure</type>
@@ -638,6 +639,26 @@
       </ParameterList>
     </Constructor>
 
+    <Constructor name='qlFedFunds'>
+      <libraryFunction>FedFunds</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='YieldCurve' exampleValue='EURYC' default='""'>
+            <type>QuantLib::YieldTermStructure</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>forecasting YieldTermStructure object ID.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
     <!-- SwapIndex interface -->
 
     <Member name='qlSwapIndexFixedLegTenor' type='QuantLib::SwapIndex'>
@@ -705,6 +726,11 @@
       <processorName>IndexProcessor</processorName>
       <ParameterList>
         <Parameters>
+          <Parameter name='Currency' exampleValue='EUR'>
+            <type>QuantLib::Currency</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Index Currency.</description>
+          </Parameter>
           <Parameter name='FamilyName' exampleValue='EuriborSwapIsdaFixA10Y'>
             <type>string</type>
             <tensorRank>scalar</tensorRank>
@@ -715,15 +741,15 @@
             <tensorRank>scalar</tensorRank>
             <description>index tenor (e.g. 2D for two days, 3W for three weeks, 6M for six months, 1Y for one year).</description>
           </Parameter>
+          <Parameter name='FixedLegDayCounter' exampleValue='30/360 (Bond Basis)'>
+            <type>QuantLib::DayCounter</type>
+            <tensorRank>scalar</tensorRank>
+            <description>day counter of the underlying swap's fixed leg (e.g. 30/360::BondBasis).</description>
+          </Parameter>
           <Parameter name='FixingDays' exampleValue='2'>
             <type>QuantLib::Natural</type>
             <tensorRank>scalar</tensorRank>
             <description>swap rate fixing days (e.g. 2).</description>
-          </Parameter>
-          <Parameter name='Currency' exampleValue='EUR'>
-            <type>QuantLib::Currency</type>
-            <tensorRank>scalar</tensorRank>
-            <description>Index Currency.</description>
           </Parameter>
           <Parameter name='Calendar' exampleValue='TARGET'>
             <type>QuantLib::Calendar</type>
@@ -739,11 +765,6 @@
             <type>QuantLib::BusinessDayConvention</type>
             <tensorRank>scalar</tensorRank>
             <description>business day convention of the underlying swap's fixed leg (e.g. ModifiedFollowing).</description>
-          </Parameter>
-          <Parameter name='FixedLegDayCounter' exampleValue='30/360 (Bond Basis)'>
-            <type>QuantLib::DayCounter</type>
-            <tensorRank>scalar</tensorRank>
-            <description>day counter of the underlying swap's fixed leg (e.g. 30/360::BondBasis).</description>
           </Parameter>
           <Parameter name='IborIndex' exampleValue='Euribor6M'>
             <type>QuantLib::IborIndex</type>
@@ -905,6 +926,11 @@
       <processorName>IndexProcessor</processorName>
       <ParameterList>
         <Parameters>
+          <Parameter name='Currency' exampleValue='EUR'>
+            <type>QuantLib::Currency</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Index Currency.</description>
+          </Parameter>
           <Parameter name='FamilyName' exampleValue='Euribor'>
             <type>string</type>
             <tensorRank>scalar</tensorRank>
@@ -915,15 +941,15 @@
             <tensorRank>scalar</tensorRank>
             <description>index tenor (e.g. 2D for two days , 3W for three weeks, 6M for six months, 1Y for one year).</description>
           </Parameter>
+          <Parameter name='DayCounter' exampleValue='Actual/360'>
+            <type>QuantLib::DayCounter</type>
+            <tensorRank>scalar</tensorRank>
+            <description>DayCounter ID.</description>
+          </Parameter>
           <Parameter name='FixingDays' exampleValue='2'>
             <type>QuantLib::Natural</type>
             <tensorRank>scalar</tensorRank>
             <description>fixing days (e.g. 2).</description>
-          </Parameter>
-          <Parameter name='Currency' exampleValue='EUR'>
-            <type>QuantLib::Currency</type>
-            <tensorRank>scalar</tensorRank>
-            <description>Index Currency.</description>
           </Parameter>
           <Parameter name='Calendar' exampleValue='TARGET'>
             <type>QuantLib::Calendar</type>
@@ -939,11 +965,6 @@
             <type>bool</type>
             <tensorRank>scalar</tensorRank>
             <description>TRUE if the index follow the 'end of month' convention.</description>
-          </Parameter>
-          <Parameter name='DayCounter' exampleValue='Actual/360'>
-            <type>QuantLib::DayCounter</type>
-            <tensorRank>scalar</tensorRank>
-            <description>DayCounter ID.</description>
           </Parameter>
           <Parameter name='Gearing' exampleValue='1.0'>
             <type>QuantLib::Quote</type>

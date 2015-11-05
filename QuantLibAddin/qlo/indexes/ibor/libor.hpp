@@ -5,6 +5,7 @@
  Copyright (C) 2006 Katiuscia Manzoni
  Copyright (C) 2005 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
+ Copyright (C) 2015 Paolo Mazzocchi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -41,6 +42,13 @@ namespace QuantLibAddin {
         Sonia(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
               const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
               bool permanent);
+    };
+
+    class FedFunds : public OvernightIndex {
+    public:
+        FedFunds(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+                 const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
+                 bool permanent);
     };
 
 }
