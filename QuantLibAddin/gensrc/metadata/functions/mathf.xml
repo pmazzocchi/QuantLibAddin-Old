@@ -12,7 +12,7 @@
     <include>qlo/getcovariance.hpp</include>
   </serializationIncludes>
   <addinIncludes>
-    <include>ql/math/tartaglia.hpp</include>
+    <include>ql/math/pascaltriangle.hpp</include>
     <include>ql/math/primenumbers.hpp</include>
     <include>ql/math/matrixutilities/pseudosqrt.hpp</include>
     <include>ql/math/matrixutilities/choleskydecomposition.hpp</include>
@@ -50,9 +50,9 @@
       </ReturnValue>
     </Procedure>
 
-    <Procedure name='qlTartagliaCoefficients'>
-      <description>returns the N-th order polynomial Tartaglia coefficients.</description>
-      <alias>QuantLib::Tartaglia::get</alias>
+    <Procedure name='qlPascalTriangleCoefficients'>
+      <description>returns the N-th order polynomial Pascal Triangle coefficients.</description>
+      <alias>QuantLib::PascalTriangle::get</alias>
       <SupportedPlatforms>
         <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
         <SupportedPlatform name='Excel'/>
