@@ -25,6 +25,7 @@
 #include <ql/types.hpp>
 
 #include <qlo/model.hpp>
+#include <qlo/yieldtermstructures.hpp>
 
 namespace QuantLib {
     class TenorBasis;
@@ -129,6 +130,25 @@ namespace QuantLibAddin {
             const QuantLib::Date& d,
             bool permanent);
     };
+
+    class TenorBasisYieldTermStructure : public YieldTermStructure {
+      public:
+          TenorBasisYieldTermStructure(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,    
+            const boost::shared_ptr<QuantLib::TenorBasis>& basis,
+            bool permanent);
+    };
+
+    class DiscountCorrectedTermStructure : public YieldTermStructure {
+    public:
+        DiscountCorrectedTermStructure(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
+            const std::vector<boost::shared_ptr<QuantLib::RateHelper> >& instruments,
+            QuantLib::Real accuracy,
+            bool permanent);
+    };
+
 }
 
 #endif

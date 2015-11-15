@@ -128,5 +128,25 @@ namespace QuantLibAddin {
             QuantLib::BasisRateHelper(basis, d));
         quoteName_ = f1(properties->getSystemProperty("Rate"));
     }
+  
+    TenorBasisYieldTermStructure::TenorBasisYieldTermStructure(
+            const shared_ptr<ObjectHandler::ValueObject>& properties,
+            const shared_ptr<QuantLib::TenorBasis>& basis,
+            bool permanent)
+    :YieldTermStructure(properties, permanent){
+        libraryObject_ = shared_ptr<QuantLib::TenorBasisYieldTermStructure>(new
+            QuantLib::TenorBasisYieldTermStructure(basis));
+    }
+
+    DiscountCorrectedTermStructure::DiscountCorrectedTermStructure(
+            const shared_ptr<ObjectHandler::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
+            const std::vector<boost::shared_ptr<QuantLib::RateHelper> >& instruments,
+            QuantLib::Real accuracy,
+            bool permanent)
+    : YieldTermStructure(properties, permanent){
+            libraryObject_ = shared_ptr<QuantLib::DiscountCorrectedTermStructure>(new
+                QuantLib::DiscountCorrectedTermStructure(baseCurve, instruments, accuracy));
+    }
 
 }

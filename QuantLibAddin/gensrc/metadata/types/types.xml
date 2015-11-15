@@ -178,6 +178,7 @@
     <DataType defaultSuperType='objectClass'>QuantLibAddin::Basket</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::GaussianDefProbLM</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::TDefProbLM</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::DiscountCorrectedTermStructure</DataType>
     <!--RL ADD 2010-07-22-->
     <DataType defaultSuperType='libraryClass'>QuantLib::DefaultProbabilityHelper</DataType>
     <!--RL ADD 2010-07-22-->
