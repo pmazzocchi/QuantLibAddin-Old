@@ -35,7 +35,7 @@
 #include <ql/termstructures/yield/oisratehelper.hpp>
 #include <ql/time/imm.hpp>
 #include <ql/experimental/tenorbasis/tenorbasis.hpp>
-#include <ql/experimental/tenorbasis/basisratehelpers.hpp>
+#include <ql/experimental/tenorbasis/forwardhelpers.hpp>
 
 #include <oh/repository.hpp>
 
@@ -359,6 +359,76 @@ namespace QuantLibAddin {
         quoteName_ = f(properties->getSystemProperty("FwdPoint"));
     }
 
+    // forward helpers
+    DepositForwardHelper::DepositForwardHelper(
+        const shared_ptr<ValueObject>& properties,
+        const QuantLib::Handle<QuantLib::Quote>& rate,
+        const shared_ptr<QuantLib::ForwardIborIndex>& iborIndex,
+        bool permanent)
+    : ForwardHelper(properties, permanent) {
+        libraryObject_ = shared_ptr<QuantLib::ForwardHelper>(new
+            QuantLib::DepositForwardHelper(rate, iborIndex));
+        quoteName_ = f(properties->getSystemProperty("Rate"));
+    }
+
+    FuturesForwardHelper::FuturesForwardHelper(
+        const shared_ptr<ValueObject>& properties,
+        const QuantLib::Handle<QuantLib::Quote>& price,
+        QuantLib::Futures::Type type,
+        const QuantLib::Date& date,
+        const shared_ptr<QuantLib::ForwardIborIndex>& iborIndex,
+        const QuantLib::Handle<QuantLib::Quote>& convAdj,
+        bool permanent)
+    : ForwardHelper(properties, permanent) {
+        libraryObject_ = shared_ptr<QuantLib::ForwardHelper>(new
+            QuantLib::FuturesForwardHelper(price, date, iborIndex, convAdj, type));
+        quoteName_ = f(properties->getSystemProperty("Price"));
+    }
+
+    FraForwardHelper::FraForwardHelper(
+        const shared_ptr<ValueObject>& properties,
+        const QuantLib::Handle<QuantLib::Quote>& rate,
+        QuantLib::Period periodToStart,
+        const shared_ptr<QuantLib::ForwardIborIndex>& iborIndex,
+        QuantLib::Pillar::Choice pillarChoice,
+        QuantLib::Date customPillar,
+        bool permanent)
+    : ForwardHelper(properties, permanent) {
+        libraryObject_ = shared_ptr<QuantLib::ForwardHelper>(new
+            QuantLib::FraForwardHelper(rate, periodToStart, iborIndex,
+            pillarChoice,
+            customPillar
+            ));
+        quoteName_ = f(properties->getSystemProperty("Rate"));
+    }
+
+    SwapForwardHelper::SwapForwardHelper(
+        const shared_ptr<ValueObject>& properties,
+        const QuantLib::Handle<QuantLib::Quote>& rate,
+        QuantLib::Natural settlementDays,
+        const QuantLib::Period& p,
+        const QuantLib::Calendar& cal,
+        const QuantLib::Frequency& fixFreq,
+        QuantLib::BusinessDayConvention fixConv,
+        const QuantLib::DayCounter& fixDC,
+        const shared_ptr<QuantLib::ForwardIborIndex>& ibor,
+        const QuantLib::Handle<QuantLib::Quote>& spread,
+        const QuantLib::Period& forwardStart,
+        const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
+        QuantLib::Pillar::Choice pillarChoice,
+        QuantLib::Date customPillar,
+        bool permanent)
+    : ForwardHelper(properties, permanent) {
+        libraryObject_ = shared_ptr<QuantLib::ForwardHelper>(new
+            QuantLib::SwapForwardHelper(rate,
+            p, cal, fixFreq, fixConv, fixDC, ibor,
+            spread, forwardStart, discount, settlementDays,
+            pillarChoice,
+            customPillar
+            ));
+        quoteName_ = f(properties->getSystemProperty("Rate"));
+    }
+
 
     // helper class
     namespace {
@@ -584,6 +654,10 @@ namespace QuantLibAddin {
               public QuantLib::Visitor<QuantLib::FraRateHelper>,
               public QuantLib::Visitor<QuantLib::FuturesRateHelper>,
               public QuantLib::Visitor<QuantLib::SwapRateHelper>,
+              public QuantLib::Visitor<QuantLib::DepositForwardHelper>,
+              public QuantLib::Visitor<QuantLib::FraForwardHelper>,
+              public QuantLib::Visitor<QuantLib::FuturesForwardHelper>,
+              public QuantLib::Visitor<QuantLib::SwapForwardHelper>,
               public QuantLib::Visitor<QuantLib::OISRateHelper>,
               public QuantLib::Visitor<QuantLib::DatedOISRateHelper>,
               public QuantLib::Visitor<QuantLib::BMASwapRateHelper>,
@@ -607,6 +681,23 @@ namespace QuantLibAddin {
                 rate_ = futureRate - convAdj;
             }
             void visit(QuantLib::SwapRateHelper& h) {
+                rate_ = h.quote()->value();
+            }
+            void visit(QuantLib::DepositForwardHelper& h) {
+                rate_ = h.quote()->value();
+            }
+            void visit(QuantLib::FraForwardHelper& h) {
+                rate_ = h.quote()->value();
+            }
+            void visit(QuantLib::FuturesForwardHelper& h) {
+                QuantLib::Rate futureRate = 1.0 - h.quote()->value() / 100.0;
+                QuantLib::Rate convAdj = h.convexityAdjustment();
+                // Convexity, as FRA/futures adjustment, has been used in the
+                // past to take into account futures margining vs FRA.
+                // Therefore, there's no requirement for it to be non-negative.
+                rate_ = futureRate - convAdj;
+            }
+            void visit(QuantLib::SwapForwardHelper& h) {
                 rate_ = h.quote()->value();
             }
             void visit(QuantLib::OISRateHelper& h) {
