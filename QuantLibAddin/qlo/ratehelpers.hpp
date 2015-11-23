@@ -35,17 +35,20 @@
 
 namespace QuantLib {
     class YieldTermStructure;
+    class ForwardRateCurve;
 
     template<class TS>
     class BootstrapHelper;
 
     typedef BootstrapHelper<YieldTermStructure> RateHelper;
+    typedef BootstrapHelper<ForwardRateCurve> ForwardHelper;
 
     class Quote;
     class Period;
     class Calendar;
     class DayCounter;
     class IborIndex;
+    class ForwardIborIndex;
     class OvernightIndex;
     class SwapIndex;
     class Schedule;
@@ -68,6 +71,20 @@ namespace QuantLibAddin {
         std::string quoteName() { return quoteName_; }
       protected:
         OH_LIB_CTOR(RateHelper, QuantLib::RateHelper);
+        std::string quoteName_;
+    };
+
+    class ForwardHelper : public ObjectHandler::LibraryObject<QuantLib::ForwardHelper> {
+    public:
+        enum DepoInclusionCriteria {
+            AllDepos,
+            DeposBeforeFirstFuturesStartDate,
+            DeposBeforeFirstFuturesStartDatePlusOne,
+            DeposBeforeFirstFuturesExpiryDate
+        };
+        std::string quoteName() { return quoteName_; }
+    protected:
+        OH_LIB_CTOR(ForwardHelper, QuantLib::ForwardHelper);
         std::string quoteName_;
     };
 
@@ -251,7 +268,58 @@ namespace QuantLibAddin {
 
     };
 
+    class DepositForwardHelper : public ForwardHelper {
+    public:
+        DepositForwardHelper(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::Quote>& rate,
+            const boost::shared_ptr<QuantLib::ForwardIborIndex>& iborIndex,
+            bool permanent);
+    };
 
+    class FuturesForwardHelper : public ForwardHelper {
+    public:
+        FuturesForwardHelper(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::Quote>& price,
+            QuantLib::Futures::Type type,
+            const QuantLib::Date& immDate,
+            const boost::shared_ptr<QuantLib::ForwardIborIndex>& iborIndex,
+            const QuantLib::Handle<QuantLib::Quote>& convAdj,
+            bool permanent);
+    };
+
+    class FraForwardHelper : public ForwardHelper {
+    public:
+        FraForwardHelper(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::Quote>& rate,
+            QuantLib::Period periodToStart,
+            const boost::shared_ptr<QuantLib::ForwardIborIndex>& iborIndex,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar,
+            bool permanent);
+    };
+
+    class SwapForwardHelper : public ForwardHelper {
+    public:
+        SwapForwardHelper(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::Quote>& quote,
+            QuantLib::Natural settlementDays,
+            const QuantLib::Period& p,
+            const QuantLib::Calendar& calendar,
+            const QuantLib::Frequency& fixedFrequency,
+            QuantLib::BusinessDayConvention fixedConvention,
+            const QuantLib::DayCounter& fixedDayCounter,
+            const boost::shared_ptr<QuantLib::ForwardIborIndex>& iborIndex,
+            const QuantLib::Handle<QuantLib::Quote>& spread,
+            const QuantLib::Period& forwardStart,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
+            QuantLib::Pillar::Choice pillarChoice,
+            QuantLib::Date customPillar,
+            bool permanent);
+    };
 
     // Processes the set of curve bootstrapping instruments
     // and selects a subset according to the given rules and parameters
@@ -267,6 +335,10 @@ namespace QuantLibAddin {
     // Returns the rate, if any, associated to the given rate helper
     QuantLib::Real qlRateHelperRate(
         const boost::shared_ptr<QuantLibAddin::RateHelper>& qlarh);
+
+    // Returns the rate, if any, associated to the given rate Forward helper
+    QuantLib::Real qlForwardHelperRate(
+        const boost::shared_ptr<QuantLibAddin::ForwardHelper>& qlarh);
 
 }
 

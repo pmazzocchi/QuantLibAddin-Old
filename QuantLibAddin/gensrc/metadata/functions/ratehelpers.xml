@@ -14,6 +14,8 @@
     <include>ql/instruments/bonds/fixedratebond.hpp</include>
     <include>ql/indexes/ibor/euribor.hpp</include>
     <include>ql/termstructures/yieldtermstructure.hpp</include>
+    <include>ql/experimental/tenorbasis/forwardratecurve.hpp</include>
+    <include>ql/experimental/tenorbasis/forwardiborindex.hpp</include>
   </serializationIncludes>
   <addinIncludes>
     <include>qlo/ratehelpers.hpp</include>
@@ -25,9 +27,11 @@
     <include>qlo/abcd.hpp</include>
 
     <include>ql/termstructures/yield/ratehelpers.hpp</include>
+    <include>ql/experimental/tenorbasis/forwardhelpers.hpp</include>    
     <include>ql/indexes/swapindex.hpp</include>
     <include>ql/instruments/bonds/fixedratebond.hpp</include>
     <include>ql/indexes/ibor/euribor.hpp</include>
+    <include>ql/experimental/tenorbasis/forwardiborindex.hpp</include>
   </addinIncludes>
   <copyright>
     Copyright (C) 2005, 2006 Eric Ehlers
@@ -177,8 +181,161 @@
       </ReturnValue>
     </Member>
 
+    <!-- Forward Helper functions -->
     <Member name='qlRateHelperQuoteError' type='QuantLib::RateHelper'>
       <description>returns the error between the curve implied quote and the value of the Quote wrapped in the given RateHelper object.</description>
+      <libraryFunction>quoteError</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForwardHelperEarliestDate' type='QuantLib::ForwardHelper'>
+      <description>returns the earliest date for the given ForwardHelper object.</description>
+      <libraryFunction>earliestDate</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Date</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForwardHelperLatestRelevantDate' type='QuantLib::ForwardHelper'>
+      <description>returns the latest relevant date for the given ForwardHelper object.</description>
+      <libraryFunction>latestRelevantDate</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Date</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForwardHelperPillarDate' type='QuantLib::ForwardHelper'>
+      <description>returns the pillar date for the given ForwardHelper object.</description>
+      <libraryFunction>pillarDate</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Date</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForwardHelperMaturityDate' type='QuantLib::ForwardHelper'>
+      <description>returns the maturity date for the given ForwardHelper object.</description>
+      <libraryFunction>maturityDate</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Date</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForwardHelperQuoteName' type='QuantLibAddin::ForwardHelper'>
+      <description>returns the objectID of the Quote wrapped in the given ForwardHelper object.</description>
+      <libraryFunction>quoteName</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>string</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForwardHelperQuoteValue' type='QuantLib::ForwardHelper'>
+      <description>returns the value of the Quote wrapped in the given ForwardHelper object.</description>
+      <libraryFunction>quote()->value</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForwardHelperQuoteIsValid' type='QuantLib::ForwardHelper'>
+      <description>returns the isValid boolean of the Quote wrapped in the given ForwardHelper object.</description>
+      <libraryFunction>quote()->isValid</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForwardHelperImpliedQuote' type='QuantLib::ForwardHelper'>
+      <description>returns the curve implied quote of the given ForwardHelper object.</description>
+      <libraryFunction>impliedQuote</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlForwardHelperQuoteError' type='QuantLib::ForwardHelper'>
+      <description>returns the error between the curve implied quote and the value of the Quote wrapped in the given ForwardHelper object.</description>
       <libraryFunction>quoteError</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
@@ -1160,6 +1317,245 @@
         <tensorRank>scalar</tensorRank>
       </ReturnValue>
     </Procedure>
+
+    <Constructor name='qlDepositForwardHelper'>
+      <libraryFunction>DepositForwardHelper</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Rate' exampleValue='0.036565'>
+            <type>QuantLib::Quote</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>deposit quote.</description>
+          </Parameter>
+          <Parameter name='ForwardIborIndex' exampleValue='Euribor6M'>
+            <type>QuantLib::ForwardIborIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>ForwardIborIndex object ID.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <Constructor name='qlSwapForwardHelper'>
+      <libraryFunction>SwapForwardHelper</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Rate' exampleValue='0.042322'>
+            <type>QuantLib::Quote</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>quote.</description>
+          </Parameter>
+          <Parameter name='SettlDays' default='2'>
+            <type>QuantLib::Natural</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Number of days to spot date.</description>
+          </Parameter>
+          <Parameter name='Tenor' exampleValue='10Y'>
+            <type>QuantLib::Period</type>
+            <tensorRank>scalar</tensorRank>
+            <description>swap length (e.g. 5Y for five years).</description>
+          </Parameter>
+          <Parameter name='Calendar' exampleValue='TARGET'>
+            <type>QuantLib::Calendar</type>
+            <tensorRank>scalar</tensorRank>
+            <description>holiday calendar (e.g. TARGET).</description>
+          </Parameter>
+          <Parameter name='FixedLegFrequency' exampleValue='Annual'>
+            <type>QuantLib::Frequency</type>
+            <tensorRank>scalar</tensorRank>
+            <description>fixed leg frequency (e.g. Annual, Semiannual, Every4Month, Quarterly, Bimonthly, Monthly).</description>
+          </Parameter>
+          <Parameter name='FixedLegConvention' exampleValue='ModifiedFollowing'>
+            <type>QuantLib::BusinessDayConvention</type>
+            <tensorRank>scalar</tensorRank>
+            <description>fixed leg convention (e.g. Unadjusted).</description>
+          </Parameter>
+          <Parameter name='FixedLegDayCounter' exampleValue='30/360 (Bond Basis)'>
+            <type>QuantLib::DayCounter</type>
+            <tensorRank>scalar</tensorRank>
+            <description>day counter (e.g. Actual/360).</description>
+          </Parameter>
+          <Parameter name='ForwardIborIndex' exampleValue='Euribor6M'>
+            <type>QuantLib::ForwardIborIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>floating leg ForwardIborIndex object ID.</description>
+          </Parameter>
+          <Parameter name='Spread' exampleValue='0.0'>
+            <type>QuantLib::Quote</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>floating leg spread.</description>
+          </Parameter>
+          <Parameter name='ForwardStart' exampleValue='"0D"'>
+            <type>QuantLib::Period</type>
+            <tensorRank>scalar</tensorRank>
+            <description>forward start period.</description>
+          </Parameter>
+          <Parameter name='DiscountingCurve' exampleValue='EURYC' default='""'>
+            <type>QuantLib::YieldTermStructure</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>discounting YieldTermStructure object ID.</description>
+          </Parameter>
+          <Parameter name='PillarDate' default='"MaturityDate"'>
+            <type>QuantLib::Pillar::Choice</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Pillar date can be: MaturityDate, LastRelevantDate or CustomDate.</description>
+          </Parameter>
+          <Parameter name='CustomPillarDate' default='QuantLib::Date()'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Custom Pillar Date.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <Member name='qlSwapForwardHelperSpread' type='QuantLib::SwapForwardHelper'>
+      <description>returns the spread for the given SwapForwardHelper object.</description>
+      <libraryFunction>spread</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Calc'/-->
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Spread</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlSwapForwardHelperForwardStart' type='QuantLib::SwapForwardHelper'>
+      <description>returns the forward start period for the given SwapForwardHelper object.</description>
+      <libraryFunction>forwardStart</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Calc'/-->
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Period</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Constructor name='qlFraForwardHelper'>
+      <libraryFunction>FraForwardHelper</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Rate' exampleValue='0.041234'>
+            <type>QuantLib::Quote</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>quote.</description>
+          </Parameter>
+          <Parameter name='PeriodToStart' exampleValue='3M'>
+            <type>QuantLib::Period</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Period to start date.</description>
+          </Parameter>
+          <Parameter name='ForwardIborIndex' exampleValue='Euribor6M'>
+            <type>QuantLib::ForwardIborIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>ForwardIborIndex object ID.</description>
+          </Parameter>
+          <Parameter name='PillarDate' default='"MaturityDate"'>
+            <type>QuantLib::Pillar::Choice</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Pillar date can be: MaturityDate, LastRelevantDate or CustomDate.</description>
+          </Parameter>
+          <Parameter name='CustomPillarDate' default='QuantLib::Date()'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Custom Pillar Date.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <Member name='qlFuturesForwardHelperConvexityAdjustment' type='QuantLib::FuturesForwardHelper'>
+      <description>returns the convexity adjustment for the given FuturesForwardHelper object.</description>
+      <libraryFunction>convexityAdjustment</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Calc'/-->
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Spread</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Constructor name='qlFuturesForwardHelper'>
+      <libraryFunction>FuturesForwardHelper</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Price' exampleValue='95.9285'>
+            <type>QuantLib::Quote</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>price quote.</description>
+          </Parameter>
+          <Parameter name='FuturesType' default='"IMM"'>
+            <type>QuantLib::Futures::Type</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Futures type.</description>
+          </Parameter>
+          <Parameter name='FuturesDate'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Futures date (IborIndex start date).</description>
+          </Parameter>
+          <Parameter name='ForwardIborIndex' default='"Euribor3M"'>
+            <type>QuantLib::ForwardIborIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>IborIndex object ID.</description>
+          </Parameter>
+          <Parameter name='ConvexityAdjQuote' exampleValue='0.0'>
+            <type>QuantLib::Quote</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>convexity adjustment quote (i.e. Forward rate = Futures rate - convexity adjustment).</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
 
   </Functions>
 </Category>

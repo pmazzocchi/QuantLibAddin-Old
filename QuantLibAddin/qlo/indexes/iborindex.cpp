@@ -26,6 +26,7 @@
 
 #include <qlo/indexes/iborindex.hpp>
 #include <ql/experimental/coupons/proxyibor.hpp>
+#include <ql/experimental/tenorbasis/forwardiborindex.hpp>
 
 namespace QuantLibAddin {
 
@@ -49,6 +50,28 @@ namespace QuantLibAddin {
                                 fixingDays, crr, calendar, 
                                 fltBDC, endOfMonth, fltDayCounter,
                                 hYTS));
+    }
+
+    ForwardIborIndex::ForwardIborIndex(
+        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const std::string& familyName,
+        const QuantLib::Period& p,
+        const QuantLib::Natural fixingDays,
+        const QuantLib::Currency& crr,
+        const QuantLib::Calendar& calendar,
+        QuantLib::BusinessDayConvention fltBDC,
+        bool endOfMonth,
+        const QuantLib::DayCounter& fltDayCounter,
+        const QuantLib::Handle<QuantLib::ForwardRateCurve>& hYTS,
+        bool permanent)
+    : IborIndex(properties, permanent)
+    {
+        libraryObject_ = boost::shared_ptr<QuantLib::ForwardIborIndex>(new
+            QuantLib::ForwardIborIndex(familyName,
+                                       p,
+                                       fixingDays, crr, calendar,
+                                       fltBDC, endOfMonth, fltDayCounter,
+                                       hYTS));
     }
 
     OvernightIndex::OvernightIndex(

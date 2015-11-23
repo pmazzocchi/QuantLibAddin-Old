@@ -98,11 +98,13 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::FloatingRateCouponPricer</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::ForwardRateAgreement</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::FuturesRateHelper</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::FuturesForwardHelper</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::FxSwapRateHelper</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::GeneralizedBlackScholesProcess</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::HistoricalForwardRatesAnalysis</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::HistoricalRatesAnalysis</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::IborIndex</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::ForwardIborIndex</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Euribor</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Index</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Instrument</DataType>
@@ -145,6 +147,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::RangeAccrualFloatersCoupon</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::RangeAccrualPricer</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::RateHelper</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::ForwardHelper</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::SABRInterpolation</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::SabrInterpolatedSmileSection</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::SabrVolSurface</DataType>
@@ -162,6 +165,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::SwapIndex</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::OISRateHelper</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::SwapRateHelper</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::SwapForwardHelper</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Swaption</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::SymmetricSchurDecomposition</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::SyntheticCDO</DataType>
@@ -195,6 +199,7 @@
 
     <DataType defaultSuperType='libraryTermStructure'>QuantLib::TermStructure</DataType>
     <DataType defaultSuperType='libraryTermStructure'>QuantLib::YieldTermStructure</DataType>
+    <DataType defaultSuperType='libraryTermStructure'>QuantLib::ForwardRateCurve</DataType>
     <DataType defaultSuperType='libraryTermStructure'>QuantLib::CompositeDiscountCurve</DataType>
     <!--RL ADD 2010-07-22-->
     <DataType defaultSuperType='libraryTermStructure'>QuantLib::DefaultProbabilityTermStructure</DataType>
@@ -257,6 +262,7 @@
     <DataType defaultSuperType='objectClass'>QuantLibAddin::PiecewiseHazardRateCurve</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::RandomSequenceGenerator</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::RateHelper</DataType>
+    <DataType defaultSuperType='objectClass'>QuantLibAddin::ForwardHelper</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::RelinkableHandle</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::SMMDriftCalculator</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::SabrVolSurface</DataType>

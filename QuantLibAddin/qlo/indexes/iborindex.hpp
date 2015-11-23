@@ -33,6 +33,7 @@ namespace QuantLib {
     class Calendar;
     class DayCounter;
     class YieldTermStructure;
+    class ForwardRateCurve;
     class IborIndex;
     class Quote;
 
@@ -57,6 +58,23 @@ namespace QuantLibAddin {
                   bool permanent);
       protected:
         OH_OBJ_CTOR(IborIndex, InterestRateIndex);
+    };
+
+    class ForwardIborIndex : public IborIndex {
+    public:
+        ForwardIborIndex(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+                         const std::string& familyName,
+                         const QuantLib::Period& p,
+                         const QuantLib::Natural fixingDays,
+                         const QuantLib::Currency& crr,
+                         const QuantLib::Calendar& calendar,
+                         QuantLib::BusinessDayConvention fltBDC,
+                         bool endOfMonth,
+                         const QuantLib::DayCounter& fltDayCounter,
+                         const QuantLib::Handle<QuantLib::ForwardRateCurve>& hYTS,
+                         bool permanent);
+    protected:
+        OH_OBJ_CTOR(ForwardIborIndex, IborIndex);
     };
 
     class OvernightIndex : public IborIndex {

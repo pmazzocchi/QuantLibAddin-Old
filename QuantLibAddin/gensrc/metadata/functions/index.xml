@@ -14,6 +14,7 @@
     <include>ql/termstructures/yieldtermstructure.hpp</include>
     <include>ql/indexes/iborindex.hpp</include>
     <include>ql/experimental/coupons/proxyibor.hpp</include>
+    <include>ql/experimental/tenorbasis/forwardiborindex.hpp</include>
   </serializationIncludes>
   <addinIncludes>
     <include>qlo/indexes/bmaindex.hpp</include>
@@ -30,6 +31,7 @@
     <include>ql/indexes/iborindex.hpp</include>
     <include>ql/experimental/coupons/proxyibor.hpp</include>
     <include>ql/indexes/swapindex.hpp</include>
+    <include>ql/experimental/tenorbasis/forwardiborindex.hpp</include>
   </addinIncludes>
   <copyright>
     Copyright (C) 2006, 2007, 2008, 2009, 2010 Ferdinando Ametrano
@@ -633,6 +635,67 @@
             <superType>libToHandle</superType>
             <tensorRank>scalar</tensorRank>
             <description>forecasting YieldTermStructure object ID.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <Constructor name='qlForwardIborIndex'>
+      <libraryFunction>ForwardIborIndex</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <processorName>IndexProcessor</processorName>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='FamilyName' exampleValue='Euribor'>
+            <type>string</type>
+            <tensorRank>scalar</tensorRank>
+            <description>index family name.</description>
+          </Parameter>
+          <Parameter name='Tenor' exampleValue='6M'>
+            <type>QuantLib::Period</type>
+            <tensorRank>scalar</tensorRank>
+            <description>index tenor (e.g. 2D for two days , 3W for three weeks, 6M for six months, 1Y for one year).</description>
+          </Parameter>
+          <Parameter name='FixingDays' exampleValue='2'>
+            <type>QuantLib::Natural</type>
+            <tensorRank>scalar</tensorRank>
+            <description>fixing days (e.g. 2).</description>
+          </Parameter>
+          <Parameter name='Currency' exampleValue='EUR'>
+            <type>QuantLib::Currency</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Index Currency.</description>
+          </Parameter>
+          <Parameter name='Calendar' exampleValue='TARGET'>
+            <type>QuantLib::Calendar</type>
+            <tensorRank>scalar</tensorRank>
+            <description>holiday calendar (e.g. TARGET).</description>
+          </Parameter>
+          <Parameter name='BDayConvention' exampleValue='Modified Following'>
+            <type>QuantLib::BusinessDayConvention</type>
+            <tensorRank>scalar</tensorRank>
+            <description>business day convention (e.g. Modified Following).</description>
+          </Parameter>
+          <Parameter name='EndOfMonth' exampleValue='TRUE'>
+            <type>bool</type>
+            <tensorRank>scalar</tensorRank>
+            <description>TRUE if the index follow the 'end of month' convention.</description>
+          </Parameter>
+          <Parameter name='DayCounter' exampleValue='Actual/360'>
+            <type>QuantLib::DayCounter</type>
+            <tensorRank>scalar</tensorRank>
+            <description>DayCounter ID.</description>
+          </Parameter>
+          <Parameter name='FwdCurve' exampleValue='EURYC6M' default='""'>
+            <type>QuantLib::ForwardRateCurve</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>forwarding Curve object ID.</description>
           </Parameter>
         </Parameters>
       </ParameterList>
