@@ -28,7 +28,6 @@
 #include <ql/quotes/simplequote.hpp>
 #include <ql/experimental/tenorbasis/tenorbasis.hpp>
 #include <ql/experimental/tenorbasis/tenorbasiscalibration.hpp>
-#include <ql/experimental/tenorbasis/basisratehelpers.hpp>
 
 #include <oh/repository.hpp>
 
@@ -104,31 +103,6 @@ namespace QuantLibAddin {
             endCriteria, method));
     }
 
-    // Within each of the RateHelper classes we want to remember the ID
-    // of the associated Rate object.  So below we coerce that input
-    // into a string.  If the caller passed in a double instead of a
-    // Rate object then the coerce below will fail in which case we
-    // return an empty string.
-    std::string f1(const ObjectHandler::property_t &p) {
-        try {
-            return ObjectHandler::convert2<std::string>(p);
-        }
-        catch (...) {
-            return std::string();
-        }
-    }
-
-    BasisRateHelper::BasisRateHelper(
-                      const shared_ptr<ObjectHandler::ValueObject>& properties,
-                      const QuantLib::Handle<QuantLib::Quote>& basis,
-                      const QuantLib::Date& d,
-                      bool permanent)
-    : BasisHelper(properties, permanent) {
-        libraryObject_ = shared_ptr<QuantLib::BasisHelper>(new
-            QuantLib::BasisRateHelper(basis, d));
-        quoteName_ = f1(properties->getSystemProperty("Rate"));
-    }
-  
     TenorBasisYieldTermStructure::TenorBasisYieldTermStructure(
             const shared_ptr<ObjectHandler::ValueObject>& properties,
             const shared_ptr<QuantLib::TenorBasis>& basis,

@@ -42,10 +42,6 @@ namespace QuantLib {
     class EndCriteria;
     class OptimizationMethod;
 
-    template<class TS>
-    class BootstrapHelper;
-    typedef BootstrapHelper<TenorBasis> BasisHelper;
-
     template <class T>
     class Handle;
 }
@@ -110,24 +106,6 @@ namespace QuantLibAddin {
             const std::vector<bool>& fixedCoeff,
             const boost::shared_ptr<QuantLib::EndCriteria> endCriteria,
             const boost::shared_ptr<QuantLib::OptimizationMethod> method,
-            bool permanent);
-    };
-
-    class BasisHelper :
-        public ObjectHandler::LibraryObject<QuantLib::BasisHelper> {
-    public:
-        std::string quoteName() { return quoteName_; }
-    protected:
-        OH_LIB_CTOR(BasisHelper, QuantLib::BasisHelper);
-        std::string quoteName_;
-    };
-
-    class BasisRateHelper : public BasisHelper {
-    public:
-        BasisRateHelper(
-            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-            const QuantLib::Handle<QuantLib::Quote>& basis,
-            const QuantLib::Date& d,
             bool permanent);
     };
 
