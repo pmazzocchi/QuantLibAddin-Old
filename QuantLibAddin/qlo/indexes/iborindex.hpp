@@ -73,8 +73,8 @@ namespace QuantLibAddin {
                          const QuantLib::DayCounter& fltDayCounter,
                          const QuantLib::Handle<QuantLib::ForwardRateCurve>& hYTS,
                          bool permanent);
-    protected:
-        OH_OBJ_CTOR(ForwardIborIndex, IborIndex);
+    //protected:
+    //    OH_OBJ_CTOR(ForwardIborIndex, IborIndex);
     };
 
     class OvernightIndex : public IborIndex {
