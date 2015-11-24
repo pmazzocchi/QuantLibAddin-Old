@@ -40,6 +40,8 @@
 #include <ql/math/interpolations/forwardflatinterpolation.hpp>
 #include <ql/math/interpolations/backwardflatinterpolation.hpp>
 
+#include <ql/experimental/tenorbasis/fwdratecurve.hpp>
+
 #include <boost/algorithm/string/case_conv.hpp>
 
 using boost::algorithm::to_upper_copy;
@@ -425,6 +427,37 @@ namespace QuantLibAddin {
                                              allowExtrapolatedJunction, 
                                              allowExtrapolation));
 	}
+
+    FwdRateCurveMonotonicCubicNaturalSpline::FwdRateCurveMonotonicCubicNaturalSpline(
+        const shared_ptr<ValueObject>& prop,
+        const std::string& fwdFamilyName,
+        const QuantLib::Period& fwdTenor,
+        QuantLib::Natural fwdSettlementDays,
+        const QuantLib::Currency& fwdCurrency,
+        const QuantLib::Calendar& fwdFixingCalendar,
+        QuantLib::BusinessDayConvention fwdConvention,
+        bool fwdEndOfMonth,
+        const QuantLib::DayCounter& fwdDayCounter,
+        const std::vector<boost::shared_ptr<QuantLib::ForwardHelper> >& instruments,
+        QuantLib::Real accuracy,
+        bool perm)
+    : ForwardRateCurve(prop, perm)
+    {
+        libraryObject_ = shared_ptr<QuantLib::Extrapolator>(new
+            QuantLib::FwdRateCurve<QuantLib::Cubic>(fwdFamilyName, 
+                                                    fwdTenor, 
+                                                    fwdSettlementDays, 
+                                                    fwdCurrency, 
+                                                    fwdFixingCalendar, 
+                                                    fwdConvention, 
+                                                    fwdEndOfMonth, 
+                                                    fwdDayCounter, 
+                                                    instruments, 
+                                                    accuracy, 
+                                                    QuantLib::Cubic(CubicInterpolation::Spline, true,
+                                                              CubicInterpolation::SecondDerivative, 0.0,
+                                                              CubicInterpolation::SecondDerivative, 0.0)));
+    }
 
     #define RESOLVE_TEMPLATE(NAME) \
         if (traitsID_=="DISCOUNT") { \

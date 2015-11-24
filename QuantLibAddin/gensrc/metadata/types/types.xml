@@ -256,6 +256,7 @@
     <DataType defaultSuperType='objectClass'>QuantLibAddin::Leg</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::NumericHaganPricer</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::PiecewiseYieldCurve</DataType>
+    <DataType defaultSuperType='objectClass'>QuantLibAddin::FwdRateCurveMonotonicCubicNaturalSpline</DataType>
     <!--RL ADD 2010-07-22-->
     <DataType defaultSuperType='objectClass'>QuantLibAddin::PiecewiseFlatForwardCurve</DataType>
     <!--RL ADD 2010-07-22-->

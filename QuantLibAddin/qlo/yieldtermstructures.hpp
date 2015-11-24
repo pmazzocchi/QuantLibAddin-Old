@@ -6,6 +6,7 @@
  Copyright (C) 2005 Plamen Neykov
  Copyright (C) 2005 Aurelien Chanudet
  Copyright (C) 2015 Riccardo Barone
+ Copyright (C) 2015 Paolo Mazzocchi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -29,17 +30,21 @@
 #include <ql/time/frequency.hpp>
 #include <ql/compounding.hpp>
 #include <ql/types.hpp>
+#include <ql/time/businessdayconvention.hpp>
 
 namespace QuantLib {
     class Calendar;
     class DayCounter;
     class Date;
+    class Period;
     class Quote;
+    class Currency;
 
     template<class TS>
     class BootstrapHelper;
 
     typedef BootstrapHelper<YieldTermStructure> RateHelper;
+    typedef BootstrapHelper<ForwardRateCurve> ForwardHelper;
 
     template <class T>
     class Handle;
@@ -172,6 +177,27 @@ namespace QuantLibAddin {
     // Stream operator to write a InterpolatedYieldCurvePair to a stream - for logging / error handling.
     std::ostream &operator<<(std::ostream &out,
                              InterpolatedYieldCurvePair tokenPair);
+
+    //forward rate curve bootstrapping using MonotonicCubicNaturalSpline
+    class FwdRateCurveMonotonicCubicNaturalSpline : public ForwardRateCurve {
+    public:
+        FwdRateCurveMonotonicCubicNaturalSpline(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const std::string& fwdFamilyName,
+            const QuantLib::Period& fwdTenor,
+            QuantLib::Natural fwdSettlementDays,
+            const QuantLib::Currency& fwdCurrency,
+            const QuantLib::Calendar& fwdFixingCalendar,
+            QuantLib::BusinessDayConvention fwdConvention,
+            bool fwdEndOfMonth,
+            const QuantLib::DayCounter& fwdDayCounter,
+            const std::vector<boost::shared_ptr<QuantLib::ForwardHelper> >&
+                                                                   instruments,
+            QuantLib::Real accuracy,
+            bool permanent);
+    };
+
+
 }
 
 #endif

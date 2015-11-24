@@ -40,7 +40,7 @@ namespace QuantLib {
 
     class YieldTermStructure;
 
-    //class ForwardRateCurve;
+    class ForwardRateCurve;
 
 }
 
