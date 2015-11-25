@@ -32,6 +32,7 @@
 #include <qlo/swaptionvolstructure.hpp>
 
 #include <ql/termstructures/yieldtermstructure.hpp>
+#include <ql/experimental/tenorbasis/forwardratecurve.hpp>
 #include <ql/termstructures/defaulttermstructure.hpp>
 #include <ql/termstructures/volatility/swaption/swaptionvolstructure.hpp>
 
@@ -123,6 +124,25 @@ namespace QuantLibAddin {
                 // At present CoerceTermStructureObject is not required for any classes derived from YieldTermStructure.
                 // See file QuantLibAddin/gensrc/metadata/types/types.xml, supertype "objectTermStructure"
                 //handleToObject<YieldTermStructure, QuantLib::YieldTermStructure, ObjectTermStructure>,
+                0
+            };
+            return conversions;
+        };
+    };
+
+    // CoerceTermStructure: Specialization for QuantLib::ForwardRateCurve -
+    // wrap handleToLibrarySame<> instead of handleToLibraryDifferent<>
+
+    template <>
+    class CoerceTermStructure<ForwardRateCurve, QuantLib::ForwardRateCurve>
+        : public ObjectHandler::Coerce<
+        boost::shared_ptr<ObjectHandler::Object>,
+        boost::shared_ptr<QuantLib::ForwardRateCurve> >{
+
+        Conversion *getConversions() {
+            static Conversion conversions[] = {
+                objectToLibrary<ForwardRateCurve, QuantLib::ForwardRateCurve>,
+                handleToLibrarySame<ForwardRateCurve, QuantLib::ForwardRateCurve>,
                 0
             };
             return conversions;

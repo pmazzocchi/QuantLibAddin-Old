@@ -804,5 +804,25 @@
       </ParameterList>
     </Constructor>
 
+    <Constructor name='qlRelinkableHandleForwardRateCurve'>
+      <libraryFunction>RelinkableHandleImpl&lt;QuantLibAddin::ForwardRateCurve, QuantLib::ForwardRateCurve&gt;</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <processorName>RelinkableHandleProcessor</processorName>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='CurrentLink' default='""'>
+            <type>string</type>
+            <superType>handlePredecessor</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>ForwardRateCurve object ID. If omitted, nothing is linked by the RelinkableHandle.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
   </Functions>
 </Category>
