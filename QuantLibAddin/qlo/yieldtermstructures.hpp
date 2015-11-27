@@ -197,6 +197,25 @@ namespace QuantLibAddin {
             bool permanent);
     };
 
+    //forward rate curve bootstrapping using Linear
+    class FwdRateCurveLinear : public ForwardRateCurve {
+    public:
+        FwdRateCurveLinear(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const std::string& fwdFamilyName,
+            const QuantLib::Period& fwdTenor,
+            QuantLib::Natural fwdSettlementDays,
+            const QuantLib::Currency& fwdCurrency,
+            const QuantLib::Calendar& fwdFixingCalendar,
+            QuantLib::BusinessDayConvention fwdConvention,
+            bool fwdEndOfMonth,
+            const QuantLib::DayCounter& fwdDayCounter,
+            const std::vector<boost::shared_ptr<QuantLib::ForwardHelper> >&
+            instruments,
+            QuantLib::Real accuracy,
+            bool permanent);
+    };
+
 
 }
 

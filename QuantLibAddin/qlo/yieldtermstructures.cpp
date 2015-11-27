@@ -428,7 +428,7 @@ namespace QuantLibAddin {
                                              allowExtrapolation));
 	}
 
-    FwdRateCurveMonotonicCubicNaturalSpline::FwdRateCurveMonotonicCubicNaturalSpline(
+    FwdRateCurveLinear::FwdRateCurveLinear(
         const shared_ptr<ValueObject>& prop,
         const std::string& fwdFamilyName,
         const QuantLib::Period& fwdTenor,
@@ -444,7 +444,7 @@ namespace QuantLibAddin {
     : ForwardRateCurve(prop, perm)
     {
         libraryObject_ = shared_ptr<QuantLib::Extrapolator>(new
-            QuantLib::FwdRateCurve<QuantLib::Cubic>(fwdFamilyName, 
+            QuantLib::FwdRateCurve<QuantLib::Linear>(fwdFamilyName, 
                                                     fwdTenor, 
                                                     fwdSettlementDays, 
                                                     fwdCurrency, 
@@ -453,10 +453,38 @@ namespace QuantLibAddin {
                                                     fwdEndOfMonth, 
                                                     fwdDayCounter, 
                                                     instruments, 
-                                                    accuracy, 
-                                                    QuantLib::Cubic(CubicInterpolation::Spline, true,
-                                                              CubicInterpolation::SecondDerivative, 0.0,
-                                                              CubicInterpolation::SecondDerivative, 0.0)));
+                                                    accuracy));
+    }
+
+    FwdRateCurveMonotonicCubicNaturalSpline::FwdRateCurveMonotonicCubicNaturalSpline(
+        const shared_ptr<ValueObject>& prop,
+        const std::string& fwdFamilyName,
+        const QuantLib::Period& fwdTenor,
+        QuantLib::Natural fwdSettlementDays,
+        const QuantLib::Currency& fwdCurrency,
+        const QuantLib::Calendar& fwdFixingCalendar,
+        QuantLib::BusinessDayConvention fwdConvention,
+        bool fwdEndOfMonth,
+        const QuantLib::DayCounter& fwdDayCounter,
+        const std::vector<boost::shared_ptr<QuantLib::ForwardHelper> >& instruments,
+        QuantLib::Real accuracy,
+        bool perm)
+        : ForwardRateCurve(prop, perm)
+    {
+        libraryObject_ = shared_ptr<QuantLib::Extrapolator>(new
+            QuantLib::FwdRateCurve<QuantLib::Cubic>(fwdFamilyName,
+            fwdTenor,
+            fwdSettlementDays,
+            fwdCurrency,
+            fwdFixingCalendar,
+            fwdConvention,
+            fwdEndOfMonth,
+            fwdDayCounter,
+            instruments,
+            accuracy,
+            QuantLib::Cubic(CubicInterpolation::Spline, true,
+            CubicInterpolation::SecondDerivative, 0.0,
+            CubicInterpolation::SecondDerivative, 0.0)));
     }
 
     #define RESOLVE_TEMPLATE(NAME) \

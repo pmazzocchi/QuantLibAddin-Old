@@ -12,6 +12,7 @@
     <include>qlo/ratehelpers.hpp</include>    
 
     <include>ql/indexes/iborindex.hpp</include>
+    <include>ql/experimental/tenorbasis/forwardiborindex.hpp</include>
     <include>ql/experimental/tenorbasis/tenorbasis.hpp</include>
   </serializationIncludes>
   <addinIncludes>
@@ -27,6 +28,7 @@
     <include>ql/math/polynomialmathfunction.hpp</include>
     <include>ql/experimental/tenorbasis/tenorbasis.hpp</include>
     <include>ql/experimental/tenorbasis/tenorbasiscalibration.hpp</include>
+    <include>ql/experimental/tenorbasis/forwardiborindex.hpp</include>
     <include>ql/indexes/iborindex.hpp</include>
   </addinIncludes>
 
@@ -743,6 +745,57 @@
       </ReturnValue>
     </Member>
 
+    <Member name='qlTenorBasisForwardCalibrate' type='QuantLib::TenorBasis'>
+      <description>calibrate tenorBasis</description>
+      <libraryFunction>forwardCalibrate</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Cpp'/>
+        <SupportedPlatform name='Calc'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='ForwardHelpers'>
+            <type>QuantLib::ForwardHelper</type>
+            <tensorRank>vector</tensorRank>
+            <description>Forward Helpers.</description>
+          </Parameter>
+          <Parameter name='Method'>
+            <type>QuantLib::OptimizationMethod</type>
+            <superType>underlyingClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>OptimizationMethod object ID.</description>
+          </Parameter>
+          <Parameter name='EndCriteria'>
+            <type>QuantLib::EndCriteria</type>
+            <superType>underlyingClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>EndCriteria object ID.</description>
+          </Parameter>
+          <!--<Parameter name='Constraint'>
+            <type>QuantLib::Constraint</type>
+            <superType>underlyingClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>Constraint.</description>
+          </Parameter>-->
+          <Parameter name='Weights' >
+            <type>QuantLib::Real</type>
+            <tensorRank>vector</tensorRank>
+            <description>weights.</description>
+          </Parameter>
+          <Parameter name='FixedCoeff' >
+            <type>bool</type>
+            <tensorRank>vector</tensorRank>
+            <description>TRUE if the i-th coefficient must be kept fixed in later calibrations, FALSE otherwise.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>void</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
     <!-- AbcdTenorBasis class costructor -->
     <Constructor name='qlAbcdTenorBasis'>
       <libraryFunction>AbcdTenorBasis</libraryFunction>
@@ -1287,6 +1340,111 @@
 
     <Member name='qlDiscountCorrectedTermStructureData' type='QuantLib::DiscountCorrectedTermStructure' superType='libraryClass'>
       <description>Retrieve Data for the given DiscountCorrectedTermStructure.</description>
+      <libraryFunction>data</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Real</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Constructor name='qlTenorBasisForwardRateCurve'>
+      <libraryFunction>TenorBasisForwardRateCurve</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel' calcInWizard='false'/>
+        <!--<SupportedPlatform name='Excel'/>-->
+        <SupportedPlatform name='Calc'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='TenorBasis'>
+            <type>QuantLib::TenorBasis</type>
+            <tensorRank>scalar</tensorRank>
+            <description>TenorBasis object ID.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <Constructor name='qlForwardCorrectedTermStructure'>
+      <libraryFunction>ForwardCorrectedTermStructure</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='FamilyName' exampleValue='Euribor'>
+            <type>string</type>
+            <tensorRank>scalar</tensorRank>
+            <description>index family name.</description>
+          </Parameter>
+          <Parameter name='Tenor' exampleValue='6M'>
+            <type>QuantLib::Period</type>
+            <tensorRank>scalar</tensorRank>
+            <description>index tenor (e.g. 2D for two days , 3W for three weeks, 6M for six months, 1Y for one year).</description>
+          </Parameter>
+          <Parameter name='FixingDays' exampleValue='2'>
+            <type>QuantLib::Natural</type>
+            <tensorRank>scalar</tensorRank>
+            <description>fixing days (e.g. 2).</description>
+          </Parameter>
+          <Parameter name='Currency' exampleValue='EUR'>
+            <type>QuantLib::Currency</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Index Currency.</description>
+          </Parameter>
+          <Parameter name='Calendar' exampleValue='TARGET'>
+            <type>QuantLib::Calendar</type>
+            <tensorRank>scalar</tensorRank>
+            <description>holiday calendar (e.g. TARGET).</description>
+          </Parameter>
+          <Parameter name='BDayConvention' exampleValue='Modified Following'>
+            <type>QuantLib::BusinessDayConvention</type>
+            <tensorRank>scalar</tensorRank>
+            <description>business day convention (e.g. Modified Following).</description>
+          </Parameter>
+          <Parameter name='EndOfMonth' exampleValue='TRUE'>
+            <type>bool</type>
+            <tensorRank>scalar</tensorRank>
+            <description>TRUE if the index follow the 'end of month' convention.</description>
+          </Parameter>
+          <Parameter name='DayCounter' exampleValue='Actual/360'>
+            <type>QuantLib::DayCounter</type>
+            <tensorRank>scalar</tensorRank>
+            <description>DayCounter ID.</description>
+          </Parameter>
+          <Parameter name='TenorBasisForwardRateCurve'>
+            <type>QuantLib::ForwardRateCurve</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>TenorBasis object ID.</description>
+          </Parameter>
+          <Parameter name='ForwardHelpers'>
+            <type>QuantLib::ForwardHelper</type>
+            <tensorRank>vector</tensorRank>
+            <description>vector of rate-helpers.</description>
+          </Parameter>
+          <Parameter name='Accuracy' default='1.0e-12'>
+            <type>QuantLib::Real</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Bootstrapping accuracy.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <Member name='qlForwardCorrectedTermStructureData' type='QuantLib::ForwardCorrectedTermStructure' superType='libraryClass'>
+      <description>Retrieve Data for the given ForwardCorrectedTermStructure.</description>
       <libraryFunction>data</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>

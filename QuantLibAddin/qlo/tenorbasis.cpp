@@ -123,4 +123,42 @@ namespace QuantLibAddin {
                 QuantLib::DiscountCorrectedTermStructure(baseCurve, instruments, accuracy));
     }
 
+    TenorBasisForwardRateCurve::TenorBasisForwardRateCurve(
+        const shared_ptr<ObjectHandler::ValueObject>& properties,
+        const shared_ptr<QuantLib::TenorBasis>& basis,
+        bool permanent)
+    : ForwardRateCurve(properties, permanent){
+        libraryObject_ = shared_ptr<QuantLib::TenorBasisForwardRateCurve>(new
+            QuantLib::TenorBasisForwardRateCurve(basis));
+    }
+
+    ForwardCorrectedTermStructure::ForwardCorrectedTermStructure(
+        const shared_ptr<ObjectHandler::ValueObject>& properties,
+        const std::string& fwdFamilyName,
+        const QuantLib::Period& fwdTenor,
+        QuantLib::Natural fwdSettlementDays,
+        const QuantLib::Currency& fwdCurrency,
+        const QuantLib::Calendar& fwdFixingCalendar,
+        QuantLib::BusinessDayConvention fwdConvention,
+        bool fwdEndOfMonth,
+        const QuantLib::DayCounter& fwdDayCounter,
+        const QuantLib::Handle<QuantLib::ForwardRateCurve>& baseCurve,
+        const std::vector<boost::shared_ptr<QuantLib::ForwardHelper> >& instruments,
+        QuantLib::Real accuracy,
+        bool permanent)
+    : ForwardRateCurve(properties, permanent){
+        libraryObject_ = shared_ptr<QuantLib::ForwardCorrectedTermStructure>(new
+            QuantLib::ForwardCorrectedTermStructure(fwdFamilyName, 
+                                                    fwdTenor, 
+                                                    fwdSettlementDays, 
+                                                    fwdCurrency,
+                                                    fwdFixingCalendar, 
+                                                    fwdConvention, 
+                                                    fwdEndOfMonth,
+                                                    fwdDayCounter,
+                                                    baseCurve, 
+                                                    instruments, 
+                                                    accuracy));
+    }
+
 }

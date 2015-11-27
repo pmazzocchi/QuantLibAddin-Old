@@ -127,6 +127,32 @@ namespace QuantLibAddin {
             bool permanent);
     };
 
+    class TenorBasisForwardRateCurve : public ForwardRateCurve {
+    public:
+        TenorBasisForwardRateCurve(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<QuantLib::TenorBasis>& basis,
+            bool permanent);
+    };
+
+    class ForwardCorrectedTermStructure : public ForwardRateCurve {
+    public:
+        ForwardCorrectedTermStructure(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const std::string& fwdFamilyName,
+            const QuantLib::Period& fwdTenor,
+            QuantLib::Natural fwdSettlementDays,
+            const QuantLib::Currency& fwdCurrency,
+            const QuantLib::Calendar& fwdFixingCalendar,
+            QuantLib::BusinessDayConvention fwdConvention,
+            bool fwdEndOfMonth,
+            const QuantLib::DayCounter& fwdDayCounter,
+            const QuantLib::Handle<QuantLib::ForwardRateCurve>& baseCurve,
+            const std::vector<boost::shared_ptr<QuantLib::ForwardHelper> >& instruments,
+            QuantLib::Real accuracy,
+            bool permanent);
+    };
+
 }
 
 #endif

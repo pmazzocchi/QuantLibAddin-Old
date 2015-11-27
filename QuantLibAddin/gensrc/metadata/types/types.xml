@@ -182,6 +182,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::GaussianDefProbLM</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::TDefProbLM</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::DiscountCorrectedTermStructure</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::ForwardCorrectedTermStructure</DataType>
     <!--RL ADD 2010-07-22-->
     <DataType defaultSuperType='libraryClass'>QuantLib::DefaultProbabilityHelper</DataType>
     <!--RL ADD 2010-07-22-->
@@ -257,6 +258,7 @@
     <DataType defaultSuperType='objectClass'>QuantLibAddin::NumericHaganPricer</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::PiecewiseYieldCurve</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::FwdRateCurveMonotonicCubicNaturalSpline</DataType>
+    <DataType defaultSuperType='objectClass'>QuantLibAddin::FwdRateCurveLinear</DataType>
     <!--RL ADD 2010-07-22-->
     <DataType defaultSuperType='objectClass'>QuantLibAddin::PiecewiseFlatForwardCurve</DataType>
     <!--RL ADD 2010-07-22-->
