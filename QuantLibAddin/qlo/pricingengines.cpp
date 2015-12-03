@@ -3,6 +3,7 @@
 /*
  Copyright (C) 2006, 2007, 2012 Ferdinando Ametrano
  Copyright (C) 2007 Eric Ehlers
+ Copyright (C) 2015 Paolo Mazzocchi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -28,6 +29,8 @@
 #include <ql/pricingengines/swap/discountingswapengine.hpp>
 #include <ql/pricingengines/bond/discountingbondengine.hpp>
 #include <ql/processes/blackscholesprocess.hpp>
+#include <ql/pricingengines/swaption/jamshidianswaptionengine.hpp>
+#include <ql/pricingengines/swaption/treeswaptionengine.hpp>
 
 namespace QuantLibAddin {
 
@@ -185,5 +188,25 @@ namespace QuantLibAddin {
             QuantLib::DiscountingBondEngine(discountCurve));
     }
 
-}
+    JamshidianSwaptionEngine::JamshidianSwaptionEngine(
+        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const boost::shared_ptr<QuantLib::OneFactorAffineModel>& model,
+        const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure,
+        bool permanent) : PricingEngine(properties, permanent)
+    {
+        libraryObject_ = boost::shared_ptr<QuantLib::PricingEngine>(new
+            QuantLib::JamshidianSwaptionEngine(model, termStructure));
+    }
 
+    TreeSwaptionEngine::TreeSwaptionEngine(
+        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const boost::shared_ptr<QuantLib::OneFactorAffineModel>& model,
+        QuantLib::Size timeSteps,
+        const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure,
+        bool permanent) : PricingEngine(properties, permanent)
+    {
+        libraryObject_ = boost::shared_ptr<QuantLib::PricingEngine>(new
+            QuantLib::TreeSwaptionEngine(model, timeSteps, termStructure));
+    }
+
+}

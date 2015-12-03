@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="All|Win32">
@@ -108,7 +108,9 @@
     <None Include="metadata\functions\quotes.xml" />
     <None Include="metadata\functions\randomsequencegenerator.xml" />
     <None Include="metadata\functions\rangeaccrual.xml" />
-    <None Include="metadata\functions\ratehelpers.xml" />
+    <None Include="metadata\functions\ratehelpers.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="metadata\functions\schedule.xml" />
     <None Include="metadata\functions\sequencestatistics.xml" />
     <None Include="metadata\functions\settings.xml" />
@@ -116,7 +118,9 @@
     <None Include="metadata\functions\smilesection.xml" />
     <None Include="metadata\functions\statistics.xml" />
     <None Include="metadata\functions\swap.xml" />
-    <None Include="metadata\functions\swaption.xml" />
+    <None Include="metadata\functions\swaption.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="metadata\functions\swaptionvolstructure.xml" />
     <None Include="metadata\functions\termstructures.xml" />
     <None Include="metadata\functions\timeseries.xml" />
@@ -159,6 +163,11 @@
     <None Include="stubs\stub.excel.includes" />
     <None Include="stubs\stub.serialization.includes" />
     <None Include="Makefile.vc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="metadata\functions\calibrationhelpers.xml">
+      <SubType>Designer</SubType>
+    </Xml>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

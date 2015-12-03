@@ -26,18 +26,44 @@
 
 #include <ql/models/shortrate/onefactormodels/vasicek.hpp>
 #include <ql/models/shortrate/onefactormodels/hullwhite.hpp>
+#include <ql/models/shortrate/twofactormodels/g2.hpp>
 
 namespace QuantLibAddin {
 
+    //ShortRateModel::ShortRateModel(
+    //            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //            //QuantLib::Size nArguments,
+    //            bool permanent)
+    //: CalibratedModel(properties, permanent){}
+
+    //OneFactorModel::OneFactorModel(
+    //            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //            //QuantLib::Size nArguments,
+    //            bool permanent)
+    //: ShortRateModel(properties, permanent){}
+
+    //OneFactorAffineModel::OneFactorAffineModel(
+    //           const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+    //           //QuantLib::Size nArguments,
+    //           bool permanent) 
+    //: OneFactorModel(properties, permanent){}
+
+    OneFactorAffineModel::OneFactorAffineModel(
+                const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+                //QuantLib::Size nArguments,
+                bool permanent) 
+    : AffineModel(properties, permanent)/*, OneFactorModel(properties, permanent)*/ {}
+
     Vasicek::Vasicek(const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+                     QuantLib::Rate r0,
                      QuantLib::Real a,
                      QuantLib::Real b,
-                     QuantLib::Real lambda,
                      QuantLib::Real sigma,
-                     bool permanent) : AffineModel(properties, permanent)
+                     QuantLib::Real lambda,
+                     bool permanent) : OneFactorAffineModel(properties, permanent)
     {
-        libraryObject_ = boost::shared_ptr<QuantLib::AffineModel>(new
-            QuantLib::Vasicek(a, b, lambda, sigma));
+        libraryObject_ = boost::shared_ptr<QuantLib::OneFactorAffineModel>(new
+            QuantLib::Vasicek(r0, a, b, sigma, lambda));
     }
 
     HullWhite::HullWhite(
@@ -45,10 +71,24 @@ namespace QuantLibAddin {
                 const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
                 QuantLib::Real a,
                 QuantLib::Real sigma,
-                bool permanent) : AffineModel(properties, permanent)
+                bool permanent) : Vasicek(properties, permanent)
+    {
+        libraryObject_ = boost::shared_ptr<QuantLib::OneFactorAffineModel>(new
+            QuantLib::HullWhite(hYTS, a, sigma));
+    }
+
+    G2::G2(
+        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure,
+        QuantLib::Real a,
+        QuantLib::Real sigma,
+        QuantLib::Real b,
+        QuantLib::Real eta,
+        QuantLib::Real rho,
+        bool permanent) : AffineModel(properties, permanent)
     {
         libraryObject_ = boost::shared_ptr<QuantLib::AffineModel>(new
-            QuantLib::HullWhite(hYTS, a, sigma));
+            QuantLib::G2(termStructure, a, sigma, b, eta, rho));
     }
 
 }
