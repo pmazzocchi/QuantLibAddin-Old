@@ -31,6 +31,7 @@
 #include <ql/processes/blackscholesprocess.hpp>
 #include <ql/pricingengines/swaption/jamshidianswaptionengine.hpp>
 #include <ql/pricingengines/swaption/treeswaptionengine.hpp>
+#include <ql/pricingengines/swaption/g2swaptionengine.hpp>
 
 namespace QuantLibAddin {
 
@@ -207,6 +208,17 @@ namespace QuantLibAddin {
     {
         libraryObject_ = boost::shared_ptr<QuantLib::PricingEngine>(new
             QuantLib::TreeSwaptionEngine(model, timeSteps, termStructure));
+    }
+
+    G2SwaptionEngine::G2SwaptionEngine(
+        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const boost::shared_ptr<QuantLib::G2>& model,
+        QuantLib::Real range,
+        QuantLib::Size intervals,
+        bool permanent) : PricingEngine(properties, permanent)
+    {
+        libraryObject_ = boost::shared_ptr<QuantLib::PricingEngine>(new
+            QuantLib::G2SwaptionEngine(model, range, intervals));
     }
 
 }

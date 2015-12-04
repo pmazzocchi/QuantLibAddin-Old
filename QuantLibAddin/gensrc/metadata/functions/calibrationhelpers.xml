@@ -19,6 +19,7 @@
     <include>ql/models/shortrate/calibrationhelpers/swaptionhelper.hpp</include>
     <include>ql/indexes/ibor/euribor.hpp</include>
     <include>ql/models/shortrate/onefactormodel.hpp</include>
+    <include>ql/models/shortrate/twofactormodels/g2.hpp</include>
   </addinIncludes>
   <copyright>
     Copyright (C) 2015 Paolo Mazzocchi
@@ -169,6 +170,58 @@
     </Member>
 
     <Member name='qlOneFactorAffineModelCalibrate' type='QuantLib::OneFactorAffineModel'>
+      <description>calibrate a model.</description>
+      <libraryFunction>calibrate</libraryFunction>
+      <SupportedPlatforms>
+        SupportedPlatform name='Excel' calcInWizard='false'/
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        SupportedPlatform name='Cpp'/
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='CalibrationHelpers'>
+            <type>QuantLib::CalibrationHelper</type>
+            <tensorRank>vector</tensorRank>
+            <description>vector of calibration-helpers.</description>
+          </Parameter>
+          <Parameter name='Method'>
+            <type>QuantLib::OptimizationMethod</type>
+            <tensorRank>scalar</tensorRank>
+            <superType>underlyingClass</superType>
+            <description>OptimizationMethod object ID.</description>
+          </Parameter>
+          <Parameter name='EndCriteria'>
+            <type>QuantLib::EndCriteria</type>
+            <superType>underlyingClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>EndCriteria object ID.</description>
+          </Parameter>
+          <Parameter name='Constraint'>
+            <type>QuantLib::Constraint</type>
+            <superType>underlyingClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>Constraint.</description>
+          </Parameter>
+          <Parameter name='Weights' default='""'>
+            <type>QuantLib::Real</type>
+            <tensorRank>vector</tensorRank>
+            <description>weights.</description>
+          </Parameter>
+          <Parameter name='FixedCoeff' default='""'>
+            <type>bool</type>
+            <tensorRank>vector</tensorRank>
+            <description>TRUE if the i-th coefficient must be kept fixed in later calibrations, FALSE otherwise.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>void</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlModelG2Calibrate' type='QuantLib::G2'>
       <description>calibrate a model.</description>
       <libraryFunction>calibrate</libraryFunction>
       <SupportedPlatforms>

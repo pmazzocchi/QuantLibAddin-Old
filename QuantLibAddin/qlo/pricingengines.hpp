@@ -47,6 +47,7 @@ namespace QuantLib {
     class DiscountingSwapEngine;
     class GeneralizedBlackScholesProcess;
     class OneFactorAffineModel;
+    class G2;
 
     template <class T>
     class Handle;
@@ -203,6 +204,18 @@ namespace QuantLibAddin {
             bool permanent);
     };
 
+    class G2SwaptionEngine : public PricingEngine {
+    public:
+        // range is the number of standard deviations to use in the
+        // exponential term of the integral for the european swaption.
+        // intervals is the number of intervals to use in the integration.
+        G2SwaptionEngine(
+               const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+               const boost::shared_ptr<QuantLib::G2>& model,
+               QuantLib::Real range,
+               QuantLib::Size intervals,
+               bool permanent);
+    };
 }
 
 #endif
