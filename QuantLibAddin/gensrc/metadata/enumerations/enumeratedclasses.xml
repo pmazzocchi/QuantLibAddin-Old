@@ -104,6 +104,17 @@
         </EnumeratedClass>
 
         <EnumeratedClass>
+          <string>MixedLinearCubicNaturalSpline</string>
+          <value>MixedLinearCubicNaturalSpline_Interpolation</value>
+          <libraryClass>QuantLib::MixedLinearCubicNaturalSpline</libraryClass>
+        </EnumeratedClass>
+        <EnumeratedClass>
+          <string>LogMixedLinearCubicNaturalSpline</string>
+          <value>LogMixedLinearCubicNaturalSpline_Interpolation</value>
+          <libraryClass>QuantLib::LogMixedLinearCubicNaturalSpline</libraryClass>
+        </EnumeratedClass>
+
+        <EnumeratedClass>
           <string>Abcd</string>
           <value>ABCD_Interpolation</value>
           <libraryClass>QuantLib::AbcdInterpolation</libraryClass>

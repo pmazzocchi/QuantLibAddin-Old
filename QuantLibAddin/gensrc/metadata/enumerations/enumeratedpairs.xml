@@ -102,6 +102,17 @@
           <value>DISCOUNT_MonotonicLogParabolic_PiecewiseYieldCurve</value>
         </EnumeratedPair>
 
+        <EnumeratedPair>
+          <id1>Discount</id1>
+          <id2>MixedLinearCubicNaturalSpline</id2>
+          <value>DISCOUNT_MixedLinearCubicNaturalSpline_PiecewiseYieldCurve</value>
+        </EnumeratedPair>
+        <EnumeratedPair>
+          <id1>Discount</id1>
+          <id2>LogMixedLinearCubicNaturalSpline</id2>
+          <value>DISCOUNT_LogMixedLinearCubicNaturalSpline_PiecewiseYieldCurve</value>
+        </EnumeratedPair>
+
         <!-- ZeroYield based yield term structures -->
         <EnumeratedPair>
           <id1>ZeroYield</id1>
@@ -187,6 +198,17 @@
           <id1>ZeroYield</id1>
           <id2>MonotonicLogParabolic</id2>
           <value>ZEROYIELD_MonotonicLogParabolic_PiecewiseYieldCurve</value>
+        </EnumeratedPair>
+
+        <EnumeratedPair>
+          <id1>ZeroYield</id1>
+          <id2>MixedLinearCubicNaturalSpline</id2>
+          <value>ZEROYIELD_MixedLinearCubicNaturalSpline_PiecewiseYieldCurve</value>
+        </EnumeratedPair>
+        <EnumeratedPair>
+          <id1>ZeroYield</id1>
+          <id2>LogMixedLinearCubicNaturalSpline</id2>
+          <value>ZEROYIELD_LogMixedLinearCubicNaturalSpline_PiecewiseYieldCurve</value>
         </EnumeratedPair>
 
         <!--ForwardRate based yield term structures-->

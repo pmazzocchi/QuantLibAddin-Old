@@ -33,6 +33,7 @@
 #include <ql/math/interpolations/backwardflatinterpolation.hpp>
 #include <ql/math/interpolations/forwardflatinterpolation.hpp>
 #include <ql/math/interpolations/loginterpolation.hpp>
+#include <ql/math/interpolations/mixedinterpolation.hpp>
 #include <ql/math/interpolations/abcdinterpolation.hpp>
 
 #include <ql/math/interpolations/bilinearinterpolation.hpp>
@@ -396,6 +397,30 @@ namespace QuantLibAddin {
         return boost::shared_ptr<QuantLib::Interpolation>(new
             QuantLib::LogCubicInterpolation(xBegin, xEnd, yBegin,
                                             QuantLib::CubicInterpolation::Parabolic, true,
+                                            QuantLib::CubicInterpolation::SecondDerivative, 0.0,
+                                            QuantLib::CubicInterpolation::SecondDerivative, 0.0));
+    }
+    boost::shared_ptr<QuantLib::Interpolation> MixedLinearCubicNaturalSpline_Interpolation(
+                                            ObjectHandler::dbl_itr& xBegin,
+                                            ObjectHandler::dbl_itr& xEnd,
+                                            ObjectHandler::dbl_itr& yBegin,
+                                            QuantLib::Size n) {
+        return boost::shared_ptr<QuantLib::Interpolation>(new 
+            QuantLib::MixedLinearCubicInterpolation(
+                                            xBegin, xEnd, yBegin, n,
+                                            QuantLib::CubicInterpolation::Spline, false,
+                                            QuantLib::CubicInterpolation::SecondDerivative, 0.0,
+                                            QuantLib::CubicInterpolation::SecondDerivative, 0.0));
+    }
+    boost::shared_ptr<QuantLib::Interpolation> LogMixedLinearCubicNaturalSpline_Interpolation(
+                                            ObjectHandler::dbl_itr& xBegin,
+                                            ObjectHandler::dbl_itr& xEnd,
+                                            ObjectHandler::dbl_itr& yBegin,
+                                            QuantLib::Size n) {
+        return boost::shared_ptr<QuantLib::Interpolation>(new
+            QuantLib::LogMixedLinearCubicInterpolation(
+                                            xBegin, xEnd, yBegin, n,
+                                            QuantLib::CubicInterpolation::Spline, false,
                                             QuantLib::CubicInterpolation::SecondDerivative, 0.0,
                                             QuantLib::CubicInterpolation::SecondDerivative, 0.0));
     }
