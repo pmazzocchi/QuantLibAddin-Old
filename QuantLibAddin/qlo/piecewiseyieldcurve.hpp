@@ -42,8 +42,8 @@ namespace QuantLibAddin {
             QuantLib::Real accuracy,
             const std::string& traitsID,
             const std::string& interpolatorID,
-            const QuantLib::Size n,
-            bool permanent);
+            const QuantLib::Size n = 0,
+            bool permanent = true);
         const std::vector<QuantLib::Time>& times() const;
 
         const std::vector<QuantLib::Date>& dates() const;
