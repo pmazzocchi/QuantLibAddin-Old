@@ -532,6 +532,29 @@
       </ReturnValue>
     </Member>
 
+    <Member name='qlTenorBasisInstBasisValue' type='QuantLib::TenorBasis' loopParameter='Dates'>
+      <description>Returns the value of instantaneous continuous basis.</description>
+      <libraryFunction>instBasisValue</libraryFunction>
+      <SupportedPlatforms>
+        SupportedPlatform name='Excel' calcInWizard='false'/
+        <SupportedPlatform name='Excel'/>
+        SupportedPlatform name='Cpp'/
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='Dates' const='False'>
+            <type>QuantLib::Date</type>
+            <tensorRank>vector</tensorRank>
+            <description>date(s).</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Spread</type>
+        <tensorRank>vector</tensorRank>
+      </ReturnValue>
+    </Member>
+
     <Member name='qlTenorBasisTenorForwardRate' type='QuantLib::TenorBasis' loopParameter='Dates'>
       <description>Returns the value of the forward rate over [d, d+tau] with tau being the iborIndex tenor, as obtained from simple basis.</description>
       <libraryFunction>tenorForwardRate</libraryFunction>
@@ -622,7 +645,7 @@
       </ReturnValue>
     </Member>
 
-    <Member name='qlTenorInstCoefficients' type='QuantLib::TenorBasis'>
+    <Member name='qlTenorBasisInstCoefficients' type='QuantLib::TenorBasis'>
       <description>Returns the coefficients of the instantaneous continuous basis.</description>
       <libraryFunction>instCoefficients</libraryFunction>
       <SupportedPlatforms>
@@ -872,6 +895,54 @@
     <Member name='qlAbcdTenorBasisLongTermValue' type='QuantLib::AbcdTenorBasis'>
       <description>Returns the long term value of the simple basis function.</description>
       <libraryFunction>longTermValue</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        SupportedPlatform name='Cpp'/
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Spread</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlAbcdTenorBasisInstBasisMaximumLocation' type='QuantLib::AbcdTenorBasis'>
+      <description>Returns the location of the instantaneous continuous basis maximum.</description>
+      <libraryFunction>instBasisMaximumLocation</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        SupportedPlatform name='Cpp'/
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Date</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlAbcdTenorBasisInstBasisMaximumValue' type='QuantLib::AbcdTenorBasis'>
+      <description>Returns the maximum of the instantaneous continuous basis function.</description>
+      <libraryFunction>instBasisMaximumValue</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel'/>
+        SupportedPlatform name='Cpp'/
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters/>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Spread</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlAbcdTenorBasisInstBasisLongTermValue' type='QuantLib::AbcdTenorBasis'>
+      <description>Returns the long term value of the instantaneous continuous basis function.</description>
+      <libraryFunction>instBasisLongTermValue</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
         SupportedPlatform name='Cpp'/
