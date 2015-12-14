@@ -42,8 +42,8 @@
     <Constructor name='qlAbcdMathFunction'>
       <libraryFunction>AbcdMathFunction</libraryFunction>
       <SupportedPlatforms>
-        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
-        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Excel' calcInWizard='false'/>
+        <!--<SupportedPlatform name='Excel'/>-->
         <SupportedPlatform name='Cpp'/>
       </SupportedPlatforms>
       <ParameterList>
