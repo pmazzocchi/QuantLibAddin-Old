@@ -499,6 +499,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\valueobjects\vo_calibrationhelpers.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_calibrationhelpers.hpp"
+				>
+			</File>
+			<File
 				RelativePath="qlo\valueobjects\vo_capfloor.cpp"
 				>
 			</File>
@@ -1634,6 +1642,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_calibrationhelpers.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_calibrationhelpers.hpp"
+					>
+				</File>
+				<File
 					RelativePath="qlo\serialization\create\create_capfloor.cpp"
 					>
 				</File>
@@ -2079,6 +2095,14 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_btp.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_calibrationhelpers.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_calibrationhelpers.hpp"
 					>
 				</File>
 				<File

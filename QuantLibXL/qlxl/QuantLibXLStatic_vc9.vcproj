@@ -733,6 +733,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\functions\calibrationhelpers.cpp"
+				>
+			</File>
+			<File
 				RelativePath="functions\capfloor.cpp"
 				>
 			</File>
