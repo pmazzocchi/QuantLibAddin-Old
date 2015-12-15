@@ -63,7 +63,7 @@
           <Parameter name='SettlementType'>
             <type>QuantLib::Settlement::Type</type>
             <tensorRank>scalar</tensorRank>
-            <description>settlement type (PhysicalSettlement, CashSettlement).</description>
+            <description>settlement type (Physical, Cash).</description>
           </Parameter>
         </Parameters>
       </ParameterList>
