@@ -24,6 +24,7 @@
 #include <qlo/optimization.hpp>
 
 #include <ql/math/optimization/armijo.hpp>
+#include <ql/math/optimization/constraint.hpp>
 #include <ql/math/optimization/conjugategradient.hpp>
 #include <ql/math/optimization/levenbergmarquardt.hpp>
 #include <ql/math/optimization/simplex.hpp>
@@ -45,6 +46,15 @@ namespace QuantLibAddin {
                                   rootEpsilon,
                                   functionEpsilon,
                                   gradientNormEpsilon));
+    }
+
+    NoConstraint::NoConstraint(
+                const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+                bool permanent)
+    : Constraint(properties, permanent) {
+        libraryObject_ = boost::shared_ptr<QuantLib::Constraint>(new
+            QuantLib::NoConstraint());
+        
     }
 
     Simplex::Simplex(

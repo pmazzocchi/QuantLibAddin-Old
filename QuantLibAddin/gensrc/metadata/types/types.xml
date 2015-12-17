@@ -68,6 +68,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::CTSMMCapletCalibration</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CTSMMCapletMaxHomogeneityCalibration</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CTSMMCapletOriginalCalibration</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::CalibratedModel</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CapFloor</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CapFloorTermVolCurve</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CapFloorTermVolSurface</DataType>
@@ -76,6 +77,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::CmsCouponPricer</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CmsMarket</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CmsMarketCalibration</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::Constraint</DataType>
     <DataType defaultSuperType='objectClass'>QuantLib::CorrelationTermStructure</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CoterminalSwapCurveState</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CovarianceDecomposition</DataType>
@@ -97,6 +99,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::FuturesRateHelper</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::FxSwapRateHelper</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::GeneralizedBlackScholesProcess</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::G2</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::HistoricalForwardRatesAnalysis</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::HistoricalRatesAnalysis</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::IborIndex</DataType>
@@ -119,6 +122,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::NumericHaganPricer</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::NthToDefault</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::OneAssetOption</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::OneFactorAffineModel</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::OptimizationMethod</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::OptionletStripper1</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::OptionletStripper2</DataType>
@@ -151,6 +155,8 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::OISRateHelper</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::SwapRateHelper</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Swaption</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::SwaptionHelper</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::CalibrationHelper</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::SymmetricSchurDecomposition</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::SyntheticCDO</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::TimeHomogeneousForwardCorrelation</DataType>
@@ -158,6 +164,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::TypePayoff</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::OvernightIndexedSwap</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::VanillaSwap</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::Vasicek</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::VolatilityTermStructure</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CreditDefaultSwap</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::CdsOption</DataType>

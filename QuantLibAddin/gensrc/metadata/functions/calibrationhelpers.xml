@@ -1,0 +1,277 @@
+<Category name='calibrationhelpers'>
+  <description>functions to construct and use Calibration Helpers objects.</description>
+  <displayName>CalibrationHelpers</displayName>
+  <xlFunctionWizardCategory>QuantLib - Financial</xlFunctionWizardCategory>
+  <serializationIncludes>
+    <include>qlo/calibrationhelpers.hpp</include>
+    <include>qlo/termstructures.hpp</include>
+    <include>qlo/indexes/ibor/euribor.hpp</include>
+
+    <include>ql/indexes/ibor/euribor.hpp</include>
+  </serializationIncludes>
+  <addinIncludes>
+    <include>qlo/calibrationhelpers.hpp</include>
+    <include>qlo/shortratemodels.hpp</include>
+    <include>qlo/pricingengines.hpp</include>
+    <include>qlo/indexes/ibor/euribor.hpp</include>
+    <include>qlo/optimization.hpp</include>
+
+    <include>ql/models/shortrate/calibrationhelpers/swaptionhelper.hpp</include>
+    <include>ql/indexes/ibor/euribor.hpp</include>
+    <include>ql/models/shortrate/onefactormodel.hpp</include>
+    <include>ql/models/shortrate/twofactormodels/g2.hpp</include>
+  </addinIncludes>
+  <copyright>
+    Copyright (C) 2015 Paolo Mazzocchi
+  </copyright>
+  <Functions>
+
+    <Member name='qlCalibrationHelperSetPricingEngine' type='QuantLib::CalibrationHelper'>
+      <description>Set the priging engine for the given SwaptionHelper object.</description>
+      <libraryFunction>setPricingEngine</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='PricingEngine' exampleValue='PricingEngineID'>
+            <type>QuantLib::PricingEngine</type>
+            <tensorRank>scalar</tensorRank>
+            <description>PricingEngine object ID.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>void</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlCalibrationHelperImpliedVolatility' type='QuantLib::CalibrationHelper'>
+      <description>Set the priging engine for the given SwaptionHelper object.</description>
+      <libraryFunction>impliedVolatility</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='TargetValue'>
+            <type>QuantLib::Real</type>
+            <tensorRank>scalar</tensorRank>
+            <description>target value.</description>
+          </Parameter>
+          <Parameter name='Accuracy'>
+            <type>QuantLib::Real</type>
+            <tensorRank>scalar</tensorRank>
+            <description>accuracy.</description>
+          </Parameter>
+          <Parameter name='MaxEvaluations'>
+            <type>QuantLib::Size</type>
+            <tensorRank>scalar</tensorRank>
+            <description>max evaluations.</description>
+          </Parameter>
+          <Parameter name='MinVol'>
+            <type>QuantLib::Volatility</type>
+            <tensorRank>scalar</tensorRank>
+            <description>min vol.</description>
+          </Parameter>
+          <Parameter name='MaxVol'>
+            <type>QuantLib::Volatility</type>
+            <tensorRank>scalar</tensorRank>
+            <description>max vol.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Volatility</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Constructor name='qlSwaptionHelper'>
+      <libraryFunction>SwaptionHelper</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='OptionTenor' exampleValue='5Y'>
+            <type>QuantLib::Period</type>
+            <tensorRank>scalar</tensorRank>
+            <description>option tenor as Period (e.g. '5Y').</description>
+          </Parameter>
+          <Parameter name='Length' exampleValue='5Y'>
+            <type>QuantLib::Period</type>
+            <tensorRank>scalar</tensorRank>
+            <description>option length.</description>
+          </Parameter>
+          <Parameter name='Volatility'>
+            <type>QuantLib::Quote</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>volatility quote.</description>
+          </Parameter>
+          <Parameter name='IborIndex'>
+            <type>QuantLib::IborIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>IborIndex object ID.</description>
+          </Parameter>
+          <Parameter name='FixedLegTenor'>
+            <type>QuantLib::Period</type>
+            <tensorRank>scalar</tensorRank>
+            <description>fixed leg tenor.</description>
+          </Parameter>
+          <Parameter name='FixedLegDayCounter'>
+            <type>QuantLib::DayCounter</type>
+            <tensorRank>scalar</tensorRank>
+            <description>fixed leg day-counter.</description>
+          </Parameter>
+          <Parameter name='FloatingLegDayCounter'>
+            <type>QuantLib::DayCounter</type>
+            <tensorRank>scalar</tensorRank>
+            <description>floating leg day-counter.</description>
+          </Parameter>
+          <Parameter name='YieldCurve'   exampleValue ='EURYC'>
+            <type>QuantLib::YieldTermStructure</type>
+            <superType>libToHandle</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>YieldTermStructure object ID.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <Member name='qlSwaptionHelperModelValue' type='QuantLib::SwaptionHelper'>
+      <description>Set the priging engine for the given SwaptionHelper object.</description>
+      <libraryFunction>modelValue</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlOneFactorAffineModelCalibrate' type='QuantLib::OneFactorAffineModel'>
+      <description>calibrate a model.</description>
+      <libraryFunction>calibrate</libraryFunction>
+      <SupportedPlatforms>
+        SupportedPlatform name='Excel' calcInWizard='false'/
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        SupportedPlatform name='Cpp'/
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='CalibrationHelpers'>
+            <type>QuantLib::CalibrationHelper</type>
+            <tensorRank>vector</tensorRank>
+            <description>vector of calibration-helpers.</description>
+          </Parameter>
+          <Parameter name='Method'>
+            <type>QuantLib::OptimizationMethod</type>
+            <tensorRank>scalar</tensorRank>
+            <superType>underlyingClass</superType>
+            <description>OptimizationMethod object ID.</description>
+          </Parameter>
+          <Parameter name='EndCriteria'>
+            <type>QuantLib::EndCriteria</type>
+            <superType>underlyingClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>EndCriteria object ID.</description>
+          </Parameter>
+          <Parameter name='Constraint'>
+            <type>QuantLib::Constraint</type>
+            <superType>underlyingClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>Constraint.</description>
+          </Parameter>
+          <Parameter name='Weights' default='""'>
+            <type>QuantLib::Real</type>
+            <tensorRank>vector</tensorRank>
+            <description>weights.</description>
+          </Parameter>
+          <Parameter name='FixedCoeff' default='""'>
+            <type>bool</type>
+            <tensorRank>vector</tensorRank>
+            <description>TRUE if the i-th coefficient must be kept fixed in later calibrations, FALSE otherwise.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>void</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlModelG2Calibrate' type='QuantLib::G2'>
+      <description>calibrate a model.</description>
+      <libraryFunction>calibrate</libraryFunction>
+      <SupportedPlatforms>
+        SupportedPlatform name='Excel' calcInWizard='false'/
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Calc'/>
+        SupportedPlatform name='Cpp'/
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='CalibrationHelpers'>
+            <type>QuantLib::CalibrationHelper</type>
+            <tensorRank>vector</tensorRank>
+            <description>vector of calibration-helpers.</description>
+          </Parameter>
+          <Parameter name='Method'>
+            <type>QuantLib::OptimizationMethod</type>
+            <tensorRank>scalar</tensorRank>
+            <superType>underlyingClass</superType>
+            <description>OptimizationMethod object ID.</description>
+          </Parameter>
+          <Parameter name='EndCriteria'>
+            <type>QuantLib::EndCriteria</type>
+            <superType>underlyingClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>EndCriteria object ID.</description>
+          </Parameter>
+          <Parameter name='Constraint'>
+            <type>QuantLib::Constraint</type>
+            <superType>underlyingClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>Constraint.</description>
+          </Parameter>
+          <Parameter name='Weights' default='""'>
+            <type>QuantLib::Real</type>
+            <tensorRank>vector</tensorRank>
+            <description>weights.</description>
+          </Parameter>
+          <Parameter name='FixedCoeff' default='""'>
+            <type>bool</type>
+            <tensorRank>vector</tensorRank>
+            <description>TRUE if the i-th coefficient must be kept fixed in later calibrations, FALSE otherwise.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>void</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+  </Functions>
+</Category>

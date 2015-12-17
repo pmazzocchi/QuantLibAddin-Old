@@ -4,6 +4,7 @@
  Copyright (C) 2006, 2012 Ferdinando Ametrano
  Copyright (C) 2006 Cristina Duminuco
  Copyright (C) 2007 Eric Ehlers
+ Copyright (C) 2015 Paolo Mazzocchi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -45,6 +46,8 @@ namespace QuantLib {
     class DiscountingBondEngine;
     class DiscountingSwapEngine;
     class GeneralizedBlackScholesProcess;
+    class OneFactorAffineModel;
+    class G2;
 
     template <class T>
     class Handle;
@@ -122,6 +125,14 @@ namespace QuantLibAddin {
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
             const boost::shared_ptr<QuantLib::AffineModel>& model,
             bool permanent);
+        //AnalyticCapFloorEngine(
+        //    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        //    const boost::shared_ptr<QuantLib::G2>& model,
+        //    bool permanent);
+        //AnalyticCapFloorEngine(
+        //    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        //    const boost::shared_ptr<QuantLib::LiborForwardModel>& model,
+        //    bool permanent);
     };
 
     class BlackCalculator : public ObjectHandler::LibraryObject<QuantLib::BlackCalculator> {
@@ -172,6 +183,38 @@ namespace QuantLibAddin {
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
             const QuantLib::Handle<QuantLib::YieldTermStructure>& discountCurve,
             bool permanent);
+    };
+
+    class JamshidianSwaptionEngine : public PricingEngine {
+    public:
+        JamshidianSwaptionEngine(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<QuantLib::OneFactorAffineModel>& model,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure,
+            bool permanent);
+    };
+
+    class TreeSwaptionEngine : public PricingEngine {
+    public:
+        TreeSwaptionEngine(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const boost::shared_ptr<QuantLib::OneFactorAffineModel>& model,
+            QuantLib::Size timeSteps,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& termStructure,
+            bool permanent);
+    };
+
+    class G2SwaptionEngine : public PricingEngine {
+    public:
+        // range is the number of standard deviations to use in the
+        // exponential term of the integral for the european swaption.
+        // intervals is the number of intervals to use in the integration.
+        G2SwaptionEngine(
+               const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+               const boost::shared_ptr<QuantLib::G2>& model,
+               QuantLib::Real range,
+               QuantLib::Size intervals,
+               bool permanent);
     };
 }
 

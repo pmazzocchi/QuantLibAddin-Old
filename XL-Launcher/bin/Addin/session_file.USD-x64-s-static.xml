@@ -31,7 +31,7 @@
         <StartupParameter name="Load Index YTD Time Series (xml)" value="False" />
         <StartupParameter name="Bootstrap Yield Curves" value="True" />
         <StartupParameter name="Real Time Feed" value="Reuters" />
-        <StartupParameter name="Market Data" value="Satic" />
+        <StartupParameter name="Market Data" value="Static" />
       </StartupParameters>
     </Framework>
   </Frameworks>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug (static runtime)|Win32">
@@ -568,6 +568,7 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="functions\calibrationhelpers.cpp" />
     <ClCompile Include="register\addin.cpp" />
     <ClCompile Include="register\register_abcd.cpp" />
     <ClCompile Include="register\register_accountingengines.cpp" />
@@ -579,6 +580,7 @@
     <ClCompile Include="register\register_browniangenerators.cpp" />
     <ClCompile Include="register\register_btp.cpp" />
     <ClCompile Include="register\register_calendar.cpp" />
+    <ClCompile Include="register\register_calibrationhelpers.cpp" />
     <ClCompile Include="register\register_capfloor.cpp" />
     <ClCompile Include="register\register_capletvolstructure.cpp" />
     <ClCompile Include="register\register_cmsmarket.cpp" />
