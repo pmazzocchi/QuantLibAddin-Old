@@ -123,7 +123,7 @@ def makeZipMi():
 
     # Zip up some specific files from the QuantLibXL directory.
     #zfile.write("Docs/QuantLibXL-docs-1.6.0.chm", ROOT_DIR + "Docs/QuantLibXL-docs-1.6.0.chm")
-    zfile.write("xll/QuantLibXLDynamic-vc90-mt.xll", ROOT_DIR + "xll/QuantLibXLDynamic-vc90-mt.xll")
+    zfile.write("xll/QuantLibXLDynamic-vc110-mt.xll", ROOT_DIR + "xll/QuantLibXLDynamic-vc110-mt.xll")
     zfile.write("zip/README.txt", ROOT_DIR + "README.txt")
     # Recursively zip some subdirectories of the QuantLibXL directory.
     #os.path.walk("Data", visit, (zfile, ".gitignore", None))
@@ -131,7 +131,7 @@ def makeZipMi():
     os.path.walk("framework", visit, (zfile, "ReadMe.txt", None))
     #os.path.walk("Workbooks", visit, (zfile, None, None))
     # Zip up some files from other projects in the repo.
-    zfile.write("../ObjectHandler/xll/ObjectHandler-xll-vc90-mt.xll", ROOT_DIR + "xll/ObjectHandler-xll-vc90-mt.xll")
+    zfile.write("../ObjectHandler/xll/ObjectHandler-xll-vc110-mt.xll", ROOT_DIR + "xll/ObjectHandler-xll-vc110-mt.xll")
     os.path.walk("../QuantLibAddin/gensrc/metadata", visit, (zfile, None, "../QuantLibAddin/gensrc/"))
     zfile.write("../XL-Launcher/bin/Addin/Launcher.xla", ROOT_DIR + "Launcher.xla")
     #zfile.write("../XL-Launcher/bin/Addin/session_file.HKD.xml", ROOT_DIR + "session_file.xml")
