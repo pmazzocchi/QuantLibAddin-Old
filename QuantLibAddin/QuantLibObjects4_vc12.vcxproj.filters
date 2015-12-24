@@ -837,6 +837,18 @@
     <ClCompile Include="qlo\settings.cpp" />
     <ClCompile Include="qlo\timeseries.cpp" />
     <ClCompile Include="qlo\utilities.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_calibrationhelpers.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_calibrationhelpers.cpp">
+      <Filter>serialization\register</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_calibrationhelpers.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\calibrationhelpers.cpp">
+      <Filter>ShortRateModels</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="qlo\enumerations\register\register_all.hpp">
@@ -1723,5 +1735,18 @@
     <ClInclude Include="qlo\timeseries.hpp" />
     <ClInclude Include="qlo\utilities.hpp" />
     <ClInclude Include="qlo\vcconfig.hpp" />
+    <ClInclude Include="qlo\models.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_calibrationhelpers.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_calibrationhelpers.hpp">
+      <Filter>serialization\register</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_calibrationhelpers.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\calibrationhelpers.hpp">
+      <Filter>ShortRateModels</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

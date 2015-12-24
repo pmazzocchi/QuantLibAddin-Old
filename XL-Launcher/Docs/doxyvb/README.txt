@@ -68,7 +68,7 @@ Instructions
        MySolution\MyProject
 
 
-2. Download and install the Doxygen 1.7.0 (or newer) distribution package
+2. Download and install the Doxygen 1.8.0 (or newer) distribution package
    from the Doxygen download page:
    http://www.stack.nl/~dimitri/doxygen/download.html#latestsrc
    
