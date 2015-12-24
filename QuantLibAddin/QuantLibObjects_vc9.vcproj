@@ -75,7 +75,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="lib\QuantLibObjects-vc90-mt-1_6_0.lib"
+				OutputFile="lib\QuantLibObjects-vc90-mt-1_7_0.lib"
 				SuppressStartupBanner="true"
 			/>
 			<Tool
@@ -156,7 +156,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="lib\QuantLibObjects-vc90-mt-s-1_6_0.lib"
+				OutputFile="lib\QuantLibObjects-vc90-mt-s-1_7_0.lib"
 				SuppressStartupBanner="true"
 			/>
 			<Tool
@@ -235,7 +235,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="lib\QuantLibObjects-vc90-mt-sgd-1_6_0.lib"
+				OutputFile="lib\QuantLibObjects-vc90-mt-sgd-1_7_0.lib"
 				SuppressStartupBanner="true"
 			/>
 			<Tool
@@ -314,7 +314,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				OutputFile="lib\QuantLibObjects-vc90-mt-gd-1_6_0.lib"
+				OutputFile="lib\QuantLibObjects-vc90-mt-gd-1_7_0.lib"
 				SuppressStartupBanner="true"
 			/>
 			<Tool
@@ -496,6 +496,14 @@
 			</File>
 			<File
 				RelativePath=".\qlo\valueobjects\vo_btp.hpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_calibrationhelpers.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\valueobjects\vo_calibrationhelpers.hpp"
 				>
 			</File>
 			<File
@@ -1634,6 +1642,14 @@
 					>
 				</File>
 				<File
+					RelativePath=".\qlo\serialization\create\create_calibrationhelpers.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_calibrationhelpers.hpp"
+					>
+				</File>
+				<File
 					RelativePath="qlo\serialization\create\create_capfloor.cpp"
 					>
 				</File>
@@ -2079,6 +2095,14 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_btp.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_calibrationhelpers.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_calibrationhelpers.hpp"
 					>
 				</File>
 				<File

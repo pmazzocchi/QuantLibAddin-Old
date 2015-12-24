@@ -124,6 +124,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\metadata\functions\calibrationhelpers.xml"
+				>
+			</File>
+			<File
 				RelativePath="metadata\functions\capfloor.xml"
 				>
 			</File>
@@ -141,10 +145,6 @@
 			</File>
 			<File
 				RelativePath="metadata\functions\couponvectors.xml"
-				>
-			</File>
-			<File
-				RelativePath=".\metadata\functions\credit.xml"
 				>
 			</File>
 			<File
