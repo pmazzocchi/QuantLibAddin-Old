@@ -16,7 +16,7 @@
 
         <!-- for FixedIncome (2) -->
         <StartupParameter name="Root Path" value=".\" />
-        <StartupParameter name="Open Contributor" value="False" />
+        <StartupParameter name="Open Contributor" value="True" />
 
         <!-- for FixedIncome (1) -->
         <StartupParameter name="Workbook Path" value=".\Workbooks" />
@@ -24,7 +24,7 @@
         <StartupParameter name="Metadata Path" value=".\metadata" />
         <StartupParameter name="Set Evaluation Date" value="False" />
         <StartupParameter name="Evaluation Date" value="2011-10-12" />
-        <StartupParameter name="Default Currency" value="RMB" />
+        <StartupParameter name="Default Currency" value="EUR_DEMO" />
         <StartupParameter name="Initialization Data Source" value="XML" />
         <StartupParameter name="Open Main Checks" value="True" />
         <StartupParameter name="Update Euribor YTD Time Series (xls)" value="False" />
