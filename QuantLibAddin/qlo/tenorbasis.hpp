@@ -60,7 +60,7 @@ namespace QuantLibAddin {
         AbcdTenorBasis(
             const boost::shared_ptr<ObjectHandler::ValueObject>& p,
             boost::shared_ptr<QuantLib::IborIndex> iborIndex,
-            const QuantLib::Handle<QuantLib::YieldTermStructure>&,
+            boost::shared_ptr<QuantLib::IborIndex> baseIborIndex,
             QuantLib::Date referenceDate,
             bool isSimple,
             const std::vector<QuantLib::Real>& coeff,
@@ -72,7 +72,7 @@ namespace QuantLibAddin {
         PolynomialTenorBasis(
             const boost::shared_ptr<ObjectHandler::ValueObject>& p,
             boost::shared_ptr<QuantLib::IborIndex> iborIndex,
-            const QuantLib::Handle<QuantLib::YieldTermStructure>&,
+            boost::shared_ptr<QuantLib::IborIndex> baseIborIndex,
             QuantLib::Date referenceDate,
             bool isSimple,
             const std::vector<QuantLib::Real>& coeff,

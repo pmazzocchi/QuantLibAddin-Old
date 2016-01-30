@@ -44,28 +44,28 @@ namespace QuantLibAddin {
     AbcdTenorBasis::AbcdTenorBasis(
         const shared_ptr<ObjectHandler::ValueObject>& p,
         shared_ptr<QuantLib::IborIndex> iborIndex,
-        const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
+        boost::shared_ptr<QuantLib::IborIndex> baseIborIndex,
         QuantLib::Date referenceDate,
         bool isSimple,
         const std::vector<QuantLib::Real>& coeff,
         bool permanent)
     : TenorBasis(p, permanent) {
         libraryObject_ = shared_ptr<QuantLib::AbcdTenorBasis>(new
-            QuantLib::AbcdTenorBasis(iborIndex, baseCurve, referenceDate, 
+            QuantLib::AbcdTenorBasis(iborIndex, baseIborIndex, referenceDate,
                                      isSimple, coeff));
     }
 
     PolynomialTenorBasis::PolynomialTenorBasis(
         const shared_ptr<ObjectHandler::ValueObject>& p,
         shared_ptr<QuantLib::IborIndex> iborIndex,
-        const QuantLib::Handle<QuantLib::YieldTermStructure>& baseCurve,
+        boost::shared_ptr<QuantLib::IborIndex> baseIborIndex,
         QuantLib::Date referenceDate,
         bool isSimple,
         const std::vector<QuantLib::Real>& coeff,
         bool permanent)
     : TenorBasis(p, permanent) {
         libraryObject_ = shared_ptr<QuantLib::PolynomialTenorBasis>(new
-            QuantLib::PolynomialTenorBasis(iborIndex, baseCurve, referenceDate,
+            QuantLib::PolynomialTenorBasis(iborIndex, baseIborIndex, referenceDate,
                                            isSimple, coeff));
     }
 

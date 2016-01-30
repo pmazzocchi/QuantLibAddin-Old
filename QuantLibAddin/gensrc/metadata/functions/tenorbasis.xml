@@ -832,13 +832,12 @@
           <Parameter name='IborIndex'>
             <type>QuantLib::IborIndex</type>
             <tensorRank>scalar</tensorRank>
-            <description>.</description>
+            <description>the IborIndex to be forwarded.</description>
           </Parameter>
-          <Parameter name='BaseCurve'>
-            <type>QuantLib::YieldTermStructure</type>
-            <superType>libToHandle</superType>
+          <Parameter name='BaseIborIndex'>
+            <type>QuantLib::IborIndex</type>
             <tensorRank>scalar</tensorRank>
-            <description>base rate term structure object ID.</description>
+            <description>iborIndex whose forwarding curve is used as base.</description>
           </Parameter>
           <Parameter name='ReferenceDate' const='False' default='QuantLib::Date()'>
             <type>QuantLib::Date</type>
@@ -969,13 +968,12 @@
           <Parameter name='IborIndex'>
             <type>QuantLib::IborIndex</type>
             <tensorRank>scalar</tensorRank>
-            <description>.</description>
+            <description>the IborIndex to be forwarded.</description>
           </Parameter>
-          <Parameter name='BaseCurve'>
-            <type>QuantLib::YieldTermStructure</type>
-            <superType>libToHandle</superType>
+          <Parameter name='BaseIborIndex'>
+            <type>QuantLib::IborIndex</type>
             <tensorRank>scalar</tensorRank>
-            <description>base rate term structure object ID.</description>
+            <description>iborIndex whose forwarding curve is used as base.</description>
           </Parameter>
           <Parameter name='ReferenceDate' const='False' default='QuantLib::Date()'>
             <type>QuantLib::Date</type>
