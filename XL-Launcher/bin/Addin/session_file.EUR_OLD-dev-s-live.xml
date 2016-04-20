@@ -23,7 +23,7 @@
         <StartupParameter name="Metadata Path" value=".\QuantLibAddin\gensrc\metadata" />
         <StartupParameter name="Set Evaluation Date" value="False" />
         <StartupParameter name="Evaluation Date" value="2015-09-30" />
-        <StartupParameter name="Default Currency" value="EUR_DEMO" />
+        <StartupParameter name="Default Currency" value="EUR_OLD" />
         <StartupParameter name="Initialization Data Source" value="Excel" />
         <StartupParameter name="Open Main Checks" value="True" />
         <StartupParameter name="Update Euribor YTD Time Series (xls)" value="False" />
