@@ -10,6 +10,7 @@
     Copyright (C) 2005 Plamen Neykov
     Copyright (C) 2015 Maddalena Zanzi
     Copyright (C) 2015 Riccardo Barone
+    Copyright (C) 2015 Paolo Mazzocchi
   </enumeratedTypeCopyright>
 
   <EnumeratedTypeGroups>
@@ -345,6 +346,29 @@
           <value>QuantLib::Indonesia(QuantLib::Indonesia::JSX)</value>
         </EnumeratedType>
         <EnumeratedType>
+          <string>Israel::Settlement</string>
+          <value>QuantLib::Israel(QuantLib::Israel::Settlement)</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <!-- Clone for Israel::Settlement -->
+          <string>Israel settlement</string>
+          <value>QuantLib::Israel(QuantLib::Israel::Settlement)</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>Israel::TASE</string>
+          <value>QuantLib::Israel(QuantLib::Israel::TASE)</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <!-- Clone for Israel::TASE -->
+          <string>Tel-Aviv stock exchange</string>
+          <value>QuantLib::Israel(QuantLib::Israel::TASE)</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <!-- Clone for Israel::TASE -->
+          <string>Tel Aviv stock exchange</string>
+          <value>QuantLib::Israel(QuantLib::Israel::TASE)</value>
+        </EnumeratedType>
+        <EnumeratedType>
           <string>Italy::Exchange</string>
           <value>QuantLib::Italy(QuantLib::Italy::Exchange)</value>
         </EnumeratedType>
@@ -565,6 +589,10 @@
         </EnumeratedType>
         <EnumeratedType>
           <string>WeekendsOnly</string>
+          <value>QuantLib::WeekendsOnly()</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>weekends only</string>
           <value>QuantLib::WeekendsOnly()</value>
         </EnumeratedType>
       </EnumeratedTypes>
@@ -1520,6 +1548,25 @@
         <EnumeratedType>
           <string>ASX</string>
           <value>QuantLib::Futures::ASX</value>
+        </EnumeratedType>
+      </EnumeratedTypes>
+    </EnumeratedTypeGroup>
+
+    <EnumeratedTypeGroup type='QuantLib::Pillar::Choice'>
+      <includeFile>oh/enumerations/typefactory.hpp</includeFile>
+      <constructor>true</constructor>
+      <EnumeratedTypes>
+        <EnumeratedType>
+          <string>LastRelevantDate</string>
+          <value>QuantLib::Pillar::LastRelevantDate</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>MaturityDate</string>
+          <value>QuantLib::Pillar::MaturityDate</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>CustomDate</string>
+          <value>QuantLib::Pillar::CustomDate</value>
         </EnumeratedType>
       </EnumeratedTypes>
     </EnumeratedTypeGroup>
