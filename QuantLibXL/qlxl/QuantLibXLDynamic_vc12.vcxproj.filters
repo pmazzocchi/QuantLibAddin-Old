@@ -417,6 +417,12 @@
     <ClCompile Include="register\register_calibrationhelpers.cpp">
       <Filter>register</Filter>
     </ClCompile>
+    <ClCompile Include="register\register_arithmeticaverageois.cpp">
+      <Filter>register</Filter>
+    </ClCompile>
+    <ClCompile Include="functions\arithmeticaverageois.cpp">
+      <Filter>functions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="functions\functioncount.hpp">
