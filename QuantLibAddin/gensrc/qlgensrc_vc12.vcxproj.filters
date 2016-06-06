@@ -327,5 +327,8 @@
     <Xml Include="metadata\functions\calibrationhelpers.xml">
       <Filter>functions</Filter>
     </Xml>
+    <Xml Include="metadata\functions\arithmeticaverageois.xml">
+      <Filter>functions</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

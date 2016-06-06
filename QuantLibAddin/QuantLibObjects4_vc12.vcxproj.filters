@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="enumerations">
@@ -848,6 +848,18 @@
     </ClCompile>
     <ClCompile Include="qlo\calibrationhelpers.cpp">
       <Filter>ShortRateModels</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\arithmeticaverageois.cpp">
+      <Filter>Instruments</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\valueobjects\vo_arithmeticaverageois.cpp">
+      <Filter>valueobjects</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\create\create_arithmeticaverageois.cpp">
+      <Filter>serialization\create</Filter>
+    </ClCompile>
+    <ClCompile Include="qlo\serialization\register\serialization_arithmeticaverageois.cpp">
+      <Filter>serialization\register</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1747,6 +1759,18 @@
     </ClInclude>
     <ClInclude Include="qlo\calibrationhelpers.hpp">
       <Filter>ShortRateModels</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\arithmeticaverageois.hpp">
+      <Filter>Instruments</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\valueobjects\vo_arithmeticaverageois.hpp">
+      <Filter>valueobjects</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\create\create_arithmeticaverageois.hpp">
+      <Filter>serialization\create</Filter>
+    </ClInclude>
+    <ClInclude Include="qlo\serialization\register\serialization_arithmeticaverageois.hpp">
+      <Filter>serialization\register</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
