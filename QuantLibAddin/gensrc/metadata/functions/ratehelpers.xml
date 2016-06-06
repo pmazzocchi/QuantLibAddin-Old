@@ -498,7 +498,7 @@
           <Parameter name='FixedLegPaymentFrequency' default='"Annual"'>
             <type>QuantLib::Frequency</type>
             <tensorRank>scalar</tensorRank>
-            <description>payment frequency.</description>
+            <description>fixed leg payment frequency.</description>
           </Parameter>
           <Parameter name='FixedRate' exampleValue='0.00423'>
             <type>QuantLib::Quote</type>
@@ -511,10 +511,10 @@
             <tensorRank>scalar</tensorRank>
             <description>floating leg OvernightIndex object ID.</description>
           </Parameter>
-          <Parameter name='PaymentFrequency' default='"Quarterly"'>
+          <Parameter name='OvernightLegPaymentFrequency' default='"Quarterly"'>
             <type>QuantLib::Frequency</type>
             <tensorRank>scalar</tensorRank>
-            <description>payment frequency.</description>
+            <description>overnight leg payment frequency.</description>
           </Parameter>
           <Parameter name='Spread' exampleValue='0.0'>
             <type>QuantLib::Quote</type>
@@ -522,12 +522,12 @@
             <tensorRank>scalar</tensorRank>
             <description>overnight spread quote.</description>
           </Parameter>
-          <Parameter name='MeanReversionSpeed' exampleValue='0.03'>
+          <Parameter name='MeanReversionSpeed' default='0.03'>
             <type>QuantLib::Real</type>
             <tensorRank>scalar</tensorRank>
             <description>meanReverison for the Hull-White short rate .</description>
           </Parameter>
-          <Parameter name='Volatility' exampleValue='0.00'>
+          <Parameter name='Volatility' default='0.00'>
             <type>QuantLib::Real</type>
             <tensorRank>scalar</tensorRank>
             <description>Volatility for the Hull-White short rate.</description>
