@@ -14,6 +14,7 @@ noinst_HEADERS = \
     serialization_bonds.hpp \
     serialization_browniangenerators.hpp \
     serialization_btp.hpp \
+    serialization_calibrationhelpers.hpp \
     serialization_capfloor.hpp \
     serialization_capletvolstructure.hpp \
     serialization_cmsmarketcalibration.hpp \
@@ -73,6 +74,7 @@ libRegister_la_SOURCES = \
     serialization_bonds.cpp \
     serialization_browniangenerators.cpp \
     serialization_btp.cpp \
+    serialization_calibrationhelpers.cpp \
     serialization_capfloor.cpp \
     serialization_capletvolstructure.cpp \
     serialization_cmsmarketcalibration.cpp \
