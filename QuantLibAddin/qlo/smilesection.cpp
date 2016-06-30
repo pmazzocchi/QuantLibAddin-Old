@@ -1,8 +1,9 @@
 /* -*- mode: c++; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- */
 
 /*
- Copyright (C) 2007 Cristina Duminuco
  Copyright (C) 2006 Francois du Vignaud
+ Copyright (C) 2007 Cristina Duminuco
+ Copyright (C) 2016 Stefano Fondi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -40,10 +41,13 @@ namespace QuantLibAddin {
                                 const QuantLib::DayCounter& dc,
                                 const QuantLib::Date& refDate,
                                 QuantLib::Real atmValue,
+                                QuantLib::VolatilityType type,
+                                QuantLib::Real shift,
                                 bool permanent) : SmileSection(properties, permanent)
     {
         libraryObject_ = boost::shared_ptr<QuantLib::SmileSection>(new
-            QuantLib::FlatSmileSection(optionDate, v, dc, refDate, atmValue));
+            QuantLib::FlatSmileSection(
+                        optionDate, v, dc, refDate, atmValue, type, shift));
     }
 
     InterpolatedSmileSection::InterpolatedSmileSection(
@@ -53,6 +57,8 @@ namespace QuantLibAddin {
             const std::vector<QuantLib::Handle<QuantLib::Quote> >& stdDevs,
             const QuantLib::Handle<QuantLib::Quote>& atmLevel,
             const QuantLib::DayCounter& dc,
+            QuantLib::VolatilityType type,
+            QuantLib::Real shift,
             bool permanent) : SmileSection(properties, permanent)
     {
         std::vector<QuantLib::Handle<QuantLib::Quote> > temp(stdDevs.size());
@@ -60,7 +66,7 @@ namespace QuantLibAddin {
             temp[i] = stdDevs[i];
         libraryObject_ = boost::shared_ptr<QuantLib::SmileSection>(new
             QuantLib::InterpolatedSmileSection<QuantLib::Linear>(
-                                    optionDate, s, temp, atmLevel, dc));
+            optionDate, s, temp, atmLevel, dc, QuantLib::Linear(), QuantLib::Date(), type, shift));
     }
 
     SabrSmileSection::SabrSmileSection(

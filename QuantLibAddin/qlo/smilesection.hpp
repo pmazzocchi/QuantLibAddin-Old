@@ -2,6 +2,7 @@
 
 /*
  Copyright (C) 2006 Francois du Vignaud
+ Copyright (C) 2016 Stefano Fondi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -22,6 +23,7 @@
 
 #include <oh/libraryobject.hpp>
 #include <ql/types.hpp>
+#include <ql/termstructures/volatility/volatilitytype.hpp>
 
 
 namespace QuantLib {
@@ -49,6 +51,8 @@ namespace QuantLibAddin {
                          const QuantLib::DayCounter& dc,
                          const QuantLib::Date& refDate,
                          QuantLib::Real atmValue,
+                         QuantLib::VolatilityType type,
+                         QuantLib::Real shift,
                          bool permanent);
     };
 
@@ -61,6 +65,8 @@ namespace QuantLibAddin {
               const std::vector<QuantLib::Handle<QuantLib::Quote> >& stdDevs,
               const QuantLib::Handle<QuantLib::Quote>& atmLevel,
               const QuantLib::DayCounter& dc,
+              QuantLib::VolatilityType type,
+              QuantLib::Real shift,
               bool permanent);
     };
 
