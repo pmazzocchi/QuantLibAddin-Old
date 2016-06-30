@@ -15,7 +15,7 @@ GIT SETUP
 
   - **$ git config --global user.email** DigitYourEmail@example.com
 
-  - **$ git config -–global http.proxy localhost:3128** (only for BIMI computers)
+  - **$ git config -–global http.proxy** YourProxy
 
   - Run **$ git config –-list** to see the modified settings;
 
