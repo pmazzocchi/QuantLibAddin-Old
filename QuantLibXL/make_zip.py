@@ -135,11 +135,11 @@ def makeZipStatic():
     # Zip up some files from other projects in the repo.
     os.path.walk("../QuantLibAddin/gensrc/metadata", visit, (zfile, None, "../QuantLibAddin/gensrc/"))
     zfile.write("../XL-Launcher/bin/Addin/Launcher.xla", ROOT_DIR + "Launcher.xla")
-    for fileName in glob.glob("../XL-Launcher/bin/Addin/session_file.*-s-*.xml"):
+    for fileName in glob.glob("../XL-Launcher/bin/Addin/session_file.*-s*.xml"):
         baseName = os.path.basename(fileName)
         if -1 != baseName.find("-dev") or -1 != baseName.find("-x64"): continue
         zfile.write("../XL-Launcher/bin/Addin/" + baseName, ROOT_DIR + baseName)
-    for fileName in glob.glob("../XL-Launcher/bin/Addin/session_file.*-s-*.bat"):
+    for fileName in glob.glob("../XL-Launcher/bin/Addin/session_file.*-s*.bat"):
         baseName = os.path.basename(fileName)
         if -1 != baseName.find("-dev") or -1 != baseName.find("-x64"): continue
         zfile.write("../XL-Launcher/bin/Addin/" + baseName, ROOT_DIR + baseName)
