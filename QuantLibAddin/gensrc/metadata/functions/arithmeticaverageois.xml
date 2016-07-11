@@ -1,0 +1,437 @@
+<Category name='arithmeticaverageois'>
+  <description>functions to construct and use Arithmetic Average OIS objects.</description>
+  <displayName>Arithmetic Average OIS</displayName>
+  <xlFunctionWizardCategory>QuantLib - Financial</xlFunctionWizardCategory>
+  <addinIncludes>
+    <include>qlo/arithmeticaverageois.hpp</include>
+    <include>qlo/indexes/iborindex.hpp</include>
+    <include>qlo/schedule.hpp</include>
+    <include>qlo/ratehelpers.hpp</include>
+
+    <include>ql/indexes/iborindex.hpp</include>
+    <include>ql/termstructures/yield/arithmeticoisratehelper.hpp</include>
+  </addinIncludes>
+  <serializationIncludes>
+    <include>qlo/arithmeticaverageois.hpp</include>
+    <include>qlo/indexes/iborindex.hpp</include>
+    <include>qlo/schedule.hpp</include>
+    <include>qlo/ratehelpers.hpp</include>
+
+    <include>ql/indexes/iborindex.hpp</include>
+    <include>ql/termstructures/yield/arithmeticoisratehelper.hpp</include>
+  </serializationIncludes>
+  <copyright>
+    Copyright (C) 2016 Stefano Fondi
+  </copyright>
+  <Functions>
+
+    <Constructor name='qlArithmeticAverageOIS'>
+      <libraryFunction>ArithmeticAverageOIS</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Calc'/-->
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <processorName>InstrumentProcessor</processorName>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='PayerReceiver' default='"Payer"'>
+            <type>QuantLib::ArithmeticAverageOIS::Type</type>
+            <tensorRank>scalar</tensorRank>
+            <description>PAYER to pay the fixed rate, RECEIVER to receive it.</description>
+          </Parameter>
+          <Parameter name='Nominal' default='100'>
+            <type>QuantLib::Real</type>
+            <tensorRank>vector</tensorRank>
+            <description>Notional Amount.</description>
+          </Parameter>
+          <Parameter name='FixedLegSchedule' exampleValue='FixedLegSchedule'>
+            <type>QuantLib::Schedule</type>
+            <superType>libraryClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>Schedule object ID.</description>
+          </Parameter>
+          <Parameter name='FixedRate' default='0.0'>
+            <type>QuantLib::Rate</type>
+            <tensorRank>scalar</tensorRank>
+            <description>the fixed leg rate.</description>
+          </Parameter>
+          <Parameter name='FixDayCounter' exampleValue='Actual/360'>
+            <type>QuantLib::DayCounter</type>
+            <tensorRank>scalar</tensorRank>
+            <description>fixed leg day counter (e.g. Actual/360).</description>
+          </Parameter>
+          <Parameter name='OvernightIndex' exampleValue='FedFunds'>
+            <type>QuantLib::OvernightIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>overnight leg OvernightIndex object ID.</description>
+          </Parameter>
+          <Parameter name='OvernightLegSchedule' exampleValue='OvernightLegSchedule'>
+            <type>QuantLib::Schedule</type>
+            <superType>libraryClass</superType>
+            <tensorRank>scalar</tensorRank>
+            <description>Schedule object ID.</description>
+          </Parameter>
+          <Parameter name='Spread' default='0.0'>
+            <type>QuantLib::Spread</type>
+            <tensorRank>scalar</tensorRank>
+            <description>overnight leg spread.</description>
+          </Parameter>
+          <Parameter name='MeanReversionSpeed' default='0.03'>
+            <type>QuantLib::Real</type>
+            <tensorRank>scalar</tensorRank>
+            <description>MeanReversion of the Hull-White short rate.</description>
+          </Parameter>
+          <Parameter name='Volatility' default='0.00'>
+            <type>QuantLib::Real</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Volatility of the Hull-White short rate.</description>
+          </Parameter>
+          <Parameter name='ByApprox' default='false'>
+            <type>bool</type>
+            <tensorRank>scalar</tensorRank>
+            <description>TRUE to use approximation through geometric average. </description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <Constructor name='qlMakeArithmeticAverageOIS'>
+      <libraryFunction>ArithmeticAverageOIS</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Calc'/-->
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='SettlDays' default='2'>
+            <type>QuantLib::Natural</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Number of days to spot date.</description>
+          </Parameter>
+          <Parameter name='SwapTenor' exampleValue='5Y'>
+            <type>QuantLib::Period</type>
+            <tensorRank>scalar</tensorRank>
+            <description>swap tenor period (e.g. 5Y).</description>
+          </Parameter>
+          <Parameter name='OvernightIndex' exampleValue='FedFunds'>
+            <type>QuantLib::OvernightIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>OvernightIndex object ID.</description>
+          </Parameter>
+          <Parameter name='FixedRate' default='QuantLib::Null&lt;QuantLib::Rate&gt;()'>
+            <type>QuantLib::Rate</type>
+            <tensorRank>scalar</tensorRank>
+            <description>the fixed leg rate. If missing atm rate is used.</description>
+          </Parameter>
+          <Parameter name='ForwardStart' exampleValue='"0D"'>
+            <type>QuantLib::Period</type>
+            <tensorRank>scalar</tensorRank>
+            <description>forward start period (from spot date).</description>
+          </Parameter>
+          <Parameter name='FixDayCounter' default='"Actual/360"'>
+            <type>QuantLib::DayCounter</type>
+            <tensorRank>scalar</tensorRank>
+            <description>fixed leg day counter.</description>
+          </Parameter>
+          <Parameter name='FixedLegPaymentFrequency' default='"Annual"'>
+            <type>QuantLib::Frequency</type>
+            <tensorRank>scalar</tensorRank>
+            <description>fixed leg payment frequency.</description>
+          </Parameter>
+          <Parameter name='OvernightLegPaymentFrequency' default='"Quarterly"'>
+            <type>QuantLib::Frequency</type>
+            <tensorRank>scalar</tensorRank>
+            <description>overnight leg payment frequency.</description>
+          </Parameter>
+          <Parameter name='OvernightSpread' default='0.0'>
+            <type>QuantLib::Spread</type>
+            <tensorRank>scalar</tensorRank>
+            <description>the spread in the overnight leg rate.</description>
+          </Parameter>
+          <Parameter name='MeanReversionSpeed' default='0.03'>
+            <type>QuantLib::Real</type>
+            <tensorRank>scalar</tensorRank>
+            <description>MeanReversion of the Hull-White short rate.</description>
+          </Parameter>
+          <Parameter name='Volatility' default='0.00'>
+            <type>QuantLib::Real</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Volatility of the Hull-White short rate.</description>
+          </Parameter>
+          <Parameter name='ByApprox' default='false'>
+            <type>bool</type>
+            <tensorRank>scalar</tensorRank>
+            <description>TRUE to use approximation through geometric average. </description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <Constructor name='qlArithmeticAverageOISFromArithmeticOISRateHelper'>
+      <libraryFunction>ArithmeticAverageOIS</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='ArithmeticOISRateHelper'>
+            <type>QuantLib::ArithmeticOISRateHelper</type>
+            <tensorRank>scalar</tensorRank>
+            <description>ArithmeticOISRateHelper object ID.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
+    <Member name='qlArithmeticAverageOISFixedLegBPS' type='QuantLib::ArithmeticAverageOIS'>
+      <description>returns the BPS of the fixed rate leg for the given ArithmeticAverageOIS object.</description>
+      <libraryFunction>fixedLegBPS</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlArithmeticAverageOISFixedLegNPV' type='QuantLib::ArithmeticAverageOIS'>
+      <description>returns the NPV of the fixed rate leg for the given ArithmeticAverageOIS object.</description>
+      <libraryFunction>fixedLegNPV</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Calc'/-->
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlArithmeticAverageOISFairRate' type='QuantLib::ArithmeticAverageOIS'>
+      <description>returns the fair fixed leg rate which would zero the swap NPV for the given ArithmeticAverageOIS object.</description>
+      <libraryFunction>fairRate</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Calc'/-->
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Rate</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlArithmeticAverageOISOvernightLegBPS' type='QuantLib::ArithmeticAverageOIS'>
+      <description>returns the BPS of the overnight rate leg for the given ArithmeticAverageOIS object.</description>
+      <libraryFunction>overnightLegBPS</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Calc'/-->
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlArithmeticAverageOISOvernightLegNPV' type='QuantLib::ArithmeticAverageOIS'>
+      <description>returns the NPV of the overnight rate leg for the given ArithmeticAverageOIS object.</description>
+      <libraryFunction>overnightLegNPV</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Calc'/-->
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlArithmeticAverageOISFairSpread' type='QuantLib::ArithmeticAverageOIS'>
+      <description>returns the fair spread over the overnight rate which would zero the swap NPV for the given ArithmeticAverageOIS object.</description>
+      <libraryFunction>fairSpread</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Calc'/-->
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Spread</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+
+    <Member name='qlArithmeticAverageOISType' type='QuantLib::ArithmeticAverageOIS'>
+      <description>returns the swap type (Payer or Receiver) of the given ArithmeticAverageOIS object.</description>
+      <libraryFunction>type</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Calc'/-->
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::ArithmeticAverageOIS::Type</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlArithmeticAverageOISNominal' type='QuantLib::ArithmeticAverageOIS'>
+      <description>returns the swap nominal for the given ArithmeticAverageOIS object.</description>
+      <libraryFunction>nominal</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Calc'/-->
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>double</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlArithmeticAverageOISFixedRate' type='QuantLib::ArithmeticAverageOIS'>
+      <description>returns the fixed rate for the given ArithmeticAverageOIS object.</description>
+      <libraryFunction>fixedRate</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Calc'/-->
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Rate</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlArithmeticAverageOISFixedDayCount' type='QuantLib::ArithmeticAverageOIS'>
+      <description>returns the fixed rate day count convention for the given ArithmeticAverageOIS object.</description>
+      <libraryFunction>fixedDayCount</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Calc'/-->
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::DayCounter</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlArithmeticAverageOISSpread' type='QuantLib::ArithmeticAverageOIS'>
+      <description>returns the spread over overnight rate for the given ArithmeticAverageOIS object.</description>
+      <libraryFunction>spread</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Calc'/-->
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters />
+      </ParameterList>
+      <ReturnValue>
+        <type>QuantLib::Spread</type>
+        <tensorRank>scalar</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlArithmeticAverageOISFixedLegAnalysis' type='QuantLibAddin::ArithmeticAverageOIS'>
+      <description>returns the fixed rate leg cash flow analysis of the given ArithmeticAverageOIS object.</description>
+      <libraryFunction>fixedLegAnalysis</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='AfterDate' const='False' default='QuantLib::Date()'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Shows only cashflows after given date</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>any</type>
+        <tensorRank>matrix</tensorRank>
+      </ReturnValue>
+    </Member>
+
+    <Member name='qlArithmeticAverageOISOvernightLegAnalysis' type='QuantLibAddin::ArithmeticAverageOIS'>
+      <description>returns the overnight rate leg cash flow analysis.</description>
+      <libraryFunction>overnightLegAnalysis</libraryFunction>
+      <SupportedPlatforms>
+        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
+        <SupportedPlatform name='Excel'/>
+        <!--SupportedPlatform name='Cpp'/-->
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='AfterDate' const='False' default='QuantLib::Date()'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Shows only cashflows after given date</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+      <ReturnValue>
+        <type>any</type>
+        <tensorRank>matrix</tensorRank>
+      </ReturnValue>
+    </Member>
+
+  </Functions>
+</Category>

@@ -321,6 +321,7 @@
     <ClCompile Include="functions\abcd.cpp" />
     <ClCompile Include="functions\accountingengines.cpp" />
     <ClCompile Include="functions\alphaform.cpp" />
+    <ClCompile Include="functions\arithmeticaverageois.cpp" />
     <ClCompile Include="functions\assetswap.cpp" />
     <ClCompile Include="functions\basketlossmodels.cpp" />
     <ClCompile Include="functions\bonds.cpp" />
@@ -368,6 +369,7 @@
     <ClCompile Include="functions\randomsequencegenerator.cpp" />
     <ClCompile Include="functions\rangeaccrual.cpp" />
     <ClCompile Include="functions\ratehelpers.cpp" />
+    <ClCompile Include="register\register_arithmeticaverageois.cpp" />
     <ClCompile Include="register\register_calibrationhelpers.cpp" />
     <ClCompile Include="register\register_overnightindexedswap.cpp" />
     <ClCompile Include="functions\schedule.cpp" />
