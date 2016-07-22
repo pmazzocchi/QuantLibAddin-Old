@@ -28,6 +28,7 @@
     <DataType defaultSuperType='enumeration'>QuantLib::SensitivityAnalysis</DataType>
     <DataType defaultSuperType='enumeration'>QuantLib::Settlement::Type</DataType>
     <DataType defaultSuperType='enumeration'>QuantLib::OvernightIndexedSwap::Type</DataType>
+    <DataType defaultSuperType='enumeration'>QuantLib::ArithmeticAverageOIS::Type</DataType>
     <DataType defaultSuperType='enumeration'>QuantLib::VanillaSwap::Type</DataType>
     <DataType defaultSuperType='enumeration'>QuantLib::Futures::Type</DataType>
     <DataType defaultSuperType='enumeration'>QuantLib::Weekday</DataType>
@@ -154,6 +155,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::SwapFromFRACorrelationStructure</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::SwapIndex</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::OISRateHelper</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::ArithmeticOISRateHelper</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::SwapRateHelper</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Swaption</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::SwaptionHelper</DataType>
@@ -164,6 +166,7 @@
     <DataType defaultSuperType='libraryClass'>QuantLib::TimeSeriesDef</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::TypePayoff</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::OvernightIndexedSwap</DataType>
+    <DataType defaultSuperType='libraryClass'>QuantLib::ArithmeticAverageOIS</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::VanillaSwap</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::Vasicek</DataType>
     <DataType defaultSuperType='libraryClass'>QuantLib::VolatilityTermStructure</DataType>
@@ -260,6 +263,7 @@
     <!--RL ADD 2010-07-22-->
     <DataType defaultSuperType='objectClass'>QuantLibAddin::UpfrontCdsHelper</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::OvernightIndexedSwap</DataType>
+    <DataType defaultSuperType='objectClass'>QuantLibAddin::ArithmeticAverageOIS</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::VanillaSwap</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::PricingEngine</DataType>
     <DataType defaultSuperType='objectClass'>QuantLibAddin::FloatingRateCouponPricer</DataType>

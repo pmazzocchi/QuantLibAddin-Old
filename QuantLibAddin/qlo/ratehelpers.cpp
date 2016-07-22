@@ -7,6 +7,7 @@
  Copyright (C) 2005, 2006, 2007 Eric Ehlers
  Copyright (C) 2005 Plamen Neykov
  Copyright (C) 2015 Maddalena Zanzi
+ Copyright (C) 2016 Stefano Fondi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -33,6 +34,7 @@
 #include <ql/termstructures/yield/ratehelpers.hpp>
 #include <ql/termstructures/yield/bondhelpers.hpp>
 #include <ql/termstructures/yield/oisratehelper.hpp>
+#include <ql/termstructures/yield/arithmeticoisratehelper.hpp>
 
 #include <oh/repository.hpp>
 
@@ -258,6 +260,35 @@ namespace QuantLibAddin {
                                     tenor,
                                     fixedRate,
                                     overnightIndex));
+        quoteName_ = f(properties->getSystemProperty("FixedRate"));
+    }
+
+    ArithmeticOISRateHelper::ArithmeticOISRateHelper(
+                        const shared_ptr<ValueObject>& properties,
+                        QuantLib::Natural settlementDays,
+                        const QuantLib::Period& tenor,
+                        const QuantLib::Frequency fixedLegPaymentFrequency,
+                        const QuantLib::Handle<QuantLib::Quote>& fixedRate,
+                        const shared_ptr<QuantLib::OvernightIndex>& overnightIndex,
+                        const QuantLib::Frequency overnightLegPaymentFrequency,
+                        const QuantLib::Handle<QuantLib::Quote>& spread,
+                        const QuantLib::Real meanReversionSpeed,
+                        const QuantLib::Real volatility,
+                        const bool byApprox,
+                        const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
+                        bool permanent)
+    : RateHelper(properties, permanent) {
+        libraryObject_ = shared_ptr<QuantLib::ArithmeticOISRateHelper>(new
+            QuantLib::ArithmeticOISRateHelper(settlementDays,
+                                    tenor,
+                                    fixedLegPaymentFrequency,
+                                    fixedRate,
+                                    overnightIndex,
+                                    overnightLegPaymentFrequency,
+                                    spread,
+                                    meanReversionSpeed,
+                                    volatility,
+                                    byApprox));
         quoteName_ = f(properties->getSystemProperty("FixedRate"));
     }
 
