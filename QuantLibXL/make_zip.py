@@ -9,8 +9,8 @@ import argparse
 import re
 
 QLXL = "QuantLibXL"
-VERSION = "1.8.0"
-VERSION_ = "1_8_0"
+VERSION = "1.9.0"
+VERSION_ = "1_9_0"
 VC_VERSION = "vc120"
 QLXL_VERSION = QLXL + "-" + VERSION
 ROOT_DIR = QLXL_VERSION + "\\"
@@ -135,11 +135,11 @@ def makeZipStatic():
     # Zip up some files from other projects in the repo.
     os.path.walk("../QuantLibAddin/gensrc/metadata", visit, (zfile, None, "../QuantLibAddin/gensrc/"))
     zfile.write("../XL-Launcher/bin/Addin/Launcher.xla", ROOT_DIR + "Launcher.xla")
-    for fileName in glob.glob("../XL-Launcher/bin/Addin/session_file.*-s-*.xml"):
+    for fileName in glob.glob("../XL-Launcher/bin/Addin/session_file.*-s*.xml"):
         baseName = os.path.basename(fileName)
         if -1 != baseName.find("-dev") or -1 != baseName.find("-x64"): continue
         zfile.write("../XL-Launcher/bin/Addin/" + baseName, ROOT_DIR + baseName)
-    for fileName in glob.glob("../XL-Launcher/bin/Addin/session_file.*-s-*.bat"):
+    for fileName in glob.glob("../XL-Launcher/bin/Addin/session_file.*-s*.bat"):
         baseName = os.path.basename(fileName)
         if -1 != baseName.find("-dev") or -1 != baseName.find("-x64"): continue
         zfile.write("../XL-Launcher/bin/Addin/" + baseName, ROOT_DIR + baseName)
@@ -189,9 +189,8 @@ def zipBinaryFiles(zipFile):
 
 def zipFrameworkFiles(zipFile):
     zipFile.zip("../XL-Launcher/bin/Addin/Launcher.xla", zipFile.root + "Launcher.xla")
-    zipFile.zip("../XL-Launcher/bin/Addin/session_file.public.live.xml", zipFile.root + "session_file.xml")
-    zipFile.zip("../XL-Launcher/bin/Addin/session_file.public.live.bat", zipFile.root + "session_file.public.live.bat")
-    zipFile.zip("../XL-Launcher/bin/Addin/session_file.public.live.xml", zipFile.root + "session_file.public.live.xml")
+    zipFile.zip("../XL-Launcher/bin/Addin/session_file.EMPTY-s.xml", zipFile.root + "session_file.EMPTY-s.xml")
+    zipFile.zip("../XL-Launcher/bin/Addin/session_file.EMPTY-s.bat", zipFile.root + "session_file.EMPTY-s.bat")
     Selector(
         inputPath = 'Data2',
         zipFile = zipFile,

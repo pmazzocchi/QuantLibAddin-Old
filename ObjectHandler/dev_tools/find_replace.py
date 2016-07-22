@@ -48,12 +48,12 @@ ROOT_DIRS = (
     #'/media/windows/linux/repos/quantlib/ObjectHandler',
     #'/media/windows/linux/repos/quantlib/QuantLibAddin',
     #'/media/windows/linux/repos/quantlib/QuantLibXL',
-	'C:/projects/quantlib-dev/log4cxx/src/main/include/log4cxx',
-    'C:/projects/quantlib-dev/gensrc',
-    'C:/projects/quantlib-dev/ObjectHandler',
-    'C:/projects/quantlib-dev/QuantLibAddin',
-    'C:/projects/quantlib-dev/QuantLibXL',
-	'C:/projects/quantlib-dev/XL-Launcher',
+	'C:/projects/QuantLibAddin-Old-Master/log4cxx/src/main/include/log4cxx',
+    'C:/projects/QuantLibAddin-Old-Master/gensrc',
+    'C:/projects/QuantLibAddin-Old-Master/ObjectHandler',
+    'C:/projects/QuantLibAddin-Old-Master/QuantLibAddin',
+    'C:/projects/QuantLibAddin-Old-Master/QuantLibXL',
+	'C:/projects/QuantLibAddin-Old-Master/XL-Launcher',
 )
 
 # CALLBACK FUNCTIONS - Called from regexes which require multiple passes
@@ -101,12 +101,12 @@ SUBSTITUTIONS = (
 #   (re.compile('abcDEFghi'), toLower),
 
 ##  Frequently used
-    (re.compile('1_7_0'), '1_8_0'),
-    (re.compile('1\.7\.0'), '1.8.0'),
-    (re.compile('0x010700'), '0x010800'),
-    (re.compile('R010700f0'), 'R010800f0'),
-    (re.compile('0\.10\.0f5'), '0.10.0f6'),
-    (re.compile('0x001000f5'), '0x001000f6'),
+    (re.compile('1_8_0'), '1_9_0'),
+    (re.compile('1\.8\.0'), '1.9.0'),
+    (re.compile('0x010800'), '0x010900'),
+    (re.compile('R010800f0'), 'R010900f0'),
+    (re.compile('0\.10\.0f6'), '0.10.0f7'),
+    (re.compile('0x001000f6'), '0x001000f7'),
 )
 
 # INCLUDE_FILES

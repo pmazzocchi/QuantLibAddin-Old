@@ -2,6 +2,7 @@
 
 /*
  Copyright (C) 2006 Ferdinando Ametrano
+ Copyright (C) 2016 Stefano Fondi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -49,6 +50,8 @@ namespace QuantLibAddin {
                                     BusinessDayConvention bdc,
                                     const Handle<Quote>& volatility,
                                     const QuantLib::DayCounter& dayCounter,
+                                    QuantLib::VolatilityType type,
+                                    QuantLib::Real shift,
                                     bool permanent)
     : OptionletVolatilityStructure(properties, permanent)
     {
@@ -57,7 +60,9 @@ namespace QuantLibAddin {
                                                   cal,
                                                   bdc,
                                                   volatility,
-                                                  dayCounter));
+                                                  dayCounter,
+                                                  type,
+                                                  shift));
     }
 
     SpreadedOptionletVolatility::SpreadedOptionletVolatility(
@@ -134,6 +139,8 @@ namespace QuantLibAddin {
                                 const vector<QuantLib::Rate>& strikes,
                                 const vector<vector<Handle<Quote> > >& vols,
                                 const QuantLib::DayCounter& dc,
+                                QuantLib::VolatilityType type,
+                                QuantLib::Real shift,
                                 bool permanent)
     : StrippedOptionletBase(properties, permanent)
     {
@@ -145,7 +152,9 @@ namespace QuantLibAddin {
                                         optionletDates,
                                         strikes,
                                         vols,
-                                        dc));
+                                        dc,
+                                        type,
+                                        shift));
     }
 
     OptionletStripper1::OptionletStripper1(
@@ -155,6 +164,8 @@ namespace QuantLibAddin {
                         QuantLib::Rate switchStrike,
                         QuantLib::Real accuracy,
                         QuantLib::Natural maxIterations,
+                        QuantLib::VolatilityType type,
+                        QuantLib::Real shift,
                         bool permanent)
     : OptionletStripper(properties, permanent)
     {
@@ -163,7 +174,10 @@ namespace QuantLibAddin {
                                          index,
                                          switchStrike,
                                          accuracy,
-                                         maxIterations));
+                                         maxIterations,
+                                         QuantLib::Handle<QuantLib::YieldTermStructure>(),
+                                         type,
+                                         shift));
     }
 
     OptionletStripper2::OptionletStripper2(
