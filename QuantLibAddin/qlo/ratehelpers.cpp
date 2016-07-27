@@ -614,6 +614,7 @@ namespace QuantLibAddin {
               public QuantLib::Visitor<QuantLib::SwapRateHelper>,
               public QuantLib::Visitor<QuantLib::OISRateHelper>,
               public QuantLib::Visitor<QuantLib::DatedOISRateHelper>,
+              public QuantLib::Visitor<QuantLib::ArithmeticOISRateHelper>,
               public QuantLib::Visitor<QuantLib::BMASwapRateHelper>,
               public QuantLib::Visitor<QuantLib::FixedRateBondHelper>,
               public QuantLib::Visitor<QuantLib::FxSwapRateHelper> {
@@ -641,6 +642,9 @@ namespace QuantLibAddin {
                 rate_ = h.quote()->value();
             }
             void visit(QuantLib::DatedOISRateHelper& h) {
+                rate_ = h.quote()->value();
+            }
+            void visit(QuantLib::ArithmeticOISRateHelper& h) {
                 rate_ = h.quote()->value();
             }
             void visit(QuantLib::BMASwapRateHelper& h) {
