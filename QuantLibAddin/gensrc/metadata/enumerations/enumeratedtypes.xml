@@ -1850,6 +1850,22 @@
           <string>MonotonicLogParabolic</string>
           <value>QuantLibAddin::InterpolatedYieldCurve::MonotonicLogParabolic</value>
         </EnumeratedType>
+        <EnumeratedType>
+          <string>MixedLinearCubicNaturalSpline</string>
+          <value>QuantLibAddin::InterpolatedYieldCurve::MixedLinearCubicNaturalSpline</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>LogMixedLinearCubicNaturalSpline</string>
+          <value>QuantLibAddin::InterpolatedYieldCurve::LogMixedLinearCubicNaturalSpline</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>MixedLinearMonotonicCubicNaturalSpline</string>
+          <value>QuantLibAddin::InterpolatedYieldCurve::MixedLinearMonotonicCubicNaturalSpline</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>LogMixedLinearKrugerCubic</string>
+          <value>QuantLibAddin::InterpolatedYieldCurve::LogMixedLinearKrugerCubic</value>
+        </EnumeratedType>
       </EnumeratedTypes>
     </EnumeratedTypeGroup>
 
