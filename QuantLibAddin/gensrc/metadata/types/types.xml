@@ -31,6 +31,7 @@
     <DataType defaultSuperType='enumeration'>QuantLib::VanillaSwap::Type</DataType>
     <DataType defaultSuperType='enumeration'>QuantLib::Futures::Type</DataType>
     <DataType defaultSuperType='enumeration'>QuantLib::Weekday</DataType>
+    <DataType defaultSuperType='enumeration'>QuantLib::MixedInterpolation::Behavior</DataType>
     <DataType defaultSuperType='enumeration'>QuantLibAddin::RateHelper::DepoInclusionCriteria</DataType>
     <DataType defaultSuperType='enumeration'>QuantLibAddin::SwapIndex::FixingType</DataType>
     <DataType defaultSuperType='enumeration'>QuantLibAddin::InterpolatedYieldCurve::Interpolator</DataType>

@@ -3,6 +3,7 @@
 /*
  Copyright (C) 2007 Eric Ehlers
  Copyright (C) 2007, 2008, 2009 Ferdinando Ametrano
+ Copyright (C) 2016 Stefano Fondi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -42,6 +43,8 @@ namespace QuantLibAddin {
             QuantLib::Real accuracy,
             const std::string& traitsID,
             const std::string& interpolatorID,
+            const QuantLib::MixedInterpolation::Behavior behavior,
+            const QuantLib::Size n,
             bool permanent);
         const std::vector<QuantLib::Time>& times() const;
 
