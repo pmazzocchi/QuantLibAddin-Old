@@ -3,6 +3,7 @@
 /*
  Copyright (C) 2007 Eric Ehlers
  Copyright (C) 2007, 2008, 2009 Ferdinando Ametrano
+ Copyright (C) 2016 Stefano Fondi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -31,6 +32,20 @@ namespace QuantLibAddin {
     // such as Excel.
     class PiecewiseYieldCurve : public YieldTermStructure {
       public:
+        PiecewiseYieldCurve(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            QuantLib::Natural nDays,
+            const QuantLib::Calendar& calendar,
+            const std::vector<boost::shared_ptr<QuantLib::RateHelper> >& qlrhs,
+            const QuantLib::DayCounter& dayCounter,
+            const std::vector<QuantLib::Handle<QuantLib::Quote> >& jumps,
+            const std::vector<QuantLib::Date>& jumpDates,
+            QuantLib::Real accuracy,
+            const std::string& traitsID,
+            const std::string& interpolatorID,
+            const QuantLib::MixedInterpolation::Behavior behavior,
+            const QuantLib::Size n,
+            bool permanent);
         PiecewiseYieldCurve(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
             QuantLib::Natural nDays,

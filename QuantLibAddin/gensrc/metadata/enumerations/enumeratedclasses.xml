@@ -1,6 +1,7 @@
 <root>
 
   <enumeratedClassCopyright>
+    Copyright (C) 2016 Stefano Fondi
     Copyright (C) 2007 Cristina Duminuco
     Copyright (C) 2006, 2007, 2008 Ferdinando Ametrano
     Copyright (C) 2005, 2006, 2007 Eric Ehlers
@@ -101,6 +102,39 @@
           <string>MonotonicLogParabolic</string>
           <value>MonotonicLogParabolic_Interpolation</value>
           <libraryClass>QuantLib::MonotonicLogParabolic</libraryClass>
+        </EnumeratedClass>
+
+        <EnumeratedClass>
+          <string>MixedLinearCubicNaturalSpline</string>
+          <value>MixedLinearCubicNaturalSpline_Interpolation</value>
+          <libraryClass>QuantLib::MixedLinearCubicNaturalSpline</libraryClass>
+        </EnumeratedClass>
+        <EnumeratedClass>
+          <string>LogMixedLinearCubicNaturalSpline</string>
+          <value>LogMixedLinearCubicNaturalSpline_Interpolation</value>
+          <libraryClass>QuantLib::LogMixedLinearCubicNaturalSpline</libraryClass>
+        </EnumeratedClass>
+
+        <EnumeratedClass>
+          <string>MixedLinearMonotonicCubicNaturalSpline</string>
+          <value>MixedLinearMonotonicCubicNaturalSpline_Interpolation</value>
+          <libraryClass>QuantLib::MixedLinearMonotonicCubicNaturalSpline</libraryClass>
+        </EnumeratedClass>
+        <EnumeratedClass>
+          <string>LogMixedLinearMonotonicCubicNaturalSpline</string>
+          <value>LogMixedLinearMonotonicCubicNaturalSpline_Interpolation</value>
+          <libraryClass>QuantLib::LogMixedLinearMonotonicCubicNaturalSpline</libraryClass>
+        </EnumeratedClass>
+        
+        <EnumeratedClass>
+          <string>MixedLinearKrugerCubic</string>
+          <value>MixedLinearKrugerCubic_Interpolation</value>
+          <libraryClass>QuantLib::MixedLinearKrugerCubic</libraryClass>
+        </EnumeratedClass>
+        <EnumeratedClass>
+          <string>LogMixedLinearKrugerCubic</string>
+          <value>LogMixedLinearKrugerCubic_Interpolation</value>
+          <libraryClass>QuantLib::LogMixedLinearKrugerCubic</libraryClass>
         </EnumeratedClass>
 
         <EnumeratedClass>
