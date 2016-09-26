@@ -27,6 +27,12 @@
 #include <ql/math/interpolations/backwardflatinterpolation.hpp>
 #include <ql/math/interpolations/forwardflatinterpolation.hpp>
 
+// fix for gcc
+namespace QuantLib {
+const Size QuantLib::Cubic::requiredPoints;
+const Size QuantLib::Linear::requiredPoints;
+};
+
 using std::pair;
 using std::vector;
 
