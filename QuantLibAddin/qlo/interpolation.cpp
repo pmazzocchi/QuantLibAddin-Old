@@ -28,10 +28,12 @@
 #include <ql/math/interpolations/forwardflatinterpolation.hpp>
 
 // fix for gcc
+#ifdef __GNUC__
 namespace QuantLib {
-const Size QuantLib::Cubic::requiredPoints;
-const Size QuantLib::Linear::requiredPoints;
+    const Size QuantLib::Cubic::requiredPoints;
+    const Size QuantLib::Linear::requiredPoints;
 };
+#endif
 
 using std::pair;
 using std::vector;
