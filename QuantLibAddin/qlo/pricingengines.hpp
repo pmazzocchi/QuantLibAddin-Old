@@ -5,6 +5,7 @@
  Copyright (C) 2006 Cristina Duminuco
  Copyright (C) 2007 Eric Ehlers
  Copyright (C) 2015 Paolo Mazzocchi
+ Copyright (C) 2016 Stefano Fondi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -35,6 +36,7 @@ namespace QuantLib {
     class SwaptionVolatilityStructure;
     class OptionletVolatilityStructure;
     class BlackCapFloorEngine;
+    class BachelierCapFloorEngine;
     class AnalyticCapFloorEngine;
     class MarketModelCapFloorEngine;
     class BlackCalculator;
@@ -116,6 +118,21 @@ namespace QuantLibAddin {
             const QuantLib::Handle<QuantLib::YieldTermStructure>&,
             const QuantLib::Handle<QuantLib::OptionletVolatilityStructure>&,
             const QuantLib::Real displacement,
+            bool permanent);
+    };
+
+    class BachelierCapFloorEngine : public PricingEngine {
+      public:
+        BachelierCapFloorEngine(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& discountCurve,
+            const QuantLib::Handle<QuantLib::Quote>& vol,
+            const QuantLib::DayCounter& dayCounter,
+            bool permanent);
+        BachelierCapFloorEngine(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const QuantLib::Handle<QuantLib::YieldTermStructure>& discountCurve,
+            const QuantLib::Handle<QuantLib::OptionletVolatilityStructure>&,
             bool permanent);
     };
 

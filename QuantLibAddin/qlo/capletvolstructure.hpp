@@ -3,6 +3,7 @@
 /*
  Copyright (C) 2006, 2010 Ferdinando Ametrano
  Copyright (C) 2007 Eric Ehlers
+ Copyright (C) 2016 Stefano Fondi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -25,6 +26,7 @@
 
 #include <ql/types.hpp>
 #include <ql/time/businessdayconvention.hpp>
+#include <ql/termstructures/volatility/volatilitytype.hpp>
 
 namespace QuantLib {
     class Period;
@@ -61,6 +63,8 @@ namespace QuantLibAddin {
                         QuantLib::BusinessDayConvention bdc,
                         const QuantLib::Handle<QuantLib::Quote>& volatility,
                         const QuantLib::DayCounter& dayCounter,
+                        QuantLib::VolatilityType type,
+                        QuantLib::Real shift,
                         bool permanent);
     };
       
@@ -98,6 +102,8 @@ namespace QuantLibAddin {
         const std::vector<QuantLib::Rate>& strikes,
         const std::vector<std::vector<QuantLib::Handle<QuantLib::Quote> > >&,
         const QuantLib::DayCounter& dc,
+        QuantLib::VolatilityType type,
+        QuantLib::Real shift,
         bool permanent);
     };
 
@@ -112,6 +118,8 @@ namespace QuantLibAddin {
                     QuantLib::Rate switchStrike,
                     QuantLib::Real accuracy,
                     QuantLib::Natural maxIterations,
+                    QuantLib::VolatilityType type,
+                    QuantLib::Real shift,
                     bool permanent);
     };
 

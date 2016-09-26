@@ -1,3 +1,8 @@
+Docs/.time-stamp-html
+Docs/.time-stamp-online
+Docs/auto.pages/
+Docs/html-online
+Examples/C++/account.xml
 aclocal.m4
 autom4te.cache/
 config.log
@@ -5,12 +10,13 @@ config.status
 config/
 configure
 gensrc/.time-stamp
+ipch
 libtool
 oh/config.hpp
 oh/config.hpp.in
+oh/loop/loop_*.hpp
 oh/stamp-h1
-ipch
-Docs/.time-stamp-html
-Examples/C++/account.xml
-Docs/.time-stamp-online
-Docs/html-online
+oh/valueobjects/vo_*.hpp
+ohxl/functions/*.?pp
+!ohxl/functions/manual.cpp
+ohxl/register/register_*.cpp

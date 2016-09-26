@@ -3,6 +3,7 @@
 /*
  Copyright (C) 2007 Eric Ehlers
  Copyright (C) 2007, 2008, 2009 Ferdinando Ametrano
+ Copyright (C) 2016 Stefano Fondi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -28,10 +29,49 @@
 #include <ql/termstructures/yield/piecewiseyieldcurve.hpp>
 #include <ql/math/interpolations/forwardflatinterpolation.hpp>
 #include <ql/math/interpolations/backwardflatinterpolation.hpp>
+#include <ql/math/interpolations/mixedinterpolation.hpp>
 
 namespace QuantLibAddin {
 
     // Constructor
+
+    PiecewiseYieldCurve::PiecewiseYieldCurve(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            QuantLib::Natural nDays,
+            const QuantLib::Calendar& calendar,
+            const std::vector<boost::shared_ptr<QuantLib::RateHelper> >& qlrhs,
+            const QuantLib::DayCounter& dayCounter,
+            const std::vector<QuantLib::Handle<QuantLib::Quote> >& jumps,
+            const std::vector<QuantLib::Date>& jumpDates,
+            QuantLib::Real accuracy,
+            const std::string& traitsID,
+            const std::string& interpolatorID,
+            const QuantLib::MixedInterpolation::Behavior behavior,
+            const QuantLib::Size n,
+            bool permanent)
+    : YieldTermStructure(properties, permanent)
+    {
+        libraryObject_ = ObjectHandler::Create<boost::shared_ptr<
+            QuantLib::YieldTermStructure> >()(traitsID,
+                                              interpolatorID,
+                                              nDays,
+                                              calendar,
+                                              qlrhs,
+                                              dayCounter,
+                                              jumps,
+                                              jumpDates,
+                                              accuracy,
+                                              behavior,
+                                              n);
+
+		// convert input strings to enumerated datatypes
+		InterpolatedYieldCurve::Traits traits =
+            ObjectHandler::Create<InterpolatedYieldCurve::Traits>()(traitsID);
+		InterpolatedYieldCurve::Interpolator interpolator=
+			ObjectHandler::Create<InterpolatedYieldCurve::Interpolator>()(interpolatorID);
+
+		pair_ = InterpolatedYieldCurvePair(traits, interpolator);
+    }
 
     PiecewiseYieldCurve::PiecewiseYieldCurve(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
@@ -56,15 +96,17 @@ namespace QuantLibAddin {
                                               dayCounter,
                                               jumps,
                                               jumpDates,
-                                              accuracy);
+                                              accuracy,
+                                              QuantLib::MixedInterpolation::ShareRanges,
+                                              0);
 
-		// convert input strings to enumerated datatypes
-		InterpolatedYieldCurve::Traits traits =
+        // convert input strings to enumerated datatypes
+        InterpolatedYieldCurve::Traits traits =
             ObjectHandler::Create<InterpolatedYieldCurve::Traits>()(traitsID);
-		InterpolatedYieldCurve::Interpolator interpolator=
-			ObjectHandler::Create<InterpolatedYieldCurve::Interpolator>()(interpolatorID);
+        InterpolatedYieldCurve::Interpolator interpolator =
+            ObjectHandler::Create<InterpolatedYieldCurve::Interpolator>()(interpolatorID);
 
-		pair_ = InterpolatedYieldCurvePair(traits, interpolator);
+        pair_ = InterpolatedYieldCurvePair(traits, interpolator);
     }
 
     // Before implementing the member functions it is necessary to provide some logic to wrap
@@ -177,6 +219,8 @@ namespace QuantLibAddin {
             init<QuantLib::Discount, QuantLib::LogCubic>(       InterpolatedYieldCurvePair(InterpolatedYieldCurve::Discount, InterpolatedYieldCurve::LogParabolic));
             init<QuantLib::Discount, QuantLib::Cubic>(          InterpolatedYieldCurvePair(InterpolatedYieldCurve::Discount, InterpolatedYieldCurve::MonotonicParabolic));
             init<QuantLib::Discount, QuantLib::LogCubic>(       InterpolatedYieldCurvePair(InterpolatedYieldCurve::Discount, InterpolatedYieldCurve::MonotonicLogParabolic));
+            init<QuantLib::Discount, QuantLib::MixedLinearCubic>(InterpolatedYieldCurvePair(InterpolatedYieldCurve::Discount, InterpolatedYieldCurve::MixedLinearCubicNaturalSpline));
+            init<QuantLib::Discount, QuantLib::LogMixedLinearCubic>(InterpolatedYieldCurvePair(InterpolatedYieldCurve::Discount, InterpolatedYieldCurve::LogMixedLinearCubicNaturalSpline));
 
             // ForwardRate
             init<QuantLib::ForwardRate, QuantLib::BackwardFlat>(InterpolatedYieldCurvePair(InterpolatedYieldCurve::ForwardRate, InterpolatedYieldCurve::BackwardFlat));
@@ -213,6 +257,8 @@ namespace QuantLibAddin {
             init<QuantLib::ZeroYield, QuantLib::LogCubic>(      InterpolatedYieldCurvePair(InterpolatedYieldCurve::ZeroYield, InterpolatedYieldCurve::LogParabolic));
             init<QuantLib::ZeroYield, QuantLib::Cubic>(         InterpolatedYieldCurvePair(InterpolatedYieldCurve::ZeroYield, InterpolatedYieldCurve::MonotonicParabolic));
             init<QuantLib::ZeroYield, QuantLib::LogCubic>(      InterpolatedYieldCurvePair(InterpolatedYieldCurve::ZeroYield, InterpolatedYieldCurve::MonotonicLogParabolic));
+            init<QuantLib::ZeroYield, QuantLib::MixedLinearCubic>(InterpolatedYieldCurvePair(InterpolatedYieldCurve::ZeroYield, InterpolatedYieldCurve::MixedLinearCubicNaturalSpline));
+            init<QuantLib::ZeroYield, QuantLib::LogMixedLinearCubic>(InterpolatedYieldCurvePair(InterpolatedYieldCurve::ZeroYield, InterpolatedYieldCurve::LogMixedLinearCubicNaturalSpline));
 
         }
 

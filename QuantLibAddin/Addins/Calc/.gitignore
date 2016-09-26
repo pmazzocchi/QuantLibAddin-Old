@@ -7,6 +7,7 @@ assetswap.hpp
 bonds.hpp
 browniangenerators.hpp
 calendar.hpp
+calibrationhelpers.?pp
 capfloor.hpp
 capletvolstructure.hpp
 correlation.hpp

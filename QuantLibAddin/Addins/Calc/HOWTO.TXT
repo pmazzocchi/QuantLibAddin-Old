@@ -1,0 +1,20 @@
+1) Download and install LibreOffice with SDK (tested with version 4.4 and 5.0) 
+2) Prepare for working with the LibreOffice SDK (execute setsdkenv_unix in the SDK directory and set path to executables - Java is not required)
+3) Build boost libraries (if not provided by your distribution)
+4) Build QuantLib, gensrc, log4cxx, ObjectHandler and QuantLibAddin
+5) Set path to libraries (required by Makefile.oo)
+ 	export QL_PATH=/work/QuantLib
+	export OH_PATH=/work/ObjectHandler
+	export QA_PATH=/work/QuantLibAddin
+	export LG_PATH=/work/log4cxx
+	export BOOST_PATH=/usr/lib64
+6) Add the library paths to the search path for libraries (add path to boost libraries if required)
+	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$LG_PATH/src/main/cpp/.libs/
+	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$QA_PATH/qlo/.libs
+	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OH_PATH/oh/.libs
+	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$QL_PATH/ql/.libs
+7) Go to QuantLibAddin/Addins/Calc
+8) Change the PRJ variable of Makefile.oo to your needs (absolute path - use data from step 1)  
+	PRJ=/opt/libreoffice4.4/sdk
+9) Build the Addin (command: "make -f Makefile.oo")
+
