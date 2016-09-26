@@ -14,6 +14,7 @@ include_HEADERS = \
     create_bonds.hpp \
     create_browniangenerators.hpp \
     create_btp.hpp \
+    create_calibrationhelpers.hpp \
     create_capfloor.hpp \
     create_capletvolstructure.hpp \
     create_cmsmarketcalibration.hpp \
@@ -71,6 +72,7 @@ libCreate_la_SOURCES = \
     create_bonds.cpp \
     create_browniangenerators.cpp \
     create_btp.cpp \
+    create_calibrationhelpers.cpp \
     create_capfloor.cpp \
     create_capletvolstructure.cpp \
     create_cmsmarketcalibration.cpp \

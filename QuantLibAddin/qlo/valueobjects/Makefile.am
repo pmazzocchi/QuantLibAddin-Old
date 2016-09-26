@@ -14,6 +14,7 @@ include_HEADERS = \
     vo_bonds.hpp \
     vo_browniangenerators.hpp \
     vo_btp.hpp \
+    vo_calibrationhelpers.hpp \
     vo_capfloor.hpp \
     vo_capletvolstructure.hpp \
     vo_cmsmarketcalibration.hpp \
@@ -73,6 +74,7 @@ libValueObjects_la_SOURCES = \
     vo_bonds.cpp \
     vo_browniangenerators.cpp \
     vo_btp.cpp \
+    vo_calibrationhelpers.cpp \
     vo_capfloor.cpp \
     vo_capletvolstructure.cpp \
     vo_cmsmarketcalibration.cpp \

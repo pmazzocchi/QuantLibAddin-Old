@@ -31,6 +31,7 @@ include_HEADERS = \
     bonds.hpp \
     browniangenerators.hpp \
     btp.hpp \
+    calibrationhelpers.hpp \
     capfloor.hpp \
     capletvolstructure.hpp \
     cmsmarket.hpp \
@@ -96,6 +97,7 @@ libQuantLibAddinCpp_la_SOURCES = \
     bonds.cpp \
     browniangenerators.cpp \
     btp.cpp \
+    calibrationhelpers.cpp \
     capfloor.cpp \
     capletvolstructure.cpp \
     cmsmarket.cpp \
