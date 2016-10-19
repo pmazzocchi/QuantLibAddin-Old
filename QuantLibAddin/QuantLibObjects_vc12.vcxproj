@@ -688,6 +688,10 @@
     <ClCompile Include="qlo\settings.cpp" />
     <ClCompile Include="qlo\timeseries.cpp" />
     <ClCompile Include="qlo\utilities.cpp" />
+    <ClCompile Include="qlo\calibrationhelpers.cpp" />
+    <ClCompile Include="qlo\serialization\create\create_calibrationhelpers.cpp" />
+    <ClCompile Include="qlo\serialization\register\serialization_calibrationhelpers.cpp" />
+    <ClCompile Include="qlo\valueobjects\vo_calibrationhelpers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="qlo\enumerations\register\register_all.hpp" />
@@ -996,6 +1000,10 @@
     <ClInclude Include="qlo\timeseries.hpp" />
     <ClInclude Include="qlo\utilities.hpp" />
     <ClInclude Include="qlo\vcconfig.hpp" />
+    <ClInclude Include="qlo\calibrationhelpers.hpp" />
+    <ClInclude Include="qlo\serialization\create\create_calibrationhelpers.hpp" />
+    <ClInclude Include="qlo\serialization\register\serialization_calibrationhelpers.hpp" />
+    <ClInclude Include="qlo\valueobjects\vo_calibrationhelpers.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ObjectHandler\ohlib_vc12.vcxproj">
