@@ -300,6 +300,8 @@
     <ClCompile Include="conversions\scalartooper.cpp" />
     <ClCompile Include="..\..\QuantLibAddin\qlo\serialization\serializationfactory.cpp" />
     <ClCompile Include="session.cpp" />
+    <ClCompile Include="functions\calibrationhelpers.cpp" />
+    <ClCompile Include="register\register_calibrationhelpers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="functions\functioncount.hpp" />

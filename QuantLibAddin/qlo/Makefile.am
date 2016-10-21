@@ -58,6 +58,7 @@ include_HEADERS = \
     marketmodelevolvers.hpp \
     marketmodels.hpp \
     mathf.hpp \
+    models.hpp \
     optimization.hpp \
     options.hpp \
     overnightindexedswap.hpp \
