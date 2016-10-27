@@ -1,8 +1,12 @@
-x64
+aclocal.m4
+autom4te.cache/
+config.status
+configure
+Docs/html-online
+Docs/QuantLibXL-docs-*-html.tar.gz
 Docs/.time-stamp-html
+Docs/.time-stamp-online
 install-sh
 missing
+x64
 zip/QuantLibXL/
-Docs/.time-stamp-online
-Docs/QuantLibXL-docs-*-html.tar.gz
-Docs/html-online
