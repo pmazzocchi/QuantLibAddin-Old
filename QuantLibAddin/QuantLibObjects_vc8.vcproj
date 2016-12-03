@@ -490,6 +490,14 @@
 				>
 			</File>
 			<File
+				RelativePath="qlo\valueobjects\vo_calibrationhelpers.cpp"
+				>
+			</File>
+			<File
+				RelativePath="qlo\valueobjects\vo_calibrationhelpers.hpp"
+				>
+			</File>
+			<File
 				RelativePath="qlo\valueobjects\vo_capfloor.cpp"
 				>
 			</File>
@@ -1165,6 +1173,14 @@
 				RelativePath="qlo\shortratemodels.hpp"
 				>
 			</File>
+			<File
+				RelativePath="qlo\calibrationhelpers.cpp"
+				>
+			</File>
+			<File
+				RelativePath="qlo\calibrationhelpers.hpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="CashFlows"
@@ -1606,6 +1622,14 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\create\create_btp.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_calibrationhelpers.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\create\create_calibrationhelpers.hpp"
 					>
 				</File>
 				<File
@@ -2054,6 +2078,14 @@
 				</File>
 				<File
 					RelativePath=".\qlo\serialization\register\serialization_btp.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_calibrationhelpers.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\qlo\serialization\register\serialization_calibrationhelpers.hpp"
 					>
 				</File>
 				<File

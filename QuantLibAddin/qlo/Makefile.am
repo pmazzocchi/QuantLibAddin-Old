@@ -20,6 +20,7 @@ include_HEADERS = \
     bonds.hpp \
     browniangenerators.hpp \
     btp.hpp \
+    calibrationhelpers.hpp \
     capfloor.hpp \
     capletvolstructure.hpp \
     cdsoption.hpp \
@@ -57,6 +58,7 @@ include_HEADERS = \
     marketmodelevolvers.hpp \
     marketmodels.hpp \
     mathf.hpp \
+    models.hpp \
     optimization.hpp \
     options.hpp \
     overnightindexedswap.hpp \
@@ -107,6 +109,7 @@ libQuantLibAddin_la_SOURCES = \
     bonds.cpp \
     browniangenerators.cpp \
     btp.cpp \
+    calibrationhelpers.cpp \
     capfloor.cpp \
     capletvolstructure.cpp \
     cdsoption.cpp \

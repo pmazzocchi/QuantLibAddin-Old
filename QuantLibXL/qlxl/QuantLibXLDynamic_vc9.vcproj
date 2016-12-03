@@ -489,6 +489,10 @@
 				RelativePath=".\functions\volatility.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\functions\calibrationhelpers.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="register"
@@ -755,6 +759,10 @@
 			</File>
 			<File
 				RelativePath=".\register\register_volatility.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\register\register_calibrationhelpers.cpp"
 				>
 			</File>
 		</Filter>

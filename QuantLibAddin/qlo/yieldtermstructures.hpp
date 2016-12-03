@@ -5,6 +5,7 @@
  Copyright (C) 2006, 2007, 2009 Ferdinando Ametrano
  Copyright (C) 2005 Plamen Neykov
  Copyright (C) 2005 Aurelien Chanudet
+ Copyright (C) 2016 Stefano Fondi
 
  This file is part of QuantLib, a free-software/open-source library
  for financial quantitative analysts and developers - http://quantlib.org/
@@ -28,6 +29,7 @@
 #include <ql/time/frequency.hpp>
 #include <ql/compounding.hpp>
 #include <ql/types.hpp>
+#include <ql/math/interpolations/mixedinterpolation.hpp>
 
 namespace QuantLib {
     class Calendar;
@@ -126,7 +128,13 @@ namespace QuantLibAddin {
                             Parabolic,
                             LogParabolic,
                             MonotonicParabolic,
-                            MonotonicLogParabolic
+                            MonotonicLogParabolic,
+                            MixedLinearCubicNaturalSpline,
+                            LogMixedLinearCubicNaturalSpline,
+                            MixedLinearMonotonicCubicNaturalSpline,
+                            LogMixedLinearMonotonicCubicNaturalSpline,
+                            MixedLinearKrugerCubic,
+                            LogMixedLinearKrugerCubic                          
         };
         InterpolatedYieldCurve(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
@@ -138,7 +146,9 @@ namespace QuantLibAddin {
             const std::vector<QuantLib::Date>& jumpDates,
             const std::string& traitsID,
             const std::string& interpolatorID,
-            bool permanent);
+            const QuantLib::MixedInterpolation::Behavior behavior,
+            const QuantLib::Size n,
+            bool permanent = false);
         const std::vector<QuantLib::Time>& times() const;
         const std::vector<QuantLib::Date>& dates() const;
         const std::vector<QuantLib::Real>& data() const;

@@ -88,6 +88,14 @@ namespace ObjectHandler {
         //! Constructor - initialize the RangeReference object.
         /*! Parse the input string and store its component tokens in separate
             variables e.g. bookName_, sheetName_, etc.
+
+            \bug This constructor fails for the following value of address:<br>
+                  <tt>"'[GBP_MARKET_AND_TRADES.XLSX]1M (2)'!R4C1"</tt><br>
+            The bug probably affects all worksheets whose name contains
+            parentheses.  The effect of the bug is that if a function on that
+            worksheet fails, the function returns \c #NUM as usual, but no error
+            message is associated with the calling cell, and
+            \c ohRangeRetrieveError() does not work for that worksheet.
         */
         RangeReference(const std::string &address);
         //@}

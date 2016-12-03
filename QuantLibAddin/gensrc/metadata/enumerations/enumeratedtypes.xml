@@ -1709,6 +1709,21 @@
       </EnumeratedTypes>
     </EnumeratedTypeGroup>
 
+    <EnumeratedTypeGroup type='QuantLib::MixedInterpolation::Behavior'>
+      <includeFile>oh/enumerations/typefactory.hpp</includeFile>
+      <constructor>true</constructor>
+      <EnumeratedTypes>
+        <EnumeratedType>
+          <string>ShareRanges</string>
+          <value>QuantLib::MixedInterpolation::ShareRanges</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>SplitRanges</string>
+          <value>QuantLib::MixedInterpolation::SplitRanges</value>
+        </EnumeratedType>
+      </EnumeratedTypes>
+    </EnumeratedTypeGroup>
+
     <EnumeratedTypeGroup type='QuantLibAddin::RateHelper::DepoInclusionCriteria'>
       <includeFile>oh/enumerations/typefactory.hpp</includeFile>
       <constructor>true</constructor>
@@ -1849,6 +1864,30 @@
         <EnumeratedType>
           <string>MonotonicLogParabolic</string>
           <value>QuantLibAddin::InterpolatedYieldCurve::MonotonicLogParabolic</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>MixedLinearCubicNaturalSpline</string>
+          <value>QuantLibAddin::InterpolatedYieldCurve::MixedLinearCubicNaturalSpline</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>LogMixedLinearCubicNaturalSpline</string>
+          <value>QuantLibAddin::InterpolatedYieldCurve::LogMixedLinearCubicNaturalSpline</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>MixedLinearMonotonicCubicNaturalSpline</string>
+          <value>QuantLibAddin::InterpolatedYieldCurve::MixedLinearMonotonicCubicNaturalSpline</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>LogMixedLinearMonotonicCubicNaturalSpline</string>
+          <value>QuantLibAddin::InterpolatedYieldCurve::LogMixedLinearMonotonicCubicNaturalSpline</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>MixedLinearKrugerCubic</string>
+          <value>QuantLibAddin::InterpolatedYieldCurve::MixedLinearKrugerCubic</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>LogMixedLinearKrugerCubic</string>
+          <value>QuantLibAddin::InterpolatedYieldCurve::LogMixedLinearKrugerCubic</value>
         </EnumeratedType>
       </EnumeratedTypes>
     </EnumeratedTypeGroup>

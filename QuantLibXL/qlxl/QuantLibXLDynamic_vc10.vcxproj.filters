@@ -411,6 +411,12 @@
     <ClCompile Include="..\..\QuantLibAddin\qlo\serialization\serializationfactory.cpp" />
     <ClCompile Include="session.cpp" />
     <ClCompile Include="functions\credit.cpp" />
+    <ClCompile Include="functions\calibrationhelpers.cpp">
+      <Filter>functions</Filter>
+    </ClCompile>
+    <ClCompile Include="register\register_calibrationhelpers.cpp">
+      <Filter>register</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="functions\functioncount.hpp">

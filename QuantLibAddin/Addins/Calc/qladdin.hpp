@@ -34,6 +34,8 @@
 #include <cppuhelper/factory.hxx>
 #include <cppuhelper/implementationentry.hxx>
 
+#include <uno/lbnames.h>
+
 #include <com/sun/star/sheet/XAddIn.hpp>
 #include <com/sun/star/lang/XServiceName.hpp>
 #include <com/sun/star/lang/XServiceInfo.hpp>

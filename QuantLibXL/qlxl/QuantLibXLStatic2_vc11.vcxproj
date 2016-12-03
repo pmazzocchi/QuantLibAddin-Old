@@ -702,6 +702,8 @@
     <ClCompile Include="conversions\opertovector.cpp" />
     <ClCompile Include="conversions\scalartooper.cpp" />
     <ClCompile Include="session.cpp" />
+    <ClCompile Include="functions\calibrationhelpers.cpp" />
+    <ClCompile Include="register\register_calibrationhelpers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="register\register_all.hpp" />

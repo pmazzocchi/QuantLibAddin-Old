@@ -177,7 +177,8 @@ lang::Locale CalcAddins_impl::getLocale() throw (RuntimeException) {
 
 static Reference< XInterface > 
 SAL_CALL create_CalcAddins_impl(Reference<XComponentContext> const & xContext) 
-    SAL_THROW( () ) {
+//    SAL_THROW( () ) 
+{
     return static_cast< ::cppu::OWeakObject * > ( new CalcAddins_impl );
 }
 

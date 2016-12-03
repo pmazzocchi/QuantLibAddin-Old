@@ -1047,6 +1047,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\qlo\calibrationhelpers.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\qlo\calibrationhelpers.hpp"
+				>
+			</File>
+			<File
 				RelativePath="qlo\capfloor.cpp"
 				>
 			</File>
@@ -1419,51 +1427,51 @@
 			Name="loop"
 			>
 			<File
-				RelativePath="qlo\loop\loop_abcd.hpp"
+				RelativePath=".\qlo\loop\loop_abcd.hpp"
 				>
 			</File>
 			<File
-				RelativePath="qlo\loop\loop_bonds.hpp"
+				RelativePath=".\qlo\loop\loop_calendar.hpp"
 				>
 			</File>
 			<File
-				RelativePath="qlo\loop\loop_calendar.hpp"
+				RelativePath=".\qlo\loop\loop_capletvolstructure.hpp"
 				>
 			</File>
 			<File
-				RelativePath="qlo\loop\loop_capletvolstructure.hpp"
+				RelativePath=".\qlo\loop\loop_date.hpp"
 				>
 			</File>
 			<File
-				RelativePath="qlo\loop\loop_date.hpp"
+				RelativePath=".\qlo\loop\loop_daycounter.hpp"
 				>
 			</File>
 			<File
-				RelativePath="qlo\loop\loop_daycounter.hpp"
+				RelativePath=".\qlo\loop\loop_defaulttermstructures.hpp"
 				>
 			</File>
 			<File
-				RelativePath="qlo\loop\loop_index.hpp"
+				RelativePath=".\qlo\loop\loop_index.hpp"
 				>
 			</File>
 			<File
-				RelativePath="qlo\loop\loop_interpolation.hpp"
+				RelativePath=".\qlo\loop\loop_interpolation.hpp"
 				>
 			</File>
 			<File
-				RelativePath="qlo\loop\loop_swaptionvolstructure.hpp"
+				RelativePath=".\qlo\loop\loop_swaptionvolstructure.hpp"
 				>
 			</File>
 			<File
-				RelativePath="qlo\loop\loop_termstructures.hpp"
+				RelativePath=".\qlo\loop\loop_termstructures.hpp"
 				>
 			</File>
 			<File
-				RelativePath="qlo\loop\loop_timeseries.hpp"
+				RelativePath=".\qlo\loop\loop_timeseries.hpp"
 				>
 			</File>
 			<File
-				RelativePath="qlo\loop\loop_valueobject.hpp"
+				RelativePath=".\qlo\loop\loop_valueobjects.hpp"
 				>
 			</File>
 		</Filter>
