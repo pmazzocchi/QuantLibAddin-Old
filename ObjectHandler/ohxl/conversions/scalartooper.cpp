@@ -27,6 +27,11 @@
 
 namespace ObjectHandler {
 
+    DLL_API void scalarToOper(const int &value, OPER &xInt, bool expandVector) {
+        xInt.xltype = xltypeNum;
+        xInt.val.num = value;
+    }
+
     DLL_API void scalarToOper(const long &value, OPER &xLong, bool expandVector) {
         xLong.xltype = xltypeNum;
         xLong.val.num = value;

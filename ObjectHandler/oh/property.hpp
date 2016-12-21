@@ -46,7 +46,7 @@ namespace ObjectHandler {
     };
 
     //! The underlying types supported by property_t
-    typedef boost::make_recursive_variant<empty_property_tag, bool, std::string, long, double,
+    typedef boost::make_recursive_variant<empty_property_tag, bool, int, std::string, long, double,
             std::vector<boost::recursive_variant_> >::type property_base;
 
     //! A value of variant type

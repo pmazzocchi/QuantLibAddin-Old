@@ -32,6 +32,8 @@
 
 namespace ObjectHandler {
 
+    //! Convert a int to an OPER.
+    DLL_API void scalarToOper(const int &value, OPER &xInt, bool expandVector = true);
     //! Convert a long to an OPER.
     DLL_API void scalarToOper(const long &value, OPER &xLong, bool expandVector = true);
     //! Convert a double to an OPER.
