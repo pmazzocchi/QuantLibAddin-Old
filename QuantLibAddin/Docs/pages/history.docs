@@ -23,6 +23,30 @@
 
 /*! \page history Version History
 
+<strong>Release 1.9.0 - ??? 201?</strong>
+
+- 0 new functions / 1,114 in total
+
+- Fixed bug in put/call processing for coupon vectors
+
+- In Credit, correct misspelled function names:
+
+qlCrediBasketAttachLive -> 
+qlCreditBasketAttachLive
+
+qlCrediBasketDetachLive ->
+qlCreditBasketDetachLive
+
+- In Interpolation, fix misspelled default value:
+
+MonotonicNaturalCubicSpline ->
+MonotonicCubicNaturalSpline
+
+- In Basket Loss Models, correct misspelled parameter name:
+
+RecoveyRates ->
+RecoveryRates
+
 <strong>Release 1.8.0 - October 2016</strong>
 
 FUNCTIONALITY
