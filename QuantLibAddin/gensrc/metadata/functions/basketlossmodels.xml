@@ -36,7 +36,7 @@
         <tensorRank>scalar</tensorRank>
         <description>Gaussian model single correlation.</description>
       </Parameter>
-      <Parameter name='RecoveyRates'>
+      <Parameter name='RecoveryRates'>
         <type>double</type>
         <tensorRank>vector</tensorRank>
         <description>Recovery rates of each live name in the portfolio.</description>
@@ -57,7 +57,7 @@
             <tensorRank>scalar</tensorRank>
             <description>Model single correlation.</description>
           </Parameter>
-          <Parameter name='RecoveyRates'>
+          <Parameter name='RecoveryRates'>
             <type>double</type>
             <tensorRank>vector</tensorRank>
             <description>Recovery rates of each live name in the portfolio.</description>
@@ -83,7 +83,7 @@
             <tensorRank>scalar</tensorRank>
             <description>Model single correlation.</description>
           </Parameter>
-          <Parameter name='RecoveyRates'>
+          <Parameter name='RecoveryRates'>
             <type>double</type>
             <tensorRank>vector</tensorRank>
             <description>Recovery rates of each live name in the portfolio.</description>
@@ -114,7 +114,7 @@
             <tensorRank>matrix</tensorRank>
             <description>Systemic model factors.</description>
           </Parameter>
-          <Parameter name='RecoveyRates'>
+          <Parameter name='RecoveryRates'>
             <type>double</type>
             <tensorRank>vector</tensorRank>
             <description>Recovery rates of each live name in the portfolio.</description>
@@ -135,7 +135,7 @@
             <tensorRank>matrix</tensorRank>
             <description>Systemic model factors.</description>
           </Parameter>
-          <Parameter name='RecoveyRates'>
+          <Parameter name='RecoveryRates'>
             <type>double</type>
             <tensorRank>vector</tensorRank>
             <description>Recovery rates of each live name in the portfolio.</description>
@@ -205,7 +205,7 @@
             <tensorRank>matrix</tensorRank>
             <description>Systemic model factors.</description>
           </Parameter>
-          <Parameter name='RecoveyRates'>
+          <Parameter name='RecoveryRates'>
             <type>double</type>
             <tensorRank>vector</tensorRank>
             <description>Recovery rates of each live name in the portfolio.</description>
@@ -233,7 +233,7 @@
             <tensorRank>matrix</tensorRank>
             <description>Systemic model factors.</description>
           </Parameter>
-          <Parameter name='RecoveyRates'>
+          <Parameter name='RecoveryRates'>
             <type>double</type>
             <tensorRank>vector</tensorRank>
             <description>Recovery rates of each live name in the portfolio.</description>
@@ -265,7 +265,7 @@
             <tensorRank>matrix</tensorRank>
             <description>Systemic model factors.</description>
           </Parameter>
-          <Parameter name='RecoveyRates'>
+          <Parameter name='RecoveryRates'>
             <type>double</type>
             <tensorRank>vector</tensorRank>
             <description>Recovery rates of each live name in the portfolio.</description>
@@ -297,7 +297,7 @@
             <tensorRank>matrix</tensorRank>
             <description>Systemic model factors.</description>
           </Parameter>
-          <Parameter name='RecoveyRates'>
+          <Parameter name='RecoveryRates'>
             <type>double</type>
             <tensorRank>vector</tensorRank>
             <description>Recovery rates of each live name in the portfolio.</description>
@@ -333,7 +333,7 @@
             <tensorRank>matrix</tensorRank>
             <description>Systemic model factors.</description>
           </Parameter>
-          <Parameter name='RecoveyRates'>
+          <Parameter name='RecoveryRates'>
             <type>double</type>
             <tensorRank>vector</tensorRank>
             <description>Recovery rates of each live name in the portfolio.</description>
@@ -354,7 +354,7 @@
             <tensorRank>matrix</tensorRank>
             <description>Systemic model factors.</description>
           </Parameter>
-          <Parameter name='RecoveyRates'>
+          <Parameter name='RecoveryRates'>
             <type>double</type>
             <tensorRank>vector</tensorRank>
             <description>Recovery rates of each live name in the portfolio.</description>
@@ -380,7 +380,7 @@
             <tensorRank>matrix</tensorRank>
             <description>Systemic model factors.</description>
           </Parameter>
-          <Parameter name='RecoveyRates'>
+          <Parameter name='RecoveryRates'>
             <type>double</type>
             <tensorRank>vector</tensorRank>
             <description>Recovery rates of each live name in the portfolio.</description>

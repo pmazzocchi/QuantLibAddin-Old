@@ -810,7 +810,7 @@
     </Member>
 
     <Member name='qlCapFloorTermVolCurveOptionDates' type='QuantLib::CapFloorTermVolCurve' superType='libraryClass'>
-      <description>Returns the option dates from the given CapFloorTermVolCurve object. .</description>
+      <description>Returns the option dates from the given CapFloorTermVolCurve object.</description>
       <libraryFunction>optionDates</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel' calcInWizard='false' />

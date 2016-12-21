@@ -210,7 +210,7 @@ namespace QuantLibAddin {
                 break;
             default:
                 OH_FAIL("DigitalIborLeg::DigitalIborLeg: invalid string for put option: "
-                        << callPositionAndATMInclusion);
+                        << putPositionAndATMInclusion);
                 break;
         }
 
@@ -358,7 +358,7 @@ namespace QuantLibAddin {
                 break;
             default:
                 OH_FAIL("DigitalIborLeg::DigitalIborLeg: invalid string for put option: "
-                        << callPositionAndATMInclusion);
+                        << putPositionAndATMInclusion);
                 break;
         }
 

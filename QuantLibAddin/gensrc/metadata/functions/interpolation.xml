@@ -234,7 +234,7 @@
       </SupportedPlatforms>
       <ParameterList>
         <Parameters>
-          <Parameter name='InterpolationType' default ='"MonotonicNaturalCubicSpline"'>
+          <Parameter name='InterpolationType' default ='"MonotonicCubicNaturalSpline"'>
             <type>string</type>
             <tensorRank>scalar</tensorRank>
             <description>interpolation type (e.g BackwardFlat, ForwardFlat, MonotonicCubicNaturalSpline, etc.)</description>

@@ -139,7 +139,7 @@
       </ReturnValue>
     </Member>
 
-    <Member name='qlCrediBasketAttachLive' type='QuantLib::Basket' >
+    <Member name='qlCreditBasketAttachLive' type='QuantLib::Basket' >
       <!--objectClass='QuantLibAddin::CreditBasket' libraryClass='QuantLib::Basket'-->
       <description>Remaining attach amount.</description>
       <libraryFunction>remainingAttachmentAmount</libraryFunction>
@@ -156,7 +156,7 @@
       </ReturnValue>
     </Member>
 
-    <Member name='qlCrediBasketDetachLive' type='QuantLib::Basket' >
+    <Member name='qlCreditBasketDetachLive' type='QuantLib::Basket' >
       <!--objectClass='QuantLibAddin::CreditBasket' libraryClass='QuantLib::Basket'-->
       <description>Remaining detach amount.</description>
       <libraryFunction>remainingDetachmentAmount</libraryFunction>

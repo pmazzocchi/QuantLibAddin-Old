@@ -43,14 +43,9 @@ using ObjectHandler::property_t;
 
 using QuantLib::earlier_than;
 using QuantLib::CashFlow;
-using QuantLib::CashFlows;
 using QuantLib::Date;
 using QuantLib::Real;
-using QuantLib::Time;
-using QuantLib::Rate;
-using QuantLib::Spread;
 using QuantLib::Null;
-using QuantLib::YieldTermStructure;
 
 using std::vector;
 
