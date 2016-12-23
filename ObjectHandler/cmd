@@ -1,2 +1,5 @@
 # Eric's cheat sheet for running configure
-DOXYGEN=/home/erik/doxygen/doxygen-1.8.7/bin/doxygen ./configure --without-log4cxx --with-gensrc=/media/windows/linux/repos/QuantLibAddin-Old/gensrc --prefix=$IDIR CPPFLAGS=-I$IDIR/include LDFLAGS=-L$IDIR/lib
+
+#DOXYGEN=/home/erik/doxygen/doxygen-1.8.7/bin/doxygen ./configure --without-log4cxx --with-gensrc=/media/windows/linux/repos/QuantLibAddin-Old/gensrc --prefix=$IDIR CPPFLAGS=-I$IDIR/include LDFLAGS=-L$IDIR/lib
+./configure --without-log4cxx --with-gensrc=/media/erik/OS/linux/repos/QuantLibAddin-Old/gensrc --prefix=$IDIR CPPFLAGS=-I$IDIR/include LDFLAGS=-L$IDIR/lib
+
