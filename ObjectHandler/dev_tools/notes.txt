@@ -1,4 +1,4 @@
-Eric's notes to himself for next time.
+Eric's notes to himself on how to package the release.
 
 |=============================================================
 |system                 | windows                | linux     |
