@@ -18,6 +18,12 @@
 
 /*! \page framework Framework
 
+<table border="1" bgcolor="lightsteelblue">
+<tr>
+<td><b>NB:</b> The Framework has not been updated for the 1.9 release.  This is the documentation for version 1.8 of the Framework.  If you need further information please send mail to <a href="https://lists.sourceforge.net/lists/listinfo/quantlib-users">quantlib-users@lists.sf.net</a>.</td>
+</tr>
+</table>
+
 The QuantLibXL Framework is an application layer written in Excel VBA which
 wraps the QuantLibXL Addin with additional functionality in support of market
 data feeds, creation of instruments, etc.
@@ -54,14 +60,14 @@ works, but the VBA code does not.
 
 Here is the link to the zip file for 32-bit Excel:
 
-<a href="http://sourceforge.net/projects/quantlib/files/QuantLibXL/1.9.0/QuantLibXL-1.9.0-RateCurveFramework.zip">QuantLibXL-1.9.0-RateCurveFramework.zip</a>.
+<a href="https://sourceforge.net/projects/quantlib/files/QuantLibXL/1.8.0/QuantLibXL-1.8.0-framework.zip">QuantLibXL-1.8.0-framework.zip</a>.
 
 We have packaged up a build for 64-bit Excel, and it is configured to load the
 64-bit XLL, but as mentioned the VBA code does not work under 64-bit Excel so
 this build is broken.  If you would like to help fix it then please send mail
-to quantlib-users@lists.sf.net.
+to <a href="https://lists.sourceforge.net/lists/listinfo/quantlib-users">quantlib-users@lists.sf.net</a>.
 
-<a href="http://sourceforge.net/projects/quantlib/files/QuantLibXL/1.9.0/QuantLibXL-1.9.0-x64-RateCurveFramework.zip">QuantLibXL-1.9.0-x64-RateCurveFramework.zip</a>.
+<a href="https://sourceforge.net/projects/quantlib/files/QuantLibXL/1.8.0/QuantLibXL-1.8.0-x64-RateCurveFramework.zip">QuantLibXL-1.8.0-x64-RateCurveFramework.zip</a>.
 
 Download the zip file to your hard drive and uncompress it.
 
