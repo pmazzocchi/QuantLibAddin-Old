@@ -2,8 +2,8 @@
 # !defines
 
 !define APP "ObjectHandler"
-!define VER_NUMBER "1.9.0"
-!define DEFAULT_PATH "C:\build_ql_1_9_0"
+!define VER_NUMBER "1.10.0"
+!define DEFAULT_PATH "C:\build_ql_1_10_0"
 
 # Compiler Flags
 

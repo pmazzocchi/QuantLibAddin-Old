@@ -43,17 +43,17 @@ import shutil
 # ROOT_DIRS - The list of root folders from which
 # you want the find/replace to begin.
 ROOT_DIRS = (
-    #'/media/windows/linux/repos/quantlib/log4cxx/src/main/include/log4cxx',
-    #'/media/windows/linux/repos/quantlib/gensrc',
-    #'/media/windows/linux/repos/quantlib/ObjectHandler',
-    #'/media/windows/linux/repos/quantlib/QuantLibAddin',
-    #'/media/windows/linux/repos/quantlib/QuantLibXL',
-	'C:/projects/QuantLibAddin-Old-Master/log4cxx/src/main/include/log4cxx',
-    'C:/projects/QuantLibAddin-Old-Master/gensrc',
-    'C:/projects/QuantLibAddin-Old-Master/ObjectHandler',
-    'C:/projects/QuantLibAddin-Old-Master/QuantLibAddin',
-    'C:/projects/QuantLibAddin-Old-Master/QuantLibXL',
-	'C:/projects/QuantLibAddin-Old-Master/XL-Launcher',
+    '/home/erik/projects/QuantLibAddin-Old/log4cxx/src/main/include/log4cxx',
+    #'/home/erik/projects/QuantLibAddin-Old/gensrc',
+    #'/home/erik/projects/QuantLibAddin-Old/ObjectHandler',
+    #'/home/erik/projects/QuantLibAddin-Old/QuantLibAddin',
+    #'/home/erik/projects/QuantLibAddin-Old/QuantLibXL',
+    #'C:/projects/QuantLibAddin-Old-Master/log4cxx/src/main/include/log4cxx',
+    #'C:/projects/QuantLibAddin-Old-Master/gensrc',
+    #'C:/projects/QuantLibAddin-Old-Master/ObjectHandler',
+    #'C:/projects/QuantLibAddin-Old-Master/QuantLibAddin',
+    #'C:/projects/QuantLibAddin-Old-Master/QuantLibXL',
+    #'C:/projects/QuantLibAddin-Old-Master/XL-Launcher',
 )
 
 # CALLBACK FUNCTIONS - Called from regexes which require multiple passes
@@ -101,12 +101,12 @@ SUBSTITUTIONS = (
 #   (re.compile('abcDEFghi'), toLower),
 
 ##  Frequently used
-    (re.compile('1_8_0'), '1_9_0'),
-    (re.compile('1\.8\.0'), '1.9.0'),
-    (re.compile('0x010800'), '0x010900'),
-    (re.compile('R010800f0'), 'R010900f0'),
-    (re.compile('0\.10\.0f6'), '0.10.0f7'),
-    (re.compile('0x001000f6'), '0x001000f7'),
+    (re.compile('1_9_0'), '1_10_0'),
+    (re.compile('1\.9\.0'), '1.10.0'),
+    (re.compile('0x010900'), '0x011000'),
+    (re.compile('R010900f0'), 'R011000f0'),
+    (re.compile('0\.10\.0f7'), '0.10.0f8'),
+    (re.compile('0x001000f7'), '0x001000f8'),
 )
 
 # INCLUDE_FILES
@@ -176,9 +176,6 @@ IGNORE_DIRS = (
     re.compile('^Launcher$'),
     re.compile('^lib$'),
     #re.compile('^log4cxx$'),
-    re.compile('^QuantLib$'),
-    re.compile('^QuantLib-site$'),
-    re.compile('^QuantLib-SWIG$'),
     re.compile('^Workbooks$'),
 )
 
