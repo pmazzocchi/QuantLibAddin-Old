@@ -1347,11 +1347,6 @@
             <tensorRank>scalar</tensorRank>
             <description>SwaptionVolatilityStructure object ID.</description>
           </Parameter>
-          <Parameter name='Displacement' default='0.0'>
-            <type>QuantLib::Real</type>
-            <tensorRank>scalar</tensorRank>
-            <description>displacement in a displaced diffusion model.</description>
-          </Parameter>
         </Parameters>
       </ParameterList>
     </Constructor>

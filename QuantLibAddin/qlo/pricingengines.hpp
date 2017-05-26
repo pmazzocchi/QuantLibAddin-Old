@@ -100,7 +100,6 @@ namespace QuantLibAddin {
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
             const QuantLib::Handle<QuantLib::YieldTermStructure>&,
             const QuantLib::Handle<QuantLib::SwaptionVolatilityStructure>&,
-            const QuantLib::Real displacement,
             bool permanent);
     };
 
