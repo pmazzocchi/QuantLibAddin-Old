@@ -23,7 +23,53 @@
 
 /*! \page history Version History
 
-<strong>Release 1.6.0 - July 2015</strong>
+<strong>Release 1.11.0 - xxx 201x</strong>
+
+- 0 new functions / 1,114 in total
+
+- Added support for VC14, and fixed auto_link.hpp files (thanks to Francois Botha
+
+- Updated signature of function qlBlackSwaptionEngine() (thanks to Stefano Fondi)
+
+- Updated signatures of functions qlSwaptionImpliedVolatility() and qlMixedLinearCubicInterpolation()
+
+<strong>Release 1.9.0 - May 2017</strong>
+
+- 0 new functions / 1,114 in total
+
+- Fixed bug in put/call processing for coupon vectors
+
+- In Credit, correct misspelled function names:
+
+qlCrediBasketAttachLive -> 
+qlCreditBasketAttachLive
+
+qlCrediBasketDetachLive ->
+qlCreditBasketDetachLive
+
+- In Interpolation, fix misspelled default value:
+
+MonotonicNaturalCubicSpline ->
+MonotonicCubicNaturalSpline
+
+- In Basket Loss Models, correct misspelled parameter name:
+
+RecoveyRates ->
+RecoveryRates
+
+<strong>Release 1.8.0 - October 2016</strong>
+
+FUNCTIONALITY
+
+- 4 new functions / 1,114 in total
+
+<strong>Release 1.7.0 - December 2015</strong>
+
+FUNCTIONALITY
+
+- 30 new functions / 1,110 in total
+
+<strong>Release 1.6.0 - August 2015</strong>
 
 REQUIRED PACKAGES
 

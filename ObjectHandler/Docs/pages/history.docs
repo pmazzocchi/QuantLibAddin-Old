@@ -23,6 +23,22 @@
 
 /*! \page history Version History
 
+<strong>Release 1.11.0 - xxx 201x</strong>
+
+- Added support for VC14, and fixed auto_link.hpp files (thanks to Francois Botha
+
+<strong>Release 1.9.0 - May 2017</strong>
+
+- Maintenance release.
+
+<strong>Release 1.8.0 - October 2016</strong>
+
+- Maintenance release.
+
+<strong>Release 1.7.0 - December 2015</strong>
+
+- Maintenance release.
+
 <strong>Release 1.6.0 - August 2015</strong>
 
 FUNCTIONALITY
