@@ -159,8 +159,7 @@
       </ReturnValue>
     </Member>
 
-    <!--FIXME signature changed-->
-	<!--Member name='qlSwaptionImpliedVolatility' type='QuantLib::Swaption'>
+    <Member name='qlSwaptionImpliedVolatility' type='QuantLib::Swaption'>
       <description>Returns the volatility implied by the given price for the given Swaption object.</description>
       <libraryFunction>impliedVolatility</libraryFunction>
       <SupportedPlatforms>
@@ -205,6 +204,11 @@
             <tensorRank>scalar</tensorRank>
             <description>Maximum volatility, no higher solution.</description>
           </Parameter>
+          <Parameter name='VolatilityType' default='"ShiftedLognormal"'>
+            <type>QuantLib::VolatilityType</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Volatility type.</description>
+          </Parameter>
           <Parameter name='Displacement' default='0.0'>
             <type>QuantLib::Real</type>
             <tensorRank>scalar</tensorRank>
@@ -216,7 +220,7 @@
         <type>QuantLib::Volatility</type>
         <tensorRank>scalar</tensorRank>
       </ReturnValue>
-    </Member-->
+    </Member>
 
   </Functions>
 </Category>

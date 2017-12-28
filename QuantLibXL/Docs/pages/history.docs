@@ -32,7 +32,9 @@ QuantLibAddin project, please refer to
 
 - 0 new functions / 1,114 in total
 
-- updated signature of constructor BlackSwaptionEngine (thanks to Stefano Fondi)
+- updated signature of function qlBlackSwaptionEngine() (thanks to Stefano Fondi)
+
+- updated signatures of functions qlSwaptionImpliedVolatility() and qlMixedLinearCubicInterpolation()
 
 <strong>Release 1.9.0 - May 2017</strong>
 

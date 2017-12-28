@@ -256,8 +256,7 @@
 
     <!-- MixedLinearCubicInterpolation constructor and interface -->
 
-    <!--FIXME signature of QL function changed-->
-	<!--Constructor name='qlMixedLinearCubicInterpolation'>
+    <Constructor name='qlMixedLinearCubicInterpolation'>
       <libraryFunction>MixedLinearCubicInterpolation</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
@@ -280,6 +279,11 @@
             <type>QuantLib::Size</type>
             <tensorRank>scalar</tensorRank>
             <description>zero based knot index at which interpolation switches from linear to cubic.</description>
+          </Parameter>
+          <Parameter name='MixedInterpolationBehavior' default='"ShareRanges"'>
+            <type>QuantLib::MixedInterpolation::Behavior</type>
+            <tensorRank>scalar</tensorRank>
+            <description>ShareRanges to join two different interpolations over all the pillars, SplitRanges otherwise.</description>
           </Parameter>
           <Parameter name='DerApprox' default='"Kruger"'>
             <type>QuantLib::CubicInterpolation::DerivativeApprox</type>
@@ -313,7 +317,7 @@
           </Parameter>
         </Parameters>
       </ParameterList>
-    </Constructor-->
+    </Constructor>
 
     <!-- CubicSplineInterpolation constructor and interface -->
 
