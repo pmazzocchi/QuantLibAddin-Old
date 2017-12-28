@@ -28,6 +28,12 @@ implementation of QuantLibAddin.  For a summary of updates to the core
 QuantLibAddin project, please refer to
 <a href="http://www.quantlibaddin.org/history.html">http://www.quantlibaddin.org/history.html</a>
 
+<strong>Release 1.11.0 - xxx 201x</strong>
+
+- 0 new functions / 1,114 in total
+
+- updated signature of constructor BlackSwaptionEngine (thanks to Stefano Fondi)
+
 <strong>Release 1.9.0 - May 2017</strong>
 
 - 0 new functions / 1,114 in total

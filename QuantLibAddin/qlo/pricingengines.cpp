@@ -83,17 +83,15 @@ namespace QuantLibAddin {
             QuantLib::BlackSwaptionEngine(hYTS, vol, dayCounter, displacement));
     }
 
-	// FIXME signature of QL function changed
-    //BlackSwaptionEngine::BlackSwaptionEngine(
-    //    const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
-    //    const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
-    //    const QuantLib::Handle<QuantLib::SwaptionVolatilityStructure>& vol,
-    //    const QuantLib::Real displacement,
-    //    bool permanent) : PricingEngine(properties, permanent)
-    //{
-    //    libraryObject_ = boost::shared_ptr<QuantLib::PricingEngine>(new
-    //        QuantLib::BlackSwaptionEngine(hYTS, vol, displacement));
-    //}
+    BlackSwaptionEngine::BlackSwaptionEngine(
+        const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+        const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
+        const QuantLib::Handle<QuantLib::SwaptionVolatilityStructure>& vol,
+        bool permanent) : PricingEngine(properties, permanent)
+    {
+        libraryObject_ = boost::shared_ptr<QuantLib::PricingEngine>(new
+            QuantLib::BlackSwaptionEngine(hYTS, vol));
+    }
 
     BlackCapFloorEngine::BlackCapFloorEngine(
         const boost::shared_ptr<ObjectHandler::ValueObject>& properties,

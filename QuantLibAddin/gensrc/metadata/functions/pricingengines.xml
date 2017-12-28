@@ -1325,8 +1325,7 @@
       </ParameterList>
     </Constructor>
 
-	<!--FIXME signature of QL function changed-->
-    <!--Constructor name='qlBlackSwaptionEngine'>
+    <Constructor name='qlBlackSwaptionEngine'>
       <libraryFunction>BlackSwaptionEngine</libraryFunction>
       <SupportedPlatforms>
         <SupportedPlatform name='Excel'/>
@@ -1347,14 +1346,9 @@
             <tensorRank>scalar</tensorRank>
             <description>SwaptionVolatilityStructure object ID.</description>
           </Parameter>
-          <Parameter name='Displacement' default='0.0'>
-            <type>QuantLib::Real</type>
-            <tensorRank>scalar</tensorRank>
-            <description>displacement in a displaced diffusion model.</description>
-          </Parameter>
         </Parameters>
       </ParameterList>
-    </Constructor-->
+    </Constructor>
 
     <Constructor name='qlBlackSwaptionEngine2'>
       <libraryFunction>BlackSwaptionEngine</libraryFunction>
