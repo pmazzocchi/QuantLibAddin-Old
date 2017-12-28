@@ -256,10 +256,10 @@
 
     <!-- MixedLinearCubicInterpolation constructor and interface -->
 
-    <Constructor name='qlMixedLinearCubicInterpolation'>
+    <!--FIXME signature of QL function changed-->
+	<!--Constructor name='qlMixedLinearCubicInterpolation'>
       <libraryFunction>MixedLinearCubicInterpolation</libraryFunction>
       <SupportedPlatforms>
-        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
         <SupportedPlatform name='Excel'/>
         <SupportedPlatform name='Cpp'/>
       </SupportedPlatforms>
@@ -313,7 +313,7 @@
           </Parameter>
         </Parameters>
       </ParameterList>
-    </Constructor>
+    </Constructor-->
 
     <!-- CubicSplineInterpolation constructor and interface -->
 

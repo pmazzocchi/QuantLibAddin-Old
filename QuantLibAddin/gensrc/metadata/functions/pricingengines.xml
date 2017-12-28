@@ -1325,10 +1325,10 @@
       </ParameterList>
     </Constructor>
 
-    <Constructor name='qlBlackSwaptionEngine'>
+	<!--FIXME signature of QL function changed-->
+    <!--Constructor name='qlBlackSwaptionEngine'>
       <libraryFunction>BlackSwaptionEngine</libraryFunction>
       <SupportedPlatforms>
-        <!--SupportedPlatform name='Excel' calcInWizard='false'/-->
         <SupportedPlatform name='Excel'/>
         <SupportedPlatform name='Calc'/>
         <SupportedPlatform name='Cpp'/>
@@ -1354,7 +1354,7 @@
           </Parameter>
         </Parameters>
       </ParameterList>
-    </Constructor>
+    </Constructor-->
 
     <Constructor name='qlBlackSwaptionEngine2'>
       <libraryFunction>BlackSwaptionEngine</libraryFunction>
