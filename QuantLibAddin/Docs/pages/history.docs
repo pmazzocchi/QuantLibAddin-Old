@@ -27,9 +27,11 @@
 
 - 0 new functions / 1,114 in total
 
-- updated signature of function qlBlackSwaptionEngine() (thanks to Stefano Fondi)
+- Added support for VC14, and fixed auto_link.hpp files (thanks to Francois Botha
 
-- updated signatures of functions qlSwaptionImpliedVolatility() and qlMixedLinearCubicInterpolation()
+- Updated signature of function qlBlackSwaptionEngine() (thanks to Stefano Fondi)
+
+- Updated signatures of functions qlSwaptionImpliedVolatility() and qlMixedLinearCubicInterpolation()
 
 <strong>Release 1.9.0 - May 2017</strong>
 
