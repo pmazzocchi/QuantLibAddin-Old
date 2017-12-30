@@ -203,6 +203,7 @@ def zipFrameworkFiles(zipFile):
 def zipSourceFiles(zipFile):
 
     zipFile.zipGlob("*.sln")
+    zipFile.zip("QuantLibXL.props")
     zipFile.zipGlob("*.txt", (re.compile("^goodpractice.txt$"),))
 
     zipFile.zip("Docs\\Makefile.vc")
