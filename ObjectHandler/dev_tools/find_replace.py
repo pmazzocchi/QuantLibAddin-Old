@@ -43,11 +43,11 @@ import shutil
 # ROOT_DIRS - The list of root folders from which
 # you want the find/replace to begin.
 ROOT_DIRS = (
-    '/home/erik/projects/QuantLibAddin-Old/log4cxx/src/main/include/log4cxx',
-    #'/home/erik/projects/QuantLibAddin-Old/gensrc',
-    #'/home/erik/projects/QuantLibAddin-Old/ObjectHandler',
-    #'/home/erik/projects/QuantLibAddin-Old/QuantLibAddin',
-    #'/home/erik/projects/QuantLibAddin-Old/QuantLibXL',
+    #'/home/erik/projects/QuantLibAddin-Old/log4cxx/src/main/include/log4cxx',
+    '/home/erik/projects/QuantLibAddin-Old/gensrc',
+    '/home/erik/projects/QuantLibAddin-Old/ObjectHandler',
+    '/home/erik/projects/QuantLibAddin-Old/QuantLibAddin',
+    '/home/erik/projects/QuantLibAddin-Old/QuantLibXL',
     #'C:/projects/QuantLibAddin-Old-Master/log4cxx/src/main/include/log4cxx',
     #'C:/projects/QuantLibAddin-Old-Master/gensrc',
     #'C:/projects/QuantLibAddin-Old-Master/ObjectHandler',
@@ -101,12 +101,12 @@ SUBSTITUTIONS = (
 #   (re.compile('abcDEFghi'), toLower),
 
 ##  Frequently used
-    (re.compile('1_9_0'), '1_10_0'),
-    (re.compile('1\.9\.0'), '1.10.0'),
-    (re.compile('0x010900'), '0x011000'),
-    (re.compile('R010900f0'), 'R011000f0'),
-    (re.compile('0\.10\.0f7'), '0.10.0f8'),
-    (re.compile('0x001000f7'), '0x001000f8'),
+    (re.compile('1_10_0'), '1_11_0'),
+    (re.compile('1\.10\.0'), '1.11.0'),
+    (re.compile('0x011000'), '0x011100'),
+    (re.compile('R011000f0'), 'R011100f0'),
+    #(re.compile('0\.10\.0f7'), '0.10.0f8'),
+    #(re.compile('0x001000f7'), '0x001000f8'),
 )
 
 # INCLUDE_FILES
@@ -173,6 +173,7 @@ IGNORE_DIRS = (
     re.compile('^dev_tools$'),
     re.compile('^framework$'),
     re.compile('^html$'),
+    re.compile('^html-online$'),
     re.compile('^Launcher$'),
     re.compile('^lib$'),
     #re.compile('^log4cxx$'),
