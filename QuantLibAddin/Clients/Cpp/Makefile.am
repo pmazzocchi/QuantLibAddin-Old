@@ -8,7 +8,9 @@ EXTRA_DIST = \
     ClientCppDemo_vc9.vcproj \
     ClientCppDemo_vc10.vcxproj \
     ClientCppDemo_vc11.vcxproj \
-    ClientCppDemo_vc12.vcxproj
+    ClientCppDemo_vc12.vcxproj \
+    ClientCppDemo_vc14.vcxproj \
+    ClientCppDemo.vcxproj
 
 QLADemo_SOURCES = qlademo.cpp
 

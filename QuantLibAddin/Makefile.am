@@ -35,6 +35,8 @@ EXTRA_DIST = \
     QuantLibAddin_vc10.sln \
     QuantLibAddin_vc11.sln \
     QuantLibAddin_vc12.sln \
+    QuantLibAddin_vc14.sln \
+    QuantLibAddin.sln \
     QuantLibObjects_vc8.vcproj \
     QuantLibObjects_vc9.vcproj \
     QuantLibObjects_vc10.vcxproj \
@@ -43,24 +45,40 @@ EXTRA_DIST = \
     QuantLibObjects_vc11.vcxproj.filters \
     QuantLibObjects_vc12.vcxproj \
     QuantLibObjects_vc12.vcxproj.filters \
+    QuantLibObjects_vc14.vcxproj \
+    QuantLibObjects_vc14.vcxproj.filters \
+    QuantLibObjects.vcxproj \
+    QuantLibObjects.vcxproj.filters \
     QuantLibObjects2_vc10.vcxproj \
     QuantLibObjects2_vc10.vcxproj.filters \
     QuantLibObjects2_vc11.vcxproj \
     QuantLibObjects2_vc11.vcxproj.filters \
     QuantLibObjects2_vc12.vcxproj \
     QuantLibObjects2_vc12.vcxproj.filters \
+    QuantLibObjects2_vc14.vcxproj \
+    QuantLibObjects2_vc14.vcxproj.filters \
+    QuantLibObjects2.vcxproj \
+    QuantLibObjects2.vcxproj.filters \
     QuantLibObjects3_vc10.vcxproj \
     QuantLibObjects3_vc10.vcxproj.filters \
     QuantLibObjects3_vc11.vcxproj \
     QuantLibObjects3_vc11.vcxproj.filters \
     QuantLibObjects3_vc12.vcxproj \
     QuantLibObjects3_vc12.vcxproj.filters \
+    QuantLibObjects3_vc14.vcxproj \
+    QuantLibObjects3_vc14.vcxproj.filters \
+    QuantLibObjects3.vcxproj \
+    QuantLibObjects3.vcxproj.filters \
     QuantLibObjects4_vc10.vcxproj \
     QuantLibObjects4_vc10.vcxproj.filters \
     QuantLibObjects4_vc11.vcxproj \
     QuantLibObjects4_vc11.vcxproj.filters \
     QuantLibObjects4_vc12.vcxproj \
     QuantLibObjects4_vc12.vcxproj.filters \
+    QuantLibObjects4_vc14.vcxproj \
+    QuantLibObjects4_vc14.vcxproj.filters \
+    QuantLibObjects4.vcxproj \
+    QuantLibObjects4.vcxproj.filters \
     README.txt \
     todo.txt
 

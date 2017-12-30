@@ -10,7 +10,9 @@ EXTRA_DIST = \
     ExampleCpp_vc9.vcproj \
     ExampleCpp_vc10.vcxproj \
     ExampleCpp_vc11.vcxproj \
-    ExampleCpp_vc12.vcxproj
+    ExampleCpp_vc12.vcxproj \
+    ExampleCpp_vc14.vcxproj \
+    ExampleCpp.vcxproj
 
 ExampleCpp_SOURCES = example.cpp
 

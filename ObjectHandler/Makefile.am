@@ -32,6 +32,8 @@ EXTRA_DIST = \
     ObjectHandler_vc10.sln \
     ObjectHandler_vc11.sln \
     ObjectHandler_vc12.sln \
+    ObjectHandler_vc14.sln \
+    ObjectHandler.sln \
     ohlib_vc8.vcproj \
     ohlib_vc9.vcproj \
     ohlib_vc10.vcxproj \
@@ -40,6 +42,10 @@ EXTRA_DIST = \
     ohlib_vc11.vcxproj.filters \
     ohlib_vc12.vcxproj \
     ohlib_vc12.vcxproj.filters \
+    ohlib_vc14.vcxproj \
+    ohlib_vc14.vcxproj.filters \
+    ohlib.vcxproj \
+    ohlib.vcxproj.filters \
     README.txt \
     TODO.txt
 

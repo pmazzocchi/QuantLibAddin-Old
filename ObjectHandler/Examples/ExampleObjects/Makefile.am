@@ -21,5 +21,9 @@ EXTRA_DIST = \
     ExampleObjects_vc11.vcxproj \
     ExampleObjects_vc11.vcxproj.filters \
     ExampleObjects_vc12.vcxproj \
-    ExampleObjects_vc12.vcxproj.filters
+    ExampleObjects_vc12.vcxproj.filters \
+    ExampleObjects_vc14.vcxproj \
+    ExampleObjects_vc14.vcxproj.filters \
+    ExampleObjects.vcxproj \
+    ExampleObjects.vcxproj.filters
 
