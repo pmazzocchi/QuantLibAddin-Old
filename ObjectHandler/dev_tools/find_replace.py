@@ -44,10 +44,10 @@ import shutil
 # you want the find/replace to begin.
 ROOT_DIRS = (
     #'/home/erik/projects/QuantLibAddin-Old/log4cxx/src/main/include/log4cxx',
-    '/home/erik/projects/QuantLibAddin-Old/gensrc',
-    '/home/erik/projects/QuantLibAddin-Old/ObjectHandler',
-    '/home/erik/projects/QuantLibAddin-Old/QuantLibAddin',
-    '/home/erik/projects/QuantLibAddin-Old/QuantLibXL',
+    #'/home/erik/projects/QuantLibAddin-Old/gensrc',
+    #'/home/erik/projects/QuantLibAddin-Old/ObjectHandler',
+    #'/home/erik/projects/QuantLibAddin-Old/QuantLibAddin',
+    #'/home/erik/projects/QuantLibAddin-Old/QuantLibXL',
     #'C:/projects/QuantLibAddin-Old-Master/log4cxx/src/main/include/log4cxx',
     #'C:/projects/QuantLibAddin-Old-Master/gensrc',
     #'C:/projects/QuantLibAddin-Old-Master/ObjectHandler',
@@ -81,11 +81,18 @@ SUBSTITUTIONS = (
 ##  Straight find/replace.
 #   (re.compile('aaa'), 'bbb'),
 
+#   delete references to boost property files from vcxproj files.
+#   (re.compile('<Import Project=".*boost_current.props" />'), ''),
+
 ##  2) Group
 ##  Use parentheses to indicate group(s) in the find text.
 ##  Use \x in the replace text to refer to a group, where x = group number.
 ##  Replace text must be a raw string r'' instead of normal string ''.
 #   (re.compile('ccc(.*)ccc'), r'ddd\1ddd'),
+
+#   comment out references to boost property files from vcxproj files.
+#   (re.compile('<Import Project="(.*)boost_current.props" />'),
+#        r'<!--Import Project="\1boost_current.props" /-->'),
 
 ##  3) Newline flag
 ##  Use re.S to indicate that . matches newline.
@@ -101,12 +108,12 @@ SUBSTITUTIONS = (
 #   (re.compile('abcDEFghi'), toLower),
 
 ##  Frequently used
-    (re.compile('1_10_0'), '1_11_0'),
-    (re.compile('1\.10\.0'), '1.11.0'),
-    (re.compile('0x011000'), '0x011100'),
-    (re.compile('R011000f0'), 'R011100f0'),
-    #(re.compile('0\.10\.0f7'), '0.10.0f8'),
-    #(re.compile('0x001000f7'), '0x001000f8'),
+    #(re.compile('1_10_0'), '1_11_0'),
+    #(re.compile('1\.10\.0'), '1.11.0'),
+    #(re.compile('0x011000'), '0x011100'),
+    #(re.compile('R011000f0'), 'R011100f0'),
+    #(re.compile('0\.10\.0f8'), '0.10.0f9'),
+    #(re.compile('0x001000f8'), '0x001000f9'),
 )
 
 # INCLUDE_FILES
@@ -117,6 +124,7 @@ SUBSTITUTIONS = (
 INCLUDE_FILES = (
 
 #    re.compile(r'^.+\.[ch]pp$'),
+#    re.compile(r'^.+\.vcxproj$'),
 
 )
 
