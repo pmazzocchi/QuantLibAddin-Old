@@ -34,6 +34,7 @@ EXTRA_DIST = \
     ObjectHandler_vc12.sln \
     ObjectHandler_vc14.sln \
     ObjectHandler.sln \
+    ObjectHandler.props \
     ohlib_vc8.vcproj \
     ohlib_vc9.vcproj \
     ohlib_vc10.vcxproj \

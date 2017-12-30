@@ -37,6 +37,7 @@ EXTRA_DIST = \
     QuantLibAddin_vc12.sln \
     QuantLibAddin_vc14.sln \
     QuantLibAddin.sln \
+    QuantLibAddin.props \
     QuantLibObjects_vc8.vcproj \
     QuantLibObjects_vc9.vcproj \
     QuantLibObjects_vc10.vcxproj \
