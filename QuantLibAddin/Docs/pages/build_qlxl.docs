@@ -25,6 +25,16 @@
 
 <div align="center"><small><a href="tutorials.html">back to tutorials index</a></small></div>
 
+<table border="1" bgcolor="lightsteelblue">
+<tr>
+<td><b>NB:</b> As in previous releases, this release includes Visual Studio
+solution files QuantLibXL_basic_vc8.sln through QuantLibXL_basic_vc14.sln which
+target specific versions of Visual Studio.  New in this release is solution
+file QuantLibXL_basic.sln (no version number) which should work for VC10
+(Visual Studio 2010) and all later versions.</td>
+</tr>
+</table>
+
 This document explains how to build QuantLibXL and its prerequisites from
 source code.
 

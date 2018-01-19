@@ -22,11 +22,9 @@
 
 <table border="1" bgcolor="lightsteelblue">
 <tr>
-<td><b>NB:</b> In the current release of %QuantLibAddin 1.11.0, support for the
-LibreOffice addin has been re-enabled.  The relevant source code is provided in
-the release.  The build has only been tested on Linux.  The documentation (this
-page) has not been updated and the information below relates to a very old
-build.  For further information please send email to
+<td><b>NB:</b> For the current release of %QuantLibAddin 1.11.0, the
+LibreOffice build has not been updated.  The documentation on this page is out
+of date and relates to an older build of the LibreOffice addin.
 quantlib-users@lists.sf.net.</td>
 </tr>
 </table>
