@@ -14,7 +14,7 @@
     <ProjectName>docs-QuantLibXL</ProjectName>
     <ProjectGuid>{A7768A12-75ED-480C-825A-BC70105281BC}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <Import Project="..\QuantLibXL.props" />

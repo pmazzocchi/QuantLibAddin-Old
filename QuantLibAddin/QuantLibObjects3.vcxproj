@@ -38,7 +38,7 @@
     <ProjectName>QuantLibObjects</ProjectName>
     <ProjectGuid>{CAB8330C-6424-4455-9285-3654587EF71F}</ProjectGuid>
     <RootNamespace>QuantLibObjects</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <Import Project="QuantLibAddin.props" />

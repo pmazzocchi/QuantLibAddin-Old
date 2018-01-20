@@ -22,7 +22,7 @@
     <ProjectName>QuantLibXLDynamic</ProjectName>
     <ProjectGuid>{AD2B301F-9217-467C-A5C2-DFF8A715D394}</ProjectGuid>
     <RootNamespace>QuantLibXLDynamic</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <Import Project="..\QuantLibXL.props" />

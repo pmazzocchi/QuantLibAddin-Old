@@ -48,12 +48,12 @@ ROOT_DIRS = (
     #'/home/erik/projects/QuantLibAddin-Old/ObjectHandler',
     #'/home/erik/projects/QuantLibAddin-Old/QuantLibAddin',
     #'/home/erik/projects/QuantLibAddin-Old/QuantLibXL',
-    #'C:/projects/QuantLibAddin-Old-Master/log4cxx/src/main/include/log4cxx',
-    #'C:/projects/QuantLibAddin-Old-Master/gensrc',
-    #'C:/projects/QuantLibAddin-Old-Master/ObjectHandler',
-    #'C:/projects/QuantLibAddin-Old-Master/QuantLibAddin',
-    #'C:/projects/QuantLibAddin-Old-Master/QuantLibXL',
-    #'C:/projects/QuantLibAddin-Old-Master/XL-Launcher',
+    #'C:/projects/QuantLibAddin-Old/log4cxx',
+    #'C:/projects/QuantLibAddin-Old/gensrc',
+    #'C:/projects/QuantLibAddin-Old/ObjectHandler',
+    #'C:/projects/QuantLibAddin-Old/QuantLibAddin',
+    #'C:/projects/QuantLibAddin-Old/QuantLibXL',
+    #'C:/projects/QuantLibAddin-Old/XL-Launcher',
 )
 
 # CALLBACK FUNCTIONS - Called from regexes which require multiple passes
@@ -83,6 +83,9 @@ SUBSTITUTIONS = (
 
 #   delete references to boost property files from vcxproj files.
 #   (re.compile('<Import Project=".*boost_current.props" />'), ''),
+
+#   delete references to Windows SDK from vcxproj files.
+#   (re.compile('<WindowsTargetPlatformVersion>.*</WindowsTargetPlatformVersion>'), ''),
 
 ##  2) Group
 ##  Use parentheses to indicate group(s) in the find text.
