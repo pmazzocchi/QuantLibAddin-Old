@@ -25,8 +25,12 @@
 
 <strong>Release 1.11.0 - January 2018</strong>
 
-- Added support for VC14, and fixed auto_link.hpp files (thanks to Francois Botha
-- In addition to the existing Visual Studio solution files, ObjectHandler_vc8.sln through ObjectHandler_vc14.sln, added a new solution file ObjectHandler.sln (no version number) which should work for VC10 (Visual Studio 2010) and all later versions.
+- Added support for VC14, and fixed %auto_link.hpp files (thanks to Francois
+  Botha)
+- In addition to the existing Visual Studio solution files,
+  ObjectHandler_vc8.sln through ObjectHandler_vc14.sln, added a new solution
+  file ObjectHandler.sln (no version number) which should work for VC10 (Visual
+  Studio 2010) and all later versions.
 
 REQUIRED PACKAGES
 
