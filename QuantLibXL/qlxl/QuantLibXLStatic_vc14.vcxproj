@@ -158,14 +158,14 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\buildStatic\vc140\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\xll\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\buildStatic\vc140\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QuantLibXL-vc140-mt-1_11_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QuantLibXL-vc140-x64-mt-1_11_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QuantLibXL-vc140-mt-gd-1_11_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">QuantLibXL-vc140-x64-mt-gd-1_11_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">QuantLibXL-vc140-mt-sgd-1_11_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">QuantLibXL-vc140-x64-mt-sgd-1_11_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">QuantLibXL-vc140-mt-s-1_11_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">QuantLibXL-vc140-x64-mt-s-1_11_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QuantLibXL-vc140-mt-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QuantLibXL-vc140-x64-mt-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QuantLibXL-vc140-mt-gd-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">QuantLibXL-vc140-x64-mt-gd-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">QuantLibXL-vc140-mt-sgd-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">QuantLibXL-vc140-x64-mt-sgd-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">QuantLibXL-vc140-mt-s-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">QuantLibXL-vc140-x64-mt-s-1_12_0</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.xll</TargetExt>
@@ -213,11 +213,11 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-sgd-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-sgd-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-sgd-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-sgd-1_12_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -263,11 +263,11 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-sgd-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-sgd-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-sgd-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-sgd-1_12_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
@@ -313,11 +313,11 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-gd-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-gd-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-gd-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-gd-1_12_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -363,11 +363,11 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-gd-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-gd-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-gd-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-gd-1_12_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
@@ -413,11 +413,11 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-s-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-s-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-s-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-s-1_12_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -463,11 +463,11 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-s-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-s-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-s-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-s-1_12_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
@@ -513,11 +513,11 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-1_12_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -563,11 +563,11 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\vc140\$(Platform)\$(Configuration)/QuantLibXL-vc140-mt-1_12_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>

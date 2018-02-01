@@ -160,14 +160,14 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\xll\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QuantLibXL-$(qlxlCompilerTag)-mt-1_11_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QuantLibXL-$(qlxlCompilerTag)-x64-mt-1_11_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QuantLibXL-$(qlxlCompilerTag)-mt-gd-1_11_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">QuantLibXL-$(qlxlCompilerTag)-x64-mt-gd-1_11_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">QuantLibXL-$(qlxlCompilerTag)-mt-sgd-1_11_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">QuantLibXL-$(qlxlCompilerTag)-x64-mt-sgd-1_11_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">QuantLibXL-$(qlxlCompilerTag)-mt-s-1_11_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">QuantLibXL-$(qlxlCompilerTag)-x64-mt-s-1_11_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QuantLibXL-$(qlxlCompilerTag)-mt-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QuantLibXL-$(qlxlCompilerTag)-x64-mt-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QuantLibXL-$(qlxlCompilerTag)-mt-gd-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">QuantLibXL-$(qlxlCompilerTag)-x64-mt-gd-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">QuantLibXL-$(qlxlCompilerTag)-mt-sgd-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">QuantLibXL-$(qlxlCompilerTag)-x64-mt-sgd-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">QuantLibXL-$(qlxlCompilerTag)-mt-s-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">QuantLibXL-$(qlxlCompilerTag)-x64-mt-s-1_12_0</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.xll</TargetExt>
@@ -215,11 +215,11 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-sgd-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-sgd-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-sgd-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-sgd-1_12_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -265,11 +265,11 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-sgd-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-sgd-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-sgd-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-sgd-1_12_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
@@ -315,11 +315,11 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-gd-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-gd-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-gd-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-gd-1_12_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -365,11 +365,11 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-gd-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-gd-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-gd-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-gd-1_12_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
@@ -415,11 +415,11 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-s-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-s-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-s-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-s-1_12_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -465,11 +465,11 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-s-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-s-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-s-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-s-1_12_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
@@ -515,11 +515,11 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-1_12_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -565,11 +565,11 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-1_11_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-1_12_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-1_11_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-1_12_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
