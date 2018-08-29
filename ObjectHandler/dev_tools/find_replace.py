@@ -82,10 +82,10 @@ SUBSTITUTIONS = (
 #   (re.compile('aaa'), 'bbb'),
 
 #   delete references to boost property files from vcxproj files.
-#   (re.compile('<Import Project=".*boost_current.props" />'), ''),
+   (re.compile('<Import Project=".*boost_current.props" />'), ''),
 
 #   delete references to Windows SDK from vcxproj files.
-#   (re.compile('<WindowsTargetPlatformVersion>.*</WindowsTargetPlatformVersion>'), ''),
+   (re.compile('<WindowsTargetPlatformVersion>.*</WindowsTargetPlatformVersion>'), ''),
 
 ##  2) Group
 ##  Use parentheses to indicate group(s) in the find text.
@@ -111,7 +111,7 @@ SUBSTITUTIONS = (
 #   (re.compile('abcDEFghi'), toLower),
 
 ##  Frequently used
-    (re.compile('vc140'), 'vc141'),
+    #(re.compile('vc140'), 'vc141'),
     #(re.compile('1_12_0'), '1_13_0'),
     #(re.compile('1\.12\.0'), '1.13.0'),
     #(re.compile('0x011200'), '0x011300'),
