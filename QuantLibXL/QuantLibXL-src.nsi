@@ -2,10 +2,10 @@
 # !defines
 
 !define APP "QuantLibXL"
-!define VER_NUMBER "1.12.0"
-!define VER_NUMBER_UNDERSCORE "1_12_0"
+!define VER_NUMBER "1.13.0"
+!define VER_NUMBER_UNDERSCORE "1_13_0"
 !define COMPILER "vc90"
-!define DEFAULT_PATH "c:\build_ql_1_12_0\${APP}"
+!define DEFAULT_PATH "c:\build_ql_1_13_0\${APP}"
 
 # Compiler Flags
 

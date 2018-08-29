@@ -120,45 +120,45 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\bin\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">build\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">build\vc141\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\bin\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">build\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">build\vc141\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\bin\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\vc141\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\bin\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\vc141\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\bin\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">build\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">build\vc141\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\bin\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">build\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">build\vc141\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\bin\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\vc141\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\bin\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\vc140\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">InstrumentIn-vc140-mt-gd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">InstrumentIn-vc140-x64-mt-gd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">InstrumentIn-vc140-mt-sgd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">InstrumentIn-vc140-x64-mt-sgd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">InstrumentIn-vc140-mt-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">InstrumentIn-vc140-x64-mt-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">InstrumentIn-vc140-mt-s-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">InstrumentIn-vc140-x64-mt-s-1_12_0</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\vc141\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">InstrumentIn-vc141-mt-gd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">InstrumentIn-vc141-x64-mt-gd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">InstrumentIn-vc141-mt-sgd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">InstrumentIn-vc141-x64-mt-sgd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">InstrumentIn-vc141-mt-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">InstrumentIn-vc141-x64-mt-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">InstrumentIn-vc141-mt-s-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">InstrumentIn-vc141-x64-mt-s-1_13_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">
     <ClCompile>
@@ -170,10 +170,10 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>build\vc140\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>build\vc140\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>build\vc140\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>build\vc140\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>build\vc141\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>build\vc141\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>build\vc141\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>build\vc141\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -182,7 +182,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>build\vc140\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>build\vc141\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
@@ -200,10 +200,10 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>build\vc140\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>build\vc140\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>build\vc140\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>build\vc140\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>build\vc141\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>build\vc141\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>build\vc141\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>build\vc141\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -212,7 +212,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>build\vc140\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>build\vc141\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
@@ -227,10 +227,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>build\vc140\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>build\vc140\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>build\vc140\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>build\vc140\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>build\vc141\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>build\vc141\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>build\vc141\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>build\vc141\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -239,7 +239,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>build\vc140\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>build\vc141\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -257,10 +257,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>build\vc140\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>build\vc140\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>build\vc140\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>build\vc140\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>build\vc141\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>build\vc141\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>build\vc141\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>build\vc141\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -269,7 +269,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>build\vc140\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>build\vc141\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -289,10 +289,10 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>build\vc140\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>build\vc140\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>build\vc140\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>build\vc140\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>build\vc141\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>build\vc141\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>build\vc141\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>build\vc141\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -301,7 +301,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>build\vc140\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>build\vc141\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
@@ -319,10 +319,10 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>build\vc140\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>build\vc140\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>build\vc140\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>build\vc140\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>build\vc141\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>build\vc141\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>build\vc141\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>build\vc141\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -331,7 +331,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>build\vc140\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>build\vc141\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
@@ -347,10 +347,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>build\vc140\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>build\vc140\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>build\vc140\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>build\vc140\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>build\vc141\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>build\vc141\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>build\vc141\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>build\vc141\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -359,7 +359,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>build\vc140\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>build\vc141\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -378,10 +378,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>build\vc140\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>build\vc140\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>build\vc140\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>build\vc140\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>build\vc141\$(Platform)\$(Configuration)\</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>build\vc141\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>build\vc141\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>build\vc141\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -390,7 +390,7 @@
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;advapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>build\vc140\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>build\vc141\$(Platform)\$(Configuration)/$(ProjectName).pdb</ProgramDatabaseFile>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

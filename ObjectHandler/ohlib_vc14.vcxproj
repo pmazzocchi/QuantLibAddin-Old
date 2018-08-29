@@ -118,45 +118,45 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\build\vc140\oh\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\build\vc141\oh\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\build\vc140\oh\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\build\vc141\oh\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\build\vc140\oh\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\build\vc141\oh\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\build\vc140\oh\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\build\vc141\oh\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\build\vc140\oh\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\build\vc141\oh\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\build\vc140\oh\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\build\vc141\oh\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\build\vc140\oh\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\build\vc141\oh\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\build\vc140\oh\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ObjectHandler-vc140-mt-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ObjectHandler-vc140-x64-mt-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ObjectHandler-vc140-mt-gd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ObjectHandler-vc140-x64-mt-gd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">ObjectHandler-vc140-mt-sgd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">ObjectHandler-vc140-x64-mt-sgd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">ObjectHandler-vc140-mt-s-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">ObjectHandler-vc140-x64-mt-s-1_12_0</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\build\vc141\oh\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ObjectHandler-vc141-mt-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ObjectHandler-vc141-x64-mt-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ObjectHandler-vc141-mt-gd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ObjectHandler-vc141-x64-mt-gd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">ObjectHandler-vc141-mt-sgd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">ObjectHandler-vc141-x64-mt-sgd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">ObjectHandler-vc141-mt-s-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">ObjectHandler-vc141-x64-mt-s-1_13_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">
     <ClCompile>
@@ -168,10 +168,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -188,7 +188,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">
@@ -201,10 +201,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -220,7 +220,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -235,10 +235,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -254,7 +254,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -269,10 +269,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -287,7 +287,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">
@@ -302,10 +302,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -321,7 +321,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">
@@ -336,10 +336,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -354,7 +354,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -367,10 +367,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -387,7 +387,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -400,10 +400,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -419,7 +419,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\vc141\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>

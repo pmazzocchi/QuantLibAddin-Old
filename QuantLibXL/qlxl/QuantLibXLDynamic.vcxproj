@@ -92,10 +92,10 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.xll</TargetExt>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QuantLibXLDynamic-$(qlxlCompilerTag)-mt-gd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">QuantLibXLDynamic-$(qlxlCompilerTag)-x64-mt-gd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QuantLibXLDynamic-$(qlxlCompilerTag)-mt-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QuantLibXLDynamic-$(qlxlCompilerTag)-x64-mt-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QuantLibXLDynamic-$(qlxlCompilerTag)-mt-gd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">QuantLibXLDynamic-$(qlxlCompilerTag)-x64-mt-gd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QuantLibXLDynamic-$(qlxlCompilerTag)-mt-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QuantLibXLDynamic-$(qlxlCompilerTag)-x64-mt-1_13_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <PreBuildEvent>
@@ -143,7 +143,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(qlxlCompilerTag)-mt-gd-1_12_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(qlxlCompilerTag)-mt-gd-1_13_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -197,7 +197,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(qlxlCompilerTag)-mt-gd-1_12_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(qlxlCompilerTag)-mt-gd-1_13_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
@@ -252,7 +252,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(qlxlCompilerTag)-mt-1_12_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(qlxlCompilerTag)-mt-1_13_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
@@ -309,7 +309,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(qlxlCompilerTag)-mt-1_12_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(qlxlCompilerTag)-mt-1_13_0.lib</ImportLibrary>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>

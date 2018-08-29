@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug (static runtime)|Win32">
       <Configuration>Debug (static runtime)</Configuration>
@@ -37,47 +37,48 @@
   <PropertyGroup Label="Globals">
     <ProjectName>log4cxx</ProjectName>
     <ProjectGuid>{FA6EB34E-6BE0-46F5-AA4C-704B49BE63D2}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -110,45 +111,45 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">log4cxxs-vc140-mt-0_10_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">log4cxxs-vc140-x64-mt-0_10_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">log4cxxs-vc140-mt-gd-0_10_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">log4cxxs-vc140-x64-mt-gd-0_10_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">log4cxxs-vc140-mt-sgd-0_10_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">log4cxxs-vc140-x64-mt-sgd-0_10_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">log4cxxs-vc140-mt-s-0_10_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">log4cxxs-vc140-x64-mt-s-0_10_0</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">log4cxxs-vc141-mt-0_10_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">log4cxxs-vc141-x64-mt-0_10_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">log4cxxs-vc141-mt-gd-0_10_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">log4cxxs-vc141-x64-mt-gd-0_10_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">log4cxxs-vc141-mt-sgd-0_10_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">log4cxxs-vc141-x64-mt-sgd-0_10_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">log4cxxs-vc141-mt-s-0_10_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">log4cxxs-vc141-x64-mt-s-0_10_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">
     <ClCompile>
@@ -161,10 +162,10 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
@@ -185,10 +186,10 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
@@ -211,10 +212,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
@@ -236,10 +237,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
@@ -259,10 +260,10 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
@@ -283,10 +284,10 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
@@ -309,10 +310,10 @@
       <FunctionLevelLinking>false</FunctionLevelLinking>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
       <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -335,10 +336,10 @@
       <FunctionLevelLinking>false</FunctionLevelLinking>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)\log4cxx\log4cxx_obj\</ProgramDataBaseFileName>
       <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
