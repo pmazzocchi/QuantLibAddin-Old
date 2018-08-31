@@ -118,7 +118,7 @@ projects:
     analytics library
 \li <a href="http://www.objecthandler.org">ObjectHandler</a> 1.13.0 - An object
     repository
-\li log4cxx 0.10.0f8 - A logging framework, used by ObjectHandler
+\li log4cxx 0.10.0f9 - A logging framework, used by ObjectHandler
 \li <a href="http://www.quantlibaddin.org">QuantLibAddin</a> 1.13.0 - Addins for
     %QuantLib functionality
 \li <a href="http://www.quantlibxl.org">QuantLibXL</a> 1.13.0 - The Excel
