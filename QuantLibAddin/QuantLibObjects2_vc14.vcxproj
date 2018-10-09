@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug (static runtime)|Win32">
       <Configuration>Debug (static runtime)</Configuration>
@@ -38,134 +38,127 @@
     <ProjectName>QuantLibObjects</ProjectName>
     <ProjectGuid>{CAB8330C-6424-4455-9285-3654587EF71F}</ProjectGuid>
     <RootNamespace>QuantLibObjects</RootNamespace>
+    
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">
+    
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">
+    
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">
+    
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">
+    
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\build\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\build\vc141\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\build\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\build\vc141\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\build\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\build\vc141\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\build\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\build\vc141\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\build\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\build\vc141\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\build\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\build\vc141\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\build\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\build\vc141\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\build\vc140\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QuantLibObjects-vc140-mt-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QuantLibObjects-vc140-x64-mt-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QuantLibObjects-vc140-mt-gd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">QuantLibObjects-vc140-x64-mt-gd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">QuantLibObjects-vc140-mt-sgd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">QuantLibObjects-vc140-x64-mt-sgd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">QuantLibObjects-vc140-mt-s-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">QuantLibObjects-vc140-x64-mt-s-1_12_0</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\build\vc141\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QuantLibObjects-vc141-mt-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QuantLibObjects-vc141-x64-mt-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QuantLibObjects-vc141-mt-gd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">QuantLibObjects-vc141-x64-mt-gd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">QuantLibObjects-vc141-mt-sgd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">QuantLibObjects-vc141-x64-mt-sgd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">QuantLibObjects-vc141-mt-s-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">QuantLibObjects-vc141-x64-mt-s-1_13_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -180,10 +173,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -198,7 +191,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
+      <OutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -214,10 +207,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -232,7 +225,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
+      <OutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">
@@ -248,10 +241,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -266,7 +259,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
+      <OutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">
@@ -282,10 +275,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -300,7 +293,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
+      <OutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">
@@ -314,10 +307,10 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -333,7 +326,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
+      <OutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">
@@ -347,10 +340,10 @@
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -366,7 +359,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
+      <OutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -380,10 +373,10 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -399,7 +392,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
+      <OutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -413,10 +406,10 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\vc140\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\vc140\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\vc140\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\vc141\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\vc141\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\vc141\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -432,7 +425,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\build\vc140\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
+      <OutputFile>.\build\vc141\$(Platform)\$(Configuration)/QuantLibObjects.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>

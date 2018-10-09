@@ -87,14 +87,14 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\xll\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ExampleXllDynamic1-$(ohCompilerTag)-mt-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ExampleXllDynamic1-$(ohCompilerTag)-x64-mt-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ExampleXllDynamic1-$(ohCompilerTag)-mt-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ExampleXllDynamic1-$(ohCompilerTag)-x64-mt-1_13_0</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.xll</TargetExt>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ExampleXllDynamic1-$(ohCompilerTag)-mt-gd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ExampleXllDynamic1-$(ohCompilerTag)-x64-mt-gd-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ExampleXllDynamic1-$(ohCompilerTag)-mt-gd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ExampleXllDynamic1-$(ohCompilerTag)-x64-mt-gd-1_13_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -117,12 +117,12 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>..\..\lib;..\..\xll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-mt-gd-1_12_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-mt-gd-1_13_0.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-mt-gd-1_12_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-mt-gd-1_13_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -147,12 +147,12 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>..\..\lib;..\..\xll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-mt-gd-1_12_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-mt-gd-1_13_0.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-x64-mt-gd-1_12_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-x64-mt-gd-1_13_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
@@ -174,14 +174,14 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>..\..\lib;..\..\xll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-mt-gd-1_12_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-mt-gd-1_13_0.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-mt-1_12_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-mt-1_13_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -204,14 +204,14 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>..\..\lib;..\..\xll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-mt-gd-1_12_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-mt-gd-1_13_0.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-x64-mt-1_12_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllDynamic1\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic1-$(ohCompilerTag)-x64-mt-1_13_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>

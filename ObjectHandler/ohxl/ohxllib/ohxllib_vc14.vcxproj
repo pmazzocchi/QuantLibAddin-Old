@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug (static runtime)|Win32">
       <Configuration>Debug (static runtime)</Configuration>
@@ -37,134 +37,127 @@
   <PropertyGroup Label="Globals">
     <ProjectName>ohxllib</ProjectName>
     <ProjectGuid>{66021664-4359-442C-ACC7-7C82F51C9D5A}</ProjectGuid>
+    
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">
+    
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">
+    
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">
+    
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\..\..\..\..\..\local\boost_1_59_0\boost.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">
+    
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ObjectHandler-xllib-vc140-mt-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ObjectHandler-xllib-vc140-x64-mt-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ObjectHandler-xllib-vc140-mt-gd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ObjectHandler-xllib-vc140-x64-mt-gd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">ObjectHandler-xllib-vc140-mt-sgd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">ObjectHandler-xllib-vc140-x64-mt-sgd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">ObjectHandler-xllib-vc140-mt-s-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">ObjectHandler-xllib-vc140-x64-mt-s-1_12_0</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ObjectHandler-xllib-vc141-mt-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ObjectHandler-xllib-vc141-x64-mt-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ObjectHandler-xllib-vc141-mt-gd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ObjectHandler-xllib-vc141-x64-mt-gd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">ObjectHandler-xllib-vc141-mt-sgd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">ObjectHandler-xllib-vc141-x64-mt-sgd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">ObjectHandler-xllib-vc141-mt-s-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">ObjectHandler-xllib-vc141-x64-mt-s-1_13_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -176,10 +169,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -196,7 +189,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -209,10 +202,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -228,7 +221,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">
@@ -243,10 +236,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -263,7 +256,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">
@@ -278,10 +271,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -297,7 +290,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -312,10 +305,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -332,7 +325,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -347,10 +340,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -366,7 +359,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">
@@ -379,10 +372,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -399,7 +392,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">
@@ -412,10 +405,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -431,7 +424,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\vc140\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\vc141\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>

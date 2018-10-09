@@ -82,10 +82,10 @@ SUBSTITUTIONS = (
 #   (re.compile('aaa'), 'bbb'),
 
 #   delete references to boost property files from vcxproj files.
-#   (re.compile('<Import Project=".*boost_current.props" />'), ''),
+   (re.compile('<Import Project=".*boost_current.props" />'), ''),
 
 #   delete references to Windows SDK from vcxproj files.
-#   (re.compile('<WindowsTargetPlatformVersion>.*</WindowsTargetPlatformVersion>'), ''),
+   (re.compile('<WindowsTargetPlatformVersion>.*</WindowsTargetPlatformVersion>'), ''),
 
 ##  2) Group
 ##  Use parentheses to indicate group(s) in the find text.
@@ -111,10 +111,11 @@ SUBSTITUTIONS = (
 #   (re.compile('abcDEFghi'), toLower),
 
 ##  Frequently used
-    (re.compile('1_11_0'), '1_12_0'),
-    (re.compile('1\.11\.0'), '1.12.0'),
-    (re.compile('0x011100'), '0x011200'),
-    (re.compile('R011100f0'), 'R011200f0'),
+    #(re.compile('vc140'), 'vc141'),
+    #(re.compile('1_12_0'), '1_13_0'),
+    #(re.compile('1\.12\.0'), '1.13.0'),
+    #(re.compile('0x011200'), '0x011300'),
+    #(re.compile('R011200f0'), 'R011300f0'),
     #(re.compile('0\.10\.0f8'), '0.10.0f9'),
     #(re.compile('0x001000f8'), '0x001000f9'),
 )
@@ -127,7 +128,7 @@ SUBSTITUTIONS = (
 INCLUDE_FILES = (
 
 #    re.compile(r'^.+\.[ch]pp$'),
-#    re.compile(r'^.+\.vcxproj$'),
+    re.compile(r'^.+\.vcxproj$'),
 
 )
 

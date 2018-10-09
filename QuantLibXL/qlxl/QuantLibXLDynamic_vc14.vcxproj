@@ -67,7 +67,7 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\buildDynamic\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\buildDynamic\vc141\$(Platform)\$(Configuration)\</IntDir>
     <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreBuildEventUseInBuild>
     <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</PreBuildEventUseInBuild>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
@@ -75,7 +75,7 @@
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\buildDynamic\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\buildDynamic\vc141\$(Platform)\$(Configuration)\</IntDir>
     <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PreBuildEventUseInBuild>
     <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</PreBuildEventUseInBuild>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
@@ -83,17 +83,17 @@
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\buildDynamic\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\buildDynamic\vc141\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\buildDynamic\vc140\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\buildDynamic\vc141\$(Platform)\$(Configuration)\</IntDir>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.xll</TargetExt>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QuantLibXLDynamic-vc140-mt-gd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">QuantLibXLDynamic-vc140-x64-mt-gd-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QuantLibXLDynamic-vc140-mt-1_12_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QuantLibXLDynamic-vc140-x64-mt-1_12_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QuantLibXLDynamic-vc141-mt-gd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">QuantLibXLDynamic-vc141-x64-mt-gd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QuantLibXLDynamic-vc141-mt-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QuantLibXLDynamic-vc141-x64-mt-1_13_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <PreBuildEvent>
@@ -105,7 +105,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -118,10 +118,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildDynamic\vc140\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildDynamic\vc140\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildDynamic\vc140\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildDynamic\vc141\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildDynamic\vc141\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildDynamic\vc141\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
@@ -141,13 +141,13 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic-vc140-mt-gd-1_12_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic-vc141-mt-gd-1_13_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
+      <OutputFile>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -159,7 +159,7 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -172,10 +172,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildDynamic\vc140\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildDynamic\vc140\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildDynamic\vc140\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildDynamic\vc141\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildDynamic\vc141\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildDynamic\vc141\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -195,12 +195,12 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic-vc140-mt-gd-1_12_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic-vc141-mt-gd-1_13_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
+      <OutputFile>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -213,7 +213,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -228,10 +228,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildDynamic\vc140\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildDynamic\vc140\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildDynamic\vc140\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildDynamic\vc141\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildDynamic\vc141\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildDynamic\vc141\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -250,7 +250,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic-vc140-mt-1_12_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic-vc141-mt-1_13_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
@@ -258,7 +258,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
+      <OutputFile>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -270,7 +270,7 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -285,10 +285,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildDynamic\vc140\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildDynamic\vc140\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildDynamic\vc140\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildDynamic\vc141\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildDynamic\vc141\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildDynamic\vc141\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -307,14 +307,14 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic-vc140-mt-1_12_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic-vc141-mt-1_13_0.lib</ImportLibrary>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildDynamic\vc140\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
+      <OutputFile>.\buildDynamic\vc141\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>

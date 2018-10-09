@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug (static runtime)|Win32">
       <Configuration>Debug (static runtime)</Configuration>
@@ -37,55 +37,56 @@
   <PropertyGroup Label="Globals">
     <ProjectName>xlsdk</ProjectName>
     <ProjectGuid>{4BD77A1E-AAE9-47A4-81FE-2308E5A460AF}</ProjectGuid>
+    
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -118,45 +119,45 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">xlsdk-vc140-mt</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xlsdk-vc140-x64-mt</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">xlsdk-vc140-mt-gd</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xlsdk-vc140-x64-mt-gd</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">xlsdk-vc140-mt-sgd</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">xlsdk-vc140-x64-mt-sgd</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">xlsdk-vc140-mt-s</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">xlsdk-vc140-x64-mt-s</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">xlsdk-vc141-mt</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">xlsdk-vc141-x64-mt</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">xlsdk-vc141-mt-gd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">xlsdk-vc141-x64-mt-gd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">xlsdk-vc141-mt-sgd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">xlsdk-vc141-x64-mt-sgd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">xlsdk-vc141-mt-s</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">xlsdk-vc141-x64-mt-s</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">
     <ClCompile>
@@ -170,10 +171,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\build\vc140\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\build\vc141\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -190,7 +191,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\build\vc140\xlsdk\Release (static runtime)\xlsdk.bsc</OutputFile>
+      <OutputFile>..\build\vc141\xlsdk\Release (static runtime)\xlsdk.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">
@@ -205,10 +206,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\build\vc140\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\build\vc141\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -224,7 +225,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\build\vc140\xlsdk\Release (static runtime)\xlsdk.bsc</OutputFile>
+      <OutputFile>..\build\vc141\xlsdk\Release (static runtime)\xlsdk.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">
@@ -237,10 +238,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\build\vc140\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\build\vc141\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -257,7 +258,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\build\vc140\xlsdk\Debug (static runtime)\xlsdk.bsc</OutputFile>
+      <OutputFile>..\build\vc141\xlsdk\Debug (static runtime)\xlsdk.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">
@@ -270,10 +271,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\build\vc140\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\build\vc141\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -289,7 +290,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\build\vc140\xlsdk\Debug (static runtime)\xlsdk.bsc</OutputFile>
+      <OutputFile>..\build\vc141\xlsdk\Debug (static runtime)\xlsdk.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -304,10 +305,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\build\vc140\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\build\vc141\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -324,7 +325,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\build\vc140\xlsdk\Release\xlsdk.bsc</OutputFile>
+      <OutputFile>..\build\vc141\xlsdk\Release\xlsdk.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -339,10 +340,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\build\vc140\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\build\vc141\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -358,7 +359,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\build\vc140\xlsdk\Release\xlsdk.bsc</OutputFile>
+      <OutputFile>..\build\vc141\xlsdk\Release\xlsdk.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -371,10 +372,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\build\vc140\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\build\vc141\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -391,7 +392,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\build\vc140\xlsdk\Debug\xlsdk.bsc</OutputFile>
+      <OutputFile>..\build\vc141\xlsdk\Debug\xlsdk.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -404,10 +405,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\build\vc140\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>..\build\vc140\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\build\vc141\xlsdk\$(Platform)\$(Configuration)/xlsdk.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>..\build\vc141\xlsdk\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -423,7 +424,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\build\vc140\xlsdk\Debug\xlsdk.bsc</OutputFile>
+      <OutputFile>..\build\vc141\xlsdk\Debug\xlsdk.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
