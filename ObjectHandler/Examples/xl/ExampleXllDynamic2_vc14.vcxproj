@@ -82,14 +82,14 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\xll\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ExampleXllDynamic2-vc141-mt-1_13_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ExampleXllDynamic2-vc141-x64-mt-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ExampleXllDynamic2-vc141-mt-1_14_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ExampleXllDynamic2-vc141-x64-mt-1_14_0</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.xll</TargetExt>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ExampleXllDynamic2-vc141-mt-gd-1_13_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ExampleXllDynamic2-vc141-x64-mt-gd-1_13_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ExampleXllDynamic2-vc141-mt-gd-1_14_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ExampleXllDynamic2-vc141-x64-mt-gd-1_14_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -128,11 +128,11 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\xll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-mt-gd-1_13_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-mt-gd-1_14_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-mt-gd-1_13_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-mt-gd-1_14_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -176,11 +176,11 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\xll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-mt-gd-1_13_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-mt-gd-1_14_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-x64-mt-gd-1_13_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-x64-mt-gd-1_14_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
@@ -224,11 +224,11 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\xll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-mt-1_13_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-mt-1_14_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-mt-1_13_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-mt-1_14_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -272,11 +272,11 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\xll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-mt-1_13_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-mt-1_14_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-x64-mt-1_13_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllDynamic2\vc141\$(Platform)\$(Configuration)\ExampleXLLDynamic2-vc141-x64-mt-1_14_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
