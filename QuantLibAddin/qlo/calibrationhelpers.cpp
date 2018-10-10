@@ -65,8 +65,8 @@ namespace QuantLibAddin {
                                    const Real nominal = 1.0,
                                    const Real shift = 0.0*/,
                                    bool permanent)
-    : CalibrationHelper(properties, permanent) {
-        libraryObject_ = shared_ptr<QuantLib::CalibrationHelper>(new QuantLib::SwaptionHelper(maturity, 
+    : BlackCalibrationHelper(properties, permanent) {
+        libraryObject_ = shared_ptr<QuantLib::BlackCalibrationHelper>(new QuantLib::SwaptionHelper(maturity,
                                                                                               length, 
                                                                                               volatility, 
                                                                                               index, 

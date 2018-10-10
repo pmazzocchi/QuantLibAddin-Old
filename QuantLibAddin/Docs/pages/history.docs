@@ -23,6 +23,11 @@
 
 /*! \page history Version History
 
+<strong>Release 1.14.0 - October 2018</strong>
+
+- Replaced references to deprecated class CalibrationHelper with references
+  to new class BlackCalibrationHelper.
+
 <strong>Release 1.13.0 - August 2018</strong>
 
 - Maintenance release.
