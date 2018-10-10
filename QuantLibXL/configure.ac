@@ -1,5 +1,5 @@
 # Process this file with autoconf to produce a configure script.
-AC_INIT([QuantLibXL], [1.13.0],
+AC_INIT([QuantLibXL], [1.14.0],
         [quantlib-dev@lists.sourceforge.net],
         [QuantLibXL])
 AC_PREREQ(2.50)

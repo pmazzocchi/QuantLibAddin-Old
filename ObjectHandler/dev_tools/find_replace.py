@@ -127,8 +127,8 @@ SUBSTITUTIONS = (
 
 INCLUDE_FILES = (
 
-    re.compile(r'^.+\.[ch]pp$'),
-    re.compile(r'^.+\.vcxproj$'),
+#    re.compile(r'^.+\.[ch]pp$'),
+#    re.compile(r'^.+\.vcxproj$'),
 
 )
 
