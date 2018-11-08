@@ -28,6 +28,10 @@ implementation of QuantLibAddin.  For a summary of updates to the core
 QuantLibAddin project, please refer to
 <a href="http://www.quantlibaddin.org/history.html">http://www.quantlibaddin.org/history.html</a>
 
+<strong>Release 1.14.0 - November 2018</strong>
+
+- Maintenance release.
+
 <strong>Release 1.13.0 - August 2018</strong>
 
 - Maintenance release.
