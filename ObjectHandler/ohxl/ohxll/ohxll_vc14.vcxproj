@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectName>ohxll</ProjectName>
     <ProjectGuid>{04D7369F-47BC-46B0-A374-41635A9656D8}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
