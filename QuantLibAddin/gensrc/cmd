@@ -1,0 +1,2 @@
+
+python /home/erik/projects/QuantLibAddin-Old/gensrc/gensrc.py -vsledxop --oh_dir=/home/erik/projects/QuantLibAddin-Old/ObjectHandler
