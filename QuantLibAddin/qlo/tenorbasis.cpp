@@ -55,6 +55,21 @@ namespace QuantLibAddin {
                                      isSimple, coeff));
     }
 
+    AcdtTenorBasis::AcdtTenorBasis(
+        const shared_ptr<ObjectHandler::ValueObject>& p,
+        shared_ptr<QuantLib::IborIndex> iborIndex,
+        boost::shared_ptr<QuantLib::IborIndex> baseIborIndex,
+        QuantLib::Date referenceDate,
+        bool isSimple,
+        const std::vector<QuantLib::Real>& coeff,
+        bool permanent)
+    : AbcdTenorBasis(p, iborIndex, baseIborIndex, referenceDate, isSimple,
+                     coeff, permanent) {
+        libraryObject_ = shared_ptr<QuantLib::AcdtTenorBasis>(new
+            QuantLib::AcdtTenorBasis(iborIndex, baseIborIndex, referenceDate,
+                isSimple, coeff));
+    }
+
     PolynomialTenorBasis::PolynomialTenorBasis(
         const shared_ptr<ObjectHandler::ValueObject>& p,
         shared_ptr<QuantLib::IborIndex> iborIndex,
@@ -79,7 +94,7 @@ namespace QuantLibAddin {
         const shared_ptr<QuantLib::EndCriteria> endCriteria,
         const shared_ptr<QuantLib::OptimizationMethod> method,
         bool permanent)
-        : LibraryObject<QuantLib::AbcdCalibration2>(properties, permanent) {
+    : LibraryObject<QuantLib::AbcdCalibration2>(properties, permanent) {
 
         libraryObject_ = shared_ptr<QuantLib::AbcdCalibration2>(new
             QuantLib::AbcdCalibration2(t, r, w, coeff, fixedCoeff,
@@ -96,7 +111,7 @@ namespace QuantLibAddin {
         const boost::shared_ptr<QuantLib::EndCriteria> endCriteria,
         const boost::shared_ptr<QuantLib::OptimizationMethod> method,
         bool permanent)
-        : LibraryObject<QuantLib::PolynomialCalibration>(properties, permanent) {
+    : LibraryObject<QuantLib::PolynomialCalibration>(properties, permanent) {
 
         libraryObject_ = shared_ptr<QuantLib::PolynomialCalibration>(new
             QuantLib::PolynomialCalibration(t, r, w, coeff, fixedCoeff,

@@ -858,6 +858,45 @@
       </ParameterList>
     </Constructor>
 
+    <!-- AcdtTenorBasis class costructor -->
+    <Constructor name='qlAcdtTenorBasis'>
+      <libraryFunction>AcdtTenorBasis</libraryFunction>
+      <SupportedPlatforms>
+        <SupportedPlatform name='Excel' calcInWizard='false'/>
+        <!--<SupportedPlatform name='Excel'/>-->
+        <SupportedPlatform name='Cpp'/>
+      </SupportedPlatforms>
+      <ParameterList>
+        <Parameters>
+          <Parameter name='IborIndex'>
+            <type>QuantLib::IborIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>the IborIndex to be forwarded.</description>
+          </Parameter>
+          <Parameter name='BaseIborIndex'>
+            <type>QuantLib::IborIndex</type>
+            <tensorRank>scalar</tensorRank>
+            <description>iborIndex whose forwarding curve is used as base.</description>
+          </Parameter>
+          <Parameter name='ReferenceDate' const='False' default='QuantLib::Date()'>
+            <type>QuantLib::Date</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Reference date.</description>
+          </Parameter>
+          <Parameter name='IsSimple'>
+            <type>bool</type>
+            <tensorRank>scalar</tensorRank>
+            <description>TRUE if the AbcdMathFunction is the parametrization of the simple basis; FALSE for instantaneous continous basis.</description>
+          </Parameter>
+          <Parameter name='Coefficients'>
+            <type>QuantLib::Real</type>
+            <tensorRank>vector</tensorRank>
+            <description>Abcd Functions coefficients.</description>
+          </Parameter>
+        </Parameters>
+      </ParameterList>
+    </Constructor>
+
     <!-- AbcdTenorBasis class interfaces -->
     <Member name='qlAbcdTenorBasisMaximumLocation' type='QuantLib::AbcdTenorBasis'>
       <description>Returns the location of the simple basis maximum.</description>

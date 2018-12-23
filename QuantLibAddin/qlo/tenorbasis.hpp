@@ -67,6 +67,18 @@ namespace QuantLibAddin {
             bool permanent);
     };
 
+    class AcdtTenorBasis : public AbcdTenorBasis {
+    public:
+        AcdtTenorBasis(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& p,
+            boost::shared_ptr<QuantLib::IborIndex> iborIndex,
+            boost::shared_ptr<QuantLib::IborIndex> baseIborIndex,
+            QuantLib::Date referenceDate,
+            bool isSimple,
+            const std::vector<QuantLib::Real>& coeff,
+            bool permanent);
+    };
+
     class PolynomialTenorBasis : public TenorBasis {
     public:
         PolynomialTenorBasis(
