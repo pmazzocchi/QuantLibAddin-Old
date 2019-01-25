@@ -436,7 +436,6 @@
     <Constructor name='qlOISRateHelper'>
       <libraryFunction>OISRateHelper</libraryFunction>
       <SupportedPlatforms>
-        SupportedPlatform name='Excel' calcInWizard='false'/
         <SupportedPlatform name='Excel'/>
         <SupportedPlatform name='Calc'/>
         <SupportedPlatform name='Cpp'/>
@@ -469,6 +468,16 @@
             <superType>libToHandle</superType>
             <tensorRank>scalar</tensorRank>
             <description>discounting YieldTermStructure object ID.</description>
+          </Parameter>
+          <Parameter name='TelescopicValueDates' exampleValue='true' default='false' >
+            <type>bool</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Telescope Value Dates?</description>
+          </Parameter>
+          <Parameter name='PaymentLag' exampleValue='2' default='0'>
+            <type>QuantLib::Natural</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Lag to payment</description>
           </Parameter>
         </Parameters>
       </ParameterList>
