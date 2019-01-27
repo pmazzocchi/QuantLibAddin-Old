@@ -63,6 +63,7 @@ namespace QuantLibAddin {
             const QuantLib::Period& fwdStart,
             const QuantLib::DayCounter& fixDayCounter,
             QuantLib::Spread overnightSpread,
+            QuantLib::Natural paymentLag,
             bool permanent)
     : Swap(properties, permanent)
     {
@@ -70,6 +71,7 @@ namespace QuantLibAddin {
                         .withSettlementDays(settlDays)
                         .withFixedLegDayCount(fixDayCounter)
                         .withOvernightLegSpread(overnightSpread)
+                        .withPaymentLag(paymentLag)
                         .operator shared_ptr<QuantLib::OvernightIndexedSwap>();
     }
 
