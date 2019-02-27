@@ -43,6 +43,7 @@ namespace QuantLibAddin {
             const QuantLib::DayCounter& fixedDC,
             const shared_ptr<QuantLib::OvernightIndex>& overnightIndex,
             QuantLib::Spread overnightSpread,
+            QuantLib::Natural paymentLag,            
             bool permanent)
     : Swap(properties, permanent)
     {
@@ -50,7 +51,9 @@ namespace QuantLibAddin {
             QuantLib::OvernightIndexedSwap(type, nominals,
                                            *schedule,
                                            fixedRate, fixedDC,
-                                           overnightIndex, overnightSpread));
+                                           overnightIndex,
+                                           overnightSpread,
+                                           paymentLag));
     }
 
     // MakeOIS

@@ -73,6 +73,11 @@
             <tensorRank>scalar</tensorRank>
             <description>overnight leg spread.</description>
           </Parameter>
+          <Parameter name='PaymentLag' exampleValue='2' default='0'>
+            <type>QuantLib::Natural</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Lag to payment</description>
+          </Parameter>	  
         </Parameters>
       </ParameterList>
     </Constructor>
