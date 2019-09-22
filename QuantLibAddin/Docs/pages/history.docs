@@ -27,6 +27,8 @@
 
 - Replaced deprecated Actual365NoLeap() with Actual365Fixed(Actual365Fixed::NoLeap) (thanks to Francois Botha)
 
+- Implemented qlScheduleFullInterfaceFromDateVector in order to create schedule with full interface from date vector (thanks to Francois Botha)
+
 <strong>Release 1.14.0 - November 2018</strong>
 
 - Replaced references to deprecated class CalibrationHelper with references

@@ -28,6 +28,12 @@ implementation of QuantLibAddin.  For a summary of updates to the core
 QuantLibAddin project, please refer to
 <a href="http://www.quantlibaddin.org/history.html">http://www.quantlibaddin.org/history.html</a>
 
+<strong>Release 1.16.0 - November 2018</strong>
+
+- Replaced deprecated Actual365NoLeap() with Actual365Fixed(Actual365Fixed::NoLeap) (thanks to Francois Botha)
+
+- Implemented qlScheduleFullInterfaceFromDateVector in order to create schedule with full interface from date vector (thanks to Francois Botha)
+
 <strong>Release 1.14.0 - November 2018</strong>
 
 - Maintenance release.
