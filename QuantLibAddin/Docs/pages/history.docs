@@ -29,9 +29,11 @@
 
 - Implemented qlScheduleFullInterfaceFromDateVector in order to create schedule with full interface from date vector (thanks to Francois Botha)
 
-- Extend OISRateHelper with payment lag parameter (thanks to BN Algorithms Ltd)
+- Extended OISRateHelper with payment lag parameter (thanks to BN Algorithms Ltd)
 
-- Extend qlMakeOIS with payment lag parameter (thanks to BN Algorithms Ltd)
+- Extended qlMakeOIS with payment lag parameter (thanks to BN Algorithms Ltd)
+
+- Corrected InterestRateDerivatives example spreadsheet (thanks to BN Algorithms Ltd)
 
 <strong>Release 1.14.0 - November 2018</strong>
 
