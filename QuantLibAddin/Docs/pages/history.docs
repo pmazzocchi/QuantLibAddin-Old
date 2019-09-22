@@ -29,6 +29,10 @@
 
 - Implemented qlScheduleFullInterfaceFromDateVector in order to create schedule with full interface from date vector (thanks to Francois Botha)
 
+- Extend OISRateHelper with payment lag parameter (thanks to BN Algorithms Ltd)
+
+- Extend qlMakeOIS with payment lag parameter (thanks to BN Algorithms Ltd)
+
 <strong>Release 1.14.0 - November 2018</strong>
 
 - Replaced references to deprecated class CalibrationHelper with references
