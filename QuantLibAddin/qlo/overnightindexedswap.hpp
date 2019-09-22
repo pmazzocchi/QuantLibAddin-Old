@@ -40,6 +40,7 @@ namespace QuantLibAddin {
             const QuantLib::DayCounter& fixedDC,
             const boost::shared_ptr<QuantLib::OvernightIndex>& overnightIndex,
             QuantLib::Spread overnightSpread,
+            QuantLib::Natural paymentLag,            
             bool permanent);
         OvernightIndexedSwap( // MakeOIS
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
@@ -50,6 +51,7 @@ namespace QuantLibAddin {
             const QuantLib::Period& forwardStart,
             const QuantLib::DayCounter& fixLegDayCounter,
             QuantLib::Spread floatingLegSpread,
+            QuantLib::Natural paymentLag,
             bool permanent);
         OvernightIndexedSwap( // MakeDatedOIS
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,

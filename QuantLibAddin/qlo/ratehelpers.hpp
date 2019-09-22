@@ -187,6 +187,8 @@ namespace QuantLibAddin {
             const QuantLib::Handle<QuantLib::Quote>& fixedRate,
             const boost::shared_ptr<QuantLib::OvernightIndex>& overnightIndex,
             const QuantLib::Handle<QuantLib::YieldTermStructure>& discount,
+            bool telescopicValueDates,
+            QuantLib::Natural paymentLag,
             bool permanent);
     };
 
