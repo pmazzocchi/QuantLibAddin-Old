@@ -89,6 +89,7 @@ testCaseCollection.xml
 *.pch
 *.idb
 *.ipch
+.vs
 
 # Outputs
 ObjectHandler/xll/
