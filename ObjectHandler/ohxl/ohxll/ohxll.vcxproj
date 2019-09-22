@@ -87,14 +87,14 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\xll\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ObjectHandler-xll-$(ohCompilerTag)-mt-1_14_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ObjectHandler-xll-$(ohCompilerTag)-x64-mt-1_14_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ObjectHandler-xll-$(ohCompilerTag)-mt-1_16_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ObjectHandler-xll-$(ohCompilerTag)-x64-mt-1_16_0</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.xll</TargetExt>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ObjectHandler-xll-$(ohCompilerTag)-mt-gd-1_14_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ObjectHandler-xll-$(ohCompilerTag)-x64-mt-gd-1_14_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ObjectHandler-xll-$(ohCompilerTag)-mt-gd-1_16_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ObjectHandler-xll-$(ohCompilerTag)-x64-mt-gd-1_16_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -138,7 +138,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(ohCompilerTag)-mt-gd-1_14_0.lib</ImportLibrary>
+      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(ohCompilerTag)-mt-gd-1_16_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -188,7 +188,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(ohCompilerTag)-x64-mt-gd-1_14_0.lib</ImportLibrary>
+      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(ohCompilerTag)-x64-mt-gd-1_16_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
@@ -238,7 +238,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(ohCompilerTag)-mt-1_14_0.lib</ImportLibrary>
+      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(ohCompilerTag)-mt-1_16_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
@@ -290,7 +290,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(ohCompilerTag)-x64-mt-1_14_0.lib</ImportLibrary>
+      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(ohCompilerTag)-x64-mt-1_16_0.lib</ImportLibrary>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>

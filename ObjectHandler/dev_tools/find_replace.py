@@ -112,12 +112,12 @@ SUBSTITUTIONS = (
 
 ##  Frequently used
     #(re.compile('vc140'), 'vc141'),
-    (re.compile('1_13_0'), '1_14_0'),
-    (re.compile('1\.13\.0'), '1.14.0'),
-    (re.compile('0x011300'), '0x011400'),
-    (re.compile('R011300f0'), 'R011400f0'),
-    (re.compile('0\.10\.0f9'), '0.10.0f10'),
-    (re.compile('0x001000f9'), '0x001000f10'),
+    (re.compile('1_14_0'), '1_16_0'),
+    (re.compile('1\.14\.0'), '1.16.0'),
+    (re.compile('0x011400'), '0x011600'),
+    (re.compile('R011400f0'), 'R011600f0'),
+    (re.compile('0\.10\.0f10'), '0.10.0f11'),
+    (re.compile('0x001000f10'), '0x001000f11'),
 )
 
 # INCLUDE_FILES

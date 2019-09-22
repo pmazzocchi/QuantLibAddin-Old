@@ -2,8 +2,8 @@
 # !defines
 
 !define APP "QuantLibAddin"
-!define VER_NUMBER "1.14.0"
-!define DEFAULT_PATH "c:\build_ql_1_14_0\${APP}"
+!define VER_NUMBER "1.16.0"
+!define DEFAULT_PATH "c:\build_ql_1_16_0\${APP}"
 
 # Compiler Flags
 
