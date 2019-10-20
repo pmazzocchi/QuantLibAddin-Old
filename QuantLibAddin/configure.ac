@@ -130,11 +130,9 @@ AC_SUBST(oh_dir, [${oh_path}])
 
 AC_CONFIG_FILES([
     Addins/Cpp/Makefile
-    Addins/Calc/Makefile
     Clients/Cpp/Makefile
     Clients/CppInstrumentIn/Makefile
     Clients/CppSwapOut/Makefile
-    Clients/Calc/Makefile
     Docs/Makefile
     gensrc/Makefile
     Makefile

@@ -15,11 +15,9 @@ SUBDIRS = \
     qlo/valueobjects \
     qlo \
     Addins/Cpp \
-    Addins/Calc \
     Clients/Cpp \
     Clients/CppInstrumentIn \
     Clients/CppSwapOut \
-    Clients/Calc \
     Docs
 
 EXTRA_DIST = \
