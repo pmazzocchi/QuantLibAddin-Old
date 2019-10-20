@@ -23,7 +23,7 @@
 
 /*! \page history Version History
 
-<strong>Release 1.16.0 - November 2018</strong>
+<strong>Release 1.16.0 - October 2019</strong>
 
 - Replaced deprecated Actual365NoLeap() with Actual365Fixed(Actual365Fixed::NoLeap) (thanks to Francois Botha)
 
