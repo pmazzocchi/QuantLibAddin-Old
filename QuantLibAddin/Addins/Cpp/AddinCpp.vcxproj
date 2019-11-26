@@ -157,14 +157,14 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\build\$(qlaCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\lib\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\build\$(qlaCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AddinCpp-$(qlaCompilerTag)-mt-1_16_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AddinCpp-$(qlaCompilerTag)-x64-mt-1_16_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AddinCpp-$(qlaCompilerTag)-mt-gd-1_16_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AddinCpp-$(qlaCompilerTag)-x64-mt-gd-1_16_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">AddinCpp-$(qlaCompilerTag)-mt-sgd-1_16_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">AddinCpp-$(qlaCompilerTag)-x64-mt-sgd-1_16_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">AddinCpp-$(qlaCompilerTag)-mt-s-1_16_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">AddinCpp-$(qlaCompilerTag)-x64-mt-s-1_16_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AddinCpp-$(qlaCompilerTag)-mt-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AddinCpp-$(qlaCompilerTag)-x64-mt-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AddinCpp-$(qlaCompilerTag)-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AddinCpp-$(qlaCompilerTag)-x64-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">AddinCpp-$(qlaCompilerTag)-mt-sgd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">AddinCpp-$(qlaCompilerTag)-x64-mt-sgd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">AddinCpp-$(qlaCompilerTag)-mt-s-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">AddinCpp-$(qlaCompilerTag)-x64-mt-s-1_17_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">
     <ClCompile>

@@ -1,5 +1,5 @@
 
-##################################################################################
+################################################################################
 #
 # find_replace.py - perform a recursive find/replace on a directory tree
 #
@@ -32,7 +32,7 @@
 # IGNORE_DIRS
 # Regexes to indicate directories to be ignored by the find/replace.
 #
-##################################################################################
+################################################################################
 
 import sys
 import os
@@ -112,12 +112,12 @@ SUBSTITUTIONS = (
 
 ##  Frequently used
     #(re.compile('vc140'), 'vc141'),
-    (re.compile('1_14_0'), '1_16_0'),
-    (re.compile('1\.14\.0'), '1.16.0'),
-    (re.compile('0x011400'), '0x011600'),
-    (re.compile('R011400f0'), 'R011600f0'),
-    (re.compile('0\.10\.0f10'), '0.10.0f11'),
-    (re.compile('0x001000f10'), '0x001000f11'),
+    (re.compile('1_16_0'), '1_17_0'),
+    (re.compile('1\.16\.0'), '1.17.0'),
+    (re.compile('0x011600'), '0x011700'),
+    (re.compile('R011600f0'), 'R011700f0'),
+    (re.compile('0\.10\.0f11'), '0.10.0f12'),
+    (re.compile('0x001000f11'), '0x001000f12'),
 )
 
 # INCLUDE_FILES
