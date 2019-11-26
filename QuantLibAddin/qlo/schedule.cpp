@@ -96,11 +96,17 @@ namespace QuantLibAddin {
     Schedule::Schedule(const boost::shared_ptr<ObjectHandler::ValueObject>& p,
                        const boost::shared_ptr<QuantLib::Schedule>& from,
                        const QuantLib::Date& truncationDate,
+                       const bool returnDatesBefore,
                        bool permanent)
     : ObjectHandler::LibraryObject<QuantLib::Schedule>(p, permanent) {
     
-        libraryObject_ = boost::shared_ptr<QuantLib::Schedule>(new
-            QuantLib::Schedule(from->until(truncationDate)));
+        if (returnDatesBefore)
+            libraryObject_ = boost::shared_ptr<QuantLib::Schedule>(new
+                QuantLib::Schedule(from->until(truncationDate)));
+        else
+            libraryObject_ = boost::shared_ptr<QuantLib::Schedule>(new
+                QuantLib::Schedule(from->after(truncationDate)));
+
     }
 
 }
