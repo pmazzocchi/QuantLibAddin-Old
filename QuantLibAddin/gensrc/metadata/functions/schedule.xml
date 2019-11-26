@@ -436,6 +436,11 @@
             <tensorRank>scalar</tensorRank>
             <description>truncation date.</description>
           </Parameter>
+          <Parameter name='ReturnDatesBefore' default='true'>
+            <type>bool</type>
+            <tensorRank>scalar</tensorRank>
+            <description>Return the dates before or after the truncation date.</description>
+          </Parameter>
         </Parameters>
       </ParameterList>
     </Constructor>

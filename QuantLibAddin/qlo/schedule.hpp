@@ -69,6 +69,7 @@ namespace QuantLibAddin {
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
             const boost::shared_ptr<QuantLib::Schedule>& originalSchedule,
             const QuantLib::Date& truncationDate,
+            const bool returnDatesBefore,
             bool permanent);
     };
 
