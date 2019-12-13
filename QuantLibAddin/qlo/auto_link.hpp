@@ -23,7 +23,9 @@
 #include <qlo/qladdindefines.hpp>
 
 // select toolset:
-#if (_MSC_VER >= 1910)
+#if (_MSC_VER >= 1924)
+#  define QLADDIN_LIB_TOOLSET "v142"
+#elif (_MSC_VER >= 1910)
 #  define QLADDIN_LIB_TOOLSET "v141"
 #elif (_MSC_VER >= 1900)
 #  define QLADDIN_LIB_TOOLSET "v140"
