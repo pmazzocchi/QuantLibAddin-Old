@@ -22,17 +22,17 @@
 
 // select toolset:
 #if (_MSC_VER >= 1910)
-#  define XLSDK_LIB_TOOLSET "vc141"
+#  define XLSDK_LIB_TOOLSET "v141"
 #elif (_MSC_VER >= 1900)
-#  define XLSDK_LIB_TOOLSET "vc140"
+#  define XLSDK_LIB_TOOLSET "v140"
 #elif (_MSC_VER >= 1800)
-#  define XLSDK_LIB_TOOLSET "vc120"
+#  define XLSDK_LIB_TOOLSET "v120"
 #elif (_MSC_VER >= 1700)
-#  define XLSDK_LIB_TOOLSET "vc110"
+#  define XLSDK_LIB_TOOLSET "v110"
 #elif (_MSC_VER >= 1600)
-#  define XLSDK_LIB_TOOLSET "vc100"
+#  define XLSDK_LIB_TOOLSET "v100"
 #elif (_MSC_VER >= 1500)
-#  define XLSDK_LIB_TOOLSET "vc90"
+#  define XLSDK_LIB_TOOLSET "v90"
 #else
 #  error "unsupported Microsoft compiler"
 #endif

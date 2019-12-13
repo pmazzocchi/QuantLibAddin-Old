@@ -25,17 +25,17 @@
 
 // select toolset:
 #if (_MSC_VER >= 1910)
-#  define OBJHANDLER_LIB_TOOLSET "vc141"
+#  define OBJHANDLER_LIB_TOOLSET "v141"
 #elif (_MSC_VER >= 1900)
-#  define OBJHANDLER_LIB_TOOLSET "vc140"
+#  define OBJHANDLER_LIB_TOOLSET "v140"
 #elif (_MSC_VER >= 1800)
-#  define OBJHANDLER_LIB_TOOLSET "vc120"
+#  define OBJHANDLER_LIB_TOOLSET "v120"
 #elif (_MSC_VER >= 1700)
-#  define OBJHANDLER_LIB_TOOLSET "vc110"
+#  define OBJHANDLER_LIB_TOOLSET "v110"
 #elif (_MSC_VER >= 1600)
-#  define OBJHANDLER_LIB_TOOLSET "vc100"
+#  define OBJHANDLER_LIB_TOOLSET "v100"
 #elif (_MSC_VER >= 1500)
-#  define OBJHANDLER_LIB_TOOLSET "vc90"
+#  define OBJHANDLER_LIB_TOOLSET "v90"
 #else
 #  error "unsupported Microsoft compiler"
 #endif

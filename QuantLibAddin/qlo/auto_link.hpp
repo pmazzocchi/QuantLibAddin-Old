@@ -24,17 +24,17 @@
 
 // select toolset:
 #if (_MSC_VER >= 1910)
-#  define QLADDIN_LIB_TOOLSET "vc141"
+#  define QLADDIN_LIB_TOOLSET "v141"
 #elif (_MSC_VER >= 1900)
-#  define QLADDIN_LIB_TOOLSET "vc140"
+#  define QLADDIN_LIB_TOOLSET "v140"
 #elif (_MSC_VER >= 1800)
-#  define QLADDIN_LIB_TOOLSET "vc120"
+#  define QLADDIN_LIB_TOOLSET "v120"
 #elif (_MSC_VER >= 1700)
-#  define QLADDIN_LIB_TOOLSET "vc110"
+#  define QLADDIN_LIB_TOOLSET "v110"
 #elif (_MSC_VER >= 1600)
-#  define QLADDIN_LIB_TOOLSET "vc100"
+#  define QLADDIN_LIB_TOOLSET "v100"
 #elif (_MSC_VER >= 1500)
-#  define QLADDIN_LIB_TOOLSET "vc90"
+#  define QLADDIN_LIB_TOOLSET "v90"
 #else
 #  error "unsupported Microsoft compiler"
 #endif
