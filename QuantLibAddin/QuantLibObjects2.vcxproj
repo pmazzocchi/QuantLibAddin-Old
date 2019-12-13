@@ -1008,6 +1008,7 @@
     </ProjectReference>
     <ProjectReference Include="gensrc\qlgensrc.vcxproj">
       <Project>{c8a6bb98-75ca-4eb9-a750-8ba3b3aa5969}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

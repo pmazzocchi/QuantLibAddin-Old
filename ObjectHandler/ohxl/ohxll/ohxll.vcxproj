@@ -388,6 +388,7 @@
     </ProjectReference>
     <ProjectReference Include="..\..\gensrc\ohgensrc.vcxproj">
       <Project>{88be5568-6e55-41c5-a251-670fafb44336}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="..\..\xlsdk\xlsdk.vcxproj">
       <Project>{4bd77a1e-aae9-47a4-81fe-2308e5a460af}</Project>
