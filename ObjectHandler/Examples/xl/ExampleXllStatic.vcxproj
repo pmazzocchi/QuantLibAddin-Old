@@ -37,130 +37,113 @@
   <PropertyGroup Label="Globals">
     <ProjectName>ExampleXllStatic</ProjectName>
     <ProjectGuid>{687DB6AF-730F-4740-B20A-B95EA8180E8D}</ProjectGuid>
-    
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <Import Project="..\..\ObjectHandler.props" />
+  <Import Project="..\..\..\QuantLib\QuantLib.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ExampleXllStatic-$(ohCompilerTag)-mt-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ExampleXllStatic-$(ohCompilerTag)-x64-mt-1_17_0</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ExampleXllStatic-$(PlatformToolset)-mt-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ExampleXllStatic-$(PlatformToolset)-x64-mt-1_17_0</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.xll</TargetExt>
@@ -169,12 +152,12 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.xll</TargetExt>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ExampleXllStatic-$(ohCompilerTag)-mt-gd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ExampleXllStatic-$(ohCompilerTag)-x64-mt-gd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">ExampleXllStatic-$(ohCompilerTag)-mt-sgd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">ExampleXllStatic-$(ohCompilerTag)-x64-mt-sgd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">ExampleXllStatic-$(ohCompilerTag)-mt-s-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">ExampleXllStatic-$(ohCompilerTag)-x64-mt-s-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ExampleXllStatic-$(PlatformToolset)-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ExampleXllStatic-$(PlatformToolset)-x64-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">ExampleXllStatic-$(PlatformToolset)-mt-sgd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">ExampleXllStatic-$(PlatformToolset)-x64-mt-sgd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">ExampleXllStatic-$(PlatformToolset)-mt-s-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">ExampleXllStatic-$(PlatformToolset)-x64-mt-s-1_17_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">
     <Midl>
@@ -182,7 +165,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -194,10 +177,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -213,17 +196,17 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\..\log4cxx\msvc\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-mt-sgd-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-mt-sgd-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-mt-sgd-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-mt-sgd-1_17_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
+      <OutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">
@@ -231,7 +214,7 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -242,10 +225,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -261,16 +244,16 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\..\log4cxx\msvc\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-mt-sgd-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-mt-sgd-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-x64-mt-sgd-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-x64-mt-sgd-1_17_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
+      <OutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">
@@ -279,7 +262,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -292,10 +275,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -309,17 +292,17 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\..\log4cxx\msvc\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-mt-s-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-mt-s-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-mt-s-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-mt-s-1_17_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
+      <OutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">
@@ -327,7 +310,7 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -340,10 +323,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -357,16 +340,16 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\..\log4cxx\msvc\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-mt-s-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-mt-s-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-x64-mt-s-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-x64-mt-s-1_17_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
+      <OutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -375,7 +358,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -388,10 +371,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -405,17 +388,17 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\..\log4cxx\msvc\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-mt-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-mt-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-mt-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-mt-1_17_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
+      <OutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -423,7 +406,7 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -436,10 +419,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -453,16 +436,16 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\..\log4cxx\msvc\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-mt-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-mt-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-mt-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-mt-1_17_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
+      <OutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -471,7 +454,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -483,10 +466,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -502,17 +485,17 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\..\log4cxx\msvc\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-mt-gd-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-mt-gd-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-mt-gd-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-mt-gd-1_17_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
+      <OutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -520,7 +503,7 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -531,10 +514,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -550,16 +533,16 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\..\log4cxx\msvc\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-mt-gd-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-mt-gd-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(ohCompilerTag)-mt-gd-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLStatic-$(PlatformToolset)-mt-gd-1_17_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildXllStatic\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
+      <OutputFile>.\buildXllStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllStatic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>

@@ -21,80 +21,71 @@
   <PropertyGroup Label="Globals">
     <ProjectName>ohxll</ProjectName>
     <ProjectGuid>{04D7369F-47BC-46B0-A374-41635A9656D8}</ProjectGuid>
-    
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <Import Project="..\..\ObjectHandler.props" />
+  <Import Project="..\..\..\QuantLib\QuantLib.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ObjectHandler-xll-$(ohCompilerTag)-mt-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ObjectHandler-xll-$(ohCompilerTag)-x64-mt-1_17_0</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ObjectHandler-xll-$(PlatformToolset)-mt-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ObjectHandler-xll-$(PlatformToolset)-x64-mt-1_17_0</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.xll</TargetExt>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ObjectHandler-xll-$(ohCompilerTag)-mt-gd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ObjectHandler-xll-$(ohCompilerTag)-x64-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ObjectHandler-xll-$(PlatformToolset)-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ObjectHandler-xll-$(PlatformToolset)-x64-mt-gd-1_17_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -115,10 +106,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/ohxll.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/ohxll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -134,11 +125,11 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\..\log4cxx\msvc\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)\ohxll.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)\ohxll.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(ohCompilerTag)-mt-gd-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(PlatformToolset)-mt-gd-1_17_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -165,10 +156,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/ohxll.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/ohxll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -184,11 +175,11 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\..\log4cxx\msvc\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)\ohxll.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)\ohxll.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(ohCompilerTag)-x64-mt-gd-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(PlatformToolset)-x64-mt-gd-1_17_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
@@ -217,10 +208,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/ohxll.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/ohxll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -234,11 +225,11 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\..\log4cxx\msvc\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)\ohxll.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)\ohxll.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(ohCompilerTag)-mt-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(PlatformToolset)-mt-1_17_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
@@ -269,10 +260,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/ohxll.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/ohxll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -286,11 +277,11 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\..\log4cxx\msvc\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>..\..\build\$(ohCompilerTag)\ohxll\$(Platform)\$(Configuration)\ohxll.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>..\..\build\$(PlatformToolset)\ohxll\$(Platform)\$(Configuration)\ohxll.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(ohCompilerTag)-x64-mt-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>..\..\lib\ObjectHandler-xll-$(PlatformToolset)-x64-mt-1_17_0.lib</ImportLibrary>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>

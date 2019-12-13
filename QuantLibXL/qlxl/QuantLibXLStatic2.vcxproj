@@ -38,136 +38,119 @@
     <ProjectName>QuantLibXLStatic</ProjectName>
     <ProjectGuid>{DADFEC4C-A850-4312-8146-FB9BCC19CE92}</ProjectGuid>
     <RootNamespace>QuantLibXLStatic</RootNamespace>
-    
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <Import Project="..\QuantLibXL.props" />
+  <Import Project="..\..\QuantLib\QuantLib.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">true</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">true</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QuantLibXL-$(qlxlCompilerTag)-mt-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QuantLibXL-$(qlxlCompilerTag)-x64-mt-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QuantLibXL-$(qlxlCompilerTag)-mt-gd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">QuantLibXL-$(qlxlCompilerTag)-x64-mt-gd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">QuantLibXL-$(qlxlCompilerTag)-mt-sgd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">QuantLibXL-$(qlxlCompilerTag)-x64-mt-sgd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">QuantLibXL-$(qlxlCompilerTag)-mt-s-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">QuantLibXL-$(qlxlCompilerTag)-x64-mt-s-1_17_0</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QuantLibXL-$(PlatformToolset)-mt-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QuantLibXL-$(PlatformToolset)-x64-mt-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QuantLibXL-$(PlatformToolset)-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">QuantLibXL-$(PlatformToolset)-x64-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">QuantLibXL-$(PlatformToolset)-mt-sgd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">QuantLibXL-$(PlatformToolset)-x64-mt-sgd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">QuantLibXL-$(PlatformToolset)-mt-s-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">QuantLibXL-$(PlatformToolset)-x64-mt-s-1_17_0</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.xll</TargetExt>
@@ -183,7 +166,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -196,10 +179,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
@@ -215,17 +198,17 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-sgd-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-sgd-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-sgd-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-sgd-1_17_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
+      <OutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">
@@ -233,7 +216,7 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -246,10 +229,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -265,16 +248,16 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-sgd-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-sgd-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-sgd-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-sgd-1_17_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
+      <OutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -283,7 +266,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -296,10 +279,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
@@ -315,17 +298,17 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-gd-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-gd-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-gd-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-gd-1_17_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
+      <OutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -333,7 +316,7 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -346,10 +329,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -365,16 +348,16 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-gd-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-gd-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-gd-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-gd-1_17_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
+      <OutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">
@@ -383,7 +366,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -398,10 +381,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -415,17 +398,17 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-s-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-s-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-s-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-s-1_17_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
+      <OutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">
@@ -433,7 +416,7 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -448,10 +431,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -465,16 +448,16 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-s-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-s-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-s-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-s-1_17_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
+      <OutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -483,7 +466,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -498,10 +481,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -515,17 +498,17 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-1_17_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
+      <OutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -533,7 +516,7 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -548,10 +531,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -565,16 +548,16 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../ObjectHandler/lib;../../QuantLib/lib;../../QuantLibAddin/lib;../../log4cxx/msvc/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL-$(qlxlCompilerTag)-mt-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL-$(PlatformToolset)-mt-1_17_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>false</SuppressStartupBanner>
-      <OutputFile>.\buildStatic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
+      <OutputFile>.\buildStatic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXL.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>

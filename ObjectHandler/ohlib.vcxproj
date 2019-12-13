@@ -37,136 +37,119 @@
   <PropertyGroup Label="Globals">
     <ProjectName>ohlib</ProjectName>
     <ProjectGuid>{CD623FE5-3B3E-4511-80A9-A99D893349A4}</ProjectGuid>
-    
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <Import Project="ObjectHandler.props" />
+  <Import Project="..\QuantLib\QuantLib.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ObjectHandler-$(ohCompilerTag)-mt-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ObjectHandler-$(ohCompilerTag)-x64-mt-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ObjectHandler-$(ohCompilerTag)-mt-gd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ObjectHandler-$(ohCompilerTag)-x64-mt-gd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">ObjectHandler-$(ohCompilerTag)-mt-sgd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">ObjectHandler-$(ohCompilerTag)-x64-mt-sgd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">ObjectHandler-$(ohCompilerTag)-mt-s-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">ObjectHandler-$(ohCompilerTag)-x64-mt-s-1_17_0</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ObjectHandler-$(PlatformToolset)-mt-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ObjectHandler-$(PlatformToolset)-x64-mt-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ObjectHandler-$(PlatformToolset)-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ObjectHandler-$(PlatformToolset)-x64-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">ObjectHandler-$(PlatformToolset)-mt-sgd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">ObjectHandler-$(PlatformToolset)-x64-mt-sgd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">ObjectHandler-$(PlatformToolset)-mt-s-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">ObjectHandler-$(PlatformToolset)-x64-mt-s-1_17_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">
     <ClCompile>
@@ -178,10 +161,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -198,7 +181,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">
@@ -211,10 +194,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -230,7 +213,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -245,10 +228,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -264,7 +247,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -279,10 +262,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -297,7 +280,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">
@@ -312,10 +295,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -331,7 +314,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">
@@ -346,10 +329,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -364,7 +347,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -377,10 +360,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -397,7 +380,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -410,10 +393,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -429,7 +412,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\build\$(ohCompilerTag)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
+      <OutputFile>.\build\$(PlatformToolset)\oh\$(Platform)\$(Configuration)/ohlib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
