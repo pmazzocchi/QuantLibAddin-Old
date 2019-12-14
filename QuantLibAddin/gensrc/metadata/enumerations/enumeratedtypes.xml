@@ -589,6 +589,15 @@
           <value>QuantLib::UnitedStates(QuantLib::UnitedStates::Settlement)</value>
         </EnumeratedType>
         <EnumeratedType>
+          <string>UnitedStates::FederalReserve</string>
+          <value>QuantLib::UnitedStates(QuantLib::UnitedStates::FederalReserve)</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <!-- Clone for UnitedStates::FederalReserve -->
+          <string>US Fedwire System</string>
+          <value>QuantLib::UnitedStates(QuantLib::UnitedStates::FederalReserve)</value>
+        </EnumeratedType>
+        <EnumeratedType>
           <string>WeekendsOnly</string>
           <value>QuantLib::WeekendsOnly()</value>
         </EnumeratedType>
