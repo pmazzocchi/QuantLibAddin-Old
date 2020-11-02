@@ -21,80 +21,71 @@
   <PropertyGroup Label="Globals">
     <ProjectName>ExampleXllDynamic2</ProjectName>
     <ProjectGuid>{F89760C1-CD0C-4138-A6A7-A8528A1B0D6F}</ProjectGuid>
-    
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <Import Project="..\..\ObjectHandler.props" />
+  <Import Project="..\..\..\QuantLib\QuantLib.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ExampleXllDynamic2-$(ohCompilerTag)-mt-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ExampleXllDynamic2-$(ohCompilerTag)-x64-mt-1_17_0</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ExampleXllDynamic2-$(PlatformToolset)-mt-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ExampleXllDynamic2-$(PlatformToolset)-x64-mt-1_17_0</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.xll</TargetExt>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ExampleXllDynamic2-$(ohCompilerTag)-mt-gd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ExampleXllDynamic2-$(ohCompilerTag)-x64-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ExampleXllDynamic2-$(PlatformToolset)-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ExampleXllDynamic2-$(PlatformToolset)-x64-mt-gd-1_17_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -102,7 +93,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllDynamic2.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllDynamic2.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -114,10 +105,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllDynamic2.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllDynamic2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -133,17 +124,17 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\xll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(ohCompilerTag)-mt-gd-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(PlatformToolset)-mt-gd-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(ohCompilerTag)-mt-gd-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(PlatformToolset)-mt-gd-1_17_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllDynamic2.bsc</OutputFile>
+      <OutputFile>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllDynamic2.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -151,7 +142,7 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllDynamic2.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllDynamic2.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -162,10 +153,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllDynamic2.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllDynamic2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -181,16 +172,16 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\xll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(ohCompilerTag)-mt-gd-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(PlatformToolset)-mt-gd-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(ohCompilerTag)-x64-mt-gd-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(PlatformToolset)-x64-mt-gd-1_17_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllDynamic2.bsc</OutputFile>
+      <OutputFile>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllDynamic2.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -199,7 +190,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllDynamic2.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllDynamic2.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -212,10 +203,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllDynamic2.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllDynamic2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -229,17 +220,17 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\xll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(ohCompilerTag)-mt-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(PlatformToolset)-mt-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(ohCompilerTag)-mt-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(PlatformToolset)-mt-1_17_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllDynamic2.bsc</OutputFile>
+      <OutputFile>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllDynamic2.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -247,7 +238,7 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllDynamic2.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllDynamic2.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -260,10 +251,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllDynamic2.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllDynamic2.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -277,16 +268,16 @@
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>..\..\lib;..\..\xll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ProgramDatabaseFile>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(ohCompilerTag)-mt-1_17_0.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(PlatformToolset)-mt-1_17_0.pdb</ProgramDatabaseFile>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(ohCompilerTag)-x64-mt-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXLLDynamic2-$(PlatformToolset)-x64-mt-1_17_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildXllDynamic2\$(ohCompilerTag)\$(Platform)\$(Configuration)\ExampleXllDynamic2.bsc</OutputFile>
+      <OutputFile>.\buildXllDynamic2\$(PlatformToolset)\$(Platform)\$(Configuration)\ExampleXllDynamic2.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>

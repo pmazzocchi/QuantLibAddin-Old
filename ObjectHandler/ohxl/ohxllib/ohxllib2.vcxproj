@@ -37,57 +37,48 @@
   <PropertyGroup Label="Globals">
     <ProjectName>ohxllib</ProjectName>
     <ProjectGuid>{66021664-4359-442C-ACC7-7C82F51C9D5A}</ProjectGuid>
-    
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <Import Project="..\..\ObjectHandler.props" />
+  <Import Project="..\..\..\QuantLib\QuantLib.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -120,45 +111,45 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">true</LinkIncremental>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">false</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">false</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">..\..\lib\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ObjectHandler-xllib-$(ohCompilerTag)-mt-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ObjectHandler-xllib-$(ohCompilerTag)-x64-mt-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ObjectHandler-xllib-$(ohCompilerTag)-mt-gd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ObjectHandler-xllib-$(ohCompilerTag)-x64-mt-gd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">ObjectHandler-xllib-$(ohCompilerTag)-mt-sgd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">ObjectHandler-xllib-$(ohCompilerTag)-x64-mt-sgd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">ObjectHandler-xllib-$(ohCompilerTag)-mt-s-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">ObjectHandler-xllib-$(ohCompilerTag)-x64-mt-s-1_17_0</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ObjectHandler-xllib-$(PlatformToolset)-mt-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ObjectHandler-xllib-$(PlatformToolset)-x64-mt-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ObjectHandler-xllib-$(PlatformToolset)-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ObjectHandler-xllib-$(PlatformToolset)-x64-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">ObjectHandler-xllib-$(PlatformToolset)-mt-sgd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">ObjectHandler-xllib-$(PlatformToolset)-x64-mt-sgd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">ObjectHandler-xllib-$(PlatformToolset)-mt-s-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">ObjectHandler-xllib-$(PlatformToolset)-x64-mt-s-1_17_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -170,10 +161,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -189,7 +180,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -202,10 +193,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -221,7 +212,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">
@@ -236,10 +227,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -255,7 +246,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">
@@ -270,10 +261,10 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -289,7 +280,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -304,10 +295,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -323,7 +314,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -338,10 +329,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -357,7 +348,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">
@@ -370,10 +361,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -389,7 +380,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">
@@ -402,10 +393,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -421,7 +412,7 @@
     </Lib>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>..\..\build\$(ohCompilerTag)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
+      <OutputFile>..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)/ohxllib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>

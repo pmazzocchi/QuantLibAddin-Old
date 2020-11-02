@@ -23,6 +23,7 @@
 
 #include <ql/time/frequency.hpp>
 
+#include <string>
 #include <vector>
 
 namespace QuantLib {

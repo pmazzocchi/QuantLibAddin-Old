@@ -22,33 +22,28 @@
     <ProjectName>QuantLibXLDynamic</ProjectName>
     <ProjectGuid>{AD2B301F-9217-467C-A5C2-DFF8A715D394}</ProjectGuid>
     <RootNamespace>QuantLibXLDynamic</RootNamespace>
-    
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <Import Project="..\QuantLibXL.props" />
+  <Import Project="..\..\QuantLib\QuantLib.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -69,7 +64,7 @@
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreBuildEventUseInBuild>
     <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</PreBuildEventUseInBuild>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
@@ -77,7 +72,7 @@
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PreBuildEventUseInBuild>
     <PreBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</PreBuildEventUseInBuild>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
@@ -85,17 +80,17 @@
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</EmbedManifest>
     <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</EmbedManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\xll\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.xll</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.xll</TargetExt>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QuantLibXLDynamic-$(qlxlCompilerTag)-mt-gd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">QuantLibXLDynamic-$(qlxlCompilerTag)-x64-mt-gd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QuantLibXLDynamic-$(qlxlCompilerTag)-mt-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QuantLibXLDynamic-$(qlxlCompilerTag)-x64-mt-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">QuantLibXLDynamic-$(PlatformToolset)-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">QuantLibXLDynamic-$(PlatformToolset)-x64-mt-gd-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">QuantLibXLDynamic-$(PlatformToolset)-mt-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QuantLibXLDynamic-$(PlatformToolset)-x64-mt-1_17_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <PreBuildEvent>
@@ -107,7 +102,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -120,10 +115,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
@@ -143,13 +138,13 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(qlxlCompilerTag)-mt-gd-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(PlatformToolset)-mt-gd-1_17_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
+      <OutputFile>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -161,7 +156,7 @@
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -174,10 +169,10 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -197,12 +192,12 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(qlxlCompilerTag)-mt-gd-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(PlatformToolset)-mt-gd-1_17_0.lib</ImportLibrary>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
+      <OutputFile>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -215,7 +210,7 @@
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TargetEnvironment>Win32</TargetEnvironment>
-      <TypeLibraryName>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -230,10 +225,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -252,7 +247,7 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(qlxlCompilerTag)-mt-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(PlatformToolset)-mt-1_17_0.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
@@ -260,7 +255,7 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
+      <OutputFile>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -272,7 +267,7 @@
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TypeLibraryName>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
+      <TypeLibraryName>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic.tlb</TypeLibraryName>
       <HeaderFileName>
       </HeaderFileName>
     </Midl>
@@ -287,10 +282,10 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeaderOutputFile>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
-      <ObjectFileName>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ObjectFileName>
-      <ProgramDataBaseFileName>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/</AssemblerListingLocation>
+      <ObjectFileName>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ObjectFileName>
+      <ProgramDataBaseFileName>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -309,14 +304,14 @@
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
       </DataExecutionPrevention>
-      <ImportLibrary>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(qlxlCompilerTag)-mt-1_17_0.lib</ImportLibrary>
+      <ImportLibrary>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic-$(PlatformToolset)-mt-1_17_0.lib</ImportLibrary>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OptimizeReferences>true</OptimizeReferences>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\buildDynamic\$(qlxlCompilerTag)\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
+      <OutputFile>.\buildDynamic\$(PlatformToolset)\$(Platform)\$(Configuration)/QuantLibXLDynamic.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
