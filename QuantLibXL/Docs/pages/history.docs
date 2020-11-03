@@ -28,6 +28,14 @@ implementation of QuantLibAddin.  For a summary of updates to the core
 QuantLibAddin project, please refer to
 <a href="http://www.quantlibaddin.org/history.html">http://www.quantlibaddin.org/history.html</a>
 
+<strong>Release 1.20.0 - November 2020</strong>
+
+- Consolidate project files and upgrade to VS2019 (thanks to Francois Botha)
+
+- Replaced deprecated Actual365NoLeap() with Actual365Fixed(Actual365Fixed::NoLeap) (thanks to Francois Botha)
+
+- New enumeraition UnitedStates::FederalReserve with alias US Fedwire System (thanks to mdelmedico)
+
 <strong>Release 1.16.0 - October 2019</strong>
 
 - Replaced deprecated Actual365NoLeap() with Actual365Fixed(Actual365Fixed::NoLeap) (thanks to Francois Botha)
