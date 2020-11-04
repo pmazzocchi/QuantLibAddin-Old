@@ -1,9 +1,6 @@
 
 EXTRA_DIST = \
-    docs_vc8.vcproj \
-    docs_vc9.vcproj \
-    docs_vc10.vcxproj \
-    docs_vc11.vcxproj \
+    docs.vcxproj \
     doxygen.css \
     gensrc.doxy \
     gs_footer.html \
@@ -47,7 +44,7 @@ docs-dist: docs-html-dist
 
 docs-html: .time-stamp-html
 .time-stamp-html: $(DOXYGEN_CONFIG) $(DOXYGEN_CUSTOM) $(DOXYGEN_INPUT)
-	python $(SCRIPT) $(DOXYGEN_CONFIG) $(DOXYGEN_CONFIG_TEMP)
+	python2 $(SCRIPT) $(DOXYGEN_CONFIG) $(DOXYGEN_CONFIG_TEMP)
 	$(DOXYGEN) $(DOXYGEN_CONFIG_TEMP)
 	rm $(DOXYGEN_CONFIG_TEMP)
 	cp tabs.css html
@@ -63,7 +60,7 @@ docs-html-dist: docs-html
 
 docs-online: .time-stamp-online
 .time-stamp-online: $(DOXYGEN_CONFIG) $(DOXYGEN_CUSTOM) $(DOXYGEN_INPUT)
-	python $(SCRIPT) -o $(DOXYGEN_CONFIG) $(DOXYGEN_CONFIG_TEMP)
+	python2 $(SCRIPT) -o $(DOXYGEN_CONFIG) $(DOXYGEN_CONFIG_TEMP)
 	$(DOXYGEN) $(DOXYGEN_CONFIG_TEMP)
 	rm $(DOXYGEN_CONFIG_TEMP)
 	cp tabs.css html-online

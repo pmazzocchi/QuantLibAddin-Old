@@ -1,15 +1,5 @@
 
 EXTRA_DIST = \
-    docs_vc8.vcproj \
-    docs_vc9.vcproj \
-    docs_vc10.vcxproj \
-    docs_vc10.vcxproj.filters \
-    docs_vc11.vcxproj \
-    docs_vc11.vcxproj.filters \
-    docs_vc12.vcxproj \
-    docs_vc12.vcxproj.filters \
-    docs_vc14.vcxproj \
-    docs_vc14.vcxproj.filters \
     docs.vcxproj \
     docs.vcxproj.filters \
     Makefile.vc \
@@ -59,7 +49,7 @@ docs-dist: docs-html-dist
 
 docs-html: .time-stamp-html
 .time-stamp-html: $(DOXYGEN_CONFIG) $(DOXYGEN_CUSTOM) $(DOXYGEN_INPUT)
-	python $(SCRIPT) $(DOXYGEN_CONFIG) $(DOXYGEN_CONFIG_TEMP)
+	python2 $(SCRIPT) $(DOXYGEN_CONFIG) $(DOXYGEN_CONFIG_TEMP)
 	$(DOXYGEN) $(DOXYGEN_CONFIG_TEMP)
 	rm $(DOXYGEN_CONFIG_TEMP)
 	cp tabs.css html
@@ -75,7 +65,7 @@ docs-html-dist: docs-html
 
 docs-online: .time-stamp-online
 .time-stamp-online: $(DOXYGEN_CONFIG) $(DOXYGEN_CUSTOM) $(DOXYGEN_INPUT)
-	python $(SCRIPT) -o $(DOXYGEN_CONFIG) $(DOXYGEN_CONFIG_TEMP)
+	python2 $(SCRIPT) -o $(DOXYGEN_CONFIG) $(DOXYGEN_CONFIG_TEMP)
 	$(DOXYGEN) $(DOXYGEN_CONFIG_TEMP)
 	rm $(DOXYGEN_CONFIG_TEMP)
 	cp tabs.css html-online

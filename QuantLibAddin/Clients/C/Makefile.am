@@ -4,8 +4,7 @@ LDADD = ../../Addins/C/libQuantLibAddinC.la
 LDFLAGS = -lObjectHandler -lQuantLib -lstdc++
 
 EXTRA_DIST = \
-    ClientCDemo_vc8.vcproj \
-    ClientCDemo_vc7.vcproj
+    ClientCDemo.vcxproj
 
 QLADemo_SOURCES = qlademo.c
 

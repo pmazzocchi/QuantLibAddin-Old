@@ -14,27 +14,27 @@
 # limitations under the License.
 #
 noinst_HEADERS = \
-	$(top_srcdir)/src/test/cpp/customlogger/*.h \
-	$(top_srcdir)/src/test/cpp/helpers/*.h \
-	$(top_srcdir)/src/test/cpp/net/*.h \
-	$(top_srcdir)/src/test/cpp/pattern/*.h \
-	$(top_srcdir)/src/test/cpp/util/*.h \
-	$(top_srcdir)/src/test/cpp/xml/*.h \
-	$(top_srcdir)/src/test/cpp/*.h
+    $(top_srcdir)/src/test/cpp/customlogger/*.h \
+    $(top_srcdir)/src/test/cpp/helpers/*.h \
+    $(top_srcdir)/src/test/cpp/net/*.h \
+    $(top_srcdir)/src/test/cpp/pattern/*.h \
+    $(top_srcdir)/src/test/cpp/util/*.h \
+    $(top_srcdir)/src/test/cpp/xml/*.h \
+    $(top_srcdir)/src/test/cpp/*.h
 
 INCLUDES = -I$(top_srcdir)/src/main/include -I$(top_builddir)/src/main/include
 
 noinst_PROGRAMS = testsuite
 
 customlogger_tests = \
-	customlogger/xlogger.cpp\
-	customlogger/xloggertestcase.cpp
+    customlogger/xlogger.cpp\
+    customlogger/xloggertestcase.cpp
 
 defaultinit_tests = \
-	defaultinit/testcase1.cpp\
-	defaultinit/testcase2.cpp\
-	defaultinit/testcase3.cpp\
-	defaultinit/testcase4.cpp
+    defaultinit/testcase1.cpp\
+    defaultinit/testcase2.cpp\
+    defaultinit/testcase3.cpp\
+    defaultinit/testcase4.cpp
 
 helpers = \
         helpers/absolutetimedateformattestcase.cpp \
@@ -57,17 +57,17 @@ helpers = \
         helpers/transcodertestcase.cpp
 
 net_tests = \
-	net/smtpappendertestcase.cpp \
-	net/socketappendertestcase.cpp \
-	net/sockethubappendertestcase.cpp \
-	net/socketservertestcase.cpp \
-	net/syslogappendertestcase.cpp \
-	net/telnetappendertestcase.cpp \
-	net/xmlsocketappendertestcase.cpp
+    net/smtpappendertestcase.cpp \
+    net/socketappendertestcase.cpp \
+    net/sockethubappendertestcase.cpp \
+    net/socketservertestcase.cpp \
+    net/syslogappendertestcase.cpp \
+    net/telnetappendertestcase.cpp \
+    net/xmlsocketappendertestcase.cpp
 
 pattern_tests = \
-	pattern/num343patternconverter.cpp \
-	pattern/patternparsertestcase.cpp
+    pattern/num343patternconverter.cpp \
+    pattern/patternparsertestcase.cpp
 
 rolling_tests = \
         rolling/filenamepatterntestcase.cpp \
@@ -79,41 +79,41 @@ rolling_tests = \
         rolling/timebasedrollingtest.cpp
 
 util = \
-	util/absolutetimefilter.cpp\
-	util/absolutedateandtimefilter.cpp\
-	util/binarycompare.cpp\
-	util/compare.cpp\
-	util/controlfilter.cpp\
-	util/filenamefilter.cpp \
-	util/utilfilter.cpp\
-	util/iso8601filter.cpp\
-	util/linenumberfilter.cpp\
-	util/relativetimefilter.cpp\
+    util/absolutetimefilter.cpp\
+    util/absolutedateandtimefilter.cpp\
+    util/binarycompare.cpp\
+    util/compare.cpp\
+    util/controlfilter.cpp\
+    util/filenamefilter.cpp \
+    util/utilfilter.cpp\
+    util/iso8601filter.cpp\
+    util/linenumberfilter.cpp\
+    util/relativetimefilter.cpp\
     util/serializationtesthelper.cpp \
-	util/threadfilter.cpp\
-	util/transformer.cpp\
-	util/xmlfilenamefilter.cpp \
-	util/xmllineattributefilter.cpp\
-	util/xmltimestampfilter.cpp \
-	util/xmlthreadfilter.cpp
+    util/threadfilter.cpp\
+    util/transformer.cpp\
+    util/xmlfilenamefilter.cpp \
+    util/xmllineattributefilter.cpp\
+    util/xmltimestampfilter.cpp \
+    util/xmlthreadfilter.cpp
 
 varia_tests = \
-	varia/errorhandlertestcase.cpp \
-	varia/levelmatchfiltertestcase.cpp \
-	varia/levelrangefiltertestcase.cpp
+    varia/errorhandlertestcase.cpp \
+    varia/levelmatchfiltertestcase.cpp \
+    varia/levelrangefiltertestcase.cpp
 
 db_tests = \
-	db/odbcappendertestcase.cpp
+    db/odbcappendertestcase.cpp
 
 xml_tests = \
-	xml/customleveltestcase.cpp \
-	xml/domtestcase.cpp \
-	xml/xlevel.cpp \
-	xml/xmllayouttestcase.cpp \
+    xml/customleveltestcase.cpp \
+    xml/domtestcase.cpp \
+    xml/xlevel.cpp \
+    xml/xmllayouttestcase.cpp \
     xml/xmllayouttest.cpp
 
 nt_tests = \
-	nt/nteventlogappendertestcase.cpp
+    nt/nteventlogappendertestcase.cpp
 
 testsuite_SOURCES = \
         $(customlogger_tests) \

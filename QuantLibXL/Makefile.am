@@ -7,13 +7,10 @@ EXTRA_DIST = \
     Contributors.txt \
     LICENSE.TXT \
     NEWS.txt \
-    QuantLibAllDynamic_vc8.sln \
-    QuantLibAllDynamic_vc9.sln \
-    QuantLibXL_basic_vc8.sln \
-    QuantLibXL_basic_vc9.sln \
+    QuantLibAllDynamic.sln \
+    QuantLibXL_basic.sln \
     QuantLibXL-bin.nsi \
-    QuantLibXL_full_vc8.sln \
-    QuantLibXL_full_vc9.sln \
+    QuantLibXL_full.sln \
     QuantLibXL.nsi \
     QuantLibXL-src.nsi \
     README.txt \

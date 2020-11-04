@@ -4,12 +4,6 @@ QLADemo_LDADD = ../../qlo/libQuantLibAddin.la ../../Addins/Cpp/libQuantLibAddinC
 QLADemo_LDFLAGS = -lObjectHandler -lQuantLib -lboost_filesystem -lboost_serialization -lboost_system -lboost_regex
 
 EXTRA_DIST = \
-    ClientCppDemo_vc8.vcproj \
-    ClientCppDemo_vc9.vcproj \
-    ClientCppDemo_vc10.vcxproj \
-    ClientCppDemo_vc11.vcxproj \
-    ClientCppDemo_vc12.vcxproj \
-    ClientCppDemo_vc14.vcxproj \
     ClientCppDemo.vcxproj
 
 QLADemo_SOURCES = qlademo.cpp
