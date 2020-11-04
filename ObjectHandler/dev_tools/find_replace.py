@@ -48,12 +48,12 @@ ROOT_DIRS = (
     #'/home/erik/projects/QuantLibAddin-Old/ObjectHandler',
     #'/home/erik/projects/QuantLibAddin-Old/QuantLibAddin',
     #'/home/erik/projects/QuantLibAddin-Old/QuantLibXL',
-    'C:/projects/QuantLibAddin-Old/log4cxx',
-    'C:/projects/QuantLibAddin-Old/gensrc',
-    'C:/projects/QuantLibAddin-Old/ObjectHandler',
-    'C:/projects/QuantLibAddin-Old/QuantLibAddin',
-    'C:/projects/QuantLibAddin-Old/QuantLibXL',
-    'C:/projects/QuantLibAddin-Old/XL-Launcher',
+    'C:/projects/QuantLibAddin-Old4/log4cxx',
+    'C:/projects/QuantLibAddin-Old4/gensrc',
+    'C:/projects/QuantLibAddin-Old4/ObjectHandler',
+    'C:/projects/QuantLibAddin-Old4/QuantLibAddin',
+    'C:/projects/QuantLibAddin-Old4/QuantLibXL',
+    'C:/projects/QuantLibAddin-Old4/XL-Launcher',
 )
 
 # CALLBACK FUNCTIONS - Called from regexes which require multiple passes
@@ -112,12 +112,12 @@ SUBSTITUTIONS = (
 
 ##  Frequently used
     #(re.compile('vc140'), 'vc141'),
-    (re.compile('1_16_0'), '1_17_0'),
-    (re.compile('1\.16\.0'), '1.17.0'),
-    (re.compile('0x011600'), '0x011700'),
-    (re.compile('R011600f0'), 'R011700f0'),
-    (re.compile('0\.10\.0f11'), '0.10.0f12'),
-    (re.compile('0x001000f11'), '0x001000f12'),
+    (re.compile('1_17_0'), '1_20_0'),
+    (re.compile('1\.17\.0'), '1.20.0'),
+    (re.compile('0x011700'), '0x012000'),
+    (re.compile('R011700f0'), 'R012000f0'),
+    #(re.compile('0\.10\.0f11'), '0.10.0f12'),
+    #(re.compile('0x001000f11'), '0x001000f12'),
 )
 
 # INCLUDE_FILES
@@ -181,6 +181,7 @@ IGNORE_DIRS = (
     re.compile('^\.svn$'),
     re.compile('^autom4te\.cache$'),
     re.compile('^build$'),
+    re.compile('^buildStatic$'),
     re.compile('^configure$'),
     re.compile('^dev_tools$'),
     re.compile('^framework$'),
