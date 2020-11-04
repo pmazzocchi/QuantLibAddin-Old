@@ -142,14 +142,14 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">..\..\lib\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">..\..\build\$(PlatformToolset)\ohxllib\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ObjectHandler-xllib-$(PlatformToolset)-mt-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ObjectHandler-xllib-$(PlatformToolset)-x64-mt-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ObjectHandler-xllib-$(PlatformToolset)-mt-gd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ObjectHandler-xllib-$(PlatformToolset)-x64-mt-gd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">ObjectHandler-xllib-$(PlatformToolset)-mt-sgd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">ObjectHandler-xllib-$(PlatformToolset)-x64-mt-sgd-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">ObjectHandler-xllib-$(PlatformToolset)-mt-s-1_17_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">ObjectHandler-xllib-$(PlatformToolset)-x64-mt-s-1_17_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ObjectHandler-xllib-$(PlatformToolset)-mt-1_20_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ObjectHandler-xllib-$(PlatformToolset)-x64-mt-1_20_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ObjectHandler-xllib-$(PlatformToolset)-mt-gd-1_20_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ObjectHandler-xllib-$(PlatformToolset)-x64-mt-gd-1_20_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">ObjectHandler-xllib-$(PlatformToolset)-mt-sgd-1_20_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">ObjectHandler-xllib-$(PlatformToolset)-x64-mt-sgd-1_20_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">ObjectHandler-xllib-$(PlatformToolset)-mt-s-1_20_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">ObjectHandler-xllib-$(PlatformToolset)-x64-mt-s-1_20_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

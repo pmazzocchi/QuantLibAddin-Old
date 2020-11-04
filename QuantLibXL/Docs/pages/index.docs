@@ -30,7 +30,7 @@
 Excel.
 
 \htmlonly
-<div id="download"><a class="imglink" id="imghover" href="https://bintray.com/quantlib/releases/download_file?file_path=QuantLibXL-1.17.0-bin.zip"><img src="images/download_qlxl.png" border=0/></a></div>
+<div id="download"><a class="imglink" id="imghover" href="https://bintray.com/quantlib/releases/download_file?file_path=QuantLibXL-1.20.0-bin.zip"><img src="images/download_qlxl.png" border=0/></a></div>
 \endhtmlonly
 
 The project comprises
