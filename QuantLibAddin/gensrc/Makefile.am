@@ -144,7 +144,7 @@ endif
 all-local: .time-stamp
 
 .time-stamp: $(GENSRC_INPUTS)
-	python2 $(GENSRC_DIR)/gensrc.py $(GENSRC_ARGS) --oh_dir=$(OH_DIR)
+	$(PYTHON2) $(GENSRC_DIR)/gensrc.py $(GENSRC_ARGS) --oh_dir=$(OH_DIR)
 	touch .time-stamp
 
 dist-hook:

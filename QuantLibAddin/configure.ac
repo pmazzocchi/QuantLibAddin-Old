@@ -59,6 +59,7 @@ AC_LANG([C++])
 
 AC_PATH_PROG([DOXYGEN], [doxygen])
 AC_PATH_PROG([SED], [sed])
+AC_PATH_PROG([PYTHON2], [python2])
 
 # Possibly enable features
 

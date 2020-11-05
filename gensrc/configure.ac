@@ -49,6 +49,7 @@ AC_PROG_INSTALL
 # Check for tools needed for building documentation
 AC_PATH_PROG([DOXYGEN], [doxygen])
 AC_PATH_PROG([SED], [sed])
+AC_PATH_PROG([PYTHON2], [python2])
 
 # done, output the configured files
 AC_CONFIG_FILES([
