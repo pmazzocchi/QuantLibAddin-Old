@@ -25,16 +25,6 @@
 
 <div align="center"><small><a href="tutorials.html">back to tutorials index</a></small></div>
 
-<table border="1" bgcolor="lightsteelblue">
-<tr>
-<td><b>NB:</b> As in previous releases, this release includes Visual Studio
-solution files QuantLibXL_basic_vc8.sln through QuantLibXL_basic_vc16.sln which
-target specific versions of Visual Studio.  New in this release is solution
-file QuantLibXL_basic.sln (no version number) which should work for VC10
-(Visual Studio 2010) and all later versions.</td>
-</tr>
-</table>
-
 This document explains how to build QuantLibXL and its prerequisites from
 source code.
 
@@ -81,8 +71,8 @@ See the following document regarding naming conventions in use for the project:
 \subsection build_qlxl_boost 2.2 Boost
 
 %QuantLibXL depends on Boost.  Any recent version of Boost should be OK.
-The minimum version of Boost recommended for %QuantLib is 1.48.  You will need
-the compiled Boost libraries, the Boost header files alone are not sufficient.
+You will need the compiled Boost libraries, the Boost header files alone are
+not sufficient.
 
 \subsection build_qlxl_python 2.3 Python 2.x
 
@@ -179,10 +169,10 @@ package to <tt>C:\\build_ql_1_20_0\\gensrc</tt>.
 \section build_qlxl_quantlibxl 5 Build QuantLibXL
 
 <b>Basic</b> build - open VC solution
-<tt>QuantLibXL\\QuantLibXL_basic_vc?.sln</tt>.
+<tt>QuantLibXL\\QuantLibXL_basic.sln</tt>.
 
 <b>Full</b> build - open VC solution
-<tt>QuantLibXL\\QuantLibXL_full_vc?.sln</tt>.
+<tt>QuantLibXL\\QuantLibXL_full.sln</tt>.
 
 Choose configuration <tt>Release (static runtime)</tt> and do <tt>Build | Build Solution</tt>.
 
