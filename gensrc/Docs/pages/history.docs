@@ -27,6 +27,8 @@
 
 - Consolidate project files and upgrade to VS2019 (thanks to Francois Botha)
 
+- Updates for changed behavior in Doxygen: 1) Put a space after a ref declaration and before the carriage return 2) No whitespace before a subsection declaration
+
 <strong>Release 1.16.0 - October 2019</strong>
 
 - Maintenance release.
