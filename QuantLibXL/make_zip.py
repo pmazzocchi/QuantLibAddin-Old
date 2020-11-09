@@ -11,7 +11,7 @@ import re
 QLXL = "QuantLibXL"
 VERSION = "1.20.0"
 VERSION_ = "1_20_0"
-VC_VERSION = "vc141"
+VC_VERSION = "v142"
 QLXL_VERSION = QLXL + "-" + VERSION
 ROOT_DIR = QLXL_VERSION + "\\"
 
@@ -203,7 +203,6 @@ def zipFrameworkFiles(zipFile):
 def zipSourceFiles(zipFile):
 
     zipFile.zipGlob("*.sln")
-    zipFile.zip("QuantLibXL.props")
     zipFile.zipGlob("*.txt", (re.compile("^goodpractice.txt$"),))
 
     zipFile.zip("Docs\\Makefile.vc")
