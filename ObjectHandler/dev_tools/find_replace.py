@@ -111,6 +111,7 @@ SUBSTITUTIONS = (
 #   (re.compile('abcDEFghi'), toLower),
 
 ##  Frequently used
+    #TODO: build_qlxl.docs, build_cpp.docs
     #(re.compile('vc140'), 'vc141'),
     (re.compile('1_17_0'), '1_20_0'),
     (re.compile('1\.17\.0'), '1.20.0'),

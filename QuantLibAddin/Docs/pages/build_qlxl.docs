@@ -143,13 +143,13 @@ C:\build_ql_1_20_0\QuantLibXL
 \section build_qlxl_source 4 Install the Source Code
 
 Go to the
-<a href="https://bintray.com/quantlib/releases/QuantLib/1.16#files">QuantLib downloads page</a>.
+<a href="https://bintray.com/quantlib/releases/QuantLib/1.20#files">QuantLib downloads page</a>.
 
 Download <tt>QuantLib-1.20.0.zip</tt> and uncompress the package to
 <tt>C:\\build_ql_1_20_0\\%QuantLib</tt>.
 
 Go to the
-<a href="https://bintray.com/quantlib/releases/QuantLibXL/1.16#files">QuantLibXL downloads page</a>.
+<a href="https://bintray.com/quantlib/releases/QuantLibXL/1.20#files">QuantLibXL downloads page</a>.
 
 Download <tt>log4cxx-0.10.0f12.zip</tt> and uncompress the package to
 <tt>C:\\build_ql_1_20_0\\log4cxx</tt>.

@@ -122,7 +122,7 @@ C:\build_ql_1_20_0\QuantLibAddin
 \subsubsection build_cpp_win_uncompress 2.2.2 Uncompress the Source Code
 
 Go to the 
-<a href="https://bintray.com/quantlib/releases/QuantLibXL/1.13#files">QuantLib downloads page</a>.
+<a href="https://bintray.com/quantlib/releases/QuantLibXL/1.20#files">QuantLib downloads page</a>.
 
 Download <tt>log4cxx-0.10.0f12.zip</tt> and uncompress the package to
 <tt>C:\\build_ql_1_20_0\\log4cxx</tt>.
@@ -208,15 +208,15 @@ where you will install it:
 \subsubsection build_cpp_auto_uncompress 3.2.2 Uncompress the Source Code
 
 Go to the 
-<a href="https://bintray.com/quantlib/releases/QuantLib/1.13#files">QuantLib downloads page</a>.
+<a href="https://bintray.com/quantlib/releases/QuantLib/1.20#files">QuantLib downloads page</a>.
 
 Download <tt>QuantLib-1.20.0.tgz</tt> and uncompress the package to
 <tt>/home/erik/build/QuantLib-1.20.0</tt>.
 
 Go to the 
-<a href="https://bintray.com/quantlib/releases/QuantLibXL/1.13#files">QuantLibXL downloads page</a>.
+<a href="https://bintray.com/quantlib/releases/QuantLibXL/1.20#files">QuantLibXL downloads page</a>.
 
-Download <tt>log4cxx-0.10.0f6.tar.gz</tt> and uncompress the package to
+Download <tt>log4cxx-0.10.0f12.tar.gz</tt> and uncompress the package to
 <tt>/home/erik/build/log4cxx-0.10.0</tt>.
 
 Download <tt>gensrc-1.20.0.tgz</tt> and uncompress the package to
