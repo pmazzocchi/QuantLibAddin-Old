@@ -36,6 +36,8 @@ QuantLibAddin project, please refer to
 
 - Add Botswana calendar (thanks to Francois Botha)
 
+- Add U as alias for Unadjusted business day convention (thanks to Francois Botha)
+
 <strong>Release 1.16.0 - October 2019</strong>
 
 - Replaced deprecated Actual365NoLeap() with Actual365Fixed(Actual365Fixed::NoLeap) (thanks to Francois Botha)
