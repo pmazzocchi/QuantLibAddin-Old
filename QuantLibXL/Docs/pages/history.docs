@@ -32,7 +32,7 @@ QuantLibAddin project, please refer to
 
 - Consolidate project files and upgrade to VS2019 (thanks to Francois Botha)
 
-- New enumeraition UnitedStates::FederalReserve with alias US Fedwire System (thanks to mdelmedico)
+- New enumeration UnitedStates::FederalReserve with alias US Fedwire System (thanks to mdelmedico)
 
 - Add Botswana calendar (thanks to Francois Botha)
 
