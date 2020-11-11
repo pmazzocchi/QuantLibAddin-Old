@@ -16,16 +16,12 @@ EXTRA_DIST = \
     README.txt \
     todo.txt
 
-.PHONY: docs docs-online docs-dist docs-clean
+.PHONY: docs docs-dist docs-clean
 BASEPATH = @abs_top_srcdir@
 docs:
 	BASEPATH=$(BASEPATH) $(MAKE) -C Docs docs-all
 docs-dist:
 	BASEPATH=$(BASEPATH) $(MAKE) -C Docs docs-dist
-docs-online:
-	BASEPATH=$(BASEPATH) $(MAKE) -C Docs docs-online
-docs-online-dist:
-	BASEPATH=$(BASEPATH) $(MAKE) -C Docs docs-online-dist
 docs-clean:
 	$(MAKE) -C Docs docs-clean
 
