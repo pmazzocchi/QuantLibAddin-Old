@@ -28,6 +28,10 @@ implementation of QuantLibAddin.  For a summary of updates to the core
 QuantLibAddin project, please refer to
 <a href="http://www.quantlibaddin.org/history.html">http://www.quantlibaddin.org/history.html</a>
 
+<strong>Release 1.21.0 - xxx 202x</strong>
+
+- Add more aliases for Actual/365 (No Leap) day counter (thanks to Francois Botha)
+
 <strong>Release 1.20.0 - November 2020</strong>
 
 - Consolidate project files and upgrade to VS2019 (thanks to Francois Botha)
