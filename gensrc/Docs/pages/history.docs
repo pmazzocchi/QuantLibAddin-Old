@@ -23,11 +23,15 @@
 
 /*! \page history Version History
 
+<strong>Release 1.21.0 - xxx 202x</strong>
+
+- Upgraded gensrc scripts from python 2 to 3 (thanks to Francois Botha)
+
 <strong>Release 1.20.0 - November 2020</strong>
 
-- Consolidate project files and upgrade to VS2019 (thanks to Francois Botha)
+- Consolidated project files and upgraded to VS2019 (thanks to Francois Botha)
 
-- Updates for changed behavior in Doxygen: 1) Put a space after a ref declaration and before the carriage return 2) No whitespace before a subsection declaration
+- Updated for changed behavior in Doxygen: 1) Put a space after a ref declaration and before the carriage return 2) No whitespace before a subsection declaration
 
 <strong>Release 1.16.0 - October 2019</strong>
 

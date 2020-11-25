@@ -30,17 +30,19 @@ QuantLibAddin project, please refer to
 
 <strong>Release 1.21.0 - xxx 202x</strong>
 
-- Add more aliases for Actual/365 (No Leap) day counter (thanks to Francois Botha)
+- Added more aliases for Actual/365 (No Leap) day counter (thanks to Francois Botha)
+
+- Upgraded gensrc scripts from python 2 to 3 (thanks to Francois Botha)
 
 <strong>Release 1.20.0 - November 2020</strong>
 
-- Consolidate project files and upgrade to VS2019 (thanks to Francois Botha)
+- Consolidated project files and upgraded to VS2019 (thanks to Francois Botha)
 
-- New enumeration UnitedStates::FederalReserve with alias US Fedwire System (thanks to mdelmedico)
+- Added enumeration UnitedStates::FederalReserve with alias US Fedwire System (thanks to mdelmedico)
 
-- Add Botswana calendar (thanks to Francois Botha)
+- Added Botswana calendar (thanks to Francois Botha)
 
-- Add U as alias for Unadjusted business day convention (thanks to Francois Botha)
+- Added U as alias for Unadjusted business day convention (thanks to Francois Botha)
 
 <strong>Release 1.16.0 - October 2019</strong>
 
