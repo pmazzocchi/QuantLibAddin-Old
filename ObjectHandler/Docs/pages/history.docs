@@ -25,7 +25,7 @@
 
 <strong>Release 1.21.0 - xxx 202x</strong>
 
-- Upgraded gensrc scripts from python 2 to 3 (thanks to Francois Botha)
+- Upgraded gensrc source code generation scripts from python 2 to 3 (thanks to Francois Botha)
 
 <strong>Release 1.20.0 - November 2020</strong>
 

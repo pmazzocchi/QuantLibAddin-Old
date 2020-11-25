@@ -1423,6 +1423,10 @@
           <string>SimpleThenCompounded</string>
           <value>QuantLib::SimpleThenCompounded</value>
         </EnumeratedType>
+        <EnumeratedType>
+          <string>CompoundedThenSimple</string>
+          <value>QuantLib::CompoundedThenSimple</value>
+        </EnumeratedType>
       </EnumeratedTypes>
     </EnumeratedTypeGroup>
 

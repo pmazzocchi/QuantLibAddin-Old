@@ -32,7 +32,9 @@ QuantLibAddin project, please refer to
 
 - Added more aliases for Actual/365 (No Leap) day counter (thanks to Francois Botha)
 
-- Upgraded gensrc scripts from python 2 to 3 (thanks to Francois Botha)
+- Added CompoundedThenSimple compounding rule (thanks to Francois Botha)
+
+- Upgraded gensrc source code generation scripts from python 2 to 3 (thanks to Francois Botha)
 
 <strong>Release 1.20.0 - November 2020</strong>
 
