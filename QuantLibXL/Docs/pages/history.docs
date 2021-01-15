@@ -30,6 +30,8 @@ QuantLibAddin project, please refer to
 
 <strong>Release 1.21.0 - xxx 202x</strong>
 
+- Implemented new function qlSwapNumberOfLegs() (thanks to Francois Botha)
+
 - Added more aliases for Actual/365 (No Leap) day counter (thanks to Francois Botha)
 
 - Added CompoundedThenSimple compounding rule (thanks to Francois Botha)
