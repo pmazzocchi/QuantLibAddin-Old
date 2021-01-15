@@ -25,6 +25,11 @@
 
 <strong>Release 1.21.0 - xxx 202x</strong>
 
+- In constructor of class FunctionCall, take the code that sets the singleton instance
+  pointer and move it to after a block of code that may throw an exception.  This
+  avoids a problem in which the instance pointer gets set before the exception and
+  blocks subsequent calls to the constructor (thanks to David Sansom)
+
 - Fixed bug in function ohRangeRetrieveError() which was causing it to malfunction
   for workbooks whose names contained parentheses (thanks to Francois Botha)
 
