@@ -25,6 +25,9 @@
 
 <strong>Release 1.21.0 - xxx 202x</strong>
 
+- Fixed bug in function ohRangeRetrieveError() which was causing it to malfunction
+  for workbooks whose names contained parentheses (thanks to Francois Botha)
+
 - Upgraded gensrc source code generation scripts from python 2 to 3 (thanks to Francois Botha)
 
 <strong>Release 1.20.0 - November 2020</strong>
