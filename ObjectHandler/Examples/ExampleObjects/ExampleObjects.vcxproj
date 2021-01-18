@@ -140,14 +140,14 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\build\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\lib\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\build\$(PlatformToolset)\$(Platform)\$(Configuration)\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ExampleObjects-$(PlatformToolset)-mt-1_20_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ExampleObjects-$(PlatformToolset)-x64-mt-1_20_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ExampleObjects-$(PlatformToolset)-mt-gd-1_20_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ExampleObjects-$(PlatformToolset)-x64-mt-gd-1_20_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">ExampleObjects-$(PlatformToolset)-mt-sgd-1_20_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">ExampleObjects-$(PlatformToolset)-x64-mt-sgd-1_20_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">ExampleObjects-$(PlatformToolset)-mt-s-1_20_0</TargetName>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">ExampleObjects-$(PlatformToolset)-x64-mt-s-1_20_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ExampleObjects-$(PlatformToolset)-mt-1_21_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ExampleObjects-$(PlatformToolset)-x64-mt-1_21_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ExampleObjects-$(PlatformToolset)-mt-gd-1_21_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ExampleObjects-$(PlatformToolset)-x64-mt-gd-1_21_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">ExampleObjects-$(PlatformToolset)-mt-sgd-1_21_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|x64'">ExampleObjects-$(PlatformToolset)-x64-mt-sgd-1_21_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|Win32'">ExampleObjects-$(PlatformToolset)-mt-s-1_21_0</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release (static runtime)|x64'">ExampleObjects-$(PlatformToolset)-x64-mt-s-1_21_0</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug (static runtime)|Win32'">
     <ClCompile>

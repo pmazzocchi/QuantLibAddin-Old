@@ -43,17 +43,17 @@ import shutil
 # ROOT_DIRS - The list of root folders from which
 # you want the find/replace to begin.
 ROOT_DIRS = (
-    #'/home/erik/projects/QuantLibAddin-Old/log4cxx/src/main/include/log4cxx',
-    #'/home/erik/projects/QuantLibAddin-Old/gensrc',
-    #'/home/erik/projects/QuantLibAddin-Old/ObjectHandler',
-    #'/home/erik/projects/QuantLibAddin-Old/QuantLibAddin',
-    #'/home/erik/projects/QuantLibAddin-Old/QuantLibXL',
-    'C:/projects/QuantLibAddin-Old4/log4cxx',
-    'C:/projects/QuantLibAddin-Old4/gensrc',
-    'C:/projects/QuantLibAddin-Old4/ObjectHandler',
-    'C:/projects/QuantLibAddin-Old4/QuantLibAddin',
-    'C:/projects/QuantLibAddin-Old4/QuantLibXL',
-    'C:/projects/QuantLibAddin-Old4/XL-Launcher',
+    '/home/erik/projects/QuantLibAddin-Old/log4cxx/src/main/include/log4cxx',
+    '/home/erik/projects/QuantLibAddin-Old/gensrc',
+    '/home/erik/projects/QuantLibAddin-Old/ObjectHandler',
+    '/home/erik/projects/QuantLibAddin-Old/QuantLibAddin',
+    '/home/erik/projects/QuantLibAddin-Old/QuantLibXL',
+    #'C:/projects/QuantLibAddin-Old4/log4cxx',
+    #'C:/projects/QuantLibAddin-Old4/gensrc',
+    #'C:/projects/QuantLibAddin-Old4/ObjectHandler',
+    #'C:/projects/QuantLibAddin-Old4/QuantLibAddin',
+    #'C:/projects/QuantLibAddin-Old4/QuantLibXL',
+    #'C:/projects/QuantLibAddin-Old4/XL-Launcher',
 )
 
 # CALLBACK FUNCTIONS - Called from regexes which require multiple passes
@@ -111,14 +111,14 @@ SUBSTITUTIONS = (
 #   (re.compile('abcDEFghi'), toLower),
 
 ##  Frequently used
-    #TODO: build_qlxl.docs, build_cpp.docs
+    (re.compile('1_20_0'), '1_21_0'),
+    (re.compile('1\.20'), '1.21'),
+    (re.compile('0x012000'), '0x012100'),
+    (re.compile('R012000f0'), 'R012100f0'),
+    (re.compile('0\.10\.0f12'), '0.10.0f13'),
+    (re.compile('0x001000f12'), '0x001000f13'),
+
     #(re.compile('vc140'), 'vc141'),
-    (re.compile('1_17_0'), '1_20_0'),
-    (re.compile('1\.17\.0'), '1.20.0'),
-    (re.compile('0x011700'), '0x012000'),
-    (re.compile('R011700f0'), 'R012000f0'),
-    #(re.compile('0\.10\.0f11'), '0.10.0f12'),
-    #(re.compile('0x001000f11'), '0x001000f12'),
 )
 
 # INCLUDE_FILES
@@ -157,6 +157,7 @@ IGNORE_FILES = (
     re.compile('^.+~$'),
     re.compile('^\.'),
 
+    re.compile('^aclocal\.m4$'),
     re.compile('^Announce\.txt$'),
     re.compile('^ChangeLog\.txt$'),
     re.compile('^changes\..+$'),
@@ -164,14 +165,14 @@ IGNORE_FILES = (
     re.compile('^configure$'),
     re.compile('^design\.docs$'),
     re.compile('^history\.docs$'),
+    re.compile('^install-sh$'),
     re.compile('^libtool$'),
     re.compile('^Makefile$'),
     re.compile('^Makefile\.in$'),
-    re.compile('^NEWS\.txt$'),
     re.compile('^News\.txt$'),
+    re.compile('^NEWS\.txt$'),
     re.compile('^objecthandler\.cpp$'),
     re.compile('^ohfunctions\.cpp$'),
-    re.compile('^todonando\.txt$'),
 )
 
 # IGNORE_DIRS
