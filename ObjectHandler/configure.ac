@@ -64,7 +64,7 @@ AS_IF([test "$HAVE_LOG4CXX" -eq 1], AC_DEFINE([OH_INCLUDE_LOG4CXX], [1], [Suppor
 
 AC_PATH_PROG([DOXYGEN], [doxygen])
 AC_PATH_PROG([SED], [sed])
-AC_PATH_PROG([PYTHON2], [python2])
+AC_PATH_PROG([PYTHON3], [python3])
 
 # Configure and validate the path to gensrc
 
