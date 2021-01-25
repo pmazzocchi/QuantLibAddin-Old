@@ -97,7 +97,7 @@ files...
 on your machine, e.g:
 
 \verbatim
-    PYTHON=C:\Python27\python.exe
+    PYTHON=C:\Users\username\AppData\Local\Programs\Python\Python39\python.exe
 \endverbatim
 
 \section build_qlxl_directories 3 A Note on Directories

@@ -108,7 +108,7 @@ file...
 on your machine, e.g:
 
 \verbatim
-    PYTHON=C:\Python27\python.exe
+    PYTHON=C:\Users\username\AppData\Local\Programs\Python\Python39\python.exe
 \endverbatim
 
 \section inst_win 2 Windows
