@@ -43,7 +43,7 @@ docs-dist: docs-html-dist
 
 docs-html: .time-stamp-html
 .time-stamp-html: $(DOXYGEN_CONFIG) $(DOXYGEN_CUSTOM) $(DOXYGEN_INPUT)
-	$(PYTHON2) $(SCRIPT) $(DOXYGEN_CONFIG) $(DOXYGEN_CONFIG_TEMP)
+	$(PYTHON3) $(SCRIPT) $(DOXYGEN_CONFIG) $(DOXYGEN_CONFIG_TEMP)
 	$(DOXYGEN) $(DOXYGEN_CONFIG_TEMP)
 	rm $(DOXYGEN_CONFIG_TEMP)
 	cp tabs.css html
