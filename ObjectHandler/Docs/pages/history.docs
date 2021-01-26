@@ -23,7 +23,7 @@
 
 /*! \page history Version History
 
-<strong>Release 1.21.0 - xxx 202x</strong>
+<strong>Release 1.21.0 - January 2021</strong>
 
 - In constructor of class FunctionCall, take the code that sets the singleton instance
   pointer and move it to after a block of code that may throw an exception.  This
