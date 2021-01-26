@@ -37,7 +37,7 @@
 
 - Consolidated project files and upgraded to VS2019 (thanks to Francois Botha)
 
-- Added enumeration UnitedStates::FederalReserve with alias US Fedwire System (thanks to mdelmedico)
+- Added enumeration UnitedStates::FederalReserve with alias US Fedwire System (thanks to Mike DelMedico)
 
 - Added Botswana calendar (thanks to Francois Botha)
 
