@@ -1,23 +1,26 @@
 Eric's notes to himself on how to package the release.
 
-|=============================================================
-|system                 | windows                | linux     |
-|=============================================================
-|log4cxx                |    (1)                 |    (2)    |
-|============================================================
-|gensrc                 |  tgz2zip               | make dist |
-|=============================================================
-|ObjectHandler          |  tgz2zip               | make dist |
-|=============================================================
-|QuantLibAddin          |  tgz2zip               | make dist |
-|=============================================================
-|QuantLibXL - binary    | make_zip_binary.bat    |    - -    |
-|=============================================================
-|QuantLibXL - framework | make_zip_framework.bat |    - -    |
-|=============================================================
-|QuantLibXL - source    | make_zip_source.bat    |    - -    |
-|=============================================================
+|====================================================================
+|system                 | linux            | windows                |
+|====================================================================
+|log4cxx                | git archive (1)  | git archive (2)        |
+|====================================================================
+|gensrc                 | make dist        | tgz2zip (3)            |
+|====================================================================
+|ObjectHandler          | make dist        | tgz2zip (4)            |
+|====================================================================
+|QuantLibAddin          | make dist        | tgz2zip (5)            |
+|====================================================================
+|QuantLibXL - binary    |    --            | make_zip_binary.bat    |
+|====================================================================
+|QuantLibXL - framework |    --            | make_zip_framework.bat |
+|====================================================================
+|QuantLibXL - source    |    --            | make_zip_source.bat    |
+|====================================================================
 
-(1) git archive --output=log4cxx-0.10.0f12.zip v1.20.x log4cxx
-(2) git archive --output=log4cxx-0.10.0f12.tar v1.20.x log4cxx
+(1) git archive --output=log4cxx-0.10.0f13.tar v1.21.x log4cxx
+(2) git archive --output=log4cxx-0.10.0f13.zip v1.21.x log4cxx
+(3) /home/erik/projects/QuantLibAddin-Old/ObjectHandler/dev_tools/tgz2zip gensrc 1.21.0
+(4) /home/erik/projects/QuantLibAddin-Old/ObjectHandler/dev_tools/tgz2zip ObjectHandler 1.21.0
+(5) /home/erik/projects/QuantLibAddin-Old/ObjectHandler/dev_tools/tgz2zip QuantLibAddin 1.21.0
 
