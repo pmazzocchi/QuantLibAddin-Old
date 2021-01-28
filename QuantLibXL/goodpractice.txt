@@ -1,3 +1,0 @@
-VBA:
-  avoid (implicitly) using ActiveWorkbook and ActiveWorksheet
-  use option explicit (Tools | Option | Editor | Require Variable Declaration)
