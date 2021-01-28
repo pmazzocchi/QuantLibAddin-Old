@@ -111,12 +111,15 @@ SUBSTITUTIONS = (
 #   (re.compile('abcDEFghi'), toLower),
 
 ##  Frequently used
+
+# TODO: include file ObjectHandler/dev_tools/notes.txt in the update
+
     (re.compile('1_20_0'), '1_21_0'),
     (re.compile('1\.20'), '1.21'),
     (re.compile('0x012000'), '0x012100'),
     (re.compile('R012000f0'), 'R012100f0'),
-    (re.compile('0\.10\.0f12'), '0.10.0f13'),
-    (re.compile('0x001000f12'), '0x001000f13'),
+    #(re.compile('0\.10\.0f12'), '0.10.0f13'),
+    #(re.compile('0x001000f12'), '0x001000f13'),
 
     #(re.compile('vc140'), 'vc141'),
 )
