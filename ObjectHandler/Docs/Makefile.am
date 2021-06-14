@@ -1,18 +1,11 @@
 
 EXTRA_DIST = \
-    docs_vc8.vcproj \
-    docs_vc9.vcproj \
-    docs_vc10.vcxproj \
-    docs_vc10.vcxproj.filters \
-    docs_vc11.vcxproj \
-    docs_vc11.vcxproj.filters \
-    docs_vc12.vcxproj \
-    docs_vc12.vcxproj.filters \
+    docs.vcxproj \
+    docs.vcxproj.filters \
     Makefile.vc \
     objecthandler.doxy \
     oh_footer.html \
     oh_header.html \
-    oh_headeronline.html \
     doxygen.css \
     tabs.css \
     ql.css \
@@ -31,7 +24,7 @@ OH_DIR := ..
 
 DOXYGEN_CONFIG := $(PROJECTNAME).doxy
 DOXYGEN_CONFIG_TEMP := .$(DOXYGEN_CONFIG)
-DOXYGEN_CUSTOM := doxygen.css tabs.css ql.css $(PROJECTINITIALS)_footer.html $(PROJECTINITIALS)_header.html $(PROJECTINITIALS)_headeronline.html 
+DOXYGEN_CUSTOM := doxygen.css tabs.css ql.css $(PROJECTINITIALS)_footer.html $(PROJECTINITIALS)_header.html
 SCRIPT := $(OH_DIR)/Docs/preprocess_doxyfile.py
 
 %.gz: %
@@ -41,7 +34,7 @@ SCRIPT := $(OH_DIR)/Docs/preprocess_doxyfile.py
 	tar chf $@ $<
 	rm $<
 
-.PHONY: docs-all docs-html docs-online docs-clean
+.PHONY: docs-all docs-html docs-clean
 .PHONY: docs-dist docs-html-dist 
 
 dist-hook:
@@ -55,7 +48,7 @@ docs-dist: docs-html-dist
 
 docs-html: .time-stamp-html
 .time-stamp-html: $(DOXYGEN_CONFIG) $(DOXYGEN_CUSTOM) $(DOXYGEN_INPUT)
-	python $(SCRIPT) $(DOXYGEN_CONFIG) $(DOXYGEN_CONFIG_TEMP)
+	$(PYTHON3) $(SCRIPT) $(DOXYGEN_CONFIG) $(DOXYGEN_CONFIG_TEMP)
 	$(DOXYGEN) $(DOXYGEN_CONFIG_TEMP)
 	rm $(DOXYGEN_CONFIG_TEMP)
 	cp tabs.css html
@@ -69,23 +62,7 @@ docs-html-dist: docs-html
 	tar czfvh $(FILENAME).tar.gz $(FILENAME)
 	rm $(FILENAME)
 
-docs-online: .time-stamp-online
-.time-stamp-online: $(DOXYGEN_CONFIG) $(DOXYGEN_CUSTOM) $(DOXYGEN_INPUT)
-	python $(SCRIPT) -o $(DOXYGEN_CONFIG) $(DOXYGEN_CONFIG_TEMP)
-	$(DOXYGEN) $(DOXYGEN_CONFIG_TEMP)
-	rm $(DOXYGEN_CONFIG_TEMP)
-	cp tabs.css html-online
-	cp ql.css html-online
-	mkdir -p html-online/images
-	cp -f images/*.ico images/*.jpg images/*.png html-online/images
-	touch .time-stamp-online
-
-docs-online-dist: docs-online
-	ln -s html-online $(PROJECTNAME)
-	tar czfvh $(FILENAME)-online.tar.gz $(PROJECTNAME)
-	rm $(PROJECTNAME)
-
 docs-clean:
-	rm -Rf html-online html
+	rm -Rf html
 	rm -f .time-stamp*
 

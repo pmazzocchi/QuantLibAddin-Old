@@ -47,7 +47,7 @@ class PpdException(Exception):
         return re.sub('(?m)^', '> ', self.text_)
 
 def usage():
-    print USAGE_ERROR % { 'scriptName' : sys.argv[0] }
+    print(USAGE_ERROR % { 'scriptName' : sys.argv[0] })
     sys.exit(1)
 
 def ppd_excepthook(type, value, tb):

@@ -24,20 +24,22 @@
 #include <oh/ohdefines.hpp>
 
 // select toolset:
-#if (_MSC_VER < 1400)
-#  error "unsupported Microsoft compiler"
-#elif (_MSC_VER == 1400)
-#  define OBJHANDLER_LIB_TOOLSET "vc80"
-#elif (_MSC_VER == 1500)
-#  define OBJHANDLER_LIB_TOOLSET "vc90"
-#elif (_MSC_VER == 1600)
-#  define OBJHANDLER_LIB_TOOLSET "vc100"
-#elif (_MSC_VER == 1700)
-#  define OBJHANDLER_LIB_TOOLSET "vc110"
-#elif (_MSC_VER == 1800)
-#  define OBJHANDLER_LIB_TOOLSET "vc120"
+#if (_MSC_VER >= 1924)
+#  define OBJHANDLER_LIB_TOOLSET "v142"
+#elif (_MSC_VER >= 1910)
+#  define OBJHANDLER_LIB_TOOLSET "v141"
+#elif (_MSC_VER >= 1900)
+#  define OBJHANDLER_LIB_TOOLSET "v140"
+#elif (_MSC_VER >= 1800)
+#  define OBJHANDLER_LIB_TOOLSET "v120"
+#elif (_MSC_VER >= 1700)
+#  define OBJHANDLER_LIB_TOOLSET "v110"
+#elif (_MSC_VER >= 1600)
+#  define OBJHANDLER_LIB_TOOLSET "v100"
+#elif (_MSC_VER >= 1500)
+#  define OBJHANDLER_LIB_TOOLSET "v90"
 #else
-#  error "unknown Microsoft compiler"
+#  error "unsupported Microsoft compiler"
 #endif
 
 /*** libraries to be linked ***/

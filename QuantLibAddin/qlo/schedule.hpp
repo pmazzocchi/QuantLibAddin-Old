@@ -56,8 +56,20 @@ namespace QuantLibAddin {
             bool permanent);
         Schedule(
             const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
+            const std::vector<QuantLib::Date>& dates,
+            const std::vector<bool>& isRegular,
+            const QuantLib::Period& tenor,
+            const QuantLib::Calendar& calendar,
+            QuantLib::BusinessDayConvention convention,
+            QuantLib::BusinessDayConvention terminationDateConvention,
+            QuantLib::DateGeneration::Rule rule,
+            bool endOfMonth,
+            bool permanent);
+        Schedule(
+            const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
             const boost::shared_ptr<QuantLib::Schedule>& originalSchedule,
             const QuantLib::Date& truncationDate,
+            const bool returnDatesBefore,
             bool permanent);
     };
 

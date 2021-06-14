@@ -1,7 +1,7 @@
 
 # Process this file with autoconf to produce a configure script.
 
-AC_INIT([ObjectHandler], [1.10.0],
+AC_INIT([ObjectHandler], [1.21.0],
         [quantlib-dev@lists.sourceforge.net],
         [ObjectHandler])
 AC_PREREQ(2.50)
@@ -64,6 +64,7 @@ AS_IF([test "$HAVE_LOG4CXX" -eq 1], AC_DEFINE([OH_INCLUDE_LOG4CXX], [1], [Suppor
 
 AC_PATH_PROG([DOXYGEN], [doxygen])
 AC_PATH_PROG([SED], [sed])
+AC_PATH_PROG([PYTHON3], [python3])
 
 # Configure and validate the path to gensrc
 

@@ -27,23 +27,13 @@ EXTRA_DIST = \
     LICENSE.TXT \
     NEWS.txt \
     ObjectHandler.nsi \
-    ObjectHandler_vc8.sln \
-    ObjectHandler_vc9.sln \
-    ObjectHandler_vc10.sln \
-    ObjectHandler_vc11.sln \
-    ObjectHandler_vc12.sln \
-    ohlib_vc8.vcproj \
-    ohlib_vc9.vcproj \
-    ohlib_vc10.vcxproj \
-    ohlib_vc10.vcxproj.filters \
-    ohlib_vc11.vcxproj \
-    ohlib_vc11.vcxproj.filters \
-    ohlib_vc12.vcxproj \
-    ohlib_vc12.vcxproj.filters \
+    ObjectHandler.sln \
+    ohlib.vcxproj \
+    ohlib.vcxproj.filters \
     README.txt \
     TODO.txt
 
-.PHONY: docs docs-online docs-dist docs-clean
+.PHONY: docs docs-dist docs-clean
 BASEPATH = @abs_top_srcdir@
 docs:
 	$(MAKE) -C gensrc
@@ -54,12 +44,6 @@ html-local:
 docs-dist:
 	$(MAKE) -C gensrc
 	BASEPATH=$(BASEPATH) $(MAKE) -C Docs docs-dist
-docs-online:
-	$(MAKE) -C gensrc
-	BASEPATH=$(BASEPATH) $(MAKE) -C Docs docs-online
-docs-online-dist:
-	$(MAKE) -C gensrc
-	BASEPATH=$(BASEPATH) $(MAKE) -C Docs docs-online-dist
 docs-clean:
 	$(MAKE) -C gensrc clean
 	$(MAKE) -C Docs docs-clean

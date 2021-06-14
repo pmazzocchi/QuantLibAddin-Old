@@ -26,7 +26,7 @@
   </copyright>
   <Functions>
 
-    <Member name='qlCalibrationHelperSetPricingEngine' type='QuantLib::CalibrationHelper'>
+    <Member name='qlCalibrationHelperSetPricingEngine' type='QuantLib::BlackCalibrationHelper'>
       <description>Set the priging engine for the given SwaptionHelper object.</description>
       <libraryFunction>setPricingEngine</libraryFunction>
       <SupportedPlatforms>
@@ -50,7 +50,7 @@
       </ReturnValue>
     </Member>
 
-    <Member name='qlCalibrationHelperImpliedVolatility' type='QuantLib::CalibrationHelper'>
+    <Member name='qlCalibrationHelperImpliedVolatility' type='QuantLib::BlackCalibrationHelper'>
       <description>Set the priging engine for the given SwaptionHelper object.</description>
       <libraryFunction>impliedVolatility</libraryFunction>
       <SupportedPlatforms>
@@ -181,7 +181,7 @@
       <ParameterList>
         <Parameters>
           <Parameter name='CalibrationHelpers'>
-            <type>QuantLib::CalibrationHelper</type>
+            <type>QuantLib::BlackCalibrationHelper</type>
             <tensorRank>vector</tensorRank>
             <description>vector of calibration-helpers.</description>
           </Parameter>
@@ -233,7 +233,7 @@
       <ParameterList>
         <Parameters>
           <Parameter name='CalibrationHelpers'>
-            <type>QuantLib::CalibrationHelper</type>
+            <type>QuantLib::BlackCalibrationHelper</type>
             <tensorRank>vector</tensorRank>
             <description>vector of calibration-helpers.</description>
           </Parameter>

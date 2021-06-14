@@ -9,14 +9,8 @@ EXTRA_DIST = \
     dependencies.vc \
     gensrc.nsi \
     gensrc.py \
-    gensrc_vc8.sln \
-    gensrc_vc8.vcproj \
-    gensrc_vc9.sln \
-    gensrc_vc9.vcproj \
-    gensrc_vc10.sln \
-    gensrc_vc10.vcxproj \
-    gensrc_vc11.sln \
-    gensrc_vc11.vcxproj \
+    gensrc.sln \
+    gensrc.vcxproj \
     LICENSE.TXT \
     NEWS.txt \
     README.txt \
@@ -52,16 +46,12 @@ dist-hook:
 	cp -p $(srcdir)/gensrc/types/*.py $(distdir)/gensrc/types
 	cp -p $(srcdir)/gensrc/utilities/*.py $(distdir)/gensrc/utilities
 
-.PHONY: docs docs-online docs-dist docs-clean
+.PHONY: docs docs-dist docs-clean
 BASEPATH = @abs_top_srcdir@
 docs:
 	BASEPATH=$(BASEPATH) $(MAKE) -C Docs docs-all
 docs-dist:
 	BASEPATH=$(BASEPATH) $(MAKE) -C Docs docs-dist
-docs-online:
-	BASEPATH=$(BASEPATH) $(MAKE) -C Docs docs-online
-docs-online-dist:
-	BASEPATH=$(BASEPATH) $(MAKE) -C Docs docs-online-dist
 docs-clean:
 	$(MAKE) -C Docs docs-clean
 

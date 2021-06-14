@@ -1,5 +1,5 @@
 
-##################################################################################
+################################################################################
 #
 # find_replace.py - perform a recursive find/replace on a directory tree
 #
@@ -32,7 +32,7 @@
 # IGNORE_DIRS
 # Regexes to indicate directories to be ignored by the find/replace.
 #
-##################################################################################
+################################################################################
 
 import sys
 import os
@@ -44,16 +44,16 @@ import shutil
 # you want the find/replace to begin.
 ROOT_DIRS = (
     '/home/erik/projects/QuantLibAddin-Old/log4cxx/src/main/include/log4cxx',
-    #'/home/erik/projects/QuantLibAddin-Old/gensrc',
-    #'/home/erik/projects/QuantLibAddin-Old/ObjectHandler',
-    #'/home/erik/projects/QuantLibAddin-Old/QuantLibAddin',
-    #'/home/erik/projects/QuantLibAddin-Old/QuantLibXL',
-    #'C:/projects/QuantLibAddin-Old-Master/log4cxx/src/main/include/log4cxx',
-    #'C:/projects/QuantLibAddin-Old-Master/gensrc',
-    #'C:/projects/QuantLibAddin-Old-Master/ObjectHandler',
-    #'C:/projects/QuantLibAddin-Old-Master/QuantLibAddin',
-    #'C:/projects/QuantLibAddin-Old-Master/QuantLibXL',
-    #'C:/projects/QuantLibAddin-Old-Master/XL-Launcher',
+    '/home/erik/projects/QuantLibAddin-Old/gensrc',
+    '/home/erik/projects/QuantLibAddin-Old/ObjectHandler',
+    '/home/erik/projects/QuantLibAddin-Old/QuantLibAddin',
+    '/home/erik/projects/QuantLibAddin-Old/QuantLibXL',
+    #'C:/projects/QuantLibAddin-Old4/log4cxx',
+    #'C:/projects/QuantLibAddin-Old4/gensrc',
+    #'C:/projects/QuantLibAddin-Old4/ObjectHandler',
+    #'C:/projects/QuantLibAddin-Old4/QuantLibAddin',
+    #'C:/projects/QuantLibAddin-Old4/QuantLibXL',
+    #'C:/projects/QuantLibAddin-Old4/XL-Launcher',
 )
 
 # CALLBACK FUNCTIONS - Called from regexes which require multiple passes
@@ -81,11 +81,21 @@ SUBSTITUTIONS = (
 ##  Straight find/replace.
 #   (re.compile('aaa'), 'bbb'),
 
+#   delete references to boost property files from vcxproj files.
+#   (re.compile('<Import Project=".*boost_current.props" />'), ''),
+
+#   delete references to Windows SDK from vcxproj files.
+#   (re.compile('<WindowsTargetPlatformVersion>.*</WindowsTargetPlatformVersion>'), ''),
+
 ##  2) Group
 ##  Use parentheses to indicate group(s) in the find text.
 ##  Use \x in the replace text to refer to a group, where x = group number.
 ##  Replace text must be a raw string r'' instead of normal string ''.
 #   (re.compile('ccc(.*)ccc'), r'ddd\1ddd'),
+
+#   comment out references to boost property files from vcxproj files.
+#   (re.compile('<Import Project="(.*)boost_current.props" />'),
+#        r'<!--Import Project="\1boost_current.props" /-->'),
 
 ##  3) Newline flag
 ##  Use re.S to indicate that . matches newline.
@@ -101,12 +111,17 @@ SUBSTITUTIONS = (
 #   (re.compile('abcDEFghi'), toLower),
 
 ##  Frequently used
-    (re.compile('1_9_0'), '1_10_0'),
-    (re.compile('1\.9\.0'), '1.10.0'),
-    (re.compile('0x010900'), '0x011000'),
-    (re.compile('R010900f0'), 'R011000f0'),
-    (re.compile('0\.10\.0f7'), '0.10.0f8'),
-    (re.compile('0x001000f7'), '0x001000f8'),
+
+# TODO: include file ObjectHandler/dev_tools/notes.txt in the update
+
+    (re.compile('1_20_0'), '1_21_0'),
+    (re.compile('1\.20'), '1.21'),
+    (re.compile('0x012000'), '0x012100'),
+    (re.compile('R012000f0'), 'R012100f0'),
+    #(re.compile('0\.10\.0f12'), '0.10.0f13'),
+    #(re.compile('0x001000f12'), '0x001000f13'),
+
+    #(re.compile('vc140'), 'vc141'),
 )
 
 # INCLUDE_FILES
@@ -117,6 +132,7 @@ SUBSTITUTIONS = (
 INCLUDE_FILES = (
 
 #    re.compile(r'^.+\.[ch]pp$'),
+#    re.compile(r'^.+\.vcxproj$'),
 
 )
 
@@ -144,6 +160,7 @@ IGNORE_FILES = (
     re.compile('^.+~$'),
     re.compile('^\.'),
 
+    re.compile('^aclocal\.m4$'),
     re.compile('^Announce\.txt$'),
     re.compile('^ChangeLog\.txt$'),
     re.compile('^changes\..+$'),
@@ -151,14 +168,14 @@ IGNORE_FILES = (
     re.compile('^configure$'),
     re.compile('^design\.docs$'),
     re.compile('^history\.docs$'),
+    re.compile('^install-sh$'),
     re.compile('^libtool$'),
     re.compile('^Makefile$'),
     re.compile('^Makefile\.in$'),
-    re.compile('^NEWS\.txt$'),
     re.compile('^News\.txt$'),
+    re.compile('^NEWS\.txt$'),
     re.compile('^objecthandler\.cpp$'),
     re.compile('^ohfunctions\.cpp$'),
-    re.compile('^todonando\.txt$'),
 )
 
 # IGNORE_DIRS
@@ -169,10 +186,12 @@ IGNORE_DIRS = (
     re.compile('^\.svn$'),
     re.compile('^autom4te\.cache$'),
     re.compile('^build$'),
+    re.compile('^buildStatic$'),
     re.compile('^configure$'),
     re.compile('^dev_tools$'),
     re.compile('^framework$'),
     re.compile('^html$'),
+    re.compile('^html-online$'),
     re.compile('^Launcher$'),
     re.compile('^lib$'),
     #re.compile('^log4cxx$'),

@@ -36,12 +36,12 @@ class Doxygen(addin.Addin):
     #############################################
 
     LINE_ENUM =          '    <tr><td>%s</td><td>%s</td></tr>\n'
-    LINE_REF_CLASS =     '\\ref enum_class_%d\\n\n'
-    LINE_REF_TYPE =      '\\ref enum_type_%d\\n\n'
-    LINE_SECTION_CLASS = '    \\subsection enum_class_%d %s\n'
-    LINE_SECTION_TYPE =  '    \\subsection enum_type_%d %s\n'
-    LINE_TABLE = """    <table>\n
-    <tr><td><b>String</b></td><td><b>%s</b></td></tr>\n"""
+    LINE_REF_CLASS =     '\\ref enum_class_%d \\n\n'
+    LINE_REF_TYPE =      '\\ref enum_type_%d \\n\n'
+    LINE_SECTION_CLASS = '\\subsection enum_class_%d %s\n'
+    LINE_SECTION_TYPE =  '\\subsection enum_type_%d %s\n'
+    LINE_TABLE = """<table>\n
+<tr><td><b>String</b></td><td><b>%s</b></td></tr>\n"""
 
     #############################################
     # public interface
@@ -83,10 +83,10 @@ class Doxygen(addin.Addin):
     def generateEnums(self):
         """Generate documentation for enumerations."""
         bufClassLinks = ''
-        for i in xrange(self.enumerationList_.enumeratedClassGroupsCount()):
+        for i in range(self.enumerationList_.enumeratedClassGroupsCount()):
             bufClassLinks += Doxygen.LINE_REF_CLASS % i
         bufTypeLinks = ''
-        for i in xrange(self.enumerationList_.enumeratedTypeGroupsCount()):
+        for i in range(self.enumerationList_.enumeratedTypeGroupsCount()):
             bufTypeLinks += Doxygen.LINE_REF_TYPE % i
         bufClassDocs = ''
         i = 0
@@ -135,7 +135,7 @@ class Doxygen(addin.Addin):
         displayNames.sort()
         bufCat = ''
         for displayKey in displayNames:
-            bufCat += '\\ref func_%s\\n\n' % dispNmToCatNm[displayKey]
+            bufCat += '\\ref func_%s \\n\n' % dispNmToCatNm[displayKey]
         self.bufferCategories_.set({
             'application' : environment.config().namespaceObjects(),
             'categories' : bufCat })

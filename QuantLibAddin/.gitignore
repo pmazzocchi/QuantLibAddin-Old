@@ -6,9 +6,7 @@ Clients/CppSwapOut/swap_out
 config/
 config.status
 configure
-Docs/html-online
 Docs/.time-stamp-html
-Docs/.time-stamp-online
 gensrc/.time-stamp
 ipch
 libtool

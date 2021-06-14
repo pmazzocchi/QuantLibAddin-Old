@@ -20,7 +20,7 @@
 
 <table border="1" bgcolor="lightsteelblue">
 <tr>
-<td><b>NB:</b> The Framework has not been updated for the 1.9 release.  This is the documentation for version 1.8 of the Framework.  If you need further information please send mail to <a href="https://lists.sourceforge.net/lists/listinfo/quantlib-users">quantlib-users@lists.sf.net</a>.</td>
+<td><b>NB:</b> The Framework is not maintained, it was last updated in version 1.8 (2016).</td>
 </tr>
 </table>
 

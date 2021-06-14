@@ -1,7 +1,7 @@
 
 # Process this file with autoconf to produce a configure script.
 
-AC_INIT([QuantLibAddin], [1.10.0],
+AC_INIT([QuantLibAddin], [1.21.0],
         [quantlib-dev@lists.sourceforge.net],
         [QuantLibAddin])
 AC_PREREQ(2.50)
@@ -59,6 +59,7 @@ AC_LANG([C++])
 
 AC_PATH_PROG([DOXYGEN], [doxygen])
 AC_PATH_PROG([SED], [sed])
+AC_PATH_PROG([PYTHON3], [python3])
 
 # Possibly enable features
 
@@ -130,11 +131,9 @@ AC_SUBST(oh_dir, [${oh_path}])
 
 AC_CONFIG_FILES([
     Addins/Cpp/Makefile
-    Addins/Calc/Makefile
     Clients/Cpp/Makefile
     Clients/CppInstrumentIn/Makefile
     Clients/CppSwapOut/Makefile
-    Clients/Calc/Makefile
     Docs/Makefile
     gensrc/Makefile
     Makefile

@@ -205,6 +205,10 @@
           <value>QuantLib::Australia()</value>
         </EnumeratedType>
         <EnumeratedType>
+          <string>Botswana</string>
+          <value>QuantLib::Botswana()</value>
+        </EnumeratedType>
+        <EnumeratedType>
           <string>Brazil::Settlement</string>
           <value>QuantLib::Brazil(QuantLib::Brazil::Settlement)</value>
         </EnumeratedType>
@@ -589,6 +593,15 @@
           <value>QuantLib::UnitedStates(QuantLib::UnitedStates::Settlement)</value>
         </EnumeratedType>
         <EnumeratedType>
+          <string>UnitedStates::FederalReserve</string>
+          <value>QuantLib::UnitedStates(QuantLib::UnitedStates::FederalReserve)</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <!-- Clone for UnitedStates::FederalReserve -->
+          <string>US Fedwire System</string>
+          <value>QuantLib::UnitedStates(QuantLib::UnitedStates::FederalReserve)</value>
+        </EnumeratedType>
+        <EnumeratedType>
           <string>WeekendsOnly</string>
           <value>QuantLib::WeekendsOnly()</value>
         </EnumeratedType>
@@ -742,19 +755,31 @@
         <!-- NON-ISDA -->
         <EnumeratedType>
           <string>Actual/365 (No Leap)</string>
-          <value>QuantLib::Actual365NoLeap()</value>
+          <value>QuantLib::Actual365Fixed(QuantLib::Actual365Fixed::NoLeap)</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>Actual/365 (NL)</string>
+          <value>QuantLib::Actual365Fixed(QuantLib::Actual365Fixed::NoLeap)</value>
         </EnumeratedType>
         <EnumeratedType>
           <string>Actual/365 (JGB)</string>
-          <value>QuantLib::Actual365NoLeap()</value>
+          <value>QuantLib::Actual365Fixed(QuantLib::Actual365Fixed::NoLeap)</value>
         </EnumeratedType>
         <EnumeratedType>
           <string>Act/365 (NL)</string>
-          <value>QuantLib::Actual365NoLeap()</value>
+          <value>QuantLib::Actual365Fixed(QuantLib::Actual365Fixed::NoLeap)</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>A/365 (NL)</string>
+          <value>QuantLib::Actual365Fixed(QuantLib::Actual365Fixed::NoLeap)</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>A/365NL</string>
+          <value>QuantLib::Actual365Fixed(QuantLib::Actual365Fixed::NoLeap)</value>
         </EnumeratedType>
         <EnumeratedType>
           <string>NL/365</string>
-          <value>QuantLib::Actual365NoLeap()</value>
+          <value>QuantLib::Actual365Fixed(QuantLib::Actual365Fixed::NoLeap)</value>
         </EnumeratedType>
 
         <!-- NON-ISDA QuantLib specific -->
@@ -842,6 +867,10 @@
         <EnumeratedType>
           <string>MP</string>
           <value>QuantLib::ModifiedPreceding</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>U</string>
+          <value>QuantLib::Unadjusted</value>
         </EnumeratedType>
         <EnumeratedType>
           <string>Unadjusted</string>
@@ -1393,6 +1422,10 @@
         <EnumeratedType>
           <string>SimpleThenCompounded</string>
           <value>QuantLib::SimpleThenCompounded</value>
+        </EnumeratedType>
+        <EnumeratedType>
+          <string>CompoundedThenSimple</string>
+          <value>QuantLib::CompoundedThenSimple</value>
         </EnumeratedType>
       </EnumeratedTypes>
     </EnumeratedTypeGroup>

@@ -4,14 +4,8 @@ AM_LDFLAGS = -release $(PACKAGE_VERSION)
 includedir = $(prefix)/include/qlo/Addins/Cpp
 
 EXTRA_DIST = \
-    AddinCpp_vc8.vcproj \
-    AddinCpp_vc9.vcproj \
-    AddinCpp_vc10.vcxproj \
-    AddinCpp_vc10.vcxproj.filters \
-    AddinCpp_vc11.vcxproj \
-    AddinCpp_vc11.vcxproj.filters \
-    AddinCpp_vc12.vcxproj \
-    AddinCpp_vc12.vcxproj.filters
+    AddinCpp.vcxproj \
+    AddinCpp.vcxproj.filters
 
 if BUILD_CPP
 lib_LTLIBRARIES = libQuantLibAddinCpp.la

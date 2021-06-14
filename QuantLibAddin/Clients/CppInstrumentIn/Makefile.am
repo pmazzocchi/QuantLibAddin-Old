@@ -4,11 +4,7 @@ instrument_in_LDADD = ../../qlo/libQuantLibAddin.la ../../Addins/Cpp/libQuantLib
 instrument_in_LDFLAGS = -lObjectHandler -lQuantLib -lboost_filesystem -lboost_serialization -lboost_system -lboost_regex
 
 EXTRA_DIST = \
-    CppInstrumentIn_vc8.vcproj \
-    CppInstrumentIn_vc9.vcproj \
-    CppInstrumentIn_vc10.vcxproj \
-    CppInstrumentIn_vc11.vcxproj \
-    CppInstrumentIn_vc12.vcxproj \
+    CppInstrumentIn.vcxproj \
     price_Swap.bat \
     price_Swap.sh
 

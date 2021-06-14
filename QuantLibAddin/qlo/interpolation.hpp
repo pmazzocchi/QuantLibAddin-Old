@@ -95,6 +95,7 @@ namespace QuantLibAddin {
             const std::vector<QuantLib::Real>& x,
             const std::vector<QuantLib::Handle<QuantLib::Quote> >& y,
             QuantLib::Size n,
+			QuantLib::MixedInterpolation::Behavior behavior,
             QuantLib::CubicInterpolation::DerivativeApprox da,
             bool monotonic,
             QuantLib::CubicInterpolation::BoundaryCondition leftCondition,

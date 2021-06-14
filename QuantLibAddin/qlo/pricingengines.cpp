@@ -87,11 +87,10 @@ namespace QuantLibAddin {
         const boost::shared_ptr<ObjectHandler::ValueObject>& properties,
         const QuantLib::Handle<QuantLib::YieldTermStructure>& hYTS,
         const QuantLib::Handle<QuantLib::SwaptionVolatilityStructure>& vol,
-        const QuantLib::Real displacement,
         bool permanent) : PricingEngine(properties, permanent)
     {
         libraryObject_ = boost::shared_ptr<QuantLib::PricingEngine>(new
-            QuantLib::BlackSwaptionEngine(hYTS, vol, displacement));
+            QuantLib::BlackSwaptionEngine(hYTS, vol));
     }
 
     BlackCapFloorEngine::BlackCapFloorEngine(

@@ -64,13 +64,49 @@ namespace QuantLibAddin {
     }
 
     Schedule::Schedule(const boost::shared_ptr<ObjectHandler::ValueObject>& p,
+        const std::vector<QuantLib::Date>& dates,
+        const std::vector<bool>& isRegular,
+        const QuantLib::Period& tenor,
+        const QuantLib::Calendar& calendar,
+        const QuantLib::BusinessDayConvention convention,
+        const QuantLib::BusinessDayConvention terminationDateConvention,
+        QuantLib::DateGeneration::Rule rule,
+        bool endOfMonth,
+        bool permanent)
+    : ObjectHandler::LibraryObject<QuantLib::Schedule>(p, permanent) {
+
+        boost::optional<QuantLib::BusinessDayConvention> optionalTerminationDateConvention(terminationDateConvention);
+        boost::optional<QuantLib::Period> optionalTenor(tenor);
+        boost::optional<QuantLib::DateGeneration::Rule> optionalRule(rule);
+        boost::optional<bool> optionalEndOfMonth(endOfMonth);
+
+        QuantLib::Schedule schedule(dates,
+            calendar,
+            convention,
+            optionalTerminationDateConvention,
+            optionalTenor,
+            optionalRule,
+            optionalEndOfMonth,
+            isRegular);
+
+        libraryObject_ = boost::shared_ptr<QuantLib::Schedule>(new
+            QuantLib::Schedule(schedule));
+    }
+
+    Schedule::Schedule(const boost::shared_ptr<ObjectHandler::ValueObject>& p,
                        const boost::shared_ptr<QuantLib::Schedule>& from,
                        const QuantLib::Date& truncationDate,
+                       const bool returnDatesBefore,
                        bool permanent)
     : ObjectHandler::LibraryObject<QuantLib::Schedule>(p, permanent) {
     
-        libraryObject_ = boost::shared_ptr<QuantLib::Schedule>(new
-            QuantLib::Schedule(from->until(truncationDate)));
+        if (returnDatesBefore)
+            libraryObject_ = boost::shared_ptr<QuantLib::Schedule>(new
+                QuantLib::Schedule(from->until(truncationDate)));
+        else
+            libraryObject_ = boost::shared_ptr<QuantLib::Schedule>(new
+                QuantLib::Schedule(from->after(truncationDate)));
+
     }
 
 }

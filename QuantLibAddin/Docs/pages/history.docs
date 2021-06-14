@@ -23,6 +23,65 @@
 
 /*! \page history Version History
 
+<strong>Release 1.21.0 - January 2021</strong>
+
+- Implemented new function qlSwapNumberOfLegs() (thanks to Francois Botha)
+
+- Added more aliases for Actual/365 (No Leap) day counter (thanks to Francois Botha)
+
+- Added CompoundedThenSimple compounding rule (thanks to Francois Botha)
+
+- Upgraded gensrc source code generation scripts from python 2 to 3 (thanks to Francois Botha)
+
+<strong>Release 1.20.0 - November 2020</strong>
+
+- Consolidated project files and upgraded to VS2019 (thanks to Francois Botha)
+
+- Added enumeration UnitedStates::FederalReserve with alias US Fedwire System (thanks to Mike DelMedico)
+
+- Added Botswana calendar (thanks to Francois Botha)
+
+- Added U as alias for Unadjusted business day convention (thanks to Francois Botha)
+
+<strong>Release 1.16.0 - October 2019</strong>
+
+- Replaced deprecated Actual365NoLeap() with Actual365Fixed(Actual365Fixed::NoLeap) (thanks to Francois Botha)
+
+- Implemented qlScheduleFullInterfaceFromDateVector in order to create schedule with full interface from date vector (thanks to Francois Botha)
+
+- Extended OISRateHelper with payment lag parameter (thanks to BN Algorithms Ltd)
+
+- Extended qlMakeOIS with payment lag parameter (thanks to BN Algorithms Ltd)
+
+- Corrected InterestRateDerivatives example spreadsheet (thanks to BN Algorithms Ltd)
+
+<strong>Release 1.14.0 - November 2018</strong>
+
+- Replaced references to deprecated class CalibrationHelper with references
+  to new class BlackCalibrationHelper.
+
+<strong>Release 1.13.0 - August 2018</strong>
+
+- Maintenance release.
+
+<strong>Release 1.12.0 - February 2018</strong>
+
+- Maintenance release.
+
+<strong>Release 1.11.0 - January 2018</strong>
+
+- 0 new functions / 1,114 in total
+- Added support for VC14, and fixed %auto_link.hpp files (thanks to Francois
+  Botha)
+- In addition to the existing Visual Studio solution files,
+  QuantLibAddin_vc8.sln through QuantLibAddin_vc14.sln, added a new solution
+  file QuantLibAddin.sln (no version number) which should work for VC10 (Visual
+  Studio 2010) and all later versions.
+- Updated signature of function qlBlackSwaptionEngine() (thanks to Stefano
+  Fondi)
+- Updated signatures of functions qlSwaptionImpliedVolatility() and
+  qlMixedLinearCubicInterpolation()
+
 <strong>Release 1.9.0 - May 2017</strong>
 
 - 0 new functions / 1,114 in total

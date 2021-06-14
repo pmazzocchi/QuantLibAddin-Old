@@ -1,5 +1,5 @@
 # Process this file with autoconf to produce a configure script.
-AC_INIT([QuantLibXL], [1.10.0],
+AC_INIT([QuantLibXL], [1.21.0],
         [quantlib-dev@lists.sourceforge.net],
         [QuantLibXL])
 AC_PREREQ(2.50)
@@ -60,6 +60,7 @@ AC_PROG_INSTALL
 # Check for tools needed for building documentation
 AC_PATH_PROG([DOXYGEN], [doxygen])
 AC_PATH_PROG([SED], [sed])
+AC_PATH_PROG([PYTHON3], [python3])
 
 # done, output the configured files
 AC_CONFIG_FILES([

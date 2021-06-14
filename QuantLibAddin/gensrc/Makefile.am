@@ -104,14 +104,8 @@ GENSRC_INPUTS = $(GENSRC_METADATA) $(GENSRC_STUBS) $(GENSRC_CODE) $(GENSRC_CONF)
 # This should prevent running from a distributed tarball
 
 EXTRA_DIST = .time-stamp \
-             qlgensrc_vc8.vcproj \
-             qlgensrc_vc9.vcproj \
-             qlgensrc_vc10.vcxproj \
-             qlgensrc_vc10.vcxproj.filters \
-             qlgensrc_vc11.vcxproj \
-             qlgensrc_vc11.vcxproj.filters \
-             qlgensrc_vc12.vcxproj \
-             qlgensrc_vc12.vcxproj.filters \
+             qlgensrc.vcxproj \
+             qlgensrc.vcxproj.filters \
              Makefile.vc \
              $(GENSRC_INPUTS)
 
@@ -150,7 +144,7 @@ endif
 all-local: .time-stamp
 
 .time-stamp: $(GENSRC_INPUTS)
-	python $(GENSRC_DIR)/gensrc.py $(GENSRC_ARGS) --oh_dir=$(OH_DIR)
+	$(PYTHON3) $(GENSRC_DIR)/gensrc.py $(GENSRC_ARGS) --oh_dir=$(OH_DIR)
 	touch .time-stamp
 
 dist-hook:

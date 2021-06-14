@@ -1,11 +1,11 @@
 
 EXTRA_DIST = \
-    AddinExcelDynamic.dsp \
-    AddinExcelDynamic_vc8.vcproj \
-    AddinExcelDynamic.vcproj \
-    AddinExcelStatic.dsp \
-    AddinExcelStatic_vc8.vcproj \
-    AddinExcelStatic.vcproj \
+    AddinExcelDynamic.vcxproj \
+    AddinExcelDynamic.vcxproj.filters \
+    AddinExcelStatic.vcxproj \
+    AddinExcelStatic.vcxproj.filters \
+    AddinExcelStatic2.vcxproj \
+    AddinExcelStatic2.vcxproj.filters \
     date.cpp \
     calendar.cpp \
     capfloor.cpp \

@@ -1,16 +1,16 @@
 quantlib-users@lists.sourceforge.net, quantlib-announce@lists.sourceforge.net
 
-QuantLibXL / ObjectHandler 1.1.0 Released
+QuantLibXL / ObjectHandler 1.13 Released
 
 QuantLibXL, QuantLibAddin, ObjectHandler, and gensrc version
-1.1.0 have been released and are available for download:
-http://sourceforge.net/projects/quantlib/files/
+1.13 have been released and are available for download:
+https://bintray.com/quantlib/releases/QuantLibXL/1.13#files
 
 QuantLibAddin
 http://www.quantlibaddin.org
 
 QuantLibAddin exports the QuantLib interface to a variety
-of end user platforms including OpenOffice.Org Calc.
+of end user platforms.
 
 QuantLibXL
 http://www.quantlibxl.org
